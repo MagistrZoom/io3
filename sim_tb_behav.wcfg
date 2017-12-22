@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="sim_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_bram_ctrl_funcs" />
+            <top_module name="glbl" />
+            <top_module name="ipif_pkg" />
+            <top_module name="lib_pkg" />
+            <top_module name="lmb_bram_if_funcs" />
+            <top_module name="sim_tb" />
+            <top_module name="tc_types" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="29350000001fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="377"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="30" />
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/bram_addr_a">
+      <obj_property name="ElementShortName">bram_addr_a[14:0]</obj_property>
+      <obj_property name="ObjectShortName">bram_addr_a[14:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/bram_clk_i">
+      <obj_property name="ElementShortName">bram_clk_i</obj_property>
+      <obj_property name="ObjectShortName">bram_clk_i</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/bram_wrdata_a">
+      <obj_property name="ElementShortName">bram_wrdata_a[32:0]</obj_property>
+      <obj_property name="ObjectShortName">bram_wrdata_a[32:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/bram_rddata_a">
+      <obj_property name="ElementShortName">bram_rddata_a[32:0]</obj_property>
+      <obj_property name="ObjectShortName">bram_rddata_a[32:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/bram_wrdata_o">
+      <obj_property name="ElementShortName">bram_wrdata_o[32:0]</obj_property>
+      <obj_property name="ObjectShortName">bram_wrdata_o[32:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/bram_addr_o">
+      <obj_property name="ElementShortName">bram_addr_o[14:0]</obj_property>
+      <obj_property name="ObjectShortName">bram_addr_o[14:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/bram_en_a">
+      <obj_property name="ElementShortName">bram_en_a</obj_property>
+      <obj_property name="ObjectShortName">bram_en_a</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/bram_rst_a">
+      <obj_property name="ElementShortName">bram_rst_a</obj_property>
+      <obj_property name="ObjectShortName">bram_rst_a</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/bram_we_a">
+      <obj_property name="ElementShortName">bram_we_a[3:0]</obj_property>
+      <obj_property name="ObjectShortName">bram_we_a[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/en_timer0">
+      <obj_property name="ElementShortName">en_timer0</obj_property>
+      <obj_property name="ObjectShortName">en_timer0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/en_timer1">
+      <obj_property name="ElementShortName">en_timer1</obj_property>
+      <obj_property name="ObjectShortName">en_timer1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/en_ic">
+      <obj_property name="ElementShortName">en_ic</obj_property>
+      <obj_property name="ObjectShortName">en_ic</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/rd_timer0">
+      <obj_property name="ElementShortName">rd_timer0</obj_property>
+      <obj_property name="ObjectShortName">rd_timer0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/rd_timer1">
+      <obj_property name="ElementShortName">rd_timer1</obj_property>
+      <obj_property name="ObjectShortName">rd_timer1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/rd_ic">
+      <obj_property name="ElementShortName">rd_ic</obj_property>
+      <obj_property name="ObjectShortName">rd_ic</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/wr_timer0">
+      <obj_property name="ElementShortName">wr_timer0</obj_property>
+      <obj_property name="ObjectShortName">wr_timer0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/wr_timer1">
+      <obj_property name="ElementShortName">wr_timer1</obj_property>
+      <obj_property name="ObjectShortName">wr_timer1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/wr_ic">
+      <obj_property name="ElementShortName">wr_ic</obj_property>
+      <obj_property name="ObjectShortName">wr_ic</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/rst_timer0">
+      <obj_property name="ElementShortName">rst_timer0</obj_property>
+      <obj_property name="ObjectShortName">rst_timer0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/rst_timer1">
+      <obj_property name="ElementShortName">rst_timer1</obj_property>
+      <obj_property name="ObjectShortName">rst_timer1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/rst_ic">
+      <obj_property name="ElementShortName">rst_ic</obj_property>
+      <obj_property name="ObjectShortName">rst_ic</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/Timer_0/clk_i">
+      <obj_property name="ElementShortName">clk_i</obj_property>
+      <obj_property name="ObjectShortName">clk_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/Timer_0/rst_i">
+      <obj_property name="ElementShortName">rst_i</obj_property>
+      <obj_property name="ObjectShortName">rst_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/Timer_0/en_i">
+      <obj_property name="ElementShortName">en_i</obj_property>
+      <obj_property name="ObjectShortName">en_i</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/Timer_0/addr_bi">
+      <obj_property name="ElementShortName">addr_bi[31:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_bi[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/Timer_0/data_bi">
+      <obj_property name="ElementShortName">data_bi[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_bi[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/Timer_0/wr_i">
+      <obj_property name="ElementShortName">wr_i</obj_property>
+      <obj_property name="ObjectShortName">wr_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/Timer_0/rd_i">
+      <obj_property name="ElementShortName">rd_i</obj_property>
+      <obj_property name="ObjectShortName">rd_i</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/Timer_0/data_bo">
+      <obj_property name="ElementShortName">data_bo[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data_bo[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/Timer_0/ap_rst">
+      <obj_property name="ElementShortName">ap_rst</obj_property>
+      <obj_property name="ObjectShortName">ap_rst</obj_property>
+   </wvobject>
+</wave_config>

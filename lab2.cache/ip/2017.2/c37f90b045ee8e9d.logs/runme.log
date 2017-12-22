@@ -1,0 +1,49 @@
+
+*** Running vivado
+    with args -log uc_system_dlmb_bram_if_cntlr_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source uc_system_dlmb_bram_if_cntlr_0.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source uc_system_dlmb_bram_if_cntlr_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1146.324 ; gain = 47.996 ; free physical = 789 ; free virtual = 17897
+INFO: [Synth 8-638] synthesizing module 'uc_system_dlmb_bram_if_cntlr_0' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_dlmb_bram_if_cntlr_0/synth/uc_system_dlmb_bram_if_cntlr_0.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/51e1/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3106]
+INFO: [Synth 8-638] synthesizing module 'lmb_mux' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/51e1/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2601]
+INFO: [Synth 8-638] synthesizing module 'pselect_mask' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/51e1/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2121]
+INFO: [Synth 8-256] done synthesizing module 'pselect_mask' (1#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/51e1/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2121]
+INFO: [Synth 8-256] done synthesizing module 'lmb_mux' (2#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/51e1/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2601]
+INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr' (3#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/51e1/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3106]
+INFO: [Synth 8-256] done synthesizing module 'uc_system_dlmb_bram_if_cntlr_0' (4#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_dlmb_bram_if_cntlr_0/synth/uc_system_dlmb_bram_if_cntlr_0.vhd:84]
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1188.824 ; gain = 90.496 ; free physical = 795 ; free virtual = 17899
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1188.824 ; gain = 90.496 ; free physical = 794 ; free virtual = 17898
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1464.668 ; gain = 0.000 ; free physical = 412 ; free virtual = 17519
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1464.668 ; gain = 366.340 ; free physical = 1010 ; free virtual = 18117
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1464.668 ; gain = 366.340 ; free physical = 1010 ; free virtual = 18117
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1464.668 ; gain = 366.340 ; free physical = 1011 ; free virtual = 18119
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1464.668 ; gain = 366.340 ; free physical = 1002 ; free virtual = 18109
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1464.668 ; gain = 366.340 ; free physical = 992 ; free virtual = 18100
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1478.668 ; gain = 380.340 ; free physical = 763 ; free virtual = 17870
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1478.668 ; gain = 380.340 ; free physical = 763 ; free virtual = 17870
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1497.699 ; gain = 399.371 ; free physical = 761 ; free virtual = 17869
+Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1497.699 ; gain = 399.371 ; free physical = 744 ; free virtual = 17851
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1497.699 ; gain = 399.371 ; free physical = 744 ; free virtual = 17851
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1497.699 ; gain = 399.371 ; free physical = 744 ; free virtual = 17851
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1497.699 ; gain = 399.371 ; free physical = 744 ; free virtual = 17851
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1497.699 ; gain = 399.371 ; free physical = 744 ; free virtual = 17851
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1497.699 ; gain = 399.371 ; free physical = 744 ; free virtual = 17851
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |     3|
+|2     |LUT3 |     4|
+|3     |FDRE |     2|
++------+-----+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1497.699 ; gain = 399.371 ; free physical = 744 ; free virtual = 17851
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1497.707 ; gain = 411.965 ; free physical = 718 ; free virtual = 17826

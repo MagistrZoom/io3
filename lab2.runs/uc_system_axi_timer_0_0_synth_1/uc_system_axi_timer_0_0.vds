@@ -1,0 +1,90 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Nov 27 21:50:09 2017
+# Process ID: 26864
+# Current directory: /home/izoomko/wrk/4grade/io/lab2/lab2.runs/uc_system_axi_timer_0_0_synth_1
+# Command line: vivado -log uc_system_axi_timer_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source uc_system_axi_timer_0_0.tcl
+# Log file: /home/izoomko/wrk/4grade/io/lab2/lab2.runs/uc_system_axi_timer_0_0_synth_1/uc_system_axi_timer_0_0.vds
+# Journal file: /home/izoomko/wrk/4grade/io/lab2/lab2.runs/uc_system_axi_timer_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source uc_system_axi_timer_0_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1153.328 ; gain = 54.996 ; free physical = 364 ; free virtual = 17475
+INFO: [Synth 8-638] synthesizing module 'uc_system_axi_timer_0_0' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_timer_0_0/synth/uc_system_axi_timer_0_0.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'axi_timer' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/a004/hdl/axi_timer_v2_0_vh_rfs.vhd:2141]
+INFO: [Synth 8-638] synthesizing module 'tc_core' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/a004/hdl/axi_timer_v2_0_vh_rfs.vhd:1698]
+INFO: [Synth 8-638] synthesizing module 'mux_onehot_f' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/a004/hdl/axi_timer_v2_0_vh_rfs.vhd:365]
+INFO: [Synth 8-638] synthesizing module 'MUXCY' [/home/izoomko/Soft/xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:21613]
+INFO: [Synth 8-256] done synthesizing module 'MUXCY' (1#1) [/home/izoomko/Soft/xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:21613]
+INFO: [Synth 8-256] done synthesizing module 'mux_onehot_f' (2#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/a004/hdl/axi_timer_v2_0_vh_rfs.vhd:365]
+INFO: [Synth 8-638] synthesizing module 'count_module' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/a004/hdl/axi_timer_v2_0_vh_rfs.vhd:1434]
+INFO: [Synth 8-638] synthesizing module 'counter_f' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/a004/hdl/axi_timer_v2_0_vh_rfs.vhd:148]
+INFO: [Synth 8-256] done synthesizing module 'counter_f' (3#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/a004/hdl/axi_timer_v2_0_vh_rfs.vhd:148]
+INFO: [Synth 8-256] done synthesizing module 'count_module' (4#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/a004/hdl/axi_timer_v2_0_vh_rfs.vhd:1434]
+INFO: [Synth 8-638] synthesizing module 'timer_control' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/a004/hdl/axi_timer_v2_0_vh_rfs.vhd:835]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (5#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'timer_control' (6#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/a004/hdl/axi_timer_v2_0_vh_rfs.vhd:835]
+INFO: [Synth 8-256] done synthesizing module 'tc_core' (7#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/a004/hdl/axi_timer_v2_0_vh_rfs.vhd:1698]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (8#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (8#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (8#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (8#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized3' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized3' (8#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized4' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized4' (8#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized5' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized5' (8#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized6' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized6' (8#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (9#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (10#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (11#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-256] done synthesizing module 'axi_timer' (12#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ipshared/a004/hdl/axi_timer_v2_0_vh_rfs.vhd:2141]
+INFO: [Synth 8-256] done synthesizing module 'uc_system_axi_timer_0_0' (13#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_timer_0_0/synth/uc_system_axi_timer_0_0.vhd:90]
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1196.828 ; gain = 98.496 ; free physical = 463 ; free virtual = 17584
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1196.828 ; gain = 98.496 ; free physical = 470 ; free virtual = 17584
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1523.680 ; gain = 0.000 ; free physical = 191 ; free virtual = 17315
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1523.680 ; gain = 425.348 ; free physical = 866 ; free virtual = 17999
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1523.680 ; gain = 425.348 ; free physical = 866 ; free virtual = 17999
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1523.680 ; gain = 425.348 ; free physical = 868 ; free virtual = 18001
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1523.680 ; gain = 425.348 ; free physical = 842 ; free virtual = 17974
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1523.680 ; gain = 425.348 ; free physical = 827 ; free virtual = 17956
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1523.680 ; gain = 425.348 ; free physical = 520 ; free virtual = 17645
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1523.680 ; gain = 425.348 ; free physical = 480 ; free virtual = 17604
+Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1531.688 ; gain = 433.355 ; free physical = 464 ; free virtual = 17588
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1531.688 ; gain = 433.355 ; free physical = 448 ; free virtual = 17568
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1531.688 ; gain = 433.355 ; free physical = 448 ; free virtual = 17568
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1531.688 ; gain = 433.355 ; free physical = 450 ; free virtual = 17569
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1531.688 ; gain = 433.355 ; free physical = 455 ; free virtual = 17574
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1531.688 ; gain = 433.355 ; free physical = 462 ; free virtual = 17582
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1531.688 ; gain = 433.355 ; free physical = 467 ; free virtual = 17587
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    16|
+|2     |LUT1   |     6|
+|3     |LUT2   |    82|
+|4     |LUT3   |    93|
+|5     |LUT4   |    82|
+|6     |LUT5   |    25|
+|7     |LUT6   |    62|
+|8     |MUXCY  |    64|
+|9     |MUXF7  |     2|
+|10    |FDR    |    12|
+|11    |FDRE   |   228|
++------+-------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1531.688 ; gain = 433.355 ; free physical = 471 ; free virtual = 17591
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1531.695 ; gain = 445.949 ; free physical = 483 ; free virtual = 17593

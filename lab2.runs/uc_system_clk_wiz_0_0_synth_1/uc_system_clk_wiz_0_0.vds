@@ -1,0 +1,52 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Nov 27 21:47:37 2017
+# Process ID: 26387
+# Current directory: /home/izoomko/wrk/4grade/io/lab2/lab2.runs/uc_system_clk_wiz_0_0_synth_1
+# Command line: vivado -log uc_system_clk_wiz_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source uc_system_clk_wiz_0_0.tcl
+# Log file: /home/izoomko/wrk/4grade/io/lab2/lab2.runs/uc_system_clk_wiz_0_0_synth_1/uc_system_clk_wiz_0_0.vds
+# Journal file: /home/izoomko/wrk/4grade/io/lab2/lab2.runs/uc_system_clk_wiz_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source uc_system_clk_wiz_0_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1146.324 ; gain = 47.996 ; free physical = 205 ; free virtual = 17969
+INFO: [Synth 8-638] synthesizing module 'uc_system_clk_wiz_0_0' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.v:70]
+INFO: [Synth 8-638] synthesizing module 'uc_system_clk_wiz_0_0_clk_wiz' [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0_clk_wiz.v:68]
+INFO: [Synth 8-638] synthesizing module 'IBUF' [/home/izoomko/Soft/xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:14470]
+INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [/home/izoomko/Soft/xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:14470]
+INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [/home/izoomko/Soft/xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20759]
+INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (2#1) [/home/izoomko/Soft/xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20759]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [/home/izoomko/Soft/xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [/home/izoomko/Soft/xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'uc_system_clk_wiz_0_0_clk_wiz' (4#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0_clk_wiz.v:68]
+INFO: [Synth 8-256] done synthesizing module 'uc_system_clk_wiz_0_0' (5#1) [/home/izoomko/wrk/4grade/io/lab2/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.v:70]
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1187.824 ; gain = 89.496 ; free physical = 178 ; free virtual = 17942
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1187.824 ; gain = 89.496 ; free physical = 173 ; free virtual = 17938
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1431.652 ; gain = 0.000 ; free physical = 136 ; free virtual = 17462
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1431.652 ; gain = 333.324 ; free physical = 291 ; free virtual = 17601
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1431.652 ; gain = 333.324 ; free physical = 291 ; free virtual = 17601
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1431.652 ; gain = 333.324 ; free physical = 292 ; free virtual = 17602
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1431.652 ; gain = 333.324 ; free physical = 273 ; free virtual = 17603
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1431.652 ; gain = 333.324 ; free physical = 273 ; free virtual = 17603
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1458.652 ; gain = 360.324 ; free physical = 121 ; free virtual = 17458
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1458.652 ; gain = 360.324 ; free physical = 121 ; free virtual = 17458
+Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1468.676 ; gain = 370.348 ; free physical = 147 ; free virtual = 17457
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1468.676 ; gain = 370.348 ; free physical = 139 ; free virtual = 17450
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1468.676 ; gain = 370.348 ; free physical = 139 ; free virtual = 17450
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1468.676 ; gain = 370.348 ; free physical = 139 ; free virtual = 17450
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1468.676 ; gain = 370.348 ; free physical = 139 ; free virtual = 17450
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1468.676 ; gain = 370.348 ; free physical = 139 ; free virtual = 17450
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1468.676 ; gain = 370.348 ; free physical = 139 ; free virtual = 17450
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     2|
+|2     |MMCME2_ADV |     1|
+|3     |IBUF       |     1|
++------+-----------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1468.676 ; gain = 370.348 ; free physical = 139 ; free virtual = 17450
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1475.676 ; gain = 389.934 ; free physical = 157 ; free virtual = 17428
