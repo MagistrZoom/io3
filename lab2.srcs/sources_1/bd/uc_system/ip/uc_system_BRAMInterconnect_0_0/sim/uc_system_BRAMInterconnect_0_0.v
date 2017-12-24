@@ -54,72 +54,75 @@
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module uc_system_BRAMInterconnect_0_0 (
-  bram_addr_a,
-  bram_clk_i,
-  bram_wrdata_a,
-  bram_rddata_a,
-  bram_wrdata_o,
-  bram_addr_o,
-  bram_en_a,
-  bram_rst_a,
-  bram_we_a,
-  en_timer0,
-  en_timer1,
-  en_ic,
-  rd_timer0,
-  rd_timer1,
-  rd_ic,
-  wr_timer0,
-  wr_timer1,
-  wr_ic,
-  rst_timer0,
-  rst_timer1,
-  rst_ic
+  clk_i,
+  rst_i,
+  addr_bi,
+  wrdata_bi,
+  en_i,
+  we_bi,
+  s1_rddata_bi,
+  s2_rddata_bi,
+  s3_rddata_bi,
+  rddata_bo,
+  s1_addr_bo,
+  s1_wrdata_bo,
+  s1_en_o,
+  s1_we_bo,
+  s2_addr_bo,
+  s2_wrdata_bo,
+  s2_en_o,
+  s2_we_bo,
+  s3_addr_bo,
+  s3_wrdata_bo,
+  s3_en_o,
+  s3_we_bo
 );
 
-input wire [12 : 0] bram_addr_a;
-input wire bram_clk_i;
-input wire [32 : 0] bram_wrdata_a;
-output wire [32 : 0] bram_rddata_a;
-output wire [32 : 0] bram_wrdata_o;
-output wire [12 : 0] bram_addr_o;
-input wire bram_en_a;
-input wire bram_rst_a;
-input wire [3 : 0] bram_we_a;
-output wire en_timer0;
-output wire en_timer1;
-output wire en_ic;
-output wire rd_timer0;
-output wire rd_timer1;
-output wire rd_ic;
-output wire wr_timer0;
-output wire wr_timer1;
-output wire wr_ic;
-output wire rst_timer0;
-output wire rst_timer1;
-output wire rst_ic;
+input wire clk_i;
+input wire rst_i;
+input wire [12 : 0] addr_bi;
+input wire [31 : 0] wrdata_bi;
+input wire en_i;
+input wire [3 : 0] we_bi;
+input wire [31 : 0] s1_rddata_bi;
+input wire [31 : 0] s2_rddata_bi;
+input wire [31 : 0] s3_rddata_bi;
+output wire [31 : 0] rddata_bo;
+output wire [12 : 0] s1_addr_bo;
+output wire [31 : 0] s1_wrdata_bo;
+output wire s1_en_o;
+output wire [3 : 0] s1_we_bo;
+output wire [12 : 0] s2_addr_bo;
+output wire [31 : 0] s2_wrdata_bo;
+output wire s2_en_o;
+output wire [3 : 0] s2_we_bo;
+output wire [12 : 0] s3_addr_bo;
+output wire [31 : 0] s3_wrdata_bo;
+output wire s3_en_o;
+output wire [3 : 0] s3_we_bo;
 
   BRAMInterconnect inst (
-    .bram_addr_a(bram_addr_a),
-    .bram_clk_i(bram_clk_i),
-    .bram_wrdata_a(bram_wrdata_a),
-    .bram_rddata_a(bram_rddata_a),
-    .bram_wrdata_o(bram_wrdata_o),
-    .bram_addr_o(bram_addr_o),
-    .bram_en_a(bram_en_a),
-    .bram_rst_a(bram_rst_a),
-    .bram_we_a(bram_we_a),
-    .en_timer0(en_timer0),
-    .en_timer1(en_timer1),
-    .en_ic(en_ic),
-    .rd_timer0(rd_timer0),
-    .rd_timer1(rd_timer1),
-    .rd_ic(rd_ic),
-    .wr_timer0(wr_timer0),
-    .wr_timer1(wr_timer1),
-    .wr_ic(wr_ic),
-    .rst_timer0(rst_timer0),
-    .rst_timer1(rst_timer1),
-    .rst_ic(rst_ic)
+    .clk_i(clk_i),
+    .rst_i(rst_i),
+    .addr_bi(addr_bi),
+    .wrdata_bi(wrdata_bi),
+    .en_i(en_i),
+    .we_bi(we_bi),
+    .s1_rddata_bi(s1_rddata_bi),
+    .s2_rddata_bi(s2_rddata_bi),
+    .s3_rddata_bi(s3_rddata_bi),
+    .rddata_bo(rddata_bo),
+    .s1_addr_bo(s1_addr_bo),
+    .s1_wrdata_bo(s1_wrdata_bo),
+    .s1_en_o(s1_en_o),
+    .s1_we_bo(s1_we_bo),
+    .s2_addr_bo(s2_addr_bo),
+    .s2_wrdata_bo(s2_wrdata_bo),
+    .s2_en_o(s2_en_o),
+    .s2_we_bo(s2_we_bo),
+    .s3_addr_bo(s3_addr_bo),
+    .s3_wrdata_bo(s3_wrdata_bo),
+    .s3_en_o(s3_en_o),
+    .s3_we_bo(s3_we_bo)
   );
 endmodule

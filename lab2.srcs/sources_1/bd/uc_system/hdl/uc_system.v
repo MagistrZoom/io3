@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-//Date        : Sat Dec 23 00:10:30 2017
+//Date        : Sun Dec 24 19:03:12 2017
 //Host        : sirius running 64-bit Debian GNU/Linux oldstable-updates (sid)
 //Command     : generate_target uc_system.bd
 //Design      : uc_system
@@ -1076,17 +1076,15 @@ module uc_system
   input uart_rtl_rxd;
   output uart_rtl_txd;
 
-  wire [12:0]BRAMInterconnect_0_bram_addr_o;
-  wire [32:0]BRAMInterconnect_0_bram_rddata_a;
-  wire [32:0]BRAMInterconnect_0_bram_wrdata_o;
+  wire [31:0]BRAMInterconnect_0_bram_rddata_o;
   wire BRAMInterconnect_0_en_timer0;
   wire BRAMInterconnect_0_en_timer1;
-  wire BRAMInterconnect_0_rd_timer0;
-  wire BRAMInterconnect_0_rd_timer1;
-  wire BRAMInterconnect_0_rst_timer0;
-  wire BRAMInterconnect_0_rst_timer1;
-  wire BRAMInterconnect_0_wr_timer0;
-  wire BRAMInterconnect_0_wr_timer1;
+  wire [12:0]BRAMInterconnect_0_s1_addr_bo;
+  wire [31:0]BRAMInterconnect_0_s1_wrdata_bo;
+  wire [12:0]BRAMInterconnect_0_s2_addr_bo;
+  wire [3:0]BRAMInterconnect_0_s2_we_bo;
+  wire [31:0]BRAMInterconnect_0_s2_wrdata_bo;
+  wire [3:0]BRAMInterconnect_0_wr_timer0;
   wire [15:0]Timer_0_data_bo;
   wire [15:0]Timer_1_data_bo;
   wire [12:0]axi_bram_ctrl_0_bram_addr_a;
@@ -1239,48 +1237,49 @@ module uc_system
   assign timer1[15:0] = Timer_1_data_bo;
   assign uart_rtl_txd = axi_uartlite_0_UART_TxD;
   uc_system_BRAMInterconnect_0_0 BRAMInterconnect_0
-       (.bram_addr_a(axi_bram_ctrl_0_bram_addr_a),
-        .bram_addr_o(BRAMInterconnect_0_bram_addr_o),
-        .bram_clk_i(axi_bram_ctrl_0_bram_clk_a),
-        .bram_en_a(axi_bram_ctrl_0_bram_en_a),
-        .bram_rddata_a(BRAMInterconnect_0_bram_rddata_a),
-        .bram_rst_a(axi_bram_ctrl_0_bram_rst_a),
-        .bram_we_a(axi_bram_ctrl_0_bram_we_a),
-        .bram_wrdata_a(axi_bram_ctrl_0_bram_wrdata_a),
-        .bram_wrdata_o(BRAMInterconnect_0_bram_wrdata_o),
-        .en_timer0(BRAMInterconnect_0_en_timer0),
-        .en_timer1(BRAMInterconnect_0_en_timer1),
-        .rd_timer0(BRAMInterconnect_0_rd_timer0),
-        .rd_timer1(BRAMInterconnect_0_rd_timer1),
-        .rst_timer0(BRAMInterconnect_0_rst_timer0),
-        .rst_timer1(BRAMInterconnect_0_rst_timer1),
-        .wr_timer0(BRAMInterconnect_0_wr_timer0),
-        .wr_timer1(BRAMInterconnect_0_wr_timer1));
+       (.addr_bi(axi_bram_ctrl_0_bram_addr_a),
+        .clk_i(axi_bram_ctrl_0_bram_clk_a),
+        .en_i(axi_bram_ctrl_0_bram_en_a),
+        .rddata_bo(BRAMInterconnect_0_bram_rddata_o),
+        .rst_i(axi_bram_ctrl_0_bram_rst_a),
+        .s1_addr_bo(BRAMInterconnect_0_s1_addr_bo),
+        .s1_en_o(BRAMInterconnect_0_en_timer0),
+        .s1_rddata_bi(Timer_0_data_bo),
+        .s1_we_bo(BRAMInterconnect_0_wr_timer0),
+        .s1_wrdata_bo(BRAMInterconnect_0_s1_wrdata_bo),
+        .s2_addr_bo(BRAMInterconnect_0_s2_addr_bo),
+        .s2_en_o(BRAMInterconnect_0_en_timer1),
+        .s2_rddata_bi(Timer_1_data_bo),
+        .s2_we_bo(BRAMInterconnect_0_s2_we_bo),
+        .s2_wrdata_bo(BRAMInterconnect_0_s2_wrdata_bo),
+        .s3_rddata_bi({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .we_bi(axi_bram_ctrl_0_bram_we_a),
+        .wrdata_bi(axi_bram_ctrl_0_bram_wrdata_a));
   uc_system_Timer_0_2 Timer_0
-       (.addr_bi(BRAMInterconnect_0_bram_addr_o),
+       (.addr_bi(BRAMInterconnect_0_s1_addr_bo),
         .ap_rst(1'b0),
         .clk_i(axi_bram_ctrl_0_bram_clk_a),
-        .data_bi(BRAMInterconnect_0_bram_wrdata_o[31:0]),
+        .data_bi(BRAMInterconnect_0_s1_wrdata_bo),
         .data_bo(Timer_0_data_bo),
         .en_i(BRAMInterconnect_0_en_timer0),
-        .rd_i(BRAMInterconnect_0_rd_timer0),
-        .rst_i(BRAMInterconnect_0_rst_timer0),
-        .wr_i(BRAMInterconnect_0_wr_timer0));
+        .rd_i(1'b0),
+        .rst_i(axi_bram_ctrl_0_bram_rst_a),
+        .wr_i(BRAMInterconnect_0_wr_timer0[0]));
   uc_system_Timer_1_1 Timer_1
-       (.addr_bi(BRAMInterconnect_0_bram_addr_o),
+       (.addr_bi(BRAMInterconnect_0_s2_addr_bo),
         .ap_rst(1'b0),
         .clk_i(axi_bram_ctrl_0_bram_clk_a),
-        .data_bi(BRAMInterconnect_0_bram_wrdata_o[31:0]),
+        .data_bi(BRAMInterconnect_0_s2_wrdata_bo),
         .data_bo(Timer_1_data_bo),
         .en_i(BRAMInterconnect_0_en_timer1),
-        .rd_i(BRAMInterconnect_0_rd_timer1),
-        .rst_i(BRAMInterconnect_0_rst_timer1),
-        .wr_i(BRAMInterconnect_0_wr_timer1));
+        .rd_i(1'b0),
+        .rst_i(axi_bram_ctrl_0_bram_rst_a),
+        .wr_i(BRAMInterconnect_0_s2_we_bo[0]));
   uc_system_axi_bram_ctrl_0_0 axi_bram_ctrl_0
        (.bram_addr_a(axi_bram_ctrl_0_bram_addr_a),
         .bram_clk_a(axi_bram_ctrl_0_bram_clk_a),
         .bram_en_a(axi_bram_ctrl_0_bram_en_a),
-        .bram_rddata_a(BRAMInterconnect_0_bram_rddata_a[31:0]),
+        .bram_rddata_a(BRAMInterconnect_0_bram_rddata_o),
         .bram_rst_a(axi_bram_ctrl_0_bram_rst_a),
         .bram_we_a(axi_bram_ctrl_0_bram_we_a),
         .bram_wrdata_a(axi_bram_ctrl_0_bram_wrdata_a),

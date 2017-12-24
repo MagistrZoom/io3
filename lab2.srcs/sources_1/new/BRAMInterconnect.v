@@ -21,64 +21,108 @@
 
 
 module BRAMInterconnect(
-    input [12:0] bram_addr_a,
-    input bram_clk_i,
-    input [32:0] bram_wrdata_a,
-    output reg [32:0] bram_rddata_a,
-    output [32:0] bram_wrdata_o,
-    output reg [12:0] bram_addr_o,
-    input bram_en_a,
-    input bram_rst_a,
-    input [3:0] bram_we_a,
-    output reg en_timer0,
-    output reg en_timer1,
-    output reg en_ic,
-    output reg rd_timer0,
-    output reg rd_timer1,
-    output reg rd_ic,
-    output reg wr_timer0,
-    output reg wr_timer1,
-    output reg wr_ic,
-    output reg rst_timer0,
-    output reg rst_timer1,
-    output reg rst_ic
+    input clk_i,
+    input rst_i,
+    input [12:0] addr_bi,
+    input [31:0] wrdata_bi,
+    input en_i,
+    input [3:0] we_bi,
+    input [31:0] s1_rddata_bi,
+    input [31:0] s2_rddata_bi,
+    input [31:0] s3_rddata_bi,
+    output reg [31:0] rddata_bo,
+    output reg [12:0] s1_addr_bo,
+    output reg [31:0] s1_wrdata_bo,
+    output reg s1_en_o,
+    output reg [3:0] s1_we_bo,
+    output reg [12:0] s2_addr_bo,
+    output reg [31:0] s2_wrdata_bo,
+    output reg s2_en_o,
+    output reg [3:0] s2_we_bo,
+    output reg [12:0] s3_addr_bo,
+    output reg [31:0] s3_wrdata_bo,
+    output reg s3_en_o,
+    output reg [3:0] s3_we_bo
     );
     
-    assign bram_wrdata_o = bram_wrdata_a;
-     
-    always @(posedge bram_clk_i) begin
-        if (!bram_en_a) begin
-            bram_rddata_a <= 0;
-            rd_timer0 <= 0;
-            rd_timer1 <= 0;
-            rd_ic <= 0;
-            wr_timer0 <= 0;
-            wr_timer1 <= 0;
-            wr_ic <= 0;
-            en_timer0 <= 0;
-            en_timer1 <= 0;
-            en_ic <= 0;
+    reg r_state;
+    reg rs_state;
+
+    always @(posedge clk_i) begin
+        if (rst_i) begin // reset read operation
+            rs_state = 0;
         end
         else begin
-            if (bram_addr_a < 14'h8) begin
-                rd_timer0 <= bram_we_a == 4'h0;
-                wr_timer0 <= bram_we_a == 4'hf;
-                rst_timer0 <= bram_rst_a;
-                en_timer0 <= 1;
-                bram_addr_o <= bram_addr_a;
-            end else if (bram_addr_a < 14'h14) begin
-                rd_timer1 <= bram_we_a == 4'h0;
-                wr_timer1 <= bram_we_a == 4'hf;
-                rst_timer1 <= bram_rst_a;
-                en_timer1 <= 1;
-                bram_addr_o <= bram_addr_a - 14'h14;
-            end else if (bram_addr_a < 14'h1C) begin
-                rd_ic <= bram_we_a == 4'h0;
-                wr_ic <= bram_we_a == 4'hf;
-                rst_ic <= bram_rst_a;
-                en_ic <= 1;
-                bram_addr_o <= bram_addr_a;
+            rs_state <= r_state;
+        end
+    end
+    
+    always @(negedge clk_i) begin
+        if (en_i && we_bi == 'h0) begin // if no write performed shedule read on next tick then
+            r_state = 1;
+        end
+    end
+    
+    // read
+    // if rs_state (means read-second state) is set it means
+    // en_i was 1 and we_bi was 0 on previous tick 
+    always @(rs_state or s1_rddata_bi or s2_rddata_bi or s3_rddata_bi) begin
+        if (rs_state) begin
+            case (addr_bi)
+                'h0,'h4, 'h8:
+                    rddata_bo <= s1_rddata_bi;
+                'hC, 'h10, 'h14:
+                    rddata_bo <= s2_rddata_bi;
+                'h18, 'h1C:
+                    rddata_bo <= s3_rddata_bi;
+            endcase
+        end
+    end
+
+    always @(addr_bi or wrdata_bi or en_i or we_bi) begin
+        s1_addr_bo   <= 0;
+        s1_wrdata_bo <= 0;
+        s1_en_o      <= 0;
+        s2_we_bo     <= 0;
+        s2_addr_bo   <= 0;
+        s2_wrdata_bo <= 0;
+        s2_en_o      <= 0;
+        s3_we_bo     <= 0;
+        s3_addr_bo   <= 0;
+        s3_wrdata_bo <= 0;
+        s3_en_o      <= 0;
+        s3_we_bo     <= 0;
+
+        case (addr_bi)
+            'h0, 'h4, 'h8: begin
+                s1_we_bo <= we_bi;
             end
+            'hC, 'h10, 'h14: begin
+                s2_we_bo <= we_bi;
+            end
+            'h18, 'h1C: begin
+                s3_we_bo <= we_bi;
+            end
+        endcase
+            
+        if (en_i) begin
+            case (addr_bi)
+                'h0, 'h4, 'h8: begin
+                    s1_addr_bo <= addr_bi;
+                    s1_wrdata_bo <= wrdata_bi;
+                    s1_en_o <= en_i;
+                end
+                'hC, 'h10, 'h14: begin
+                    s2_addr_bo <= addr_bi - 'hC;
+                    s2_wrdata_bo <= wrdata_bi;
+                    s2_en_o <= en_i;
+                end
+                'h18, 'h1C: begin
+                    s3_addr_bo <= addr_bi - 'h18;
+                    s3_wrdata_bo <= wrdata_bi;
+                    s3_en_o <= en_i;
+                end
+            endcase
         end
     end
 endmodule

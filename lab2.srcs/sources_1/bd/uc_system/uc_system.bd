@@ -410,101 +410,93 @@
       <spirit:adHocConnection>
         <spirit:name>axi_bram_ctrl_0_bram_we_a</spirit:name>
         <spirit:internalPortReference spirit:componentRef="axi_bram_ctrl_0" spirit:portRef="bram_we_a"/>
-        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="bram_we_a"/>
+        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="we_bi"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>axi_bram_ctrl_0_bram_rst_a</spirit:name>
         <spirit:internalPortReference spirit:componentRef="axi_bram_ctrl_0" spirit:portRef="bram_rst_a"/>
-        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="bram_rst_a"/>
+        <spirit:internalPortReference spirit:componentRef="Timer_0" spirit:portRef="rst_i"/>
+        <spirit:internalPortReference spirit:componentRef="Timer_1" spirit:portRef="rst_i"/>
+        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="rst_i"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>axi_bram_ctrl_0_bram_en_a</spirit:name>
         <spirit:internalPortReference spirit:componentRef="axi_bram_ctrl_0" spirit:portRef="bram_en_a"/>
-        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="bram_en_a"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>BRAMInterconnect_0_bram_rddata_a</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="bram_rddata_a"/>
-        <spirit:internalPortReference spirit:componentRef="axi_bram_ctrl_0" spirit:portRef="bram_rddata_a"/>
+        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="en_i"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>axi_bram_ctrl_0_bram_wrdata_a</spirit:name>
         <spirit:internalPortReference spirit:componentRef="axi_bram_ctrl_0" spirit:portRef="bram_wrdata_a"/>
-        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="bram_wrdata_a"/>
+        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="wrdata_bi"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>axi_bram_ctrl_0_bram_clk_a</spirit:name>
         <spirit:internalPortReference spirit:componentRef="axi_bram_ctrl_0" spirit:portRef="bram_clk_a"/>
         <spirit:internalPortReference spirit:componentRef="Timer_0" spirit:portRef="clk_i"/>
         <spirit:internalPortReference spirit:componentRef="Timer_1" spirit:portRef="clk_i"/>
-        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="bram_clk_i"/>
+        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="clk_i"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>axi_bram_ctrl_0_bram_addr_a</spirit:name>
         <spirit:internalPortReference spirit:componentRef="axi_bram_ctrl_0" spirit:portRef="bram_addr_a"/>
-        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="bram_addr_a"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>BRAMInterconnect_0_rst_timer0</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="rst_timer0"/>
-        <spirit:internalPortReference spirit:componentRef="Timer_0" spirit:portRef="rst_i"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>BRAMInterconnect_0_rst_timer1</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="rst_timer1"/>
-        <spirit:internalPortReference spirit:componentRef="Timer_1" spirit:portRef="rst_i"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>BRAMInterconnect_0_wr_timer1</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="wr_timer1"/>
-        <spirit:internalPortReference spirit:componentRef="Timer_1" spirit:portRef="wr_i"/>
+        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="addr_bi"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>BRAMInterconnect_0_wr_timer0</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="wr_timer0"/>
+        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="s1_we_bo"/>
         <spirit:internalPortReference spirit:componentRef="Timer_0" spirit:portRef="wr_i"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>BRAMInterconnect_0_rd_timer1</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="rd_timer1"/>
-        <spirit:internalPortReference spirit:componentRef="Timer_1" spirit:portRef="rd_i"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>BRAMInterconnect_0_rd_timer0</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="rd_timer0"/>
-        <spirit:internalPortReference spirit:componentRef="Timer_0" spirit:portRef="rd_i"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>BRAMInterconnect_0_en_timer0</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="en_timer0"/>
+        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="s1_en_o"/>
         <spirit:internalPortReference spirit:componentRef="Timer_0" spirit:portRef="en_i"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>BRAMInterconnect_0_en_timer1</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="en_timer1"/>
+        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="s2_en_o"/>
         <spirit:internalPortReference spirit:componentRef="Timer_1" spirit:portRef="en_i"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>BRAMInterconnect_0_bram_addr_o</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="bram_addr_o"/>
-        <spirit:internalPortReference spirit:componentRef="Timer_0" spirit:portRef="addr_bi"/>
-        <spirit:internalPortReference spirit:componentRef="Timer_1" spirit:portRef="addr_bi"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>BRAMInterconnect_0_bram_wrdata_o</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="bram_wrdata_o"/>
-        <spirit:internalPortReference spirit:componentRef="Timer_0" spirit:portRef="data_bi"/>
-        <spirit:internalPortReference spirit:componentRef="Timer_1" spirit:portRef="data_bi"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>Timer_0_data_bo</spirit:name>
         <spirit:internalPortReference spirit:componentRef="Timer_0" spirit:portRef="data_bo"/>
         <spirit:externalPortReference spirit:portRef="timer0"/>
+        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="s1_rddata_bi"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>Timer_1_data_bo</spirit:name>
         <spirit:internalPortReference spirit:componentRef="Timer_1" spirit:portRef="data_bo"/>
         <spirit:externalPortReference spirit:portRef="timer1"/>
+        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="s2_rddata_bi"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>BRAMInterconnect_0_bram_rddata_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="rddata_bo"/>
+        <spirit:internalPortReference spirit:componentRef="axi_bram_ctrl_0" spirit:portRef="bram_rddata_a"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>BRAMInterconnect_0_s1_addr_bo</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="s1_addr_bo"/>
+        <spirit:internalPortReference spirit:componentRef="Timer_0" spirit:portRef="addr_bi"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>BRAMInterconnect_0_s2_addr_bo</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="s2_addr_bo"/>
+        <spirit:internalPortReference spirit:componentRef="Timer_1" spirit:portRef="addr_bi"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>BRAMInterconnect_0_s2_wrdata_bo</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="s2_wrdata_bo"/>
+        <spirit:internalPortReference spirit:componentRef="Timer_1" spirit:portRef="data_bi"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>BRAMInterconnect_0_s1_wrdata_bo</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="s1_wrdata_bo"/>
+        <spirit:internalPortReference spirit:componentRef="Timer_0" spirit:portRef="data_bi"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>BRAMInterconnect_0_s2_we_bo</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="s2_we_bo"/>
+        <spirit:internalPortReference spirit:componentRef="Timer_1" spirit:portRef="wr_i"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

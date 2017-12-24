@@ -17,7 +17,7 @@ uc_system_wrapper uc(
 initial begin
 rst = 1;
 clk = 0;
-#100;
+#500;
 rst = 0;
 end
 always #5 clk = ~clk;

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Dec 23 00:10:31 2017" VIVADOVERSION="2017.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Dec 24 19:03:13 2017" VIVADOVERSION="2017.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="uc_system" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -61,97 +61,96 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="12" NAME="bram_addr_a" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_bram_addr_a">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="bram_addr_a"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="bram_clk_i" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_bram_clk_a">
+        <PORT DIR="I" NAME="clk_i" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_bram_clk_a">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="bram_clk_a"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="32" NAME="bram_wrdata_a" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_bram_wrdata_a">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="bram_wrdata_a"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="32" NAME="bram_rddata_a" RIGHT="0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_bram_rddata_a">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="bram_rddata_a"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="32" NAME="bram_wrdata_o" RIGHT="0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_bram_wrdata_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Timer_0" PORT="data_bi"/>
-            <CONNECTION INSTANCE="Timer_1" PORT="data_bi"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="12" NAME="bram_addr_o" RIGHT="0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_bram_addr_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Timer_0" PORT="addr_bi"/>
-            <CONNECTION INSTANCE="Timer_1" PORT="addr_bi"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="bram_en_a" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_bram_en_a">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="bram_en_a"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="bram_rst_a" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_bram_rst_a">
+        <PORT DIR="I" NAME="rst_i" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_bram_rst_a">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="bram_rst_a"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="bram_we_a" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_bram_we_a">
+        <PORT DIR="I" LEFT="12" NAME="addr_bi" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_bram_addr_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="bram_addr_a"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="wrdata_bi" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_bram_wrdata_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="bram_wrdata_a"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="en_i" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_bram_en_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="bram_en_a"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="we_bi" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_bram_we_a">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="bram_we_a"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="en_timer0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_en_timer0">
+        <PORT DIR="I" LEFT="31" NAME="s1_rddata_bi" RIGHT="0" SIGIS="undef" SIGNAME="Timer_0_data_bo">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Timer_0" PORT="data_bo"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s2_rddata_bi" RIGHT="0" SIGIS="undef" SIGNAME="Timer_1_data_bo">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Timer_1" PORT="data_bo"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s3_rddata_bi" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="rddata_bo" RIGHT="0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_rddata_bo">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="bram_rddata_a"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="12" NAME="s1_addr_bo" RIGHT="0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_s1_addr_bo">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Timer_0" PORT="addr_bi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="s1_wrdata_bo" RIGHT="0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_s1_wrdata_bo">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Timer_0" PORT="data_bi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s1_en_o" SIGIS="undef" SIGNAME="BRAMInterconnect_0_s1_en_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Timer_0" PORT="en_i"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="en_timer1" SIGIS="undef" SIGNAME="BRAMInterconnect_0_en_timer1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Timer_1" PORT="en_i"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="en_ic" SIGIS="undef"/>
-        <PORT DIR="O" NAME="rd_timer0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_rd_timer0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Timer_0" PORT="rd_i"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="rd_timer1" SIGIS="undef" SIGNAME="BRAMInterconnect_0_rd_timer1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Timer_1" PORT="rd_i"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="rd_ic" SIGIS="undef"/>
-        <PORT DIR="O" NAME="wr_timer0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_wr_timer0">
+        <PORT DIR="O" LEFT="3" NAME="s1_we_bo" RIGHT="0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_s1_we_bo">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Timer_0" PORT="wr_i"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="wr_timer1" SIGIS="undef" SIGNAME="BRAMInterconnect_0_wr_timer1">
+        <PORT DIR="O" LEFT="12" NAME="s2_addr_bo" RIGHT="0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_s2_addr_bo">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Timer_1" PORT="addr_bi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="s2_wrdata_bo" RIGHT="0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_s2_wrdata_bo">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Timer_1" PORT="data_bi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s2_en_o" SIGIS="undef" SIGNAME="BRAMInterconnect_0_s2_en_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Timer_1" PORT="en_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="s2_we_bo" RIGHT="0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_s2_we_bo">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Timer_1" PORT="wr_i"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="wr_ic" SIGIS="undef"/>
-        <PORT DIR="O" NAME="rst_timer0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_rst_timer0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Timer_0" PORT="rst_i"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="rst_timer1" SIGIS="undef" SIGNAME="BRAMInterconnect_0_rst_timer1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Timer_1" PORT="rst_i"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="rst_ic" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="12" NAME="s3_addr_bo" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="s3_wrdata_bo" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="s3_en_o" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="s3_we_bo" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -167,39 +166,36 @@
             <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="bram_clk_a"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rst_i" SIGIS="undef" SIGNAME="BRAMInterconnect_0_rst_timer0">
+        <PORT DIR="I" NAME="rst_i" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_bram_rst_a">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="rst_timer0"/>
+            <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="bram_rst_a"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="en_i" SIGIS="undef" SIGNAME="BRAMInterconnect_0_en_timer0">
+        <PORT DIR="I" NAME="en_i" SIGIS="undef" SIGNAME="BRAMInterconnect_0_s1_en_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="en_timer0"/>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="s1_en_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="addr_bi" RIGHT="0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_bram_addr_o">
+        <PORT DIR="I" LEFT="31" NAME="addr_bi" RIGHT="0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_s1_addr_bo">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="bram_addr_o"/>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="s1_addr_bo"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="data_bi" RIGHT="0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_bram_wrdata_o">
+        <PORT DIR="I" LEFT="31" NAME="data_bi" RIGHT="0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_s1_wrdata_bo">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="bram_wrdata_o"/>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="s1_wrdata_bo"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="wr_i" SIGIS="undef" SIGNAME="BRAMInterconnect_0_wr_timer0">
+        <PORT DIR="I" NAME="wr_i" SIGIS="undef" SIGNAME="BRAMInterconnect_0_s1_we_bo">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="wr_timer0"/>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="s1_we_bo"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rd_i" SIGIS="undef" SIGNAME="BRAMInterconnect_0_rd_timer0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="rd_timer0"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="I" NAME="rd_i" SIGIS="undef"/>
         <PORT DIR="O" LEFT="15" NAME="data_bo" RIGHT="0" SIGIS="undef" SIGNAME="Timer_0_data_bo">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="timer0"/>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="s1_rddata_bi"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="ap_rst" SIGIS="rst"/>
@@ -218,39 +214,36 @@
             <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="bram_clk_a"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rst_i" SIGIS="undef" SIGNAME="BRAMInterconnect_0_rst_timer1">
+        <PORT DIR="I" NAME="rst_i" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_bram_rst_a">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="rst_timer1"/>
+            <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="bram_rst_a"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="en_i" SIGIS="undef" SIGNAME="BRAMInterconnect_0_en_timer1">
+        <PORT DIR="I" NAME="en_i" SIGIS="undef" SIGNAME="BRAMInterconnect_0_s2_en_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="en_timer1"/>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="s2_en_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="addr_bi" RIGHT="0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_bram_addr_o">
+        <PORT DIR="I" LEFT="31" NAME="addr_bi" RIGHT="0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_s2_addr_bo">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="bram_addr_o"/>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="s2_addr_bo"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="data_bi" RIGHT="0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_bram_wrdata_o">
+        <PORT DIR="I" LEFT="31" NAME="data_bi" RIGHT="0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_s2_wrdata_bo">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="bram_wrdata_o"/>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="s2_wrdata_bo"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="wr_i" SIGIS="undef" SIGNAME="BRAMInterconnect_0_wr_timer1">
+        <PORT DIR="I" NAME="wr_i" SIGIS="undef" SIGNAME="BRAMInterconnect_0_s2_we_bo">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="wr_timer1"/>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="s2_we_bo"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rd_i" SIGIS="undef" SIGNAME="BRAMInterconnect_0_rd_timer1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="rd_timer1"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="I" NAME="rd_i" SIGIS="undef"/>
         <PORT DIR="O" LEFT="15" NAME="data_bo" RIGHT="0" SIGIS="undef" SIGNAME="Timer_1_data_bo">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="timer1"/>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="s2_rddata_bi"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="ap_rst" SIGIS="rst"/>
@@ -770,39 +763,41 @@
         </PORT>
         <PORT DIR="O" NAME="bram_rst_a" SIGIS="rst" SIGNAME="axi_bram_ctrl_0_bram_rst_a">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="bram_rst_a"/>
+            <CONNECTION INSTANCE="Timer_0" PORT="rst_i"/>
+            <CONNECTION INSTANCE="Timer_1" PORT="rst_i"/>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="rst_i"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="bram_clk_a" SIGIS="clk" SIGNAME="axi_bram_ctrl_0_bram_clk_a">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Timer_0" PORT="clk_i"/>
             <CONNECTION INSTANCE="Timer_1" PORT="clk_i"/>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="bram_clk_i"/>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="clk_i"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="bram_en_a" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_bram_en_a">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="bram_en_a"/>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="en_i"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="bram_we_a" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_bram_we_a">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="bram_we_a"/>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="we_bi"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="12" NAME="bram_addr_a" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_bram_addr_a">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="bram_addr_a"/>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="addr_bi"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="bram_wrdata_a" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_bram_wrdata_a">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="bram_wrdata_a"/>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="wrdata_bi"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="bram_rddata_a" RIGHT="0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_bram_rddata_a">
+        <PORT DIR="I" LEFT="31" NAME="bram_rddata_a" RIGHT="0" SIGIS="undef" SIGNAME="BRAMInterconnect_0_rddata_bo">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="bram_rddata_a"/>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="rddata_bo"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
