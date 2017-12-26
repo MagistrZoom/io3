@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-//Date        : Sun Dec 17 23:54:51 2017
+//Date        : Mon Dec 25 23:13:59 2017
 //Host        : sirius running 64-bit Debian GNU/Linux oldstable-updates (sid)
 //Command     : generate_target uc_system.bd
 //Design      : uc_system
@@ -1055,44 +1055,42 @@ module s00_couplers_imp_P907S0
   assign s00_couplers_to_s00_couplers_WVALID = S_AXI_wvalid[0];
 endmodule
 
-(* CORE_GENERATION_INFO = "uc_system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=uc_system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=24,numReposBlks=17,numNonXlnxBlks=3,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=5,da_clkrst_cnt=1,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "uc_system.hwdef" *) 
+(* CORE_GENERATION_INFO = "uc_system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=uc_system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=25,numReposBlks=18,numNonXlnxBlks=4,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=8,da_clkrst_cnt=2,da_mb_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "uc_system.hwdef" *) 
 module uc_system
    (clock_rtl,
     gpio_rtl_tri_o,
+    ins_i,
     pwm0,
     reset_rtl,
-    reset_rtl_0,
-    timer0,
-    timer1,
     uart_rtl_rxd,
     uart_rtl_txd);
   input clock_rtl;
   output [15:0]gpio_rtl_tri_o;
+  input ins_i;
   output pwm0;
   input reset_rtl;
-  input reset_rtl_0;
-  output [15:0]timer0;
-  output [15:0]timer1;
   input uart_rtl_rxd;
   output uart_rtl_txd;
 
-  wire [14:0]BRAMInterconnect_0_bram_addr_o;
-  wire [32:0]BRAMInterconnect_0_bram_rddata_a;
-  wire [32:0]BRAMInterconnect_0_bram_wrdata_o;
-  wire BRAMInterconnect_0_en_timer0;
-  wire BRAMInterconnect_0_en_timer1;
-  wire BRAMInterconnect_0_rd_timer0;
-  wire BRAMInterconnect_0_rd_timer1;
-  wire BRAMInterconnect_0_rst_timer0;
-  wire BRAMInterconnect_0_rst_timer1;
-  wire BRAMInterconnect_0_wr_timer0;
-  wire BRAMInterconnect_0_wr_timer1;
+  wire [31:0]BRAMInterconnect_0_bram_rddata_o;
+  wire [12:0]BRAMInterconnect_0_s1_addr_bo;
+  wire BRAMInterconnect_0_s1_en_o;
+  wire [3:0]BRAMInterconnect_0_s1_we_bo;
+  wire [31:0]BRAMInterconnect_0_s1_wrdata_bo;
+  wire [12:0]BRAMInterconnect_0_s2_addr_bo;
+  wire BRAMInterconnect_0_s2_en_o;
+  wire [3:0]BRAMInterconnect_0_s2_we_bo;
+  wire [31:0]BRAMInterconnect_0_s2_wrdata_bo;
+  wire [12:0]BRAMInterconnect_0_s3_addr_bo;
+  wire BRAMInterconnect_0_s3_en_o;
+  wire [3:0]BRAMInterconnect_0_s3_we_bo;
+  wire [31:0]BRAMInterconnect_0_s3_wrdata_bo;
+  wire [31:0]IC_0_rddata_bi;
   wire [15:0]Timer_0_data_bo;
   wire [15:0]Timer_1_data_bo;
   wire [12:0]axi_bram_ctrl_0_bram_addr_a;
   wire axi_bram_ctrl_0_bram_clk_a;
   wire axi_bram_ctrl_0_bram_en_a;
-  wire axi_bram_ctrl_0_bram_rst_a;
   wire [3:0]axi_bram_ctrl_0_bram_we_a;
   wire [31:0]axi_bram_ctrl_0_bram_wrdata_a;
   wire [15:0]axi_gpio_0_GPIO_TRI_O;
@@ -1101,6 +1099,7 @@ module uc_system
   wire axi_uartlite_0_UART_TxD;
   wire clk_wiz_0_locked;
   wire clock_rtl_1;
+  wire ins_i_1;
   wire microblaze_0_Clk;
   wire [31:0]microblaze_0_M_AXI_DP_ARADDR;
   wire [2:0]microblaze_0_M_AXI_DP_ARPROT;
@@ -1226,62 +1225,73 @@ module uc_system
   wire [0:0]proc_sys_reset_0_interconnect_aresetn;
   wire proc_sys_reset_0_mb_reset;
   wire [0:0]proc_sys_reset_0_peripheral_aresetn;
-  wire reset_rtl_0_1;
-  wire reset_rtl_1;
+  wire [0:0]proc_sys_reset_0_peripheral_reset;
+  wire reset_rtl_0_1_1;
 
   assign axi_uartlite_0_UART_RxD = uart_rtl_rxd;
   assign clock_rtl_1 = clock_rtl;
   assign gpio_rtl_tri_o[15:0] = axi_gpio_0_GPIO_TRI_O;
+  assign ins_i_1 = ins_i;
   assign pwm0 = axi_timer_0_pwm0;
-  assign reset_rtl_0_1 = reset_rtl_0;
-  assign reset_rtl_1 = reset_rtl;
-  assign timer0[15:0] = Timer_0_data_bo;
-  assign timer1[15:0] = Timer_1_data_bo;
+  assign reset_rtl_0_1_1 = reset_rtl;
   assign uart_rtl_txd = axi_uartlite_0_UART_TxD;
   uc_system_BRAMInterconnect_0_0 BRAMInterconnect_0
-       (.bram_addr_a(axi_bram_ctrl_0_bram_addr_a),
-        .bram_addr_o(BRAMInterconnect_0_bram_addr_o),
-        .bram_clk_i(axi_bram_ctrl_0_bram_clk_a),
-        .bram_en_a(axi_bram_ctrl_0_bram_en_a),
-        .bram_rddata_a(BRAMInterconnect_0_bram_rddata_a),
-        .bram_rst_a(axi_bram_ctrl_0_bram_rst_a),
-        .bram_we_a(axi_bram_ctrl_0_bram_we_a),
-        .bram_wrdata_a(axi_bram_ctrl_0_bram_wrdata_a),
-        .bram_wrdata_o(BRAMInterconnect_0_bram_wrdata_o),
-        .en_timer0(BRAMInterconnect_0_en_timer0),
-        .en_timer1(BRAMInterconnect_0_en_timer1),
-        .rd_timer0(BRAMInterconnect_0_rd_timer0),
-        .rd_timer1(BRAMInterconnect_0_rd_timer1),
-        .rst_timer0(BRAMInterconnect_0_rst_timer0),
-        .rst_timer1(BRAMInterconnect_0_rst_timer1),
-        .wr_timer0(BRAMInterconnect_0_wr_timer0),
-        .wr_timer1(BRAMInterconnect_0_wr_timer1));
-  uc_system_Timer_0_2 Timer_0
-       (.addr_bi(BRAMInterconnect_0_bram_addr_o),
+       (.addr_bi(axi_bram_ctrl_0_bram_addr_a),
+        .clk_i(axi_bram_ctrl_0_bram_clk_a),
+        .en_i(axi_bram_ctrl_0_bram_en_a),
+        .rddata_bo(BRAMInterconnect_0_bram_rddata_o),
+        .rst_i(proc_sys_reset_0_peripheral_reset),
+        .s1_addr_bo(BRAMInterconnect_0_s1_addr_bo),
+        .s1_en_o(BRAMInterconnect_0_s1_en_o),
+        .s1_rddata_bi(Timer_0_data_bo),
+        .s1_we_bo(BRAMInterconnect_0_s1_we_bo),
+        .s1_wrdata_bo(BRAMInterconnect_0_s1_wrdata_bo),
+        .s2_addr_bo(BRAMInterconnect_0_s2_addr_bo),
+        .s2_en_o(BRAMInterconnect_0_s2_en_o),
+        .s2_rddata_bi(Timer_1_data_bo),
+        .s2_we_bo(BRAMInterconnect_0_s2_we_bo),
+        .s2_wrdata_bo(BRAMInterconnect_0_s2_wrdata_bo),
+        .s3_addr_bo(BRAMInterconnect_0_s3_addr_bo),
+        .s3_en_o(BRAMInterconnect_0_s3_en_o),
+        .s3_rddata_bi(IC_0_rddata_bi),
+        .s3_we_bo(BRAMInterconnect_0_s3_we_bo),
+        .s3_wrdata_bo(BRAMInterconnect_0_s3_wrdata_bo),
+        .we_bi(axi_bram_ctrl_0_bram_we_a),
+        .wrdata_bi(axi_bram_ctrl_0_bram_wrdata_a));
+  uc_system_IC_0_0 IC_0
+       (.addr_bi(BRAMInterconnect_0_s3_addr_bo),
+        .clk_i(axi_bram_ctrl_0_bram_clk_a),
+        .en_i(BRAMInterconnect_0_s3_en_o),
+        .ins_i(ins_i_1),
+        .rddata_bo(IC_0_rddata_bi),
+        .rst_i(proc_sys_reset_0_peripheral_reset),
+        .timer1_val_bi(Timer_0_data_bo),
+        .timer2_val_bi(Timer_1_data_bo),
+        .we_bi(BRAMInterconnect_0_s3_we_bo),
+        .wrdata_bi(BRAMInterconnect_0_s3_wrdata_bo));
+  uc_system_Timer_0_0 Timer_0
+       (.addr_bi(BRAMInterconnect_0_s1_addr_bo),
         .ap_rst(1'b0),
         .clk_i(axi_bram_ctrl_0_bram_clk_a),
-        .data_bi(BRAMInterconnect_0_bram_wrdata_o[31:0]),
+        .data_bi(BRAMInterconnect_0_s1_wrdata_bo),
         .data_bo(Timer_0_data_bo),
-        .en_i(BRAMInterconnect_0_en_timer0),
-        .rd_i(BRAMInterconnect_0_rd_timer0),
-        .rst_i(BRAMInterconnect_0_rst_timer0),
-        .wr_i(BRAMInterconnect_0_wr_timer0));
-  uc_system_Timer_1_1 Timer_1
-       (.addr_bi(BRAMInterconnect_0_bram_addr_o),
+        .en_i(BRAMInterconnect_0_s1_en_o),
+        .rst_i(proc_sys_reset_0_peripheral_reset),
+        .we_bi(BRAMInterconnect_0_s1_we_bo));
+  uc_system_Timer_1_0 Timer_1
+       (.addr_bi(BRAMInterconnect_0_s2_addr_bo),
         .ap_rst(1'b0),
         .clk_i(axi_bram_ctrl_0_bram_clk_a),
-        .data_bi(BRAMInterconnect_0_bram_wrdata_o[31:0]),
+        .data_bi(BRAMInterconnect_0_s2_wrdata_bo),
         .data_bo(Timer_1_data_bo),
-        .en_i(BRAMInterconnect_0_en_timer1),
-        .rd_i(BRAMInterconnect_0_rd_timer1),
-        .rst_i(BRAMInterconnect_0_rst_timer1),
-        .wr_i(BRAMInterconnect_0_wr_timer1));
+        .en_i(BRAMInterconnect_0_s2_en_o),
+        .rst_i(proc_sys_reset_0_peripheral_reset),
+        .we_bi(BRAMInterconnect_0_s2_we_bo));
   uc_system_axi_bram_ctrl_0_0 axi_bram_ctrl_0
        (.bram_addr_a(axi_bram_ctrl_0_bram_addr_a),
         .bram_clk_a(axi_bram_ctrl_0_bram_clk_a),
         .bram_en_a(axi_bram_ctrl_0_bram_en_a),
-        .bram_rddata_a(BRAMInterconnect_0_bram_rddata_a[31:0]),
-        .bram_rst_a(axi_bram_ctrl_0_bram_rst_a),
+        .bram_rddata_a(BRAMInterconnect_0_bram_rddata_o),
         .bram_we_a(axi_bram_ctrl_0_bram_we_a),
         .bram_wrdata_a(axi_bram_ctrl_0_bram_wrdata_a),
         .s_axi_aclk(microblaze_0_Clk),
@@ -1388,7 +1398,7 @@ module uc_system
        (.clk_in1(clock_rtl_1),
         .clk_out1(microblaze_0_Clk),
         .locked(clk_wiz_0_locked),
-        .reset(reset_rtl_1));
+        .reset(reset_rtl_0_1_1));
   (* BMM_INFO_PROCESSOR = "microblaze-le > uc_system microblaze_0_local_memory/dlmb_bram_if_cntlr" *) 
   (* KEEP_HIERARCHY = "yes" *) 
   uc_system_microblaze_0_0 microblaze_0
@@ -1582,11 +1592,12 @@ module uc_system
        (.aux_reset_in(1'b1),
         .bus_struct_reset(proc_sys_reset_0_bus_struct_reset),
         .dcm_locked(clk_wiz_0_locked),
-        .ext_reset_in(reset_rtl_0_1),
+        .ext_reset_in(reset_rtl_0_1_1),
         .interconnect_aresetn(proc_sys_reset_0_interconnect_aresetn),
         .mb_debug_sys_rst(1'b0),
         .mb_reset(proc_sys_reset_0_mb_reset),
         .peripheral_aresetn(proc_sys_reset_0_peripheral_aresetn),
+        .peripheral_reset(proc_sys_reset_0_peripheral_reset),
         .slowest_sync_clk(microblaze_0_Clk));
 endmodule
 

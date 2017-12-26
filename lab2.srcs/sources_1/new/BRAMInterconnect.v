@@ -69,7 +69,7 @@ module BRAMInterconnect(
     always @(rs_state or s1_rddata_bi or s2_rddata_bi or s3_rddata_bi) begin
         if (rs_state) begin
             case (addr_bi)
-                'h0,'h4, 'h8:
+                'h0, 'h4, 'h8:
                     rddata_bo <= s1_rddata_bi;
                 'hC, 'h10, 'h14:
                     rddata_bo <= s2_rddata_bi;

@@ -15,6 +15,11 @@ int main() {
 //    bus_write(0x8, Timer::TimerInc);
 
 	Xil_Out32(GPIO_ADDRESS,	1);
-	Xil_Out32(BRAM_ADDRESS,	0);
-	Xil_Out32(BRAM_ADDRESS + 0x4,	1);
+	Xil_Out32(BRAM_ADDRESS + 0x8,	2);
+	Xil_Out32(BRAM_ADDRESS,	~0);
+	Xil_Out32(BRAM_ADDRESS + 0x8,	1);
+
+	Xil_Out32(BRAM_ADDRESS + 0x18,	1);
+	while (1);
+	return 0;
 }

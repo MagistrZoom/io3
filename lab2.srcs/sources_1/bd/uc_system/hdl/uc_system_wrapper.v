@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-//Date        : Sun Dec 24 19:03:12 2017
+//Date        : Tue Dec 26 00:40:13 2017
 //Host        : sirius running 64-bit Debian GNU/Linux oldstable-updates (sid)
 //Command     : generate_target uc_system_wrapper.bd
 //Design      : uc_system_wrapper
@@ -12,41 +12,33 @@
 module uc_system_wrapper
    (clock_rtl,
     gpio_rtl_tri_o,
+    ins_i,
     pwm0,
     reset_rtl,
-    reset_rtl_0,
-    timer0,
-    timer1,
     uart_rtl_rxd,
     uart_rtl_txd);
   input clock_rtl;
   output [15:0]gpio_rtl_tri_o;
+  input ins_i;
   output pwm0;
   input reset_rtl;
-  input reset_rtl_0;
-  output [15:0]timer0;
-  output [15:0]timer1;
   input uart_rtl_rxd;
   output uart_rtl_txd;
 
   wire clock_rtl;
   wire [15:0]gpio_rtl_tri_o;
+  wire ins_i;
   wire pwm0;
   wire reset_rtl;
-  wire reset_rtl_0;
-  wire [15:0]timer0;
-  wire [15:0]timer1;
   wire uart_rtl_rxd;
   wire uart_rtl_txd;
 
   uc_system uc_system_i
        (.clock_rtl(clock_rtl),
         .gpio_rtl_tri_o(gpio_rtl_tri_o),
+        .ins_i(ins_i),
         .pwm0(pwm0),
         .reset_rtl(reset_rtl),
-        .reset_rtl_0(reset_rtl_0),
-        .timer0(timer0),
-        .timer1(timer1),
         .uart_rtl_rxd(uart_rtl_rxd),
         .uart_rtl_txd(uart_rtl_txd));
 endmodule

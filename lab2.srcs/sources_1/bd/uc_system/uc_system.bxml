@@ -2,9 +2,9 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="uc_system" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1514131394"/>
-    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1514131393"/>
-    <Generation Name="SIMULATION" State="STALE" Timestamp="1514131394"/>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1514238014"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1514238014"/>
+    <Generation Name="SIMULATION" State="STALE" Timestamp="1514238014"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/uc_system_microblaze_0_0/uc_system_microblaze_0_0.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0"/>
@@ -16,14 +16,6 @@
       </File>
       <File Name="ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.xci" Type="IP">
         <Instance HierarchyPath="clk_wiz_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/uc_system_proc_sys_reset_0_0/uc_system_proc_sys_reset_0_0.xci" Type="IP">
-        <Instance HierarchyPath="proc_sys_reset_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -126,7 +118,14 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/uc_system_Timer_0_2/uc_system_Timer_0_2.xci" Type="IP">
+      <File Name="hdl/uc_system.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/uc_system_Timer_0_0/uc_system_Timer_0_0.xci" Type="IP">
         <Instance HierarchyPath="Timer_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -134,7 +133,15 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/uc_system_Timer_1_1/uc_system_Timer_1_1.xci" Type="IP">
+      <File Name="ip/uc_system_proc_sys_reset_0_0/uc_system_proc_sys_reset_0_0.xci" Type="IP">
+        <Instance HierarchyPath="proc_sys_reset_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/uc_system_Timer_1_0/uc_system_Timer_1_0.xci" Type="IP">
         <Instance HierarchyPath="Timer_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -142,8 +149,9 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="hdl/uc_system.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+      <File Name="ip/uc_system_IC_0_0/uc_system_IC_0_0.xci" Type="IP">
+        <Instance HierarchyPath="IC_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>

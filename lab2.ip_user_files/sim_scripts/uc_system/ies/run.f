@@ -15,17 +15,11 @@
   "../../../bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0_clk_wiz.v" \
   "../../../bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.v" \
 -endlib
--makelib ies/lib_cdc_v1_0_2 \
-  "../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd" \
--endlib
--makelib ies/proc_sys_reset_v5_0_11 \
-  "../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
--endlib
--makelib ies/xil_defaultlib \
-  "../../../bd/uc_system/ip/uc_system_proc_sys_reset_0_0/sim/uc_system_proc_sys_reset_0_0.vhd" \
--endlib
 -makelib ies/axi_lite_ipif_v3_0_4 \
   "../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib ies/lib_cdc_v1_0_2 \
+  "../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd" \
 -endlib
 -makelib ies/lib_pkg_v1_0_2 \
   "../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/832a/hdl/lib_pkg_v1_0_rfs.vhd" \
@@ -109,9 +103,18 @@
 -endlib
 -makelib ies/xil_defaultlib \
   "../../../bd/uc_system/ip/uc_system_BRAMInterconnect_0_0/sim/uc_system_BRAMInterconnect_0_0.v" \
-  "../../../bd/uc_system/ip/uc_system_Timer_0_2/sim/uc_system_Timer_0_2.v" \
-  "../../../bd/uc_system/ip/uc_system_Timer_1_1/sim/uc_system_Timer_1_1.v" \
   "../../../bd/uc_system/hdl/uc_system.v" \
+  "../../../bd/uc_system/ip/uc_system_Timer_0_0/sim/uc_system_Timer_0_0.v" \
+-endlib
+-makelib ies/proc_sys_reset_v5_0_11 \
+  "../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/uc_system/ip/uc_system_proc_sys_reset_0_0/sim/uc_system_proc_sys_reset_0_0.vhd" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/uc_system/ip/uc_system_Timer_1_0/sim/uc_system_Timer_1_0.v" \
+  "../../../bd/uc_system/ip/uc_system_IC_0_0/sim/uc_system_IC_0_0.v" \
 -endlib
 -makelib ies/axi_protocol_converter_v2_1_13 \
   "../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/f0ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

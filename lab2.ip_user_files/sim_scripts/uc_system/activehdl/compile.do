@@ -4,9 +4,8 @@ vlib activehdl
 vlib activehdl/xil_defaultlib
 vlib activehdl/xpm
 vlib activehdl/microblaze_v10_0_3
-vlib activehdl/lib_cdc_v1_0_2
-vlib activehdl/proc_sys_reset_v5_0_11
 vlib activehdl/axi_lite_ipif_v3_0_4
+vlib activehdl/lib_cdc_v1_0_2
 vlib activehdl/lib_pkg_v1_0_2
 vlib activehdl/axi_timer_v2_0_15
 vlib activehdl/interrupt_control_v3_1_4
@@ -23,14 +22,14 @@ vlib activehdl/blk_mem_gen_v8_3_6
 vlib activehdl/axi_bram_ctrl_v4_0_11
 vlib activehdl/lib_srl_fifo_v1_0_2
 vlib activehdl/axi_uartlite_v2_0_17
+vlib activehdl/proc_sys_reset_v5_0_11
 vlib activehdl/axi_protocol_converter_v2_1_13
 
 vmap xil_defaultlib activehdl/xil_defaultlib
 vmap xpm activehdl/xpm
 vmap microblaze_v10_0_3 activehdl/microblaze_v10_0_3
-vmap lib_cdc_v1_0_2 activehdl/lib_cdc_v1_0_2
-vmap proc_sys_reset_v5_0_11 activehdl/proc_sys_reset_v5_0_11
 vmap axi_lite_ipif_v3_0_4 activehdl/axi_lite_ipif_v3_0_4
+vmap lib_cdc_v1_0_2 activehdl/lib_cdc_v1_0_2
 vmap lib_pkg_v1_0_2 activehdl/lib_pkg_v1_0_2
 vmap axi_timer_v2_0_15 activehdl/axi_timer_v2_0_15
 vmap interrupt_control_v3_1_4 activehdl/interrupt_control_v3_1_4
@@ -47,6 +46,7 @@ vmap blk_mem_gen_v8_3_6 activehdl/blk_mem_gen_v8_3_6
 vmap axi_bram_ctrl_v4_0_11 activehdl/axi_bram_ctrl_v4_0_11
 vmap lib_srl_fifo_v1_0_2 activehdl/lib_srl_fifo_v1_0_2
 vmap axi_uartlite_v2_0_17 activehdl/axi_uartlite_v2_0_17
+vmap proc_sys_reset_v5_0_11 activehdl/proc_sys_reset_v5_0_11
 vmap axi_protocol_converter_v2_1_13 activehdl/axi_protocol_converter_v2_1_13
 
 vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" \
@@ -66,17 +66,11 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../lab2.srcs/sources_1/bd/uc_
 "../../../bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0_clk_wiz.v" \
 "../../../bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.v" \
 
-vcom -work lib_cdc_v1_0_2 -93 \
-"../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd" \
-
-vcom -work proc_sys_reset_v5_0_11 -93 \
-"../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
-
-vcom -work xil_defaultlib -93 \
-"../../../bd/uc_system/ip/uc_system_proc_sys_reset_0_0/sim/uc_system_proc_sys_reset_0_0.vhd" \
-
 vcom -work axi_lite_ipif_v3_0_4 -93 \
 "../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
+
+vcom -work lib_cdc_v1_0_2 -93 \
+"../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd" \
 
 vcom -work lib_pkg_v1_0_2 -93 \
 "../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/832a/hdl/lib_pkg_v1_0_rfs.vhd" \
@@ -160,9 +154,18 @@ vcom -work xil_defaultlib -93 \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" \
 "../../../bd/uc_system/ip/uc_system_BRAMInterconnect_0_0/sim/uc_system_BRAMInterconnect_0_0.v" \
-"../../../bd/uc_system/ip/uc_system_Timer_0_2/sim/uc_system_Timer_0_2.v" \
-"../../../bd/uc_system/ip/uc_system_Timer_1_1/sim/uc_system_Timer_1_1.v" \
 "../../../bd/uc_system/hdl/uc_system.v" \
+"../../../bd/uc_system/ip/uc_system_Timer_0_0/sim/uc_system_Timer_0_0.v" \
+
+vcom -work proc_sys_reset_v5_0_11 -93 \
+"../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/uc_system/ip/uc_system_proc_sys_reset_0_0/sim/uc_system_proc_sys_reset_0_0.vhd" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" \
+"../../../bd/uc_system/ip/uc_system_Timer_1_0/sim/uc_system_Timer_1_0.v" \
+"../../../bd/uc_system/ip/uc_system_IC_0_0/sim/uc_system_IC_0_0.v" \
 
 vlog -work axi_protocol_converter_v2_1_13  -v2k5 "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" \
 "../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/f0ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
