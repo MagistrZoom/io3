@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Port 'Timer/we_bi' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="lab3" solutionName="solution" date="2017-12-25T00:09:29.672+0300" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] Found reading to uninitialized signal/variable 'Timer_m_tval_V'('t_V', 't.V', ../lab1/src/Timer.cpp:58), the signal/variable should be written or reset firstly, or it may introduce RTL simulation mismatch." projectName="lab3" solutionName="solution" date="2017-12-25T00:09:29.221+0300" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] Signal 'Timer_m_tval_V' has no reset." projectName="lab3" solutionName="solution" date="2017-12-25T00:09:29.215+0300" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] Found reading to uninitialized signal/variable 'Timer_m_tmr_V'('Timer_m_tmr_V_read', ../lab1/src/Timer.cpp:50), the signal/variable should be written or reset firstly, or it may introduce RTL simulation mismatch." projectName="lab3" solutionName="solution" date="2017-12-25T00:09:29.210+0300" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] Signal 'Timer_m_tmr_V' has no reset." projectName="lab3" solutionName="solution" date="2017-12-25T00:09:29.204+0300" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] Port 'data_bo' has no reset." projectName="lab3" solutionName="solution" date="2017-12-25T00:09:29.198+0300" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] Cannot find reset port in module 'Timer', an RTL reset port will be automatically inserted." projectName="lab3" solutionName="solution" date="2017-12-25T00:09:29.177+0300" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-77] Found opaque type argument 'nm' of top function 'Timer::Timer'. Possible causes are: (1) the argument is passed by reference; (2) the argument is never used in the function; (3) the argument is of templated class type. " projectName="lab3" solutionName="solution" date="2017-12-25T00:09:27.549+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] ../lab1/src/Timer.cpp:27:6: warning: 'auto' type specifier is a C++11 extension [-Wc++11-extensions]&#xA;            auto data = data_bi.read();&#xA;            ^&#xA;../lab1/src/Timer.cpp:28:6: warning: 'auto' type specifier is a C++11 extension [-Wc++11-extensions]&#xA;            auto addr = addr_bi.read();&#xA;            ^&#xA;2 warnings generated." projectName="lab3" solutionName="solution" date="2017-12-25T00:09:26.317+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'." projectName="lab3" solutionName="solution" date="2017-12-25T00:07:40.021+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library '/home/izoomko/Soft/xilinx/Vivado_HLS/2017.2/common/technology/xilinx/null/null.lib'." projectName="lab3" solutionName="solution" date="2017-12-25T00:07:39.382+0300" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'Timer/rd_i' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="lab3" solutionName="solution1" date="2017-12-17T18:26:04.760+0300" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-35] Protocol 'SC_METHOD' contains conflicting I/O accesses:&#xA;   wire read on port 'm_tval' (../lab1/src/Timer.cpp:34) and wire read on port 'm_tval' (../lab1/src/Timer.cpp:44) occur in the same clock cycle." projectName="lab3" solutionName="solution1" date="2017-12-17T18:26:04.439+0300" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] Port 'data_bo' has no reset." projectName="lab3" solutionName="solution1" date="2017-12-17T18:26:04.351+0300" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] Cannot find reset port in module 'Timer', an RTL reset port will be automatically inserted." projectName="lab3" solutionName="solution1" date="2017-12-17T18:26:04.319+0300" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-77] Found opaque type argument 'nm' of top function 'Timer::Timer'. Possible causes are: (1) the argument is passed by reference; (2) the argument is never used in the function; (3) the argument is of templated class type. " projectName="lab3" solutionName="solution1" date="2017-12-17T18:26:03.497+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] ../lab1/src/Timer.cpp:34:6: warning: 'auto' type specifier is a C++11 extension [-Wc++11-extensions]&#xA;        auto tval = m_tval.read();&#xA;        ^&#xA;1 warning generated." projectName="lab3" solutionName="solution1" date="2017-12-17T18:26:02.844+0300" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

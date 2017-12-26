@@ -1,0 +1,137 @@
+
+
+================================================================
+== Vivado HLS Report for 'Timer_on_clock'
+================================================================
+* Date:           Mon Dec 25 00:09:29 2017
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        lab3
+* Solution:       solution
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      7.29|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|     202|    204|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     78|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|     202|    282|
++-----------------+---------+-------+--------+-------+
+|Available        |      270|    240|  126800|  63400|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------+----------+-------+-----+----+------------+------------+
+    |          Variable Name         | Operation| DSP48E|  FF | LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------+----------+-------+-----+----+------------+------------+
+    |tmp_1_fu_204_p2                 |     +    |      0|  101|  37|          32|           2|
+    |tmp_4_fu_224_p2                 |     +    |      0|  101|  37|          32|           1|
+    |ap_condition_70                 |    and   |      0|    0|   2|           1|           1|
+    |tmp_9_fu_198_p2                 |   icmp   |      0|    0|  16|          32|           1|
+    |tmp_s_fu_218_p2                 |   icmp   |      0|    0|  16|          32|          32|
+    |Timer_m_tmr_V_load_t_fu_210_p3  |  select  |      0|    0|  32|           1|          32|
+    |storemerge2_fu_238_p3           |  select  |      0|    0|  32|           1|          32|
+    |tmp_4_s_fu_230_p3               |  select  |      0|    0|  32|           1|          32|
+    +--------------------------------+----------+-------+-----+----+------------+------------+
+    |Total                           |          |      0|  202| 204|         132|         133|
+    +--------------------------------+----------+-------+-----+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------+----+-----------+-----+-----------+
+    |                 Name                | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------+----+-----------+-----+-----------+
+    |Timer_m_tconf_V_o                    |  15|          3|   32|         96|
+    |Timer_m_tmr_V_o                      |  15|          3|   32|         96|
+    |Timer_m_tval_V_loc_3_phi_fu_165_p14  |  27|          5|   32|        160|
+    |Timer_m_tval_V_o                     |  21|          4|   32|        128|
+    +-------------------------------------+----+-----------+-----+-----------+
+    |Total                                |  78|         15|  128|        480|
+    +-------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+-----------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++--------------------------+-----+-----+------------+-----------------+--------------+
+|ap_clk                    |  in |    1| ap_ctrl_hs | Timer::on_clock | return value |
+|ap_rst                    |  in |    1| ap_ctrl_hs | Timer::on_clock | return value |
+|rst_i                     |  in |    1|   ap_none  |      rst_i      |    pointer   |
+|en_i                      |  in |    1|   ap_none  |       en_i      |    pointer   |
+|addr_bi                   |  in |   13|   ap_none  |     addr_bi     |    pointer   |
+|data_bi                   |  in |   32|   ap_none  |     data_bi     |    pointer   |
+|data_bo                   | out |   16|   ap_vld   |     data_bo     |    pointer   |
+|data_bo_ap_vld            | out |    1|   ap_vld   |     data_bo     |    pointer   |
+|Timer_m_tmr_V_i           |  in |   32|   ap_ovld  |  Timer_m_tmr_V  |    pointer   |
+|Timer_m_tmr_V_o           | out |   32|   ap_ovld  |  Timer_m_tmr_V  |    pointer   |
+|Timer_m_tmr_V_o_ap_vld    | out |    1|   ap_ovld  |  Timer_m_tmr_V  |    pointer   |
+|Timer_m_tval_V_i          |  in |   32|   ap_ovld  |  Timer_m_tval_V |    pointer   |
+|Timer_m_tval_V_o          | out |   32|   ap_ovld  |  Timer_m_tval_V |    pointer   |
+|Timer_m_tval_V_o_ap_vld   | out |    1|   ap_ovld  |  Timer_m_tval_V |    pointer   |
+|Timer_m_tconf_V_i         |  in |   32|   ap_ovld  | Timer_m_tconf_V |    pointer   |
+|Timer_m_tconf_V_o         | out |   32|   ap_ovld  | Timer_m_tconf_V |    pointer   |
+|Timer_m_tconf_V_o_ap_vld  | out |    1|   ap_ovld  | Timer_m_tconf_V |    pointer   |
++--------------------------+-----+-----+------------+-----------------+--------------+
+

@@ -1,0 +1,17 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../../lab1/src/main.cpp in debug mode
+   Compiling ../../../../../lab1/src/BusMatrix.cpp in debug mode
+   Compiling ../../../../../lab1/src/EdgeDetector.cpp in debug mode
+   Compiling ../../../../../lab1/src/InputCapture.cpp in debug mode
+   Compiling ../../../../../lab1/src/Prescaler.cpp in debug mode
+   Compiling ../../../../../lab1/src/Signal.cpp in debug mode
+   Compiling ../../../../../lab1/src/Timer.cpp in debug mode
+   Generating csim.exe
+
+             SystemC 2.3.0-ASI --- May 15 2013 06:32:03
+        Copyright (c) 1996-2012 by all Contributors,
+        ALL RIGHTS RESERVED
+
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

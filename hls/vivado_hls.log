@@ -1,0 +1,96 @@
+INFO: [HLS 200-10] Running '/home/izoomko/Soft/xilinx/Vivado_HLS/2017.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'izoomko' on host 'sirius.sky' (Linux_x86_64 version 4.13.0-1-amd64) on Mon Dec 25 00:07:38 MSK 2017
+INFO: [HLS 200-10] On os Debian GNU/Linux oldstable-updates (sid)
+INFO: [HLS 200-10] In directory '/home/izoomko/wrk/4grade/io/hls'
+INFO: [HLS 200-10] Opening project '/home/izoomko/wrk/4grade/io/hls/lab3'.
+INFO: [HLS 200-10] Adding design file '../lab1/src/Timer.h' to the project
+INFO: [HLS 200-10] Adding design file '../lab1/src/Timer.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file '../lab1/src/main.cpp' to the project
+INFO: [HLS 200-10] Opening solution '/home/izoomko/wrk/4grade/io/hls/lab3/solution'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library '/home/izoomko/Soft/xilinx/Vivado_HLS/2017.2/common/technology/xilinx/null/null.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'.
+INFO: [HLS 200-10] Setting target device to 'xc7a100tcsg324-1'
+INFO: [HLS 200-10] Analyzing design file '../lab1/src/Timer.cpp' ... 
+WARNING: [HLS 200-40] ../lab1/src/Timer.cpp:27:6: warning: 'auto' type specifier is a C++11 extension [-Wc++11-extensions]
+            auto data = data_bi.read();
+            ^
+../lab1/src/Timer.cpp:28:6: warning: 'auto' type specifier is a C++11 extension [-Wc++11-extensions]
+            auto addr = addr_bi.read();
+            ^
+2 warnings generated.
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:02:40 ; elapsed = 00:01:48 . Memory (MB): peak = 348.844 ; gain = 12.586 ; free physical = 542 ; free virtual = 14871
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:02:40 ; elapsed = 00:01:49 . Memory (MB): peak = 348.844 ; gain = 12.586 ; free physical = 533 ; free virtual = 14870
+INFO: [HLS 200-10] Starting code transformations ...
+WARNING: [SYNCHK 200-77] Found opaque type argument 'nm' of top function 'Timer::Timer'. Possible causes are: (1) the argument is passed by reference; (2) the argument is never used in the function; (3) the argument is of templated class type. 
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:02:40 ; elapsed = 00:01:49 . Memory (MB): peak = 349.207 ; gain = 12.949 ; free physical = 517 ; free virtual = 14865
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:02:41 ; elapsed = 00:01:50 . Memory (MB): peak = 349.207 ; gain = 12.949 ; free physical = 511 ; free virtual = 14859
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../lab1/src/Timer.cpp:49:8) to (../lab1/src/Timer.cpp:65:3) in function 'Timer::on_clock'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:02:41 ; elapsed = 00:01:50 . Memory (MB): peak = 477.148 ; gain = 140.891 ; free physical = 484 ; free virtual = 14836
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:02:41 ; elapsed = 00:01:51 . Memory (MB): peak = 477.148 ; gain = 140.891 ; free physical = 479 ; free virtual = 14832
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [SCA 200-201] Elaborating SystemC module 'Timer'.
+INFO: [SCA 200-201] Performing SystemC synthesis linting.
+INFO: [SCA 200-201] Analyzing ports and processes.
+INFO: [SCA 200-201] Found the clock port of process 'Timer::on_clock': 'clk_i'.
+INFO: [SCA 200-201] Process 'Timer::on_clock' has no reset block.
+WARNING: [SCA 200-202] Cannot find reset port in module 'Timer', an RTL reset port will be automatically inserted.
+WARNING: [SCA 200-202] Port 'data_bo' has no reset.
+WARNING: [SCA 200-202] Signal 'Timer_m_tmr_V' has no reset.
+WARNING: [SCA 200-202] Found reading to uninitialized signal/variable 'Timer_m_tmr_V'('Timer_m_tmr_V_read', ../lab1/src/Timer.cpp:50), the signal/variable should be written or reset firstly, or it may introduce RTL simulation mismatch.
+WARNING: [SCA 200-202] Signal 'Timer_m_tval_V' has no reset.
+WARNING: [SCA 200-202] Found reading to uninitialized signal/variable 'Timer_m_tval_V'('t_V', 't.V', ../lab1/src/Timer.cpp:58), the signal/variable should be written or reset firstly, or it may introduce RTL simulation mismatch.
+INFO: [HLS 200-10] Synthesizing SystemC module [ Timer ]
+INFO: [HLS 200-10] Found SystemC process: 'Timer_on_clock' 
+INFO: [HLS 200-10] Synthesizing 'Timer_on_clock' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'Timer_on_clock' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 111.07 seconds; current allocated memory: 87.757 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 87.994 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Timer_on_clock' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Timer_on_clock'.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 88.297 MB.
+INFO: [HLS 200-10] Synthesizing 'Timer' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'Timer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 89.072 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 89.167 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Timer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'Timer/clk_i' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Timer/rst_i' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Timer/en_i' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Timer/addr_bi' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Timer/data_bi' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Timer/we_bi' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Timer/data_bo' to 'ap_vld'.
+WARNING: [RTGEN 206-101] Port 'Timer/we_bi' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Timer'.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 89.308 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:02:42 ; elapsed = 00:01:52 . Memory (MB): peak = 477.148 ; gain = 140.891 ; free physical = 465 ; free virtual = 14828
+INFO: [SYSC 207-301] Generating SystemC RTL for Timer.
+INFO: [VHDL 208-304] Generating VHDL RTL for Timer.
+INFO: [VLOG 209-307] Generating Verilog RTL for Timer.
+INFO: [HLS 200-112] Total elapsed time: 112 seconds; peak allocated memory: 89.308 MB.

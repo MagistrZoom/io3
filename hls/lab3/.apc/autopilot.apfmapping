@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="Timer.h" path="/home/izoomko/wrk/4grade/io/lab1/src/Timer.h"/>
+    <originFiles name="Timer.cpp" path="/home/izoomko/wrk/4grade/io/lab1/src/Timer.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="main.cpp" path="/home/izoomko/wrk/4grade/io/lab1/src/main.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

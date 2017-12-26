@@ -1,0 +1,129 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'Timer_on_clock'" level="0">
+<item name = "Date">Mon Dec 25 00:09:29 2017
+</item>
+<item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
+<item name = "Project">lab3</item>
+<item name = "Solution">solution</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a100tcsg324-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 7.29, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">0, 0, 0, 0, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 202, 204</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, -, -, -</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 78</column>
+<column name="Register">-, -, -, -</column>
+<specialColumn name="Available">270, 240, 126800, 63400</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="tmp_1_fu_204_p2">+, 0, 101, 37, 32, 2</column>
+<column name="tmp_4_fu_224_p2">+, 0, 101, 37, 32, 1</column>
+<column name="ap_condition_70">and, 0, 0, 2, 1, 1</column>
+<column name="tmp_9_fu_198_p2">icmp, 0, 0, 16, 32, 1</column>
+<column name="tmp_s_fu_218_p2">icmp, 0, 0, 16, 32, 32</column>
+<column name="Timer_m_tmr_V_load_t_fu_210_p3">select, 0, 0, 32, 1, 32</column>
+<column name="storemerge2_fu_238_p3">select, 0, 0, 32, 1, 32</column>
+<column name="tmp_4_s_fu_230_p3">select, 0, 0, 32, 1, 32</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="Timer_m_tconf_V_o">15, 3, 32, 96</column>
+<column name="Timer_m_tmr_V_o">15, 3, 32, 96</column>
+<column name="Timer_m_tval_V_loc_3_phi_fu_165_p14">27, 5, 32, 160</column>
+<column name="Timer_m_tval_V_o">21, 4, 32, 128</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, Timer::on_clock, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, Timer::on_clock, return value</column>
+<column name="rst_i">in, 1, ap_none, rst_i, pointer</column>
+<column name="en_i">in, 1, ap_none, en_i, pointer</column>
+<column name="addr_bi">in, 13, ap_none, addr_bi, pointer</column>
+<column name="data_bi">in, 32, ap_none, data_bi, pointer</column>
+<column name="data_bo">out, 16, ap_vld, data_bo, pointer</column>
+<column name="data_bo_ap_vld">out, 1, ap_vld, data_bo, pointer</column>
+<column name="Timer_m_tmr_V_i">in, 32, ap_ovld, Timer_m_tmr_V, pointer</column>
+<column name="Timer_m_tmr_V_o">out, 32, ap_ovld, Timer_m_tmr_V, pointer</column>
+<column name="Timer_m_tmr_V_o_ap_vld">out, 1, ap_ovld, Timer_m_tmr_V, pointer</column>
+<column name="Timer_m_tval_V_i">in, 32, ap_ovld, Timer_m_tval_V, pointer</column>
+<column name="Timer_m_tval_V_o">out, 32, ap_ovld, Timer_m_tval_V, pointer</column>
+<column name="Timer_m_tval_V_o_ap_vld">out, 1, ap_ovld, Timer_m_tval_V, pointer</column>
+<column name="Timer_m_tconf_V_i">in, 32, ap_ovld, Timer_m_tconf_V, pointer</column>
+<column name="Timer_m_tconf_V_o">out, 32, ap_ovld, Timer_m_tconf_V, pointer</column>
+<column name="Timer_m_tconf_V_o_ap_vld">out, 1, ap_ovld, Timer_m_tconf_V, pointer</column>
+</table>
+</item>
+</section>
+</profile>
