@@ -63,7 +63,8 @@ module uc_system_IC_0_0 (
   timer1_val_bi,
   timer2_val_bi,
   ins_i,
-  rddata_bo
+  rddata_bo,
+  edges
 );
 
 input wire clk_i;
@@ -76,6 +77,7 @@ input wire [15 : 0] timer1_val_bi;
 input wire [15 : 0] timer2_val_bi;
 input wire ins_i;
 output wire [31 : 0] rddata_bo;
+output wire edges;
 
   IC inst (
     .clk_i(clk_i),
@@ -87,6 +89,7 @@ output wire [31 : 0] rddata_bo;
     .timer1_val_bi(timer1_val_bi),
     .timer2_val_bi(timer2_val_bi),
     .ins_i(ins_i),
-    .rddata_bo(rddata_bo)
+    .rddata_bo(rddata_bo),
+    .edges(edges)
   );
 endmodule

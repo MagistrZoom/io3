@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-//Date        : Mon Dec 25 23:13:59 2017
+//Date        : Wed Dec 27 07:59:31 2017
 //Host        : sirius running 64-bit Debian GNU/Linux oldstable-updates (sid)
 //Command     : generate_target uc_system.bd
 //Design      : uc_system
@@ -1058,15 +1058,15 @@ endmodule
 (* CORE_GENERATION_INFO = "uc_system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=uc_system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=25,numReposBlks=18,numNonXlnxBlks=4,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=8,da_clkrst_cnt=2,da_mb_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "uc_system.hwdef" *) 
 module uc_system
    (clock_rtl,
+    edges,
     gpio_rtl_tri_o,
-    ins_i,
     pwm0,
     reset_rtl,
     uart_rtl_rxd,
     uart_rtl_txd);
   input clock_rtl;
+  output edges;
   output [15:0]gpio_rtl_tri_o;
-  input ins_i;
   output pwm0;
   input reset_rtl;
   input uart_rtl_rxd;
@@ -1085,6 +1085,7 @@ module uc_system
   wire BRAMInterconnect_0_s3_en_o;
   wire [3:0]BRAMInterconnect_0_s3_we_bo;
   wire [31:0]BRAMInterconnect_0_s3_wrdata_bo;
+  wire IC_0_edges;
   wire [31:0]IC_0_rddata_bi;
   wire [15:0]Timer_0_data_bo;
   wire [15:0]Timer_1_data_bo;
@@ -1099,7 +1100,6 @@ module uc_system
   wire axi_uartlite_0_UART_TxD;
   wire clk_wiz_0_locked;
   wire clock_rtl_1;
-  wire ins_i_1;
   wire microblaze_0_Clk;
   wire [31:0]microblaze_0_M_AXI_DP_ARADDR;
   wire [2:0]microblaze_0_M_AXI_DP_ARPROT;
@@ -1230,8 +1230,8 @@ module uc_system
 
   assign axi_uartlite_0_UART_RxD = uart_rtl_rxd;
   assign clock_rtl_1 = clock_rtl;
+  assign edges = IC_0_edges;
   assign gpio_rtl_tri_o[15:0] = axi_gpio_0_GPIO_TRI_O;
-  assign ins_i_1 = ins_i;
   assign pwm0 = axi_timer_0_pwm0;
   assign reset_rtl_0_1_1 = reset_rtl;
   assign uart_rtl_txd = axi_uartlite_0_UART_TxD;
@@ -1261,8 +1261,9 @@ module uc_system
   uc_system_IC_0_0 IC_0
        (.addr_bi(BRAMInterconnect_0_s3_addr_bo),
         .clk_i(axi_bram_ctrl_0_bram_clk_a),
+        .edges(IC_0_edges),
         .en_i(BRAMInterconnect_0_s3_en_o),
-        .ins_i(ins_i_1),
+        .ins_i(axi_timer_0_pwm0),
         .rddata_bo(IC_0_rddata_bi),
         .rst_i(proc_sys_reset_0_peripheral_reset),
         .timer1_val_bi(Timer_0_data_bo),

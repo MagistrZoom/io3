@@ -1,7 +1,0 @@
-srcscan starts
-INFO: analyzing module BRAMInterconnect (VERI-9002)
-Listing tops:
-VeriTop library:xil_defaultlib mod:BRAMInterconnect
-END of tops
-/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/new/BRAMInterconnect.v(23): INFO: compiling module BRAMInterconnect (VERI-1018)
-srcscan exits with return value 0

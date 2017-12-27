@@ -1,8 +1,12 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/izoomko/wrk/4grade/io/lab3/lab2.sim/sim_1/synth/func/sim_tb_func_synth.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module BRAMInterconnect
+INFO: [VRFC 10-311] analyzing module EdgeDetector
 INFO: [VRFC 10-311] analyzing module GPIO_Core
+INFO: [VRFC 10-311] analyzing module IC
 INFO: [VRFC 10-311] analyzing module Timer
+INFO: [VRFC 10-311] analyzing module Timer_595
 INFO: [VRFC 10-311] analyzing module Timer_on_clock
+INFO: [VRFC 10-311] analyzing module Timer_on_clock_596
 INFO: [VRFC 10-311] analyzing module address_decoder
 INFO: [VRFC 10-311] analyzing module address_decoder__parameterized0
 INFO: [VRFC 10-311] analyzing module address_decoder__parameterized1
@@ -74,7 +78,9 @@ INFO: [VRFC 10-311] analyzing module uartlite_rx
 INFO: [VRFC 10-311] analyzing module uartlite_tx
 INFO: [VRFC 10-311] analyzing module uc_system
 INFO: [VRFC 10-311] analyzing module uc_system_BRAMInterconnect_0_0
+INFO: [VRFC 10-311] analyzing module uc_system_IC_0_0
 INFO: [VRFC 10-311] analyzing module uc_system_Timer_0_0
+INFO: [VRFC 10-311] analyzing module uc_system_Timer_1_0
 INFO: [VRFC 10-311] analyzing module uc_system_auto_pc_0
 INFO: [VRFC 10-311] analyzing module uc_system_axi_bram_ctrl_0_0
 INFO: [VRFC 10-311] analyzing module uc_system_axi_gpio_0_0

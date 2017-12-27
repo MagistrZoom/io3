@@ -28,42 +28,23 @@ module EdgeDetector(
     output reg ins_o 
     );
     
+    
     reg prev_ins;
-    reg next_ins;
+    wire rising_edge = ins_i && !prev_ins;
+    wire falling_edge = !ins_i && prev_ins;
     
-    always @(prev_ins or icm_bi) begin
-    /*    if (icm_bi == 'h1) begin
-            next_ins <= prev_ins != ins_i;
-        end
-        else if (icm_bi == 'h2 || icm_bi == 'h6 || icm_bi == 'h7) begin
-            next_ins <= ins_i && !prev_ins;
-        end
-        else begin
-            next_ins <= !ins_i && prev_ins;
-        end
-    */
-       if ( (prev_ins != ins_i) && 
-       ((icm_bi =='h1) ||
-        ((icm_bi =='h2 || icm_bi =='h6 || icm_bi == 'h7) && !ins_i) ||
-        ((icm_bi >='h3 && icm_bi < 1+'h7) && !ins_i)))
-            begin
-                next_ins = 1;
-            end
-            else begin
-                next_ins = 0;
-            end
-    end
+    wire enable_rising_edge = rising_edge && (icm_bi == 'h1 || icm_bi == 'h3 || icm_bi == 'h4 || icm_bi == 'h5);
+    wire enable_falling_edge = falling_edge && (icm_bi == 'h1 || icm_bi == 'h2 || icm_bi == 'h6 || icm_bi == 'h7);
+    wire signal = (icm_bi != 0) && (enable_rising_edge || enable_falling_edge);
     
-    always @(posedge clk_i) begin
-        next_ins <= next_ins;
+    always @(posedge clk_i or posedge rst_i) begin
         if (rst_i) begin
-            ins_o    <= 0;
             prev_ins <= 0;
-            next_ins <= 0;
         end
         else begin
-            ins_o    <= next_ins;
             prev_ins <= ins_i;
+            ins_o <= signal;
         end
     end
+    
 endmodule

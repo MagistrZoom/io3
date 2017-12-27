@@ -10,7 +10,6 @@ wire [15:0] gpio;
 uc_system_wrapper uc(
 .clock_rtl(clk),
 .gpio_rtl_tri_o(gpio),
-.ins_i(ins),
 .pwm0(pwm0),
 .reset_rtl(rst),
 .uart_rtl_rxd(uart_rtl_rxd),
@@ -19,8 +18,6 @@ uc_system_wrapper uc(
 initial begin
 rst = 0;
 clk = 0;
-ins = 0;
 end
 always #5 clk = ~clk;
-always #150 ins = ~ins;
 endmodule

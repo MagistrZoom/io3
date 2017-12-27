@@ -252,7 +252,7 @@ proc create_root_design { parentCell } {
 CONFIG.FREQ_HZ {100000000} \
 CONFIG.PHASE {0.000} \
  ] $clock_rtl
-  set ins_i [ create_bd_port -dir I ins_i ]
+  set edges [ create_bd_port -dir O edges ]
   set pwm0 [ create_bd_port -dir O pwm0 ]
   set reset_rtl [ create_bd_port -dir I -type rst reset_rtl ]
   set_property -dict [ list \
@@ -375,6 +375,7 @@ CONFIG.C_NUM_PERP_RST {1} \
   connect_bd_net -net BRAMInterconnect_0_s3_en_o [get_bd_pins BRAMInterconnect_0/s3_en_o] [get_bd_pins IC_0/en_i]
   connect_bd_net -net BRAMInterconnect_0_s3_we_bo [get_bd_pins BRAMInterconnect_0/s3_we_bo] [get_bd_pins IC_0/we_bi]
   connect_bd_net -net BRAMInterconnect_0_s3_wrdata_bo [get_bd_pins BRAMInterconnect_0/s3_wrdata_bo] [get_bd_pins IC_0/wrdata_bi]
+  connect_bd_net -net IC_0_edges [get_bd_ports edges] [get_bd_pins IC_0/edges]
   connect_bd_net -net IC_0_rddata_bi [get_bd_pins BRAMInterconnect_0/s3_rddata_bi] [get_bd_pins IC_0/rddata_bo]
   connect_bd_net -net Timer_0_data_bo [get_bd_pins BRAMInterconnect_0/s1_rddata_bi] [get_bd_pins IC_0/timer1_val_bi] [get_bd_pins Timer_0/data_bo]
   connect_bd_net -net Timer_1_data_bo [get_bd_pins BRAMInterconnect_0/s2_rddata_bi] [get_bd_pins IC_0/timer2_val_bi] [get_bd_pins Timer_1/data_bo]
@@ -383,10 +384,9 @@ CONFIG.C_NUM_PERP_RST {1} \
   connect_bd_net -net axi_bram_ctrl_0_bram_en_a [get_bd_pins BRAMInterconnect_0/en_i] [get_bd_pins axi_bram_ctrl_0/bram_en_a]
   connect_bd_net -net axi_bram_ctrl_0_bram_we_a [get_bd_pins BRAMInterconnect_0/we_bi] [get_bd_pins axi_bram_ctrl_0/bram_we_a]
   connect_bd_net -net axi_bram_ctrl_0_bram_wrdata_a [get_bd_pins BRAMInterconnect_0/wrdata_bi] [get_bd_pins axi_bram_ctrl_0/bram_wrdata_a]
-  connect_bd_net -net axi_timer_0_pwm0 [get_bd_ports pwm0] [get_bd_pins axi_timer_0/pwm0]
+  connect_bd_net -net axi_timer_0_pwm0 [get_bd_ports pwm0] [get_bd_pins IC_0/ins_i] [get_bd_pins axi_timer_0/pwm0]
   connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins proc_sys_reset_0/dcm_locked]
   connect_bd_net -net clock_rtl_1 [get_bd_ports clock_rtl] [get_bd_pins clk_wiz_0/clk_in1]
-  connect_bd_net -net ins_i_1 [get_bd_ports ins_i] [get_bd_pins IC_0/ins_i]
   connect_bd_net -net microblaze_0_Clk [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_timer_0/s_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_axi_periph/ACLK] [get_bd_pins microblaze_0_axi_periph/M00_ACLK] [get_bd_pins microblaze_0_axi_periph/M01_ACLK] [get_bd_pins microblaze_0_axi_periph/M02_ACLK] [get_bd_pins microblaze_0_axi_periph/M03_ACLK] [get_bd_pins microblaze_0_axi_periph/S00_ACLK] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins proc_sys_reset_0/slowest_sync_clk]
   connect_bd_net -net proc_sys_reset_0_bus_struct_reset [get_bd_pins microblaze_0_local_memory/SYS_Rst] [get_bd_pins proc_sys_reset_0/bus_struct_reset]
   connect_bd_net -net proc_sys_reset_0_interconnect_aresetn [get_bd_pins microblaze_0_axi_periph/ARESETN] [get_bd_pins proc_sys_reset_0/interconnect_aresetn]

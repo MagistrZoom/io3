@@ -30,7 +30,8 @@ module IC(
     input [15:0] timer1_val_bi,
     input [15:0] timer2_val_bi,
     input ins_i,
-    output reg [31:0] rddata_bo
+    output reg [31:0] rddata_bo,
+    output edges
     );
     
     reg [31:0] icconf;
@@ -42,7 +43,7 @@ module IC(
     reg r_state;
     reg rs_state;
     
-    always @(rs_state) begin
+    always @(rs_state or addr_bi or icconf or icbuf) begin
         if (rs_state) begin
             case (addr_bi)
                 'h0:
@@ -50,10 +51,10 @@ module IC(
                 'h4:
                     rddata_bo <= icbuf;
             endcase
-       end
+        end
     end
     
-    always @(we_bi) begin
+    always @(we_bi or icconf or icbuf or we_bi or addr_bi or wrdata_bi) begin
         icconf_next <= icconf;
         icbuf_next  <= icbuf;
         if (we_bi == 'hF) begin
@@ -79,7 +80,8 @@ module IC(
             icconf      <= 0;
             icconf_next <= 0;
             icbuf       <= 0;
-            icbuf_next <= 0;
+            icbuf_next  <= 0;
+            rddata_bo   <= 0;
         end
         else begin
             rs_state    <= r_state;
@@ -89,11 +91,10 @@ module IC(
             icbuf       <= icbuf_next;
         end
         
+        
     end
-    
+
     wire ed_prescaler;
-    wire prescaler_fifo;
-    Prescaler u_prescaler(clk_i, rst_i, ed_prescaler, icconf[2:0], prescaler_fifo);
+    Prescaler u_prescaler(clk_i, rst_i, ed_prescaler, icconf[2:0], edges);
     EdgeDetector u_detector(clk_i, rst_i, ins_i, icconf[2:0], ed_prescaler);
-    //FIFO u_fifo();
 endmodule

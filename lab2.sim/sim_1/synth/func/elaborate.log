@@ -26,9 +26,16 @@ Compiling module unisims_ver.LUT5
 Compiling module unisims_ver.x_lut3_mux8
 Compiling module unisims_ver.LUT3
 Compiling module xil_defaultlib.uc_system_BRAMInterconnect_0_0
+Compiling module unisims_ver.FDCE_default
+Compiling module xil_defaultlib.EdgeDetector
+Compiling module xil_defaultlib.IC
+Compiling module xil_defaultlib.uc_system_IC_0_0
+Compiling module xil_defaultlib.Timer_on_clock_596
+Compiling module xil_defaultlib.Timer_595
+Compiling module xil_defaultlib.uc_system_Timer_0_0
 Compiling module xil_defaultlib.Timer_on_clock
 Compiling module xil_defaultlib.Timer
-Compiling module xil_defaultlib.uc_system_Timer_0_0
+Compiling module xil_defaultlib.uc_system_Timer_1_0
 Compiling module xil_defaultlib.sng_port_arb
 Compiling module xil_defaultlib.wrap_brst_594
 Compiling module xil_defaultlib.rd_chnl
@@ -664,7 +671,6 @@ Compiling module xil_defaultlib.Decode_gti
 Compiling module xil_defaultlib.DAXI_interface
 Compiling module unisims_ver.AND2B1L
 Compiling module xil_defaultlib.MB_AND2B1L
-Compiling module unisims_ver.FDCE_default
 Compiling module xil_defaultlib.MB_SRL16E
 Compiling module xil_defaultlib.MB_SRL16E__parameterized1
 Compiling module xil_defaultlib.MB_SRL16E__parameterized7
