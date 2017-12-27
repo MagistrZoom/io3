@@ -1490,3 +1490,93 @@ mb-size soft.elf  |tee "soft.elf.size"
    2484	    268	   3112	   5864	   16e8	soft.elf
 Finished building: soft.elf.size
  
+10:47:26 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: soft.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size soft.elf  |tee "soft.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2484	    268	   3112	   5864	   16e8	soft.elf
+Finished building: soft.elf.size
+ 
+10:52:13 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: soft.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size soft.elf  |tee "soft.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2484	    268	   3112	   5864	   16e8	soft.elf
+Finished building: soft.elf.size
+ 
+10:52:18 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: soft.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size soft.elf  |tee "soft.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2484	    268	   3112	   5864	   16e8	soft.elf
+Finished building: soft.elf.size
+ 
+10:52:24 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: soft.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size soft.elf  |tee "soft.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2484	    268	   3112	   5864	   16e8	soft.elf
+Finished building: soft.elf.size
+ 
+10:52:59 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: soft.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size soft.elf  |tee "soft.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2484	    268	   3112	   5864	   16e8	soft.elf
+Finished building: soft.elf.size
+ 

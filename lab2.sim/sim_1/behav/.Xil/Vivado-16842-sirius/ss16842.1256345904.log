@@ -1,9 +1,0 @@
-srcscan starts
-INFO: analyzing module EdgeDetector (VERI-9002)
-INFO: analyzing module IC (VERI-9002)
-INFO: analyzing module Prescaler (VERI-9002)
-Listing tops:
-VeriTop library:xil_defaultlib mod:IC
-END of tops
-/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/new/IC.v(23): INFO: compiling module IC (VERI-1018)
-srcscan exits with return value 0
