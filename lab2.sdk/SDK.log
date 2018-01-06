@@ -122,3 +122,4 @@
 08:00:29 INFO  : Clearing existing target manager status.
 08:00:33 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
 08:00:33 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+20:57:59 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
