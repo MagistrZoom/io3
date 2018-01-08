@@ -8,10 +8,6 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/home/izoomko/wrk/4grade/io/lab3/la
 INFO: [VRFC 10-311] analyzing module EdgeDetector
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/new/Prescaler.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Prescaler
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/new/ram_dp_ar_aw.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ram_dp_ar_aw
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/new/sys_fifo.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module syn_fifo
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/new/IC.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module IC
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/izoomko/wrk/4grade/io/lab3/lab2.ip_user_files/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0_clk_wiz.v" into library xil_defaultlib

@@ -1,4 +1,4 @@
-10:52:59 **** Auto Build of configuration Debug for project soft ****
+22:24:50 **** Auto Build of configuration Debug for project soft ****
 make all 
 Building file: ../src/main.c
 Invoking: MicroBlaze gcc compiler
@@ -13,9 +13,9 @@ Finished building target: soft.elf
 Invoking: MicroBlaze Print Size
 mb-size soft.elf  |tee "soft.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   2484	    268	   3112	   5864	   16e8	soft.elf
+   2612	    268	   3112	   5992	   1768	soft.elf
 Finished building: soft.elf.size
  
 
-10:52:59 Build Finished (took 271ms)
+22:24:51 Build Finished (took 628ms)
 

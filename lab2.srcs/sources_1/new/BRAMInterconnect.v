@@ -50,7 +50,7 @@ module BRAMInterconnect(
 
     always @(posedge clk_i) begin
         if (rst_i) begin // reset read operation
-            rs_state = 0;
+            rs_state <= 0;
         end
         else begin
             rs_state <= r_state;
@@ -59,14 +59,14 @@ module BRAMInterconnect(
     
     always @(negedge clk_i) begin
         if (en_i && we_bi == 'h0) begin // if no write performed shedule read on next tick then
-            r_state = 1;
+            r_state <= 1;
         end
     end
     
     // read
     // if rs_state (means read-second state) is set it means
     // en_i was 1 and we_bi was 0 on previous tick 
-    always @(rs_state or s1_rddata_bi or s2_rddata_bi or s3_rddata_bi) begin
+    always @(rs_state or addr_bi or s1_rddata_bi or s2_rddata_bi or s3_rddata_bi) begin
         if (rs_state) begin
             case (addr_bi)
                 'h0, 'h4, 'h8:

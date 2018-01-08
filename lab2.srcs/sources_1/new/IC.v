@@ -34,12 +34,14 @@ module IC(
     output edges
     );
     
+    reg [12:0] prev_addr;
     reg [31:0] icconf;
     reg [31:0] icconf_out;
     wire [1:0] ictmr;
     assign ictmr = icconf[6:5];
     wire [15:0] timer1_enabled = ictmr[0:0] ? 'hFFFF : 'h0000;
     wire [15:0] timer2_enabled = ictmr[1:1] ? 'hFFFF : 'h0000;
+    wire [31:0] timer = {timer2_enabled & timer2_val_bi , timer1_enabled & timer1_val_bi};
     reg [31:0] icconf_next;
     
     reg r_state;
@@ -49,75 +51,94 @@ module IC(
     EdgeDetector u_detector(clk_i, rst_i, ins_i, icconf[2:0], ed_prescaler);
     wire prescaler_fifo;
     Prescaler u_prescaler(clk_i, rst_i, ed_prescaler, icconf[2:0], prescaler_fifo);
+
+    reg [31:0] mem [31:0];
+    reg [4:0] wr_ptr;
+    reg [4:0] wr_ptr_next;
+    reg [4:0] rd_ptr;
+    reg [4:0] rd_ptr_next;
+    reg icbne;
+    reg icov;
     
-    // fifo triggers
-    wire rd_cs, wr_cs, wr_en;
-    reg rd_en;
-    assign rd_cs = rd_en;
-    assign wr_cs = wr_en;
-    assign wr_en = prescaler_fifo & icconf[0:0]; // write in fifo if timers 
-    // fifo flags
-    wire empty, full;
-    wire [31:0] data_in;
-    wire [31:0] data_out;
-    assign data_in[31:16] = timer2_val_bi & timer2_enabled;
-    assign data_in[15:0]  = timer1_val_bi & timer1_enabled;
-    syn_fifo #(32, 4) fifo(clk_i, rst_i, wr_cs, rd_cs, data_in, rd_en, wr_en, data_out, empty, full);
-    
-    always @(rs_state or addr_bi or icconf) begin
+    always @(rs_state or prev_addr or icconf) begin
         if (rs_state) begin
-            case (addr_bi)
+            case (prev_addr)
                 'h0:
-                    rddata_bo <= icconf_out;
+                    rddata_bo = icconf;
                 'h4: begin
-                    rd_en <= 0;
-                    rddata_bo <= data_out;
+                    rddata_bo = mem[rd_ptr];
                 end
             endcase
         end
     end
     
-    always @(we_bi or icconf or we_bi or addr_bi or wrdata_bi) begin
-        icconf_next <= icconf;
-        if (we_bi == 'hF) begin
-            case (addr_bi)
-                'h0:
-                    icconf_next <= wrdata_bi;
-            endcase
+    always @(posedge prescaler_fifo) begin
+        if (wr_ptr < 32) begin
+            mem[wr_ptr] <= timer;
+            wr_ptr_next <= wr_ptr + 1;
+            icov        <= 0;
+        end
+        else begin
+            icov <= 1;
+        end
+    end
+    
+    always @(rst_i or we_bi or icconf or we_bi or addr_bi or wrdata_bi) begin
+        if (rst_i) begin
+            icconf_next <= 0;
+        end
+        else begin
+            icconf_next <= icconf;
+            if (we_bi == 'hF) begin
+                case (addr_bi)
+                    'h0:
+                        icconf_next <= wrdata_bi;
+                endcase
+            end
         end
     end
     
     always @(negedge clk_i) begin
         r_state = 0;
         if (en_i && we_bi == 'h0) begin // if no write performed shedule read on next tick then
+            prev_addr  <= addr_bi;
+            r_state    <= 1;
+            icbne      <= rd_ptr > 0;
             case (addr_bi)
             'h0: begin
-                r_state <= 1;
                 icconf_out <= icconf;
-                icconf_out[3:3] <= empty;
-                icconf_out[4:4] <= full;
+                icconf_out[4:3] <= {icov, icbne};
             end
             'h4: begin
-                // TBD: pop top of the fifo
-                r_state <= 1;
-                rd_en <= 1;
+                if (rd_ptr > 0) begin
+                    rd_ptr_next = rd_ptr + 1;
+                end
+                if (rd_ptr == 0) begin
+                    icbne <= 0;
+                end
             end
             endcase
         end
     end
     
+    integer i;
     always @(posedge clk_i) begin
+    prev_addr  <= addr_bi;
         if (rst_i) begin // reset read operation
-            rd_en       <= 0;
             rs_state    <= 0;
             icconf      <= 0;
-            icconf_next <= 0;
             rddata_bo   <= 0;
+            wr_ptr_next <= 0;
+            rd_ptr_next <= 0;
+            for (i = 0; i < 32; i = i + 1) begin
+                mem[i]  <= 0;
+            end
         end
         else begin
             rs_state    <= r_state;
-            icconf_next <= icconf_next;
             icconf      <= icconf_next;
+            wr_ptr      <= wr_ptr_next;
+            rd_ptr      <= rd_ptr_next;
         end
     end
 endmodule

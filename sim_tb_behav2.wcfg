@@ -16,252 +16,101 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="40400000001fs"></ZoomEndTime>
-      <Cursor1Time time="950000000fs"></Cursor1Time>
+      <ZoomStartTime time="14413333334fs"></ZoomStartTime>
+      <ZoomEndTime time="17123333335fs"></ZoomEndTime>
+      <Cursor1Time time="14865000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="185"></NameColumnWidth>
-      <ValueColumnWidth column_width="104"></ValueColumnWidth>
+      <ValueColumnWidth column_width="80"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="59" />
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/clk_i">
+   <WVObjectSize size="22" />
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/clk_i">
       <obj_property name="ElementShortName">clk_i</obj_property>
       <obj_property name="ObjectShortName">clk_i</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/rst_i">
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/rst_i">
       <obj_property name="ElementShortName">rst_i</obj_property>
       <obj_property name="ObjectShortName">rst_i</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/addr_bi">
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/addr_bi">
       <obj_property name="ElementShortName">addr_bi[12:0]</obj_property>
       <obj_property name="ObjectShortName">addr_bi[12:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/wrdata_bi">
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/wrdata_bi">
       <obj_property name="ElementShortName">wrdata_bi[31:0]</obj_property>
       <obj_property name="ObjectShortName">wrdata_bi[31:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/en_i">
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/en_i">
       <obj_property name="ElementShortName">en_i</obj_property>
       <obj_property name="ObjectShortName">en_i</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/we_bi">
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/we_bi">
       <obj_property name="ElementShortName">we_bi[3:0]</obj_property>
       <obj_property name="ObjectShortName">we_bi[3:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/timer2_val_bi">
-      <obj_property name="ElementShortName">timer2_val_bi[15:0]</obj_property>
-      <obj_property name="ObjectShortName">timer2_val_bi[15:0]</obj_property>
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/s1_rddata_bi">
+      <obj_property name="ElementShortName">s1_rddata_bi[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s1_rddata_bi[31:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/ins_i">
-      <obj_property name="ElementShortName">ins_i</obj_property>
-      <obj_property name="ObjectShortName">ins_i</obj_property>
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/s2_rddata_bi">
+      <obj_property name="ElementShortName">s2_rddata_bi[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s2_rddata_bi[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/rddata_bo">
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/s3_rddata_bi">
+      <obj_property name="ElementShortName">s3_rddata_bi[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s3_rddata_bi[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/rddata_bo">
       <obj_property name="ElementShortName">rddata_bo[31:0]</obj_property>
       <obj_property name="ObjectShortName">rddata_bo[31:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/edges">
-      <obj_property name="ElementShortName">edges</obj_property>
-      <obj_property name="ObjectShortName">edges</obj_property>
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/s1_addr_bo">
+      <obj_property name="ElementShortName">s1_addr_bo[12:0]</obj_property>
+      <obj_property name="ObjectShortName">s1_addr_bo[12:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/icconf">
-      <obj_property name="ElementShortName">icconf[31:0]</obj_property>
-      <obj_property name="ObjectShortName">icconf[31:0]</obj_property>
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/s1_wrdata_bo">
+      <obj_property name="ElementShortName">s1_wrdata_bo[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s1_wrdata_bo[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/ictmr">
-      <obj_property name="ElementShortName">ictmr[1:0]</obj_property>
-      <obj_property name="ObjectShortName">ictmr[1:0]</obj_property>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/s1_en_o">
+      <obj_property name="ElementShortName">s1_en_o</obj_property>
+      <obj_property name="ObjectShortName">s1_en_o</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/timer1_enabled">
-      <obj_property name="ElementShortName">timer1_enabled[15:0]</obj_property>
-      <obj_property name="ObjectShortName">timer1_enabled[15:0]</obj_property>
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/s1_we_bo">
+      <obj_property name="ElementShortName">s1_we_bo[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s1_we_bo[3:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/timer2_enabled">
-      <obj_property name="ElementShortName">timer2_enabled[15:0]</obj_property>
-      <obj_property name="ObjectShortName">timer2_enabled[15:0]</obj_property>
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/s2_addr_bo">
+      <obj_property name="ElementShortName">s2_addr_bo[12:0]</obj_property>
+      <obj_property name="ObjectShortName">s2_addr_bo[12:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/icconf_next">
-      <obj_property name="ElementShortName">icconf_next[31:0]</obj_property>
-      <obj_property name="ObjectShortName">icconf_next[31:0]</obj_property>
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/s2_wrdata_bo">
+      <obj_property name="ElementShortName">s2_wrdata_bo[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s2_wrdata_bo[31:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/r_state">
-      <obj_property name="ElementShortName">r_state</obj_property>
-      <obj_property name="ObjectShortName">r_state</obj_property>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/s2_en_o">
+      <obj_property name="ElementShortName">s2_en_o</obj_property>
+      <obj_property name="ObjectShortName">s2_en_o</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/rs_state">
-      <obj_property name="ElementShortName">rs_state</obj_property>
-      <obj_property name="ObjectShortName">rs_state</obj_property>
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/s2_we_bo">
+      <obj_property name="ElementShortName">s2_we_bo[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s2_we_bo[3:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/ed_prescaler">
-      <obj_property name="ElementShortName">ed_prescaler</obj_property>
-      <obj_property name="ObjectShortName">ed_prescaler</obj_property>
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/s3_addr_bo">
+      <obj_property name="ElementShortName">s3_addr_bo[12:0]</obj_property>
+      <obj_property name="ObjectShortName">s3_addr_bo[12:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/prescaler_fifo">
-      <obj_property name="ElementShortName">prescaler_fifo</obj_property>
-      <obj_property name="ObjectShortName">prescaler_fifo</obj_property>
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/s3_wrdata_bo">
+      <obj_property name="ElementShortName">s3_wrdata_bo[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s3_wrdata_bo[31:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/rd_cs">
-      <obj_property name="ElementShortName">rd_cs</obj_property>
-      <obj_property name="ObjectShortName">rd_cs</obj_property>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/s3_en_o">
+      <obj_property name="ElementShortName">s3_en_o</obj_property>
+      <obj_property name="ObjectShortName">s3_en_o</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/wr_cs">
-      <obj_property name="ElementShortName">wr_cs</obj_property>
-      <obj_property name="ObjectShortName">wr_cs</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/rd_en">
-      <obj_property name="ElementShortName">rd_en</obj_property>
-      <obj_property name="ObjectShortName">rd_en</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/wr_en">
-      <obj_property name="ElementShortName">wr_en</obj_property>
-      <obj_property name="ObjectShortName">wr_en</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/empty">
-      <obj_property name="ElementShortName">empty</obj_property>
-      <obj_property name="ObjectShortName">empty</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/full">
-      <obj_property name="ElementShortName">full</obj_property>
-      <obj_property name="ObjectShortName">full</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/timer1_val_bi">
-      <obj_property name="ElementShortName">timer1_val_bi[15:0]</obj_property>
-      <obj_property name="ObjectShortName">timer1_val_bi[15:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/data_in">
-      <obj_property name="ElementShortName">data_in[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/data_out">
-      <obj_property name="ElementShortName">data_out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="divider188" type="divider">
-      <obj_property name="label">fifo</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/clk">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/rst">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/wr_cs">
-      <obj_property name="ElementShortName">wr_cs</obj_property>
-      <obj_property name="ObjectShortName">wr_cs</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/rd_cs">
-      <obj_property name="ElementShortName">rd_cs</obj_property>
-      <obj_property name="ObjectShortName">rd_cs</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/rd_en">
-      <obj_property name="ElementShortName">rd_en</obj_property>
-      <obj_property name="ObjectShortName">rd_en</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/wr_en">
-      <obj_property name="ElementShortName">wr_en</obj_property>
-      <obj_property name="ObjectShortName">wr_en</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/data_in">
-      <obj_property name="ElementShortName">data_in[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/full">
-      <obj_property name="ElementShortName">full</obj_property>
-      <obj_property name="ObjectShortName">full</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/empty">
-      <obj_property name="ElementShortName">empty</obj_property>
-      <obj_property name="ObjectShortName">empty</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/wr_pointer">
-      <obj_property name="ElementShortName">wr_pointer[3:0]</obj_property>
-      <obj_property name="ObjectShortName">wr_pointer[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/rd_pointer">
-      <obj_property name="ElementShortName">rd_pointer[3:0]</obj_property>
-      <obj_property name="ObjectShortName">rd_pointer[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/status_cnt">
-      <obj_property name="ElementShortName">status_cnt[4:0]</obj_property>
-      <obj_property name="ObjectShortName">status_cnt[4:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/data_out">
-      <obj_property name="ElementShortName">data_out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/data_ram">
-      <obj_property name="ElementShortName">data_ram[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_ram[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/DATA_WIDTH">
-      <obj_property name="ElementShortName">DATA_WIDTH[31:0]</obj_property>
-      <obj_property name="ObjectShortName">DATA_WIDTH[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/ADDR_WIDTH">
-      <obj_property name="ElementShortName">ADDR_WIDTH[31:0]</obj_property>
-      <obj_property name="ObjectShortName">ADDR_WIDTH[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/RAM_DEPTH">
-      <obj_property name="ElementShortName">RAM_DEPTH[31:0]</obj_property>
-      <obj_property name="ObjectShortName">RAM_DEPTH[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/DP_RAM/address_0">
-      <obj_property name="ElementShortName">address_0[3:0]</obj_property>
-      <obj_property name="ObjectShortName">address_0[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/DP_RAM/cs_0">
-      <obj_property name="ElementShortName">cs_0</obj_property>
-      <obj_property name="ObjectShortName">cs_0</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/DP_RAM/we_0">
-      <obj_property name="ElementShortName">we_0</obj_property>
-      <obj_property name="ObjectShortName">we_0</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/DP_RAM/oe_0">
-      <obj_property name="ElementShortName">oe_0</obj_property>
-      <obj_property name="ObjectShortName">oe_0</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/DP_RAM/address_1">
-      <obj_property name="ElementShortName">address_1[3:0]</obj_property>
-      <obj_property name="ObjectShortName">address_1[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/DP_RAM/cs_1">
-      <obj_property name="ElementShortName">cs_1</obj_property>
-      <obj_property name="ObjectShortName">cs_1</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/DP_RAM/we_1">
-      <obj_property name="ElementShortName">we_1</obj_property>
-      <obj_property name="ObjectShortName">we_1</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/DP_RAM/oe_1">
-      <obj_property name="ElementShortName">oe_1</obj_property>
-      <obj_property name="ObjectShortName">oe_1</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/DP_RAM/data_0">
-      <obj_property name="ElementShortName">data_0[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_0[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/DP_RAM/data_1">
-      <obj_property name="ElementShortName">data_1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_1[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/DP_RAM/data_0_out">
-      <obj_property name="ElementShortName">data_0_out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_0_out[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/DP_RAM/data_1_out">
-      <obj_property name="ElementShortName">data_1_out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_1_out[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/fifo/DP_RAM/mem">
-      <obj_property name="ElementShortName">mem[0:15][31:0]</obj_property>
-      <obj_property name="ObjectShortName">mem[0:15][31:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/BRAMInterconnect_0/s3_we_bo">
+      <obj_property name="ElementShortName">s3_we_bo[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s3_we_bo[3:0]</obj_property>
    </wvobject>
 </wave_config>

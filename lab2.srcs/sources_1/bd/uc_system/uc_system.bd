@@ -210,6 +210,25 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
+        <spirit:instanceName>proc_sys_reset_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">uc_system_proc_sys_reset_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_NUM_PERP_RST">1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>BRAMInterconnect_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="BRAMInterconnect" spirit:vendor="user.org" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">uc_system_BRAMInterconnect_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">BRAMInterconnect</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
         <spirit:instanceName>Timer_0</spirit:instanceName>
         <spirit:componentRef spirit:library="module_ref" spirit:name="Timer" spirit:vendor="user.org" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -221,30 +240,11 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>proc_sys_reset_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="proc_sys_reset" spirit:vendor="xilinx.com" spirit:version="5.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">uc_system_proc_sys_reset_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_NUM_PERP_RST">1</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>Timer_1</spirit:instanceName>
         <spirit:componentRef spirit:library="module_ref" spirit:name="Timer" spirit:vendor="user.org" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">uc_system_Timer_1_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceName">Timer</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>BRAMInterconnect_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="BRAMInterconnect" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">uc_system_BRAMInterconnect_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">BRAMInterconnect</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
@@ -359,9 +359,9 @@
       <spirit:adHocConnection>
         <spirit:name>axi_bram_ctrl_0_bram_clk_a</spirit:name>
         <spirit:internalPortReference spirit:componentRef="axi_bram_ctrl_0" spirit:portRef="bram_clk_a"/>
+        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="clk_i"/>
         <spirit:internalPortReference spirit:componentRef="Timer_0" spirit:portRef="clk_i"/>
         <spirit:internalPortReference spirit:componentRef="Timer_1" spirit:portRef="clk_i"/>
-        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="clk_i"/>
         <spirit:internalPortReference spirit:componentRef="IC_0" spirit:portRef="clk_i"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -429,9 +429,9 @@
       <spirit:adHocConnection>
         <spirit:name>proc_sys_reset_0_peripheral_reset</spirit:name>
         <spirit:internalPortReference spirit:componentRef="proc_sys_reset_0" spirit:portRef="peripheral_reset"/>
+        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="rst_i"/>
         <spirit:internalPortReference spirit:componentRef="Timer_0" spirit:portRef="rst_i"/>
         <spirit:internalPortReference spirit:componentRef="Timer_1" spirit:portRef="rst_i"/>
-        <spirit:internalPortReference spirit:componentRef="BRAMInterconnect_0" spirit:portRef="rst_i"/>
         <spirit:internalPortReference spirit:componentRef="IC_0" spirit:portRef="rst_i"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -2237,10 +2237,10 @@
               <spirit:localName>sim_1</spirit:localName>
             </spirit:fileSetRef>
             <spirit:fileSetRef>
-              <spirit:localName>sim_1</spirit:localName>
+              <spirit:localName>sources_1</spirit:localName>
             </spirit:fileSetRef>
             <spirit:fileSetRef>
-              <spirit:localName>sources_1</spirit:localName>
+              <spirit:localName>sim_1</spirit:localName>
             </spirit:fileSetRef>
           </spirit:fileSetRefGroup>
         </spirit:executableImage>

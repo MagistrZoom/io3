@@ -8,8 +8,6 @@ WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 fo
 WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.2/nightly/2017_06_15_1909853/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/new/sys_fifo.v" Line 7. Module syn_fifo(DATA_WIDTH=32,ADDR_WIDTH=4) doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/new/ram_dp_ar_aw.v" Line 7. Module ram_dp_ar_aw(DATA_WIDTH=32,ADDR_WIDTH=4) doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package std.standard
@@ -36,8 +34,6 @@ Compiling module xil_defaultlib.BRAMInterconnect
 Compiling module xil_defaultlib.uc_system_BRAMInterconnect_0_0
 Compiling module xil_defaultlib.EdgeDetector
 Compiling module xil_defaultlib.Prescaler
-Compiling module xil_defaultlib.ram_dp_ar_aw(DATA_WIDTH=32,ADDR_...
-Compiling module xil_defaultlib.syn_fifo(DATA_WIDTH=32,ADDR_WIDT...
 Compiling module xil_defaultlib.IC
 Compiling module xil_defaultlib.uc_system_IC_0_0
 Compiling module xil_defaultlib.Timer_on_clock

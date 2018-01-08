@@ -1,0 +1,65 @@
+/*
+ * main.c
+ *
+ *  Created on: 27 Nov. 2017
+ *      Author: izoomko
+ */
+
+#include <xil_io.h>
+
+#define GPIO_ADDRESS	0x40000000
+#define BRAM_ADDRESS	0xC0000000
+
+#define TIMER_ADDRESS	0x41C00000
+
+#define TCSR0	0x00
+#define TLR0	0x04
+#define TCR0	0x08
+#define TCSR1	0x10
+#define TLR1	0x14
+#define TCR1	0x18
+
+#define C_PER	77
+
+int set_pwm(UINTPTR Addr, u32 period, u32 impulse){
+	Xil_Out32(GPIO_ADDRESS,	0);
+	Xil_Out32(Addr+TCSR0,	0);
+	Xil_Out32(Addr+TCSR1,	1 << 9 /* pwm t1 */ |
+							1 << 2 /* generate signal t1 */ |
+							1 << 1 /* down timer1 */);
+	/*
+	 * When counters are configured to count down (UDT = 1):
+	 *	PWM_PERIOD = (TLR0 + 2) * AXI_CLOCK_PERIOD
+	 *	PWM_HIGH_TIME = (TLR1 + 2) * AXI_CLOCK_PERIOD
+	 */
+	Xil_Out32(Addr+TLR0,	period - 2);
+	Xil_Out32(Addr+TCR0,	0);
+	Xil_Out32(Addr+TLR1,	impulse - 2);
+	Xil_Out32(Addr+TCR1,	0);
+	Xil_Out32(Addr+TCSR0,	1 << 10 /* en all */ |
+							1 << 9  /* pwm t1 */  |
+							1 << 2  /* generate signal t1 */ |
+							1 << 1  /* down timer1 */);
+	Xil_Out32(GPIO_ADDRESS,	impulse);
+	return 0;
+}
+
+int main() {
+//    bus_write(0x0, (uint16_t) ~0);
+//    bus_write(0x8, Timer::TimerInc);
+	set_pwm(TIMER_ADDRESS, 60, 15);
+
+	Xil_Out32(GPIO_ADDRESS,	1);
+	Xil_Out32(BRAM_ADDRESS + 0x8,	2);
+	Xil_Out32(BRAM_ADDRESS,	~0);
+	Xil_Out32(BRAM_ADDRESS + 0x8,	1);
+
+	Xil_Out32(BRAM_ADDRESS + 0x18,	0x1 | 0x20);
+
+	int i = 0;
+	for (i = 0; i < 500; i++) {
+
+	}
+	Xil_In32(BRAM_ADDRESS + 0x1C);
+	return 0;
+}

@@ -35,6 +35,8 @@ module Prescaler(
         
         always @(icm_bi) begin
             case (icm_bi)
+                'h1:
+                    ratio <= 1;
                 'h2, 'h3:
                     ratio <= 2;
                 'h4,'h6:
@@ -46,12 +48,15 @@ module Prescaler(
             endcase
         end
         
-        always @(ins_i or counter or ratio) begin
-            if (ins_i) begin
+        always @(rst_i or ins_i or counter or ratio) begin
+            if (rst_i) begin
+                next_ins     <= 0;
+                next_counter <= 0;
+            end else if (ins_i) begin
                 next_ins <= 0;
                 next_counter <= counter + 1;
             end
-            else if (counter == ratio) begin
+            else if (counter == ratio && ratio != 0) begin
                 next_ins <= 1;
                 next_counter <= 0;
             end
@@ -61,13 +66,7 @@ module Prescaler(
         end
         
         always @(posedge clk_i) begin
-            if (rst_i) begin
-                ins_o   <= 0;
-                counter <= 0;
-            end
-            else begin
-                ins_o   <= next_ins;
-                counter <= next_counter;
-            end
+            ins_o   <= next_ins;
+            counter <= next_counter;
         end
 endmodule

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 27 12:51:54 2017" VIVADOVERSION="2017.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jan  8 23:28:30 2018" VIVADOVERSION="2017.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="uc_system" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -838,9 +838,9 @@
         <PORT DIR="O" NAME="bram_rst_a" SIGIS="rst"/>
         <PORT DIR="O" NAME="bram_clk_a" SIGIS="clk" SIGNAME="axi_bram_ctrl_0_bram_clk_a">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="clk_i"/>
             <CONNECTION INSTANCE="Timer_0" PORT="clk_i"/>
             <CONNECTION INSTANCE="Timer_1" PORT="clk_i"/>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="clk_i"/>
             <CONNECTION INSTANCE="IC_0" PORT="clk_i"/>
           </CONNECTIONS>
         </PORT>
@@ -5374,9 +5374,9 @@
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_reset">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="rst_i"/>
             <CONNECTION INSTANCE="Timer_0" PORT="rst_i"/>
             <CONNECTION INSTANCE="Timer_1" PORT="rst_i"/>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="rst_i"/>
             <CONNECTION INSTANCE="IC_0" PORT="rst_i"/>
           </CONNECTIONS>
         </PORT>

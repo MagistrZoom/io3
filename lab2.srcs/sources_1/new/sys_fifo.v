@@ -16,7 +16,7 @@ data_out , // Data Output
 empty    , // FIFO empty
 full       // FIFO full
 );    
- 
+
 // FIFO constants
 parameter DATA_WIDTH = 8;
 parameter ADDR_WIDTH = 8;

@@ -54,7 +54,12 @@ int main() {
 	Xil_Out32(BRAM_ADDRESS,	~0);
 	Xil_Out32(BRAM_ADDRESS + 0x8,	1);
 
-	Xil_Out32(BRAM_ADDRESS + 0x18,	0x2 | 0x20);
-	while (1);
+	Xil_Out32(BRAM_ADDRESS + 0x18,	0x1 | 0x20);
+
+	int i = 0;
+	for (i = 0; i < 50; i++) {
+
+	}
+	Xil_In32(BRAM_ADDRESS + 0x1C);
 	return 0;
 }
