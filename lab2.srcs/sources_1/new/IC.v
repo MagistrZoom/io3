@@ -73,7 +73,7 @@ module IC(
     end
     
     always @(posedge prescaler_fifo) begin
-        if (wr_ptr < 32) begin
+        if (wr_ptr < 30) begin
             mem[wr_ptr] <= timer;
             wr_ptr_next <= wr_ptr + 1;
             icov        <= 0;
@@ -110,11 +110,8 @@ module IC(
                 icconf_out[4:3] <= {icov, icbne};
             end
             'h4: begin
-                if (rd_ptr > 0) begin
-                    rd_ptr_next = rd_ptr + 1;
-                end
-                if (rd_ptr == 0) begin
-                    icbne <= 0;
+                if (rd_ptr < 30) begin
+                    rd_ptr_next <= rd_ptr + 1;
                 end
             end
             endcase
@@ -123,7 +120,7 @@ module IC(
     
     integer i;
     always @(posedge clk_i) begin
-    prev_addr  <= addr_bi;
+        prev_addr  <= addr_bi;
         if (rst_i) begin // reset read operation
             rs_state    <= 0;
             icconf      <= 0;
