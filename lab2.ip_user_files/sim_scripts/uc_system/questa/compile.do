@@ -165,13 +165,13 @@ vcom -work xil_defaultlib -64 -93 \
 vlog -work xil_defaultlib -64 "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" \
 "../../../bd/uc_system/ip/uc_system_Timer_1_0/sim/uc_system_Timer_1_0.v" \
 "../../../bd/uc_system/ip/uc_system_IC_0_0/sim/uc_system_IC_0_0.v" \
-"../../../bd/uc_system/hdl/uc_system.v" \
 
 vlog -work axi_protocol_converter_v2_1_13 -64 "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" \
 "../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/f0ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" \
 "../../../bd/uc_system/ip/uc_system_auto_pc_0/sim/uc_system_auto_pc_0.v" \
+"../../../bd/uc_system/hdl/uc_system.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

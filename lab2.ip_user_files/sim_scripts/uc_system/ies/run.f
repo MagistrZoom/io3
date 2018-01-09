@@ -114,13 +114,13 @@
 -makelib ies/xil_defaultlib \
   "../../../bd/uc_system/ip/uc_system_Timer_1_0/sim/uc_system_Timer_1_0.v" \
   "../../../bd/uc_system/ip/uc_system_IC_0_0/sim/uc_system_IC_0_0.v" \
-  "../../../bd/uc_system/hdl/uc_system.v" \
 -endlib
 -makelib ies/axi_protocol_converter_v2_1_13 \
   "../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/f0ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 -endlib
 -makelib ies/xil_defaultlib \
   "../../../bd/uc_system/ip/uc_system_auto_pc_0/sim/uc_system_auto_pc_0.v" \
+  "../../../bd/uc_system/hdl/uc_system.v" \
 -endlib
 -makelib ies/xil_defaultlib \
   glbl.v

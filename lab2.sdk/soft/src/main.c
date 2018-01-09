@@ -10,8 +10,20 @@
 #define GPIO_ADDRESS	0x40000000
 #define BRAM_ADDRESS	0xC0000000
 
-#define TIMER_ADDRESS	0x41C00000
+#define TIMER1 BRAM_ADDRESS
+#define TIMER2 BRAM_ADDRESS + 0xC
+	#define TMR 0x0
+	#define TVAL 0x4
+	#define TCONF 0x8
 
+#define IC BRAM_ADDRESS + 0x18
+	#define ICCONF 0x0
+		#define FIFO_NOT_EMPTY 0x8
+		#define FIFO_OV 0x10
+	#define ICBUF 0x4
+
+
+#define TIMER_ADDRESS	0x41C00000
 #define TCSR0	0x00
 #define TLR0	0x04
 #define TCR0	0x08
@@ -47,19 +59,34 @@ int set_pwm(UINTPTR Addr, u32 period, u32 impulse){
 int main() {
 //    bus_write(0x0, (uint16_t) ~0);
 //    bus_write(0x8, Timer::TimerInc);
-	set_pwm(TIMER_ADDRESS, 60, 15);
 
-	Xil_Out32(GPIO_ADDRESS,	1);
-	Xil_Out32(BRAM_ADDRESS + 0x8,	2);
-	Xil_Out32(BRAM_ADDRESS,	~0);
-	Xil_Out32(BRAM_ADDRESS + 0x8,	1);
+	int state = 0;
+	while (1) {
+		switch (state) {
+		case 0: // init
 
-	Xil_Out32(BRAM_ADDRESS + 0x18,	0x1 | 0x20);
+			set_pwm(TIMER_ADDRESS, 60, 15);
+			Xil_Out32(TIMER1 + TCONF,	2);
+			Xil_Out32(TIMER1 + TMR,	~0);
+			Xil_Out32(TIMER1 + TCONF,	1);
 
-	int i = 0;
-	for (i = 0; i < 50; i++) {
+			Xil_Out32(IC + ICCONF,	0x1 | 0x20);
 
+			state = 1;
+			break;
+		case 1: {// wait for non-empty
+			u32 icconf = Xil_In32(IC + ICCONF);
+			if (icconf & FIFO_NOT_EMPTY) {
+				state = 2;
+			}
+		} break;
+		case 2: {
+			u32 buf = Xil_In32(IC + ICBUF);
+			state = 1;
+		}
+		}
 	}
 	Xil_In32(BRAM_ADDRESS + 0x1C);
+
 	return 0;
 }
