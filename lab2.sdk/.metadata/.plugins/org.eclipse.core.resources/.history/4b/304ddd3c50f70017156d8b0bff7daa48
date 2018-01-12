@@ -1,0 +1,203 @@
+/*
+ * main.c
+ *
+ *  Created on: 27 Nov. 2017
+ *      Author: izoomko
+ */
+
+#include <xil_io.h>
+
+#define GPIO_ADDRESS	0x40000000
+#define BRAM_ADDRESS	0xC0000000
+
+#define TIMER1 BRAM_ADDRESS
+#define TIMER2 BRAM_ADDRESS + 0xC
+	#define TMR 0x0
+	#define TVAL 0x4
+	#define TCONF 0x8
+
+#define IC BRAM_ADDRESS + 0x18
+	#define ICCONF 0x0
+		#define FIFO_NOT_EMPTY 0x8
+		#define FIFO_OV 0x10
+	#define ICBUF 0x4
+
+
+#define TIMER_ADDRESS	0x41C00000
+#define TCSR0	0x00
+#define TLR0	0x04
+#define TCR0	0x08
+#define TCSR1	0x10
+#define TLR1	0x14
+#define TCR1	0x18
+
+#define C_PER	77
+
+int set_pwm(UINTPTR Addr, u32 period, u32 impulse){
+	Xil_Out32(GPIO_ADDRESS,	0);
+	Xil_Out32(Addr+TCSR0,	0);
+	Xil_Out32(Addr+TCSR1,	1 << 9 /* pwm t1 */ |
+							1 << 2 /* generate signal t1 */ |
+							1 << 1 /* down timer1 */);
+	/*
+	 * When counters are configured to count down (UDT = 1):
+	 *	PWM_PERIOD = (TLR0 + 2) * AXI_CLOCK_PERIOD
+	 *	PWM_HIGH_TIME = (TLR1 + 2) * AXI_CLOCK_PERIOD
+	 */
+	Xil_Out32(Addr+TLR0,	period - 2);
+	Xil_Out32(Addr+TCR0,	0);
+	Xil_Out32(Addr+TLR1,	impulse - 2);
+	Xil_Out32(Addr+TCR1,	0);
+	Xil_Out32(Addr+TCSR0,	1 << 10 /* en all */ |
+							1 << 9  /* pwm t1 */  |
+							1 << 2  /* generate signal t1 */ |
+							1 << 1  /* down timer1 */);
+	Xil_Out32(GPIO_ADDRESS,	impulse);
+	return 0;
+}
+
+void swap(char * a, char * b)
+{
+	char t = *a;
+	*a = *b;
+	*b = t;
+}
+
+/* A utility function to reverse a string  */
+void reverse(char str[], int length)
+{
+    int start = 0;
+    int end = length -1;
+    while (start < end)
+    {
+        swap((str+start), (str+end));
+        start++;
+        end--;
+    }
+}
+
+// Implementation of itoa()
+char* itoa(int num, char* str, int base)
+{
+    int i = 0;
+    int isNegative = 0;
+
+    /* Handle 0 explicitely, otherwise empty string is printed for 0 */
+    if (num == 0)
+    {
+        str[i++] = '0';
+        str[i] = '\0';
+        return str;
+    }
+
+    // In standard itoa(), negative numbers are handled only with
+    // base 10. Otherwise numbers are considered unsigned.
+    if (num < 0 && base == 10)
+    {
+        isNegative = 1;
+        num = -num;
+    }
+
+    // Process individual digits
+    while (num != 0)
+    {
+        int rem = num % base;
+        str[i++] = (rem > 9)? (rem-10) + 'a' : rem + '0';
+        num = num/base;
+    }
+
+    // If number is negative, append '-'
+    if (isNegative)
+        str[i++] = '-';
+
+    str[i] = '\0'; // Append string terminator
+
+    // Reverse the string
+    reverse(str, i);
+
+    return str;
+}
+
+int main() {
+//    bus_write(0x0, (uint16_t) ~0);
+//    bus_write(0x8, Timer::TimerInc);
+    int impulse_posedge = 0;
+    int impulse_negedge = 0;
+    int next_posedge = 0;
+
+    // static int c = 0;
+    int read_n = 0;
+    double ratio = 0;
+
+	int state = 0;
+	while (1) {
+		switch (state) {
+		case 0: // init
+			set_pwm(TIMER_ADDRESS, 200, 50);
+			Xil_Out32(TIMER1 + TCONF,	2);
+			Xil_Out32(TIMER1 + TMR,	~0);
+			Xil_Out32(TIMER1 + TCONF,	1);
+
+			Xil_Out32(IC + ICCONF,	0x1 | 0x20);
+
+			state = 1;
+			break;
+		case 1: {// wait for non-empty
+			u32 icconf = Xil_In32(IC + ICCONF);
+            if (icconf & CaptureFieldsBufferNonEmpty) {
+                switch (read_n) {
+                    case 0:
+                        state = 2;
+                        break;
+                    case 1:
+                        state = 3;
+                        break;
+                    case 2:
+                        state = 4;
+                        break;
+                }
+            }
+            if (icconf & CaptureFieldsBufferOverflow) {
+                //abort();
+            }
+		} break;
+        case 2: // read impulse posedge
+            impulse_posedge = next_posedge;
+            m_state = 1;
+            read_n = 1;
+            break;
+        case 3: // imp negedge
+            impulse_negedge = Xil_In32(IC + ICBUF);
+            m_state = 1;
+            read_n = 2;
+            break;
+        case 4: { // signal end
+            next_posedge = Xil_In32(IC + ICBUF);
+            m_state = 1;
+            read_n = 0;
+            const double epsilon = 10e-2;
+            double value = (double) (next_posedge - impulse_posedge) / (impulse_negedge - impulse_posedge);
+            if (abs(value - ratio) > epsilon && value > 0) {
+                ratio = value;
+                //std::cout << "[" << sc_time_stamp() << "] duty cycle: "
+                //          << ratio << '\n';
+            }
+            if (value < 0) {
+                //std::cout << "ERROR: Timer overflow probably\n";
+                //sc_stop();
+                //return;
+            }
+        } break;
+
+		//case 2: {
+		//	u32 time = Xil_In32(IC + ICBUF);
+		//	char buf[12];
+		//	itoa(time, buf, 10);
+		//	print(buf);
+		//	print("\n");
+		//	state = 1;
+		//}
+		}
+	}
+	return 0;
+}
