@@ -120,6 +120,7 @@ int main()
 
 	int state = 0;
 	while (1) {
+		Xil_Out32(GPIO_ADDRESS,	state);
 		switch (state) {
 		case 0: // init
 			set_pwm(TIMER_ADDRESS, 4000, 1000);
@@ -168,13 +169,13 @@ int main()
             float value = (float) (next_posedge - impulse_posedge) / (impulse_negedge - impulse_posedge);
             if (LAB3_ABS(value - ratio) > epsilon && value > 0) {
                 ratio = value;
-        		//	char buf[12];
-        		//	itoa((int)ratio, buf, 10);
-        		//	print(buf);
-        		//	print("\n");
+        		char buf[12];
+        		itoa((int)ratio, buf, 10);
+        		print(buf);
+        		print("\n");
             }
             if (value < 0) {
-            	// print("[Error] Timer overflow probably");
+            	print("[Error] Timer overflow probably");
             }
         } break;
 		}

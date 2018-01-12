@@ -72,15 +72,15 @@ WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_uartlite_0_0' generated file not fo
 WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_uartlite_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0_stub.vhdl'. Please regenerate to continue.
 WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_uartlite_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0_sim_netlist.v'. Please regenerate to continue.
 WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_uartlite_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0_sim_netlist.vhdl'. Please regenerate to continue.
-add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1086.746 ; gain = 1.000 ; free physical = 1150 ; free virtual = 16959
+add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 1086.738 ; gain = 1.000 ; free physical = 507 ; free virtual = 16533
 Command: synth_design -top uc_system_wrapper -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 19811 
+INFO: Helper process launched with PID 1406 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1183.328 ; gain = 82.992 ; free physical = 1047 ; free virtual = 16868
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1183.320 ; gain = 82.992 ; free physical = 370 ; free virtual = 16435
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'uc_system_wrapper' [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/hdl/uc_system_wrapper.v:12]
 INFO: [Synth 8-638] synthesizing module 'uc_system' [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/hdl/uc_system.v:1059]
@@ -2195,7 +2195,7 @@ WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected p
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[184]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:03:28 ; elapsed = 00:03:32 . Memory (MB): peak = 1673.805 ; gain = 573.469 ; free physical = 1098 ; free virtual = 16626
+Finished RTL Elaboration : Time (s): cpu = 00:03:38 ; elapsed = 00:03:47 . Memory (MB): peak = 1674.328 ; gain = 574.000 ; free physical = 608 ; free virtual = 16251
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2205,7 +2205,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:03:31 ; elapsed = 00:03:35 . Memory (MB): peak = 1673.805 ; gain = 573.469 ; free physical = 1146 ; free virtual = 16674
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:03:40 ; elapsed = 00:03:51 . Memory (MB): peak = 1674.328 ; gain = 574.000 ; free physical = 651 ; free virtual = 16295
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 868 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -2362,16 +2362,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 16 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1847.430 ; gain = 0.000 ; free physical = 793 ; free virtual = 16365
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1846.953 ; gain = 0.000 ; free physical = 323 ; free virtual = 15978
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:04:11 ; elapsed = 00:04:17 . Memory (MB): peak = 1847.430 ; gain = 747.094 ; free physical = 950 ; free virtual = 16522
+Finished Constraint Validation : Time (s): cpu = 00:04:21 ; elapsed = 00:04:34 . Memory (MB): peak = 1846.953 ; gain = 746.625 ; free physical = 481 ; free virtual = 16136
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:04:11 ; elapsed = 00:04:17 . Memory (MB): peak = 1847.430 ; gain = 747.094 ; free physical = 950 ; free virtual = 16522
+Finished Loading Part and Timing Information : Time (s): cpu = 00:04:21 ; elapsed = 00:04:34 . Memory (MB): peak = 1846.953 ; gain = 746.625 ; free physical = 481 ; free virtual = 16136
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -2405,7 +2405,7 @@ Applied set_property DONT_TOUCH = true for uc_system_i/microblaze_0_local_memory
 Applied set_property DONT_TOUCH = true for uc_system_i/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for uc_system_i/proc_sys_reset_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:04:11 ; elapsed = 00:04:18 . Memory (MB): peak = 1847.430 ; gain = 747.094 ; free physical = 952 ; free virtual = 16524
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:04:22 ; elapsed = 00:04:35 . Memory (MB): peak = 1846.953 ; gain = 746.625 ; free physical = 484 ; free virtual = 16138
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "s1_en_o" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "s2_en_o" won't be mapped to RAM because it is too sparse
@@ -2568,7 +2568,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'write_reg' [/home/izoomko/w
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'rlast_sm_cs_reg' using encoding 'sequential' in module 'rd_chnl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:24 ; elapsed = 00:04:32 . Memory (MB): peak = 1847.430 ; gain = 747.094 ; free physical = 1035 ; free virtual = 16600
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:34 ; elapsed = 00:04:49 . Memory (MB): peak = 1846.953 ; gain = 746.625 ; free physical = 571 ; free virtual = 16226
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3620,3 +3620,1099 @@ INFO: [Synth 8-3886] merging instance 'uc_system_i/microblaze_0/U0/LOCKSTEP_Out_
 INFO: [Synth 8-3886] merging instance 'uc_system_i/microblaze_0/U0/LOCKSTEP_Out_reg[640]' (FDR) to 'uc_system_i/microblaze_0/U0/LOCKSTEP_Out_reg[474]'
 INFO: [Synth 8-3886] merging instance 'uc_system_i/microblaze_0/U0/LOCKSTEP_Out_reg[639]' (FDR) to 'uc_system_i/microblaze_0/U0/LOCKSTEP_Out_reg[473]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:09 ; elapsed = 00:05:26 . Memory (MB): peak = 1846.953 ; gain = 746.625 ; free physical = 625 ; free virtual = 16270
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'uc_system_i/microblaze_0/U0/Reset' to pin 'uc_system_i/proc_sys_reset_0/U0/mb_reset_reg/Q'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:21 ; elapsed = 00:05:39 . Memory (MB): peak = 1846.953 ; gain = 746.625 ; free physical = 507 ; free virtual = 16158
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:05:27 ; elapsed = 00:05:44 . Memory (MB): peak = 1846.953 ; gain = 746.625 ; free physical = 494 ; free virtual = 16146
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:05:35 ; elapsed = 00:05:53 . Memory (MB): peak = 1846.953 ; gain = 746.625 ; free physical = 505 ; free virtual = 16157
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:05:37 ; elapsed = 00:05:55 . Memory (MB): peak = 1846.953 ; gain = 746.625 ; free physical = 506 ; free virtual = 16157
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:37 ; elapsed = 00:05:55 . Memory (MB): peak = 1846.953 ; gain = 746.625 ; free physical = 506 ; free virtual = 16157
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:39 ; elapsed = 00:05:57 . Memory (MB): peak = 1846.953 ; gain = 746.625 ; free physical = 507 ; free virtual = 16158
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:39 ; elapsed = 00:05:57 . Memory (MB): peak = 1846.953 ; gain = 746.625 ; free physical = 507 ; free virtual = 16158
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:40 ; elapsed = 00:05:58 . Memory (MB): peak = 1846.953 ; gain = 746.625 ; free physical = 507 ; free virtual = 16158
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:40 ; elapsed = 00:05:58 . Memory (MB): peak = 1846.953 ; gain = 746.625 ; free physical = 507 ; free virtual = 16158
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-------------+----------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name  | RTL Name                                                                         | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------+----------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|axi_uartlite | UARTLITE_CORE_I/UARTLITE_RX_I/DELAY_16_I/INFERRED_GEN.data_reg[15][0]            | 16     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|axi_uartlite | UARTLITE_CORE_I/UARTLITE_TX_I/MID_START_BIT_SRL16_I/INFERRED_GEN.data_reg[15][0] | 16     | 1     | NO           | NO                 | YES               | 1      | 0       | 
++-------------+----------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+
+Dynamic Shift Register Report:
++------------+---------------------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name                  | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+---------------------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | INFERRED_GEN.data_reg[15] | 16     | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__1     | INFERRED_GEN.data_reg[15] | 16     | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__2     | INFERRED_GEN.data_reg[15] | 16     | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__3     | PC_Buffer_reg[3]          | 4      | 32         | 32     | 0       | 0      | 0      | 0      | 
+|dsrl__4     | ibuffer_reg[3]            | 4      | 43         | 43     | 0       | 0      | 0      | 0      | 
++------------+---------------------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |AND2B1L    |     1|
+|2     |BUFG       |     4|
+|3     |CARRY4     |    62|
+|4     |LUT1       |   185|
+|5     |LUT2       |   369|
+|6     |LUT3       |   703|
+|7     |LUT4       |   420|
+|8     |LUT5       |   526|
+|9     |LUT6       |  1138|
+|10    |LUT6_2     |    80|
+|11    |MMCME2_ADV |     1|
+|12    |MULT_AND   |     1|
+|13    |MUXCY      |    64|
+|14    |MUXCY_L    |   136|
+|15    |MUXF7      |   238|
+|16    |MUXF8      |    64|
+|17    |RAM32M     |    16|
+|18    |RAMB36E1   |    64|
+|19    |RAMB36E1_1 |    64|
+|20    |SRL16      |     1|
+|21    |SRL16E     |   107|
+|22    |SRLC16E    |     8|
+|23    |XORCY      |    94|
+|24    |FDCE       |   144|
+|25    |FDE        |    32|
+|26    |FDR        |   111|
+|27    |FDRE       |  3220|
+|28    |FDS        |     3|
+|29    |FDSE       |    72|
+|30    |LD         |    37|
+|31    |LDC        |    38|
+|32    |IBUF       |     3|
+|33    |OBUF       |    18|
++------+-----------+------+
+
+Report Instance Areas: 
++------+-------------------------------------------------------------------------------------+-----------------------------------------------+------+
+|      |Instance                                                                             |Module                                         |Cells |
++------+-------------------------------------------------------------------------------------+-----------------------------------------------+------+
+|1     |top                                                                                  |                                               |  8024|
+|2     |  uc_system_i                                                                        |uc_system                                      |  8004|
+|3     |    BRAMInterconnect_0                                                               |uc_system_BRAMInterconnect_0_0                 |   237|
+|4     |      inst                                                                           |BRAMInterconnect                               |   126|
+|5     |    IC_0                                                                             |uc_system_IC_0_0                               |  1794|
+|6     |      inst                                                                           |IC                                             |  1793|
+|7     |        u_detector                                                                   |EdgeDetector                                   |     6|
+|8     |        u_prescaler                                                                  |Prescaler                                      |    35|
+|9     |    Timer_0                                                                          |uc_system_Timer_0_0                            |   329|
+|10    |      inst                                                                           |Timer_595                                      |   329|
+|11    |        StgValue_16_Timer_on_clock_fu_66                                             |Timer_on_clock_596                             |     4|
+|12    |    Timer_1                                                                          |uc_system_Timer_1_0                            |   329|
+|13    |      inst                                                                           |Timer                                          |   329|
+|14    |        StgValue_16_Timer_on_clock_fu_66                                             |Timer_on_clock                                 |     4|
+|15    |    axi_bram_ctrl_0                                                                  |uc_system_axi_bram_ctrl_0_0                    |   433|
+|16    |      U0                                                                             |axi_bram_ctrl                                  |   433|
+|17    |        \gext_inst.abcv4_0_ext_inst                                                  |axi_bram_ctrl_top                              |   433|
+|18    |          \GEN_AXI4.I_FULL_AXI                                                       |full_axi                                       |   433|
+|19    |            \GEN_ARB.I_SNG_PORT                                                      |sng_port_arb                                   |    30|
+|20    |            I_RD_CHNL                                                                |rd_chnl                                        |   276|
+|21    |              I_WRAP_BRST                                                            |wrap_brst_594                                  |    49|
+|22    |            I_WR_CHNL                                                                |wr_chnl                                        |   108|
+|23    |              I_WRAP_BRST                                                            |wrap_brst                                      |    31|
+|24    |    axi_gpio_0                                                                       |uc_system_axi_gpio_0_0                         |   148|
+|25    |      U0                                                                             |axi_gpio                                       |   148|
+|26    |        AXI_LITE_IPIF_I                                                              |axi_lite_ipif                                  |    77|
+|27    |          I_SLAVE_ATTACHMENT                                                         |slave_attachment                               |    77|
+|28    |            I_DECODER                                                                |address_decoder                                |    23|
+|29    |        gpio_core_1                                                                  |GPIO_Core                                      |    53|
+|30    |    axi_timer_0                                                                      |uc_system_axi_timer_0_0                        |   672|
+|31    |      U0                                                                             |axi_timer                                      |   672|
+|32    |        AXI4_LITE_I                                                                  |axi_lite_ipif__parameterized0                  |   197|
+|33    |          I_SLAVE_ATTACHMENT                                                         |slave_attachment__parameterized0               |   197|
+|34    |            I_DECODER                                                                |address_decoder__parameterized0                |   128|
+|35    |              \MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I         |pselect_f__parameterized3                      |     1|
+|36    |              \MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I         |pselect_f__parameterized5                      |     1|
+|37    |              \MEM_DECODE_GEN[0].PER_CE_GEN[4].MULTIPLE_CES_THIS_CS_GEN.CE_I         |pselect_f__parameterized7                      |     1|
+|38    |              \MEM_DECODE_GEN[0].PER_CE_GEN[5].MULTIPLE_CES_THIS_CS_GEN.CE_I         |pselect_f__parameterized8                      |     1|
+|39    |              \MEM_DECODE_GEN[0].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I         |pselect_f__parameterized9                      |     1|
+|40    |              \MEM_DECODE_GEN[0].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I         |pselect_f__parameterized10                     |     1|
+|41    |        TC_CORE_I                                                                    |tc_core                                        |   475|
+|42    |          COUNTER_0_I                                                                |count_module                                   |   139|
+|43    |            COUNTER_I                                                                |counter_f_593                                  |   107|
+|44    |          \GEN_SECOND_TIMER.COUNTER_1_I                                              |count_module_589                               |   172|
+|45    |            COUNTER_I                                                                |counter_f                                      |   140|
+|46    |          READ_MUX_I                                                                 |mux_onehot_f                                   |    64|
+|47    |          TIMER_CONTROL_I                                                            |timer_control                                  |    99|
+|48    |            INPUT_DOUBLE_REGS                                                        |cdc_sync__parameterized0_590                   |     5|
+|49    |            INPUT_DOUBLE_REGS2                                                       |cdc_sync__parameterized0_591                   |     5|
+|50    |            INPUT_DOUBLE_REGS3                                                       |cdc_sync__parameterized0_592                   |    14|
+|51    |    axi_uartlite_0                                                                   |uc_system_axi_uartlite_0_0                     |   227|
+|52    |      U0                                                                             |axi_uartlite                                   |   227|
+|53    |        AXI_LITE_IPIF_I                                                              |axi_lite_ipif__parameterized1                  |    65|
+|54    |          I_SLAVE_ATTACHMENT                                                         |slave_attachment__parameterized1               |    65|
+|55    |            I_DECODER                                                                |address_decoder__parameterized1                |    37|
+|56    |              \MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I         |pselect_f                                      |     1|
+|57    |              \MEM_DECODE_GEN[0].PER_CE_GEN[1].MULTIPLE_CES_THIS_CS_GEN.CE_I         |pselect_f__parameterized0                      |     1|
+|58    |              \MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I         |pselect_f__parameterized1                      |     1|
+|59    |        UARTLITE_CORE_I                                                              |uartlite_core                                  |   162|
+|60    |          BAUD_RATE_I                                                                |baudrate                                       |    26|
+|61    |          UARTLITE_RX_I                                                              |uartlite_rx                                    |    76|
+|62    |            DELAY_16_I                                                               |dynshreg_i_f                                   |    17|
+|63    |            INPUT_DOUBLE_REGS3                                                       |cdc_sync__parameterized0                       |     5|
+|64    |            SRL_FIFO_I                                                               |srl_fifo_f_585                                 |    27|
+|65    |              I_SRL_FIFO_RBU_F                                                       |srl_fifo_rbu_f_586                             |    27|
+|66    |                CNTR_INCR_DECR_ADDN_F_I                                              |cntr_incr_decr_addn_f_587                      |    16|
+|67    |                DYNSHREG_F_I                                                         |dynshreg_f_588                                 |     9|
+|68    |          UARTLITE_TX_I                                                              |uartlite_tx                                    |    51|
+|69    |            MID_START_BIT_SRL16_I                                                    |dynshreg_i_f__parameterized0                   |     3|
+|70    |            SRL_FIFO_I                                                               |srl_fifo_f                                     |    32|
+|71    |              I_SRL_FIFO_RBU_F                                                       |srl_fifo_rbu_f                                 |    32|
+|72    |                CNTR_INCR_DECR_ADDN_F_I                                              |cntr_incr_decr_addn_f                          |    18|
+|73    |                DYNSHREG_F_I                                                         |dynshreg_f                                     |    13|
+|74    |    clk_wiz_0                                                                        |uc_system_clk_wiz_0_0                          |     4|
+|75    |      inst                                                                           |uc_system_clk_wiz_0_0_clk_wiz                  |     4|
+|76    |    microblaze_0                                                                     |uc_system_microblaze_0_0                       |  3175|
+|77    |      U0                                                                             |MicroBlaze                                     |  3175|
+|78    |        MicroBlaze_Core_I                                                            |MicroBlaze_Core                                |  2808|
+|79    |          \Performance.Core                                                          |MicroBlaze_GTi                                 |  2799|
+|80    |            Data_Flow_I                                                              |Data_Flow_gti                                  |   693|
+|81    |              ALU_I                                                                  |ALU                                            |   102|
+|82    |                \Use_Carry_Decoding.CarryIn_MUXCY                                    |microblaze_v10_0_3_MB_MUXCY_491                |     1|
+|83    |                \Using_FPGA.ALL_Bits[0].ALU_Bit_I1                                   |ALU_Bit__parameterized2                        |     7|
+|84    |                  \Last_Bit.I_ALU_LUT_2                                              |MB_LUT4                                        |     1|
+|85    |                  \Last_Bit.I_ALU_LUT_V5                                             |microblaze_v10_0_3_MB_LUT6__parameterized5     |     1|
+|86    |                  \Last_Bit.MULT_AND_I                                               |MB_MULT_AND                                    |     1|
+|87    |                  \Last_Bit.MUXCY_XOR_I                                              |MB_MUXCY_XORCY_583                             |     3|
+|88    |                  \Last_Bit.Pre_MUXCY_I                                              |microblaze_v10_0_3_MB_MUXCY_584                |     1|
+|89    |                \Using_FPGA.ALL_Bits[10].ALU_Bit_I1                                  |ALU_Bit                                        |     3|
+|90    |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_581                                  |     1|
+|91    |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_582                             |     2|
+|92    |                \Using_FPGA.ALL_Bits[11].ALU_Bit_I1                                  |ALU_Bit_492                                    |     3|
+|93    |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_579                                  |     1|
+|94    |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_580                             |     2|
+|95    |                \Using_FPGA.ALL_Bits[12].ALU_Bit_I1                                  |ALU_Bit_493                                    |     3|
+|96    |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_577                                  |     1|
+|97    |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_578                             |     2|
+|98    |                \Using_FPGA.ALL_Bits[13].ALU_Bit_I1                                  |ALU_Bit_494                                    |     3|
+|99    |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_575                                  |     1|
+|100   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_576                             |     2|
+|101   |                \Using_FPGA.ALL_Bits[14].ALU_Bit_I1                                  |ALU_Bit_495                                    |     3|
+|102   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_573                                  |     1|
+|103   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_574                             |     2|
+|104   |                \Using_FPGA.ALL_Bits[15].ALU_Bit_I1                                  |ALU_Bit_496                                    |     3|
+|105   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_571                                  |     1|
+|106   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_572                             |     2|
+|107   |                \Using_FPGA.ALL_Bits[16].ALU_Bit_I1                                  |ALU_Bit_497                                    |     3|
+|108   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_569                                  |     1|
+|109   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_570                             |     2|
+|110   |                \Using_FPGA.ALL_Bits[17].ALU_Bit_I1                                  |ALU_Bit_498                                    |     3|
+|111   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_567                                  |     1|
+|112   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_568                             |     2|
+|113   |                \Using_FPGA.ALL_Bits[18].ALU_Bit_I1                                  |ALU_Bit_499                                    |     3|
+|114   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_565                                  |     1|
+|115   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_566                             |     2|
+|116   |                \Using_FPGA.ALL_Bits[19].ALU_Bit_I1                                  |ALU_Bit_500                                    |     3|
+|117   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_563                                  |     1|
+|118   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_564                             |     2|
+|119   |                \Using_FPGA.ALL_Bits[1].ALU_Bit_I1                                   |ALU_Bit_501                                    |     3|
+|120   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_561                                  |     1|
+|121   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_562                             |     2|
+|122   |                \Using_FPGA.ALL_Bits[20].ALU_Bit_I1                                  |ALU_Bit_502                                    |     3|
+|123   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_559                                  |     1|
+|124   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_560                             |     2|
+|125   |                \Using_FPGA.ALL_Bits[21].ALU_Bit_I1                                  |ALU_Bit_503                                    |     3|
+|126   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_557                                  |     1|
+|127   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_558                             |     2|
+|128   |                \Using_FPGA.ALL_Bits[22].ALU_Bit_I1                                  |ALU_Bit_504                                    |     3|
+|129   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_555                                  |     1|
+|130   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_556                             |     2|
+|131   |                \Using_FPGA.ALL_Bits[23].ALU_Bit_I1                                  |ALU_Bit_505                                    |     3|
+|132   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_553                                  |     1|
+|133   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_554                             |     2|
+|134   |                \Using_FPGA.ALL_Bits[24].ALU_Bit_I1                                  |ALU_Bit_506                                    |     3|
+|135   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_551                                  |     1|
+|136   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_552                             |     2|
+|137   |                \Using_FPGA.ALL_Bits[25].ALU_Bit_I1                                  |ALU_Bit_507                                    |     3|
+|138   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_549                                  |     1|
+|139   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_550                             |     2|
+|140   |                \Using_FPGA.ALL_Bits[26].ALU_Bit_I1                                  |ALU_Bit_508                                    |     3|
+|141   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_547                                  |     1|
+|142   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_548                             |     2|
+|143   |                \Using_FPGA.ALL_Bits[27].ALU_Bit_I1                                  |ALU_Bit_509                                    |     3|
+|144   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_545                                  |     1|
+|145   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_546                             |     2|
+|146   |                \Using_FPGA.ALL_Bits[28].ALU_Bit_I1                                  |ALU_Bit_510                                    |     3|
+|147   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_543                                  |     1|
+|148   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_544                             |     2|
+|149   |                \Using_FPGA.ALL_Bits[29].ALU_Bit_I1                                  |ALU_Bit_511                                    |     3|
+|150   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_541                                  |     1|
+|151   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_542                             |     2|
+|152   |                \Using_FPGA.ALL_Bits[2].ALU_Bit_I1                                   |ALU_Bit_512                                    |     3|
+|153   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_539                                  |     1|
+|154   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_540                             |     2|
+|155   |                \Using_FPGA.ALL_Bits[30].ALU_Bit_I1                                  |ALU_Bit_513                                    |     3|
+|156   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_537                                  |     1|
+|157   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_538                             |     2|
+|158   |                \Using_FPGA.ALL_Bits[31].ALU_Bit_I1                                  |ALU_Bit_514                                    |     3|
+|159   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_535                                  |     1|
+|160   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_536                             |     2|
+|161   |                \Using_FPGA.ALL_Bits[3].ALU_Bit_I1                                   |ALU_Bit_515                                    |     3|
+|162   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_533                                  |     1|
+|163   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_534                             |     2|
+|164   |                \Using_FPGA.ALL_Bits[4].ALU_Bit_I1                                   |ALU_Bit_516                                    |     3|
+|165   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_531                                  |     1|
+|166   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_532                             |     2|
+|167   |                \Using_FPGA.ALL_Bits[5].ALU_Bit_I1                                   |ALU_Bit_517                                    |     3|
+|168   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_529                                  |     1|
+|169   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_530                             |     2|
+|170   |                \Using_FPGA.ALL_Bits[6].ALU_Bit_I1                                   |ALU_Bit_518                                    |     3|
+|171   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_527                                  |     1|
+|172   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_528                             |     2|
+|173   |                \Using_FPGA.ALL_Bits[7].ALU_Bit_I1                                   |ALU_Bit_519                                    |     3|
+|174   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_525                                  |     1|
+|175   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_526                             |     2|
+|176   |                \Using_FPGA.ALL_Bits[8].ALU_Bit_I1                                   |ALU_Bit_520                                    |     3|
+|177   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2_523                                  |     1|
+|178   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_524                             |     2|
+|179   |                \Using_FPGA.ALL_Bits[9].ALU_Bit_I1                                   |ALU_Bit_521                                    |     3|
+|180   |                  \Not_Last_Bit.I_ALU_LUT_V5                                         |MB_LUT6_2                                      |     1|
+|181   |                  \Not_Last_Bit.MUXCY_XOR_I                                          |MB_MUXCY_XORCY_522                             |     2|
+|182   |              Byte_Doublet_Handle_gti_I                                              |Byte_Doublet_Handle_gti                        |    45|
+|183   |              Data_Flow_Logic_I                                                      |Data_Flow_Logic                                |    64|
+|184   |                \Gen_Bits[0].MEM_EX_Result_Inst                                      |microblaze_v10_0_3_MB_FDRE_459                 |     1|
+|185   |                \Gen_Bits[10].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_460                 |     1|
+|186   |                \Gen_Bits[11].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_461                 |     1|
+|187   |                \Gen_Bits[12].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_462                 |     1|
+|188   |                \Gen_Bits[13].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_463                 |     1|
+|189   |                \Gen_Bits[14].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_464                 |     1|
+|190   |                \Gen_Bits[15].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_465                 |     1|
+|191   |                \Gen_Bits[16].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_466                 |     1|
+|192   |                \Gen_Bits[17].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_467                 |     1|
+|193   |                \Gen_Bits[18].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_468                 |     1|
+|194   |                \Gen_Bits[19].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_469                 |     1|
+|195   |                \Gen_Bits[1].MEM_EX_Result_Inst                                      |microblaze_v10_0_3_MB_FDRE_470                 |     1|
+|196   |                \Gen_Bits[20].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_471                 |     1|
+|197   |                \Gen_Bits[21].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_472                 |     1|
+|198   |                \Gen_Bits[22].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_473                 |     1|
+|199   |                \Gen_Bits[23].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_474                 |     1|
+|200   |                \Gen_Bits[24].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_475                 |     1|
+|201   |                \Gen_Bits[25].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_476                 |     1|
+|202   |                \Gen_Bits[26].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_477                 |     1|
+|203   |                \Gen_Bits[27].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_478                 |     1|
+|204   |                \Gen_Bits[28].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_479                 |     1|
+|205   |                \Gen_Bits[29].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_480                 |     1|
+|206   |                \Gen_Bits[2].MEM_EX_Result_Inst                                      |microblaze_v10_0_3_MB_FDRE_481                 |     1|
+|207   |                \Gen_Bits[30].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_482                 |     1|
+|208   |                \Gen_Bits[31].MEM_EX_Result_Inst                                     |microblaze_v10_0_3_MB_FDRE_483                 |     1|
+|209   |                \Gen_Bits[3].MEM_EX_Result_Inst                                      |microblaze_v10_0_3_MB_FDRE_484                 |     1|
+|210   |                \Gen_Bits[4].MEM_EX_Result_Inst                                      |microblaze_v10_0_3_MB_FDRE_485                 |     1|
+|211   |                \Gen_Bits[5].MEM_EX_Result_Inst                                      |microblaze_v10_0_3_MB_FDRE_486                 |     1|
+|212   |                \Gen_Bits[6].MEM_EX_Result_Inst                                      |microblaze_v10_0_3_MB_FDRE_487                 |     1|
+|213   |                \Gen_Bits[7].MEM_EX_Result_Inst                                      |microblaze_v10_0_3_MB_FDRE_488                 |     1|
+|214   |                \Gen_Bits[8].MEM_EX_Result_Inst                                      |microblaze_v10_0_3_MB_FDRE_489                 |     1|
+|215   |                \Gen_Bits[9].MEM_EX_Result_Inst                                      |microblaze_v10_0_3_MB_FDRE_490                 |     1|
+|216   |              Operand_Select_I                                                       |Operand_Select_gti                             |   286|
+|217   |                \Gen_Bit[0].MUXF7_I1                                                 |microblaze_v10_0_3_MB_MUXF7_427                |     1|
+|218   |                \Gen_Bit[10].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_428                |     5|
+|219   |                \Gen_Bit[11].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_429                |     5|
+|220   |                \Gen_Bit[12].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_430                |     5|
+|221   |                \Gen_Bit[13].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_431                |     5|
+|222   |                \Gen_Bit[14].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_432                |     5|
+|223   |                \Gen_Bit[15].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_433                |     5|
+|224   |                \Gen_Bit[16].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_434                |     5|
+|225   |                \Gen_Bit[17].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_435                |     2|
+|226   |                \Gen_Bit[18].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_436                |     2|
+|227   |                \Gen_Bit[19].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_437                |     2|
+|228   |                \Gen_Bit[1].MUXF7_I1                                                 |microblaze_v10_0_3_MB_MUXF7_438                |     5|
+|229   |                \Gen_Bit[20].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_439                |     2|
+|230   |                \Gen_Bit[21].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_440                |     2|
+|231   |                \Gen_Bit[22].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_441                |     2|
+|232   |                \Gen_Bit[23].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_442                |     2|
+|233   |                \Gen_Bit[24].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_443                |     2|
+|234   |                \Gen_Bit[25].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_444                |     2|
+|235   |                \Gen_Bit[26].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_445                |     2|
+|236   |                \Gen_Bit[27].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_446                |     2|
+|237   |                \Gen_Bit[28].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_447                |     2|
+|238   |                \Gen_Bit[29].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_448                |     2|
+|239   |                \Gen_Bit[2].MUXF7_I1                                                 |microblaze_v10_0_3_MB_MUXF7_449                |     5|
+|240   |                \Gen_Bit[30].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_450                |     2|
+|241   |                \Gen_Bit[31].MUXF7_I1                                                |microblaze_v10_0_3_MB_MUXF7_451                |     2|
+|242   |                \Gen_Bit[3].MUXF7_I1                                                 |microblaze_v10_0_3_MB_MUXF7_452                |     5|
+|243   |                \Gen_Bit[4].MUXF7_I1                                                 |microblaze_v10_0_3_MB_MUXF7_453                |     5|
+|244   |                \Gen_Bit[5].MUXF7_I1                                                 |microblaze_v10_0_3_MB_MUXF7_454                |     5|
+|245   |                \Gen_Bit[6].MUXF7_I1                                                 |microblaze_v10_0_3_MB_MUXF7_455                |     5|
+|246   |                \Gen_Bit[7].MUXF7_I1                                                 |microblaze_v10_0_3_MB_MUXF7_456                |     5|
+|247   |                \Gen_Bit[8].MUXF7_I1                                                 |microblaze_v10_0_3_MB_MUXF7_457                |     4|
+|248   |                \Gen_Bit[9].MUXF7_I1                                                 |microblaze_v10_0_3_MB_MUXF7_458                |     5|
+|249   |              Register_File_I                                                        |Register_File_gti                              |    16|
+|250   |                \Using_LUT6.All_RAM32M[0].ram32m_i                                   |MB_RAM32M                                      |     1|
+|251   |                \Using_LUT6.All_RAM32M[10].ram32m_i                                  |MB_RAM32M_412                                  |     1|
+|252   |                \Using_LUT6.All_RAM32M[11].ram32m_i                                  |MB_RAM32M_413                                  |     1|
+|253   |                \Using_LUT6.All_RAM32M[12].ram32m_i                                  |MB_RAM32M_414                                  |     1|
+|254   |                \Using_LUT6.All_RAM32M[13].ram32m_i                                  |MB_RAM32M_415                                  |     1|
+|255   |                \Using_LUT6.All_RAM32M[14].ram32m_i                                  |MB_RAM32M_416                                  |     1|
+|256   |                \Using_LUT6.All_RAM32M[15].ram32m_i                                  |MB_RAM32M_417                                  |     1|
+|257   |                \Using_LUT6.All_RAM32M[1].ram32m_i                                   |MB_RAM32M_418                                  |     1|
+|258   |                \Using_LUT6.All_RAM32M[2].ram32m_i                                   |MB_RAM32M_419                                  |     1|
+|259   |                \Using_LUT6.All_RAM32M[3].ram32m_i                                   |MB_RAM32M_420                                  |     1|
+|260   |                \Using_LUT6.All_RAM32M[4].ram32m_i                                   |MB_RAM32M_421                                  |     1|
+|261   |                \Using_LUT6.All_RAM32M[5].ram32m_i                                   |MB_RAM32M_422                                  |     1|
+|262   |                \Using_LUT6.All_RAM32M[6].ram32m_i                                   |MB_RAM32M_423                                  |     1|
+|263   |                \Using_LUT6.All_RAM32M[7].ram32m_i                                   |MB_RAM32M_424                                  |     1|
+|264   |                \Using_LUT6.All_RAM32M[8].ram32m_i                                   |MB_RAM32M_425                                  |     1|
+|265   |                \Using_LUT6.All_RAM32M[9].ram32m_i                                   |MB_RAM32M_426                                  |     1|
+|266   |              Shift_Logic_Module_I                                                   |Shift_Logic_Module_gti                         |     0|
+|267   |              \Using_DAXI_ALU_Carry.Direct_MUXCY_I                                   |microblaze_v10_0_3_MB_MUXCY_302                |     1|
+|268   |              \Using_DAXI_ALU_Carry.Post_MUXCY_I                                     |microblaze_v10_0_3_MB_MUXCY_303                |     1|
+|269   |              \Using_DAXI_ALU_Carry.direct_lut_INST                                  |MB_LUT6_2__parameterized1                      |     1|
+|270   |              Zero_Detect_I                                                          |Zero_Detect_gti                                |    12|
+|271   |                Part_Of_Zero_Carry_Start                                             |microblaze_v10_0_3_MB_MUXCY_405                |     1|
+|272   |                \Zero_Detecting[0].I_Part_Of_Zero_Detect                             |microblaze_v10_0_3_MB_MUXCY_406                |     1|
+|273   |                \Zero_Detecting[1].I_Part_Of_Zero_Detect                             |microblaze_v10_0_3_MB_MUXCY_407                |     1|
+|274   |                \Zero_Detecting[2].I_Part_Of_Zero_Detect                             |microblaze_v10_0_3_MB_MUXCY_408                |     1|
+|275   |                \Zero_Detecting[3].I_Part_Of_Zero_Detect                             |microblaze_v10_0_3_MB_MUXCY_409                |     1|
+|276   |                \Zero_Detecting[4].I_Part_Of_Zero_Detect                             |microblaze_v10_0_3_MB_MUXCY_410                |     1|
+|277   |                \Zero_Detecting[5].I_Part_Of_Zero_Detect                             |microblaze_v10_0_3_MB_MUXCY_411                |     1|
+|278   |              exception_registers_I1                                                 |exception_registers_gti                        |   146|
+|279   |                CarryIn_MUXCY                                                        |microblaze_v10_0_3_MB_MUXCY_310                |     1|
+|280   |                \Using_FPGA_LUT6.Gen_Ret_Addr[0].I_RET_ADDR_WB                       |MB_LUT6_2__parameterized5                      |     1|
+|281   |                \Using_FPGA_LUT6.Gen_Ret_Addr[0].MUXCY_XOR_I                         |MB_MUXCY_XORCY_311                             |     1|
+|282   |                \Using_FPGA_LUT6.Gen_Ret_Addr[0].WB_PC_FDE                           |MB_FDE                                         |     1|
+|283   |                \Using_FPGA_LUT6.Gen_Ret_Addr[10].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_312                  |     1|
+|284   |                \Using_FPGA_LUT6.Gen_Ret_Addr[10].MUXCY_XOR_I                        |MB_MUXCY_XORCY_313                             |     2|
+|285   |                \Using_FPGA_LUT6.Gen_Ret_Addr[10].WB_PC_FDE                          |MB_FDE_314                                     |     1|
+|286   |                \Using_FPGA_LUT6.Gen_Ret_Addr[11].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_315                  |     1|
+|287   |                \Using_FPGA_LUT6.Gen_Ret_Addr[11].MUXCY_XOR_I                        |MB_MUXCY_XORCY_316                             |     2|
+|288   |                \Using_FPGA_LUT6.Gen_Ret_Addr[11].WB_PC_FDE                          |MB_FDE_317                                     |     1|
+|289   |                \Using_FPGA_LUT6.Gen_Ret_Addr[12].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_318                  |     1|
+|290   |                \Using_FPGA_LUT6.Gen_Ret_Addr[12].MUXCY_XOR_I                        |MB_MUXCY_XORCY_319                             |     2|
+|291   |                \Using_FPGA_LUT6.Gen_Ret_Addr[12].WB_PC_FDE                          |MB_FDE_320                                     |     1|
+|292   |                \Using_FPGA_LUT6.Gen_Ret_Addr[13].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_321                  |     1|
+|293   |                \Using_FPGA_LUT6.Gen_Ret_Addr[13].MUXCY_XOR_I                        |MB_MUXCY_XORCY_322                             |     2|
+|294   |                \Using_FPGA_LUT6.Gen_Ret_Addr[13].WB_PC_FDE                          |MB_FDE_323                                     |     1|
+|295   |                \Using_FPGA_LUT6.Gen_Ret_Addr[14].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_324                  |     1|
+|296   |                \Using_FPGA_LUT6.Gen_Ret_Addr[14].MUXCY_XOR_I                        |MB_MUXCY_XORCY_325                             |     2|
+|297   |                \Using_FPGA_LUT6.Gen_Ret_Addr[14].WB_PC_FDE                          |MB_FDE_326                                     |     1|
+|298   |                \Using_FPGA_LUT6.Gen_Ret_Addr[15].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_327                  |     1|
+|299   |                \Using_FPGA_LUT6.Gen_Ret_Addr[15].MUXCY_XOR_I                        |MB_MUXCY_XORCY_328                             |     2|
+|300   |                \Using_FPGA_LUT6.Gen_Ret_Addr[15].WB_PC_FDE                          |MB_FDE_329                                     |     1|
+|301   |                \Using_FPGA_LUT6.Gen_Ret_Addr[16].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_330                  |     1|
+|302   |                \Using_FPGA_LUT6.Gen_Ret_Addr[16].MUXCY_XOR_I                        |MB_MUXCY_XORCY_331                             |     6|
+|303   |                \Using_FPGA_LUT6.Gen_Ret_Addr[16].WB_PC_FDE                          |MB_FDE_332                                     |     1|
+|304   |                \Using_FPGA_LUT6.Gen_Ret_Addr[17].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_333                  |     1|
+|305   |                \Using_FPGA_LUT6.Gen_Ret_Addr[17].MUXCY_XOR_I                        |MB_MUXCY_XORCY_334                             |     4|
+|306   |                \Using_FPGA_LUT6.Gen_Ret_Addr[17].WB_PC_FDE                          |MB_FDE_335                                     |     1|
+|307   |                \Using_FPGA_LUT6.Gen_Ret_Addr[18].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_336                  |     1|
+|308   |                \Using_FPGA_LUT6.Gen_Ret_Addr[18].MUXCY_XOR_I                        |MB_MUXCY_XORCY_337                             |     4|
+|309   |                \Using_FPGA_LUT6.Gen_Ret_Addr[18].WB_PC_FDE                          |MB_FDE_338                                     |     1|
+|310   |                \Using_FPGA_LUT6.Gen_Ret_Addr[19].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_339                  |     1|
+|311   |                \Using_FPGA_LUT6.Gen_Ret_Addr[19].MUXCY_XOR_I                        |MB_MUXCY_XORCY_340                             |     4|
+|312   |                \Using_FPGA_LUT6.Gen_Ret_Addr[19].WB_PC_FDE                          |MB_FDE_341                                     |     1|
+|313   |                \Using_FPGA_LUT6.Gen_Ret_Addr[1].I_RET_ADDR_WB                       |MB_LUT6_2__parameterized5_342                  |     1|
+|314   |                \Using_FPGA_LUT6.Gen_Ret_Addr[1].MUXCY_XOR_I                         |MB_MUXCY_XORCY_343                             |     2|
+|315   |                \Using_FPGA_LUT6.Gen_Ret_Addr[1].WB_PC_FDE                           |MB_FDE_344                                     |     1|
+|316   |                \Using_FPGA_LUT6.Gen_Ret_Addr[20].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_345                  |     1|
+|317   |                \Using_FPGA_LUT6.Gen_Ret_Addr[20].MUXCY_XOR_I                        |MB_MUXCY_XORCY_346                             |     4|
+|318   |                \Using_FPGA_LUT6.Gen_Ret_Addr[20].WB_PC_FDE                          |MB_FDE_347                                     |     1|
+|319   |                \Using_FPGA_LUT6.Gen_Ret_Addr[21].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_348                  |     1|
+|320   |                \Using_FPGA_LUT6.Gen_Ret_Addr[21].MUXCY_XOR_I                        |MB_MUXCY_XORCY_349                             |     4|
+|321   |                \Using_FPGA_LUT6.Gen_Ret_Addr[21].WB_PC_FDE                          |MB_FDE_350                                     |     1|
+|322   |                \Using_FPGA_LUT6.Gen_Ret_Addr[22].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_351                  |     1|
+|323   |                \Using_FPGA_LUT6.Gen_Ret_Addr[22].MUXCY_XOR_I                        |MB_MUXCY_XORCY_352                             |     4|
+|324   |                \Using_FPGA_LUT6.Gen_Ret_Addr[22].WB_PC_FDE                          |MB_FDE_353                                     |     1|
+|325   |                \Using_FPGA_LUT6.Gen_Ret_Addr[23].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_354                  |     1|
+|326   |                \Using_FPGA_LUT6.Gen_Ret_Addr[23].MUXCY_XOR_I                        |MB_MUXCY_XORCY_355                             |     4|
+|327   |                \Using_FPGA_LUT6.Gen_Ret_Addr[23].WB_PC_FDE                          |MB_FDE_356                                     |     1|
+|328   |                \Using_FPGA_LUT6.Gen_Ret_Addr[24].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_357                  |     1|
+|329   |                \Using_FPGA_LUT6.Gen_Ret_Addr[24].MUXCY_XOR_I                        |MB_MUXCY_XORCY_358                             |     2|
+|330   |                \Using_FPGA_LUT6.Gen_Ret_Addr[24].WB_PC_FDE                          |MB_FDE_359                                     |     1|
+|331   |                \Using_FPGA_LUT6.Gen_Ret_Addr[25].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_360                  |     1|
+|332   |                \Using_FPGA_LUT6.Gen_Ret_Addr[25].MUXCY_XOR_I                        |MB_MUXCY_XORCY_361                             |     2|
+|333   |                \Using_FPGA_LUT6.Gen_Ret_Addr[25].WB_PC_FDE                          |MB_FDE_362                                     |     1|
+|334   |                \Using_FPGA_LUT6.Gen_Ret_Addr[26].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_363                  |     1|
+|335   |                \Using_FPGA_LUT6.Gen_Ret_Addr[26].MUXCY_XOR_I                        |MB_MUXCY_XORCY_364                             |     2|
+|336   |                \Using_FPGA_LUT6.Gen_Ret_Addr[26].WB_PC_FDE                          |MB_FDE_365                                     |     1|
+|337   |                \Using_FPGA_LUT6.Gen_Ret_Addr[27].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_366                  |     1|
+|338   |                \Using_FPGA_LUT6.Gen_Ret_Addr[27].MUXCY_XOR_I                        |MB_MUXCY_XORCY_367                             |     2|
+|339   |                \Using_FPGA_LUT6.Gen_Ret_Addr[27].WB_PC_FDE                          |MB_FDE_368                                     |     1|
+|340   |                \Using_FPGA_LUT6.Gen_Ret_Addr[28].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_369                  |     1|
+|341   |                \Using_FPGA_LUT6.Gen_Ret_Addr[28].MUXCY_XOR_I                        |MB_MUXCY_XORCY_370                             |     2|
+|342   |                \Using_FPGA_LUT6.Gen_Ret_Addr[28].WB_PC_FDE                          |MB_FDE_371                                     |     1|
+|343   |                \Using_FPGA_LUT6.Gen_Ret_Addr[29].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_372                  |     1|
+|344   |                \Using_FPGA_LUT6.Gen_Ret_Addr[29].MUXCY_XOR_I                        |MB_MUXCY_XORCY_373                             |     2|
+|345   |                \Using_FPGA_LUT6.Gen_Ret_Addr[29].WB_PC_FDE                          |MB_FDE_374                                     |     1|
+|346   |                \Using_FPGA_LUT6.Gen_Ret_Addr[2].I_RET_ADDR_WB                       |MB_LUT6_2__parameterized5_375                  |     1|
+|347   |                \Using_FPGA_LUT6.Gen_Ret_Addr[2].MUXCY_XOR_I                         |MB_MUXCY_XORCY_376                             |     2|
+|348   |                \Using_FPGA_LUT6.Gen_Ret_Addr[2].WB_PC_FDE                           |MB_FDE_377                                     |     1|
+|349   |                \Using_FPGA_LUT6.Gen_Ret_Addr[30].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_378                  |     1|
+|350   |                \Using_FPGA_LUT6.Gen_Ret_Addr[30].MUXCY_XOR_I                        |MB_MUXCY_XORCY_379                             |     2|
+|351   |                \Using_FPGA_LUT6.Gen_Ret_Addr[30].WB_PC_FDE                          |MB_FDE_380                                     |     1|
+|352   |                \Using_FPGA_LUT6.Gen_Ret_Addr[31].I_RET_ADDR_WB                      |MB_LUT6_2__parameterized5_381                  |     1|
+|353   |                \Using_FPGA_LUT6.Gen_Ret_Addr[31].MUXCY_XOR_I                        |MB_MUXCY_XORCY_382                             |     2|
+|354   |                \Using_FPGA_LUT6.Gen_Ret_Addr[31].WB_PC_FDE                          |MB_FDE_383                                     |     1|
+|355   |                \Using_FPGA_LUT6.Gen_Ret_Addr[3].I_RET_ADDR_WB                       |MB_LUT6_2__parameterized5_384                  |     1|
+|356   |                \Using_FPGA_LUT6.Gen_Ret_Addr[3].MUXCY_XOR_I                         |MB_MUXCY_XORCY_385                             |     2|
+|357   |                \Using_FPGA_LUT6.Gen_Ret_Addr[3].WB_PC_FDE                           |MB_FDE_386                                     |     1|
+|358   |                \Using_FPGA_LUT6.Gen_Ret_Addr[4].I_RET_ADDR_WB                       |MB_LUT6_2__parameterized5_387                  |     1|
+|359   |                \Using_FPGA_LUT6.Gen_Ret_Addr[4].MUXCY_XOR_I                         |MB_MUXCY_XORCY_388                             |     2|
+|360   |                \Using_FPGA_LUT6.Gen_Ret_Addr[4].WB_PC_FDE                           |MB_FDE_389                                     |     1|
+|361   |                \Using_FPGA_LUT6.Gen_Ret_Addr[5].I_RET_ADDR_WB                       |MB_LUT6_2__parameterized5_390                  |     1|
+|362   |                \Using_FPGA_LUT6.Gen_Ret_Addr[5].MUXCY_XOR_I                         |MB_MUXCY_XORCY_391                             |     2|
+|363   |                \Using_FPGA_LUT6.Gen_Ret_Addr[5].WB_PC_FDE                           |MB_FDE_392                                     |     1|
+|364   |                \Using_FPGA_LUT6.Gen_Ret_Addr[6].I_RET_ADDR_WB                       |MB_LUT6_2__parameterized5_393                  |     1|
+|365   |                \Using_FPGA_LUT6.Gen_Ret_Addr[6].MUXCY_XOR_I                         |MB_MUXCY_XORCY_394                             |     2|
+|366   |                \Using_FPGA_LUT6.Gen_Ret_Addr[6].WB_PC_FDE                           |MB_FDE_395                                     |     1|
+|367   |                \Using_FPGA_LUT6.Gen_Ret_Addr[7].I_RET_ADDR_WB                       |MB_LUT6_2__parameterized5_396                  |     1|
+|368   |                \Using_FPGA_LUT6.Gen_Ret_Addr[7].MUXCY_XOR_I                         |MB_MUXCY_XORCY_397                             |     2|
+|369   |                \Using_FPGA_LUT6.Gen_Ret_Addr[7].WB_PC_FDE                           |MB_FDE_398                                     |     1|
+|370   |                \Using_FPGA_LUT6.Gen_Ret_Addr[8].I_RET_ADDR_WB                       |MB_LUT6_2__parameterized5_399                  |     1|
+|371   |                \Using_FPGA_LUT6.Gen_Ret_Addr[8].MUXCY_XOR_I                         |MB_MUXCY_XORCY_400                             |     2|
+|372   |                \Using_FPGA_LUT6.Gen_Ret_Addr[8].WB_PC_FDE                           |MB_FDE_401                                     |     1|
+|373   |                \Using_FPGA_LUT6.Gen_Ret_Addr[9].I_RET_ADDR_WB                       |MB_LUT6_2__parameterized5_402                  |     1|
+|374   |                \Using_FPGA_LUT6.Gen_Ret_Addr[9].MUXCY_XOR_I                         |MB_MUXCY_XORCY_403                             |     2|
+|375   |                \Using_FPGA_LUT6.Gen_Ret_Addr[9].WB_PC_FDE                           |MB_FDE_404                                     |     1|
+|376   |              msr_reg_i                                                              |msr_reg_gti                                    |    19|
+|377   |                \MEM_MSR_Bits[28].Using_FDR.MSR_I                                    |MB_FDR_304                                     |     3|
+|378   |                \MEM_MSR_Bits[29].Using_FDR.MSR_I                                    |MB_FDR_305                                     |     4|
+|379   |                \MEM_MSR_Bits[30].Using_FDR.MSR_I                                    |MB_FDR_306                                     |     3|
+|380   |                \OF_EX_MSR_Bits[28].Using_FDR.MSR_ex_I                               |MB_FDR_307                                     |     2|
+|381   |                \OF_EX_MSR_Bits[29].Using_FDR.MSR_ex_I                               |MB_FDR_308                                     |     2|
+|382   |                \OF_EX_MSR_Bits[30].Using_FDR.MSR_ex_I                               |MB_FDR_309                                     |     2|
+|383   |            Decode_I                                                                 |Decode_gti                                     |  1468|
+|384   |              PC_Module_I                                                            |PC_Module_gti                                  |   344|
+|385   |                \Instruction_Prefetch_Mux[0].Gen_Instr_DFF                           |MB_FDR_209                                     |     2|
+|386   |                \Instruction_Prefetch_Mux[0].PC_Mux_MUXF7                            |microblaze_v10_0_3_MB_MUXF7_210                |     2|
+|387   |                \Instruction_Prefetch_Mux[10].Gen_Instr_DFF                          |MB_FDR_211                                     |     3|
+|388   |                \Instruction_Prefetch_Mux[10].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_212                |     2|
+|389   |                \Instruction_Prefetch_Mux[11].Gen_Instr_DFF                          |MB_FDR_213                                     |     3|
+|390   |                \Instruction_Prefetch_Mux[11].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_214                |     2|
+|391   |                \Instruction_Prefetch_Mux[12].Gen_Instr_DFF                          |MB_FDR_215                                     |     3|
+|392   |                \Instruction_Prefetch_Mux[12].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_216                |     2|
+|393   |                \Instruction_Prefetch_Mux[13].Gen_Instr_DFF                          |MB_FDR_217                                     |     3|
+|394   |                \Instruction_Prefetch_Mux[13].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_218                |     2|
+|395   |                \Instruction_Prefetch_Mux[14].Gen_Instr_DFF                          |MB_FDR_219                                     |     3|
+|396   |                \Instruction_Prefetch_Mux[14].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_220                |     2|
+|397   |                \Instruction_Prefetch_Mux[15].Gen_Instr_DFF                          |MB_FDR_221                                     |     3|
+|398   |                \Instruction_Prefetch_Mux[15].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_222                |     2|
+|399   |                \Instruction_Prefetch_Mux[16].Gen_Instr_DFF                          |MB_FDR_223                                     |     3|
+|400   |                \Instruction_Prefetch_Mux[16].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_224                |     2|
+|401   |                \Instruction_Prefetch_Mux[17].Gen_Instr_DFF                          |MB_FDR_225                                     |     3|
+|402   |                \Instruction_Prefetch_Mux[17].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_226                |     2|
+|403   |                \Instruction_Prefetch_Mux[18].Gen_Instr_DFF                          |MB_FDR_227                                     |     3|
+|404   |                \Instruction_Prefetch_Mux[18].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_228                |     2|
+|405   |                \Instruction_Prefetch_Mux[19].Gen_Instr_DFF                          |MB_FDR_229                                     |     3|
+|406   |                \Instruction_Prefetch_Mux[19].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_230                |     2|
+|407   |                \Instruction_Prefetch_Mux[1].Gen_Instr_DFF                           |MB_FDR_231                                     |     3|
+|408   |                \Instruction_Prefetch_Mux[1].PC_Mux_MUXF7                            |microblaze_v10_0_3_MB_MUXF7_232                |     2|
+|409   |                \Instruction_Prefetch_Mux[20].Gen_Instr_DFF                          |MB_FDR_233                                     |     3|
+|410   |                \Instruction_Prefetch_Mux[20].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_234                |     2|
+|411   |                \Instruction_Prefetch_Mux[21].Gen_Instr_DFF                          |MB_FDR_235                                     |     3|
+|412   |                \Instruction_Prefetch_Mux[21].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_236                |     2|
+|413   |                \Instruction_Prefetch_Mux[22].Gen_Instr_DFF                          |MB_FDR_237                                     |     3|
+|414   |                \Instruction_Prefetch_Mux[22].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_238                |     2|
+|415   |                \Instruction_Prefetch_Mux[23].Gen_Instr_DFF                          |MB_FDR_239                                     |     3|
+|416   |                \Instruction_Prefetch_Mux[23].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_240                |     2|
+|417   |                \Instruction_Prefetch_Mux[24].Gen_Instr_DFF                          |MB_FDR_241                                     |     3|
+|418   |                \Instruction_Prefetch_Mux[24].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_242                |     2|
+|419   |                \Instruction_Prefetch_Mux[25].Gen_Instr_DFF                          |MB_FDR_243                                     |     3|
+|420   |                \Instruction_Prefetch_Mux[25].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_244                |     2|
+|421   |                \Instruction_Prefetch_Mux[26].Gen_Instr_DFF                          |MB_FDR_245                                     |     3|
+|422   |                \Instruction_Prefetch_Mux[26].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_246                |     2|
+|423   |                \Instruction_Prefetch_Mux[27].Gen_Instr_DFF                          |MB_FDR_247                                     |     3|
+|424   |                \Instruction_Prefetch_Mux[27].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_248                |     2|
+|425   |                \Instruction_Prefetch_Mux[28].Gen_Instr_DFF                          |MB_FDR_249                                     |     2|
+|426   |                \Instruction_Prefetch_Mux[28].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_250                |     2|
+|427   |                \Instruction_Prefetch_Mux[29].Gen_Instr_DFF                          |MB_FDR_251                                     |     2|
+|428   |                \Instruction_Prefetch_Mux[29].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_252                |     2|
+|429   |                \Instruction_Prefetch_Mux[2].Gen_Instr_DFF                           |MB_FDR_253                                     |     3|
+|430   |                \Instruction_Prefetch_Mux[2].PC_Mux_MUXF7                            |microblaze_v10_0_3_MB_MUXF7_254                |     2|
+|431   |                \Instruction_Prefetch_Mux[30].Gen_Instr_DFF                          |MB_FDR_255                                     |     2|
+|432   |                \Instruction_Prefetch_Mux[30].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_256                |     2|
+|433   |                \Instruction_Prefetch_Mux[31].Gen_Instr_DFF                          |MB_FDR_257                                     |     3|
+|434   |                \Instruction_Prefetch_Mux[31].PC_Mux_MUXF7                           |microblaze_v10_0_3_MB_MUXF7_258                |     2|
+|435   |                \Instruction_Prefetch_Mux[3].Gen_Instr_DFF                           |MB_FDR_259                                     |     3|
+|436   |                \Instruction_Prefetch_Mux[3].PC_Mux_MUXF7                            |microblaze_v10_0_3_MB_MUXF7_260                |     2|
+|437   |                \Instruction_Prefetch_Mux[4].Gen_Instr_DFF                           |MB_FDR_261                                     |     3|
+|438   |                \Instruction_Prefetch_Mux[4].PC_Mux_MUXF7                            |microblaze_v10_0_3_MB_MUXF7_262                |     2|
+|439   |                \Instruction_Prefetch_Mux[5].Gen_Instr_DFF                           |MB_FDR_263                                     |     3|
+|440   |                \Instruction_Prefetch_Mux[5].PC_Mux_MUXF7                            |microblaze_v10_0_3_MB_MUXF7_264                |     2|
+|441   |                \Instruction_Prefetch_Mux[6].Gen_Instr_DFF                           |MB_FDR_265                                     |     3|
+|442   |                \Instruction_Prefetch_Mux[6].PC_Mux_MUXF7                            |microblaze_v10_0_3_MB_MUXF7_266                |     2|
+|443   |                \Instruction_Prefetch_Mux[7].Gen_Instr_DFF                           |MB_FDR_267                                     |     3|
+|444   |                \Instruction_Prefetch_Mux[7].PC_Mux_MUXF7                            |microblaze_v10_0_3_MB_MUXF7_268                |     2|
+|445   |                \Instruction_Prefetch_Mux[8].Gen_Instr_DFF                           |MB_FDR_269                                     |     3|
+|446   |                \Instruction_Prefetch_Mux[8].PC_Mux_MUXF7                            |microblaze_v10_0_3_MB_MUXF7_270                |     2|
+|447   |                \Instruction_Prefetch_Mux[9].Gen_Instr_DFF                           |MB_FDR_271                                     |     3|
+|448   |                \Instruction_Prefetch_Mux[9].PC_Mux_MUXF7                            |microblaze_v10_0_3_MB_MUXF7_272                |     2|
+|449   |                \Using_FPGA.Incr_PC[0].MUXCY_XOR_I                                   |MB_MUXCY_XORCY                                 |     1|
+|450   |                \Using_FPGA.Incr_PC[10].MUXCY_XOR_I                                  |MB_MUXCY_XORCY_273                             |     2|
+|451   |                \Using_FPGA.Incr_PC[11].MUXCY_XOR_I                                  |MB_MUXCY_XORCY_274                             |     2|
+|452   |                \Using_FPGA.Incr_PC[12].MUXCY_XOR_I                                  |MB_MUXCY_XORCY_275                             |     2|
+|453   |                \Using_FPGA.Incr_PC[13].MUXCY_XOR_I                                  |MB_MUXCY_XORCY_276                             |     2|
+|454   |                \Using_FPGA.Incr_PC[14].MUXCY_XOR_I                                  |MB_MUXCY_XORCY_277                             |     2|
+|455   |                \Using_FPGA.Incr_PC[15].MUXCY_XOR_I                                  |MB_MUXCY_XORCY_278                             |     2|
+|456   |                \Using_FPGA.Incr_PC[16].MUXCY_XOR_I                                  |MB_MUXCY_XORCY_279                             |     2|
+|457   |                \Using_FPGA.Incr_PC[17].MUXCY_XOR_I                                  |MB_MUXCY_XORCY_280                             |     2|
+|458   |                \Using_FPGA.Incr_PC[18].MUXCY_XOR_I                                  |MB_MUXCY_XORCY_281                             |     2|
+|459   |                \Using_FPGA.Incr_PC[19].MUXCY_XOR_I                                  |MB_MUXCY_XORCY_282                             |     2|
+|460   |                \Using_FPGA.Incr_PC[1].MUXCY_XOR_I                                   |MB_MUXCY_XORCY_283                             |     2|
+|461   |                \Using_FPGA.Incr_PC[20].MUXCY_XOR_I                                  |MB_MUXCY_XORCY_284                             |     2|
+|462   |                \Using_FPGA.Incr_PC[21].MUXCY_XOR_I                                  |MB_MUXCY_XORCY_285                             |     2|
+|463   |                \Using_FPGA.Incr_PC[22].MUXCY_XOR_I                                  |MB_MUXCY_XORCY_286                             |     2|
+|464   |                \Using_FPGA.Incr_PC[23].MUXCY_XOR_I                                  |MB_MUXCY_XORCY_287                             |     2|
+|465   |                \Using_FPGA.Incr_PC[24].MUXCY_XOR_I                                  |MB_MUXCY_XORCY_288                             |     2|
+|466   |                \Using_FPGA.Incr_PC[25].MUXCY_XOR_I                                  |MB_MUXCY_XORCY_289                             |     2|
+|467   |                \Using_FPGA.Incr_PC[26].MUXCY_XOR_I                                  |MB_MUXCY_XORCY_290                             |     2|
+|468   |                \Using_FPGA.Incr_PC[27].MUXCY_XOR_I                                  |MB_MUXCY_XORCY_291                             |     2|
+|469   |                \Using_FPGA.Incr_PC[28].MUXCY_XOR_I                                  |MB_MUXCY_XORCY_292                             |     2|
+|470   |                \Using_FPGA.Incr_PC[29].MUXCY_XOR_I                                  |MB_MUXCY_XORCY_293                             |     2|
+|471   |                \Using_FPGA.Incr_PC[2].MUXCY_XOR_I                                   |MB_MUXCY_XORCY_294                             |     2|
+|472   |                \Using_FPGA.Incr_PC[3].MUXCY_XOR_I                                   |MB_MUXCY_XORCY_295                             |     2|
+|473   |                \Using_FPGA.Incr_PC[4].MUXCY_XOR_I                                   |MB_MUXCY_XORCY_296                             |     2|
+|474   |                \Using_FPGA.Incr_PC[5].MUXCY_XOR_I                                   |MB_MUXCY_XORCY_297                             |     2|
+|475   |                \Using_FPGA.Incr_PC[6].MUXCY_XOR_I                                   |MB_MUXCY_XORCY_298                             |     2|
+|476   |                \Using_FPGA.Incr_PC[7].MUXCY_XOR_I                                   |MB_MUXCY_XORCY_299                             |     2|
+|477   |                \Using_FPGA.Incr_PC[8].MUXCY_XOR_I                                   |MB_MUXCY_XORCY_300                             |     2|
+|478   |                \Using_FPGA.Incr_PC[9].MUXCY_XOR_I                                   |MB_MUXCY_XORCY_301                             |     2|
+|479   |              PreFetch_Buffer_I1                                                     |PreFetch_Buffer_gti                            |   578|
+|480   |                \Gen_Mux_Select_LUT6[1].Gen_Sel_DFF                                  |MB_FDR_115                                     |     4|
+|481   |                \Gen_Mux_Select_LUT6[1].Mux_Select_LUT6                              |microblaze_v10_0_3_MB_LUT6                     |     1|
+|482   |                \Gen_Mux_Select_LUT6[2].Gen_Sel_DFF                                  |MB_FDR_116                                     |     4|
+|483   |                \Gen_Mux_Select_LUT6[2].Mux_Select_LUT6                              |microblaze_v10_0_3_MB_LUT6_117                 |     1|
+|484   |                \Gen_Mux_Select_LUT6[3].Gen_Sel_DFF                                  |MB_FDR_118                                     |     1|
+|485   |                \Gen_Mux_Select_LUT6[3].Mux_Select_LUT6                              |microblaze_v10_0_3_MB_LUT6_119                 |     1|
+|486   |                \Gen_Mux_Select_LUT6[4].Gen_Sel_DFF                                  |MB_FDR_120                                     |    43|
+|487   |                \Gen_Mux_Select_LUT6[4].Mux_Select_LUT6                              |microblaze_v10_0_3_MB_LUT6_121                 |     1|
+|488   |                \Gen_Mux_Select_LUT6[4].Using_ExtraMUX.Mux_Select_Delayslot_LUT6     |microblaze_v10_0_3_MB_LUT6__parameterized0     |     1|
+|489   |                \Gen_Mux_Select_LUT6[4].Using_ExtraMUX.Sel_Mux_MUXF7                 |microblaze_v10_0_3_MB_MUXF7                    |     2|
+|490   |                \Instruction_Prefetch_Mux[0].Gen_Instr_DFF                           |MB_FDR_122                                     |     2|
+|491   |                \Instruction_Prefetch_Mux[0].Instr_Mux_MUXF7                         |microblaze_v10_0_3_MB_MUXF7_123                |     1|
+|492   |                \Instruction_Prefetch_Mux[10].Gen_Instr_DFF                          |MB_FDR_124                                     |     2|
+|493   |                \Instruction_Prefetch_Mux[10].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_125                |     1|
+|494   |                \Instruction_Prefetch_Mux[11].Gen_Instr_DFF                          |MB_FDR_126                                     |     4|
+|495   |                \Instruction_Prefetch_Mux[11].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_127                |     1|
+|496   |                \Instruction_Prefetch_Mux[12].Gen_Instr_DFF                          |MB_FDR_128                                     |     1|
+|497   |                \Instruction_Prefetch_Mux[12].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_129                |     1|
+|498   |                \Instruction_Prefetch_Mux[13].Gen_Instr_DFF                          |MB_FDR_130                                     |     2|
+|499   |                \Instruction_Prefetch_Mux[13].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_131                |     1|
+|500   |                \Instruction_Prefetch_Mux[14].Gen_Instr_DFF                          |MB_FDR_132                                     |     2|
+|501   |                \Instruction_Prefetch_Mux[14].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_133                |     1|
+|502   |                \Instruction_Prefetch_Mux[15].Gen_Instr_DFF                          |MB_FDR_134                                     |     1|
+|503   |                \Instruction_Prefetch_Mux[15].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_135                |     1|
+|504   |                \Instruction_Prefetch_Mux[16].Gen_Instr_DFF                          |MB_FDR_136                                     |    16|
+|505   |                \Instruction_Prefetch_Mux[16].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_137                |     1|
+|506   |                \Instruction_Prefetch_Mux[17].Gen_Instr_DFF                          |MB_FDR_138                                     |     4|
+|507   |                \Instruction_Prefetch_Mux[17].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_139                |     1|
+|508   |                \Instruction_Prefetch_Mux[18].Gen_Instr_DFF                          |MB_FDR_140                                     |     1|
+|509   |                \Instruction_Prefetch_Mux[18].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_141                |     1|
+|510   |                \Instruction_Prefetch_Mux[19].Gen_Instr_DFF                          |MB_FDR_142                                     |     1|
+|511   |                \Instruction_Prefetch_Mux[19].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_143                |     1|
+|512   |                \Instruction_Prefetch_Mux[1].Gen_Instr_DFF                           |MB_FDR_144                                     |    15|
+|513   |                \Instruction_Prefetch_Mux[1].Instr_Mux_MUXF7                         |microblaze_v10_0_3_MB_MUXF7_145                |     1|
+|514   |                \Instruction_Prefetch_Mux[20].Gen_Instr_DFF                          |MB_FDR_146                                     |     3|
+|515   |                \Instruction_Prefetch_Mux[20].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_147                |     1|
+|516   |                \Instruction_Prefetch_Mux[21].Gen_Instr_DFF                          |MB_FDR_148                                     |     3|
+|517   |                \Instruction_Prefetch_Mux[21].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_149                |     1|
+|518   |                \Instruction_Prefetch_Mux[22].Gen_Instr_DFF                          |MB_FDR_150                                     |     2|
+|519   |                \Instruction_Prefetch_Mux[22].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_151                |     1|
+|520   |                \Instruction_Prefetch_Mux[23].Gen_Instr_DFF                          |MB_FDR_152                                     |     2|
+|521   |                \Instruction_Prefetch_Mux[23].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_153                |     1|
+|522   |                \Instruction_Prefetch_Mux[24].Gen_Instr_DFF                          |MB_FDR_154                                     |     1|
+|523   |                \Instruction_Prefetch_Mux[24].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_155                |     1|
+|524   |                \Instruction_Prefetch_Mux[25].Gen_Instr_DFF                          |MB_FDR_156                                     |     2|
+|525   |                \Instruction_Prefetch_Mux[25].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_157                |     1|
+|526   |                \Instruction_Prefetch_Mux[26].Gen_Instr_DFF                          |MB_FDR_158                                     |     2|
+|527   |                \Instruction_Prefetch_Mux[26].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_159                |     1|
+|528   |                \Instruction_Prefetch_Mux[27].Gen_Instr_DFF                          |MB_FDR_160                                     |     2|
+|529   |                \Instruction_Prefetch_Mux[27].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_161                |     1|
+|530   |                \Instruction_Prefetch_Mux[28].Gen_Instr_DFF                          |MB_FDR_162                                     |     1|
+|531   |                \Instruction_Prefetch_Mux[28].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_163                |     1|
+|532   |                \Instruction_Prefetch_Mux[29].Gen_Instr_DFF                          |MB_FDR_164                                     |     2|
+|533   |                \Instruction_Prefetch_Mux[29].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_165                |     1|
+|534   |                \Instruction_Prefetch_Mux[2].Gen_Instr_DFF                           |MB_FDR_166                                     |     2|
+|535   |                \Instruction_Prefetch_Mux[2].Instr_Mux_MUXF7                         |microblaze_v10_0_3_MB_MUXF7_167                |     1|
+|536   |                \Instruction_Prefetch_Mux[30].Gen_Instr_DFF                          |MB_FDR_168                                     |     3|
+|537   |                \Instruction_Prefetch_Mux[30].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_169                |     1|
+|538   |                \Instruction_Prefetch_Mux[31].Gen_Instr_DFF                          |MB_FDR_170                                     |     2|
+|539   |                \Instruction_Prefetch_Mux[31].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_171                |     1|
+|540   |                \Instruction_Prefetch_Mux[32].Gen_Instr_DFF                          |MB_FDR_172                                     |     1|
+|541   |                \Instruction_Prefetch_Mux[32].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_173                |     1|
+|542   |                \Instruction_Prefetch_Mux[33].Gen_Instr_DFF                          |MB_FDR_174                                     |    37|
+|543   |                \Instruction_Prefetch_Mux[33].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_175                |     1|
+|544   |                \Instruction_Prefetch_Mux[34].Gen_Instr_DFF                          |MB_FDR_176                                     |    29|
+|545   |                \Instruction_Prefetch_Mux[34].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_177                |     1|
+|546   |                \Instruction_Prefetch_Mux[35].Gen_Instr_DFF                          |MB_FDR_178                                     |     1|
+|547   |                \Instruction_Prefetch_Mux[35].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_179                |     1|
+|548   |                \Instruction_Prefetch_Mux[36].Gen_Instr_DFF                          |MB_FDR_180                                     |    10|
+|549   |                \Instruction_Prefetch_Mux[36].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_181                |     1|
+|550   |                \Instruction_Prefetch_Mux[37].Gen_Instr_DFF                          |MB_FDR_182                                     |     3|
+|551   |                \Instruction_Prefetch_Mux[37].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_183                |     1|
+|552   |                \Instruction_Prefetch_Mux[38].Gen_Instr_DFF                          |MB_FDR_184                                     |     3|
+|553   |                \Instruction_Prefetch_Mux[38].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_185                |     1|
+|554   |                \Instruction_Prefetch_Mux[39].Gen_Instr_DFF                          |MB_FDR_186                                     |     2|
+|555   |                \Instruction_Prefetch_Mux[39].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_187                |     1|
+|556   |                \Instruction_Prefetch_Mux[3].Gen_Instr_DFF                           |MB_FDR_188                                     |    12|
+|557   |                \Instruction_Prefetch_Mux[3].Instr_Mux_MUXF7                         |microblaze_v10_0_3_MB_MUXF7_189                |     1|
+|558   |                \Instruction_Prefetch_Mux[40].Gen_Instr_DFF                          |MB_FDR_190                                     |     1|
+|559   |                \Instruction_Prefetch_Mux[40].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_191                |     1|
+|560   |                \Instruction_Prefetch_Mux[41].Gen_Instr_DFF                          |MB_FDR_192                                     |     2|
+|561   |                \Instruction_Prefetch_Mux[41].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_193                |     1|
+|562   |                \Instruction_Prefetch_Mux[42].Gen_Instr_DFF                          |MB_FDR_194                                     |    70|
+|563   |                \Instruction_Prefetch_Mux[42].Instr_Mux_MUXF7                        |microblaze_v10_0_3_MB_MUXF7_195                |     1|
+|564   |                \Instruction_Prefetch_Mux[4].Gen_Instr_DFF                           |MB_FDR_196                                     |    13|
+|565   |                \Instruction_Prefetch_Mux[4].Instr_Mux_MUXF7                         |microblaze_v10_0_3_MB_MUXF7_197                |     1|
+|566   |                \Instruction_Prefetch_Mux[5].Gen_Instr_DFF                           |MB_FDR_198                                     |    31|
+|567   |                \Instruction_Prefetch_Mux[5].Instr_Mux_MUXF7                         |microblaze_v10_0_3_MB_MUXF7_199                |     1|
+|568   |                \Instruction_Prefetch_Mux[6].Gen_Instr_DFF                           |MB_FDR_200                                     |     3|
+|569   |                \Instruction_Prefetch_Mux[6].Instr_Mux_MUXF7                         |microblaze_v10_0_3_MB_MUXF7_201                |     1|
+|570   |                \Instruction_Prefetch_Mux[7].Gen_Instr_DFF                           |MB_FDR_202                                     |    80|
+|571   |                \Instruction_Prefetch_Mux[7].Instr_Mux_MUXF7                         |microblaze_v10_0_3_MB_MUXF7_203                |     1|
+|572   |                \Instruction_Prefetch_Mux[8].Gen_Instr_DFF                           |MB_FDR_204                                     |     4|
+|573   |                \Instruction_Prefetch_Mux[8].Instr_Mux_MUXF7                         |microblaze_v10_0_3_MB_MUXF7_205                |     1|
+|574   |                \Instruction_Prefetch_Mux[9].Gen_Instr_DFF                           |MB_FDR_206                                     |     4|
+|575   |                \Instruction_Prefetch_Mux[9].Instr_Mux_MUXF7                         |microblaze_v10_0_3_MB_MUXF7_207                |     1|
+|576   |                Last_Sel_DFF                                                         |MB_FDS                                         |    44|
+|577   |                Mux_Select_Empty_LUT6                                                |microblaze_v10_0_3_MB_LUT6__parameterized1     |     1|
+|578   |                Mux_Select_OF_Valid_LUT6                                             |microblaze_v10_0_3_MB_LUT6__parameterized2     |     1|
+|579   |                OF_Valid_DFF                                                         |MB_FDR_208                                     |     2|
+|580   |              \Use_MuxCy[10].OF_Piperun_Stage                                        |carry_and                                      |     1|
+|581   |                MUXCY_I                                                              |microblaze_v10_0_3_MB_MUXCY_114                |     1|
+|582   |              \Use_MuxCy[11].OF_Piperun_Stage                                        |carry_and_59                                   |     7|
+|583   |                MUXCY_I                                                              |microblaze_v10_0_3_MB_MUXCY_113                |     7|
+|584   |              \Use_MuxCy[1].OF_Piperun_Stage                                         |carry_and_60                                   |     1|
+|585   |                MUXCY_I                                                              |microblaze_v10_0_3_MB_MUXCY_112                |     1|
+|586   |              \Use_MuxCy[2].OF_Piperun_Stage                                         |carry_and_61                                   |     2|
+|587   |                MUXCY_I                                                              |microblaze_v10_0_3_MB_MUXCY_111                |     2|
+|588   |              \Use_MuxCy[3].OF_Piperun_Stage                                         |carry_and_62                                   |     4|
+|589   |                MUXCY_I                                                              |microblaze_v10_0_3_MB_MUXCY_110                |     4|
+|590   |              \Use_MuxCy[4].OF_Piperun_Stage                                         |carry_and_63                                   |     1|
+|591   |                MUXCY_I                                                              |microblaze_v10_0_3_MB_MUXCY_109                |     1|
+|592   |              \Use_MuxCy[5].OF_Piperun_Stage                                         |carry_and_64                                   |     1|
+|593   |                MUXCY_I                                                              |microblaze_v10_0_3_MB_MUXCY_108                |     1|
+|594   |              \Use_MuxCy[6].OF_Piperun_Stage                                         |carry_and_65                                   |     1|
+|595   |                MUXCY_I                                                              |microblaze_v10_0_3_MB_MUXCY_107                |     1|
+|596   |              \Use_MuxCy[7].OF_Piperun_Stage                                         |carry_and_66                                   |     1|
+|597   |                MUXCY_I                                                              |microblaze_v10_0_3_MB_MUXCY_106                |     1|
+|598   |              \Use_MuxCy[8].OF_Piperun_Stage                                         |carry_and_67                                   |     1|
+|599   |                MUXCY_I                                                              |microblaze_v10_0_3_MB_MUXCY_105                |     1|
+|600   |              \Use_MuxCy[9].OF_Piperun_Stage                                         |carry_and_68                                   |     1|
+|601   |                MUXCY_I                                                              |microblaze_v10_0_3_MB_MUXCY_104                |     1|
+|602   |              \Using_FPGA.Gen_Bits[28].MEM_EX_Result_Inst                            |microblaze_v10_0_3_MB_FDRE                     |     2|
+|603   |              \Using_FPGA.Gen_Bits[31].MEM_EX_Result_Inst                            |microblaze_v10_0_3_MB_FDRE_69                  |     2|
+|604   |              \Using_FPGA_2.ex_byte_access_i_Inst                                    |microblaze_v10_0_3_MB_FDRE_70                  |    13|
+|605   |              \Using_FPGA_2.ex_doublet_access_i_Inst                                 |microblaze_v10_0_3_MB_FDRE_71                  |     3|
+|606   |              \Using_FPGA_2.ex_is_load_instr_Inst                                    |microblaze_v10_0_3_MB_FDRE_72                  |     5|
+|607   |              \Using_FPGA_2.ex_is_lwx_instr_Inst                                     |microblaze_v10_0_3_MB_FDRE_73                  |     2|
+|608   |              \Using_FPGA_2.ex_is_swx_instr_Inst                                     |microblaze_v10_0_3_MB_FDRE_74                  |     5|
+|609   |              \Using_FPGA_2.ex_load_store_instr_Inst                                 |microblaze_v10_0_3_MB_FDRE_75                  |     6|
+|610   |              \Using_FPGA_2.ex_reverse_mem_access_inst                               |microblaze_v10_0_3_MB_FDRE_76                  |     5|
+|611   |              \Using_FPGA_3.ex_clear_MSR_BIP_instr_Inst                              |microblaze_v10_0_3_MB_FDRE_77                  |     3|
+|612   |              \Using_FPGA_3.of_clear_MSR_BIP_hold_Inst                               |MB_FDR                                         |     4|
+|613   |              \Using_FPGA_4.of_read_ex_write_op1_conflict_INST1                      |microblaze_v10_0_3_MB_LUT6__parameterized3     |     2|
+|614   |              \Using_FPGA_4.of_read_ex_write_op1_conflict_INST2                      |microblaze_v10_0_3_MB_LUT6__parameterized4     |     1|
+|615   |              \Using_FPGA_4.of_read_ex_write_op2_conflict_INST1                      |microblaze_v10_0_3_MB_LUT6__parameterized3_78  |     1|
+|616   |              \Using_FPGA_4.of_read_ex_write_op2_conflict_INST2                      |microblaze_v10_0_3_MB_LUT6__parameterized4_79  |     1|
+|617   |              \Using_FPGA_4.of_read_ex_write_op3_conflict_INST1                      |microblaze_v10_0_3_MB_LUT6__parameterized3_80  |     1|
+|618   |              \Using_FPGA_4.of_read_ex_write_op3_conflict_INST2                      |microblaze_v10_0_3_MB_LUT6__parameterized4_81  |     2|
+|619   |              \Using_FPGA_4.of_read_mem_write_op1_conflict_INST1                     |microblaze_v10_0_3_MB_LUT6__parameterized3_82  |     2|
+|620   |              \Using_FPGA_4.of_read_mem_write_op1_conflict_INST2                     |microblaze_v10_0_3_MB_LUT6__parameterized4_83  |     1|
+|621   |              \Using_FPGA_4.of_read_mem_write_op2_conflict_INST1                     |microblaze_v10_0_3_MB_LUT6__parameterized3_84  |     1|
+|622   |              \Using_FPGA_4.of_read_mem_write_op2_conflict_INST2                     |microblaze_v10_0_3_MB_LUT6__parameterized4_85  |     1|
+|623   |              \Using_FPGA_4.of_read_mem_write_op3_conflict_INST1                     |microblaze_v10_0_3_MB_LUT6__parameterized3_86  |     2|
+|624   |              \Using_FPGA_4.of_read_mem_write_op3_conflict_INST2                     |microblaze_v10_0_3_MB_LUT6__parameterized4_87  |     1|
+|625   |              \Using_PC_Incr_Dbg_or_Prot.if_pc_incr_carry_and_1                      |carry_and_88                                   |     1|
+|626   |                MUXCY_I                                                              |microblaze_v10_0_3_MB_MUXCY_103                |     1|
+|627   |              if_pc_incr_carry_and_0                                                 |carry_and_89                                   |     2|
+|628   |                MUXCY_I                                                              |microblaze_v10_0_3_MB_MUXCY_102                |     2|
+|629   |              if_pc_incr_carry_and_3                                                 |carry_and_90                                   |     1|
+|630   |                MUXCY_I                                                              |microblaze_v10_0_3_MB_MUXCY_101                |     1|
+|631   |              jump_logic_I1                                                          |jump_logic                                     |    65|
+|632   |                MUXCY_JUMP_CARRY                                                     |microblaze_v10_0_3_MB_MUXCY_95                 |     3|
+|633   |                MUXCY_JUMP_CARRY2                                                    |microblaze_v10_0_3_MB_MUXCY_96                 |     3|
+|634   |                MUXCY_JUMP_CARRY3                                                    |microblaze_v10_0_3_MB_MUXCY_97                 |     2|
+|635   |                MUXCY_JUMP_CARRY4                                                    |microblaze_v10_0_3_MB_MUXCY_98                 |     2|
+|636   |                MUXCY_JUMP_CARRY5                                                    |microblaze_v10_0_3_MB_MUXCY_99                 |     1|
+|637   |                MUXCY_JUMP_CARRY6                                                    |microblaze_v10_0_3_MB_MUXCY_100                |    45|
+|638   |              mem_PipeRun_carry_and                                                  |carry_and_91                                   |     5|
+|639   |                MUXCY_I                                                              |microblaze_v10_0_3_MB_MUXCY_94                 |     5|
+|640   |              mem_wait_on_ready_N_carry_or                                           |carry_or_92                                    |     2|
+|641   |                MUXCY_I                                                              |microblaze_v10_0_3_MB_MUXCY_93                 |     2|
+|642   |            \Use_DBUS.DAXI_Interface_I1                                              |DAXI_interface                                 |   106|
+|643   |            \Use_DLMB.Using_Latch_AS_Logic.AND2B1L_I1                                |MB_AND2B1L                                     |     1|
+|644   |            \Use_Debug_Logic.Master_Core.Debug_Perf                                  |Debug                                          |   407|
+|645   |              \Serial_Dbg_Intf.SRL16E_1                                              |MB_SRL16E                                      |     1|
+|646   |              \Serial_Dbg_Intf.SRL16E_2                                              |MB_SRL16E__parameterized1                      |     1|
+|647   |              \Serial_Dbg_Intf.SRL16E_3                                              |MB_SRL16E__parameterized7                      |     1|
+|648   |              \Serial_Dbg_Intf.SRL16E_4                                              |MB_SRL16E__parameterized9                      |     5|
+|649   |              \Serial_Dbg_Intf.SRL16E_7                                              |MB_SRL16E__parameterized1_18                   |     2|
+|650   |              \Serial_Dbg_Intf.SRL16E_8                                              |MB_SRL16E__parameterized1_19                   |     1|
+|651   |              \Serial_Dbg_Intf.The_Cache_Addresses[1].SRL16E_Cache_I                 |MB_SRL16E__parameterized3                      |     1|
+|652   |              \Serial_Dbg_Intf.The_Cache_Addresses[2].SRL16E_Cache_I                 |MB_SRL16E__parameterized5                      |     2|
+|653   |              \Serial_Dbg_Intf.The_Cache_Addresses[3].SRL16E_Cache_I                 |MB_SRL16E__parameterized1_20                   |     1|
+|654   |              \Serial_Dbg_Intf.The_Cache_Addresses[4].SRL16E_Cache_I                 |MB_SRL16E__parameterized1_21                   |     1|
+|655   |              \Serial_Dbg_Intf.The_Cache_Addresses[5].SRL16E_Cache_I                 |MB_SRL16E__parameterized3_22                   |     1|
+|656   |              \Serial_Dbg_Intf.The_Cache_Addresses[6].SRL16E_Cache_I                 |MB_SRL16E__parameterized5_23                   |     2|
+|657   |              \Serial_Dbg_Intf.The_Cache_Addresses[7].SRL16E_Cache_I                 |MB_SRL16E__parameterized1_24                   |     1|
+|658   |              \Serial_Dbg_Intf.The_Cache_Addresses[8].SRL16E_Cache_I                 |MB_SRL16E__parameterized1_25                   |     1|
+|659   |              \Serial_Dbg_Intf.sync_dbg_brk_hit                                      |mb_sync_bit__parameterized2                    |     1|
+|660   |              \Serial_Dbg_Intf.sync_dbg_hit                                          |mb_sync_vec                                    |     1|
+|661   |                \sync_bits[0].sync_bit                                               |mb_sync_bit__parameterized2_58                 |     1|
+|662   |              \Serial_Dbg_Intf.sync_dbg_wakeup                                       |mb_sync_bit__parameterized4                    |     2|
+|663   |              \Serial_Dbg_Intf.sync_pause                                            |mb_sync_bit__parameterized2_26                 |     2|
+|664   |              \Serial_Dbg_Intf.sync_running_clock                                    |mb_sync_bit__parameterized2_27                 |     1|
+|665   |              \Serial_Dbg_Intf.sync_sample                                           |mb_sync_vec__parameterized1                    |    29|
+|666   |                \sync_bits[0].sync_bit                                               |mb_sync_bit_48                                 |     3|
+|667   |                \sync_bits[1].sync_bit                                               |mb_sync_bit_49                                 |     3|
+|668   |                \sync_bits[2].sync_bit                                               |mb_sync_bit_50                                 |     3|
+|669   |                \sync_bits[3].sync_bit                                               |mb_sync_bit_51                                 |     3|
+|670   |                \sync_bits[4].sync_bit                                               |mb_sync_bit_52                                 |     3|
+|671   |                \sync_bits[5].sync_bit                                               |mb_sync_bit_53                                 |     4|
+|672   |                \sync_bits[6].sync_bit                                               |mb_sync_bit_54                                 |     3|
+|673   |                \sync_bits[7].sync_bit                                               |mb_sync_bit_55                                 |     3|
+|674   |                \sync_bits[8].sync_bit                                               |mb_sync_bit_56                                 |     2|
+|675   |                \sync_bits[9].sync_bit                                               |mb_sync_bit_57                                 |     2|
+|676   |              \Serial_Dbg_Intf.sync_sleep                                            |mb_sync_bit__parameterized2_28                 |     1|
+|677   |              \Serial_Dbg_Intf.sync_stop_CPU                                         |mb_sync_bit__parameterized2_29                 |     1|
+|678   |              \Using_PC_Breakpoints.All_PC_Brks[0].Serial_Interface_1.address_hit_I  |address_hit                                    |    23|
+|679   |                \Compare[0].MUXCY_I                                                  |microblaze_v10_0_3_MB_MUXCY_32                 |     1|
+|680   |                \Compare[0].SRLC16E_I                                                |MB_SRLC16E                                     |     3|
+|681   |                \Compare[1].MUXCY_I                                                  |microblaze_v10_0_3_MB_MUXCY_33                 |     1|
+|682   |                \Compare[1].SRLC16E_I                                                |MB_SRLC16E_34                                  |     1|
+|683   |                \Compare[2].MUXCY_I                                                  |microblaze_v10_0_3_MB_MUXCY_35                 |     1|
+|684   |                \Compare[2].SRLC16E_I                                                |MB_SRLC16E_36                                  |     1|
+|685   |                \Compare[3].MUXCY_I                                                  |microblaze_v10_0_3_MB_MUXCY_37                 |     1|
+|686   |                \Compare[3].SRLC16E_I                                                |MB_SRLC16E_38                                  |     1|
+|687   |                \Compare[4].MUXCY_I                                                  |microblaze_v10_0_3_MB_MUXCY_39                 |     1|
+|688   |                \Compare[4].SRLC16E_I                                                |MB_SRLC16E_40                                  |     1|
+|689   |                \Compare[5].MUXCY_I                                                  |microblaze_v10_0_3_MB_MUXCY_41                 |     1|
+|690   |                \Compare[5].SRLC16E_I                                                |MB_SRLC16E_42                                  |     1|
+|691   |                \Compare[6].MUXCY_I                                                  |microblaze_v10_0_3_MB_MUXCY_43                 |     1|
+|692   |                \Compare[6].SRLC16E_I                                                |MB_SRLC16E_44                                  |     1|
+|693   |                \Compare[7].MUXCY_I                                                  |microblaze_v10_0_3_MB_MUXCY_45                 |     1|
+|694   |                \Compare[7].SRLC16E_I                                                |MB_SRLC16E_46                                  |     1|
+|695   |                \The_First_BreakPoints.MUXCY_Post                                    |microblaze_v10_0_3_MB_MUXCY_47                 |     5|
+|696   |              sync_trig_ack_in_0                                                     |mb_sync_bit__parameterized4_30                 |     2|
+|697   |              sync_trig_out_0                                                        |mb_sync_bit__parameterized4_31                 |     2|
+|698   |            instr_mux_I                                                              |instr_mux                                      |    19|
+|699   |              \Mux_LD.LD_inst                                                        |mux_bus                                        |    19|
+|700   |                \Mux_Loop[0].I_MUX_LUT6                                              |MB_LUT6_2__parameterized3                      |     4|
+|701   |                \Mux_Loop[10].I_MUX_LUT6                                             |MB_LUT6_2__parameterized3_3                    |     1|
+|702   |                \Mux_Loop[11].I_MUX_LUT6                                             |MB_LUT6_2__parameterized3_4                    |     1|
+|703   |                \Mux_Loop[12].I_MUX_LUT6                                             |MB_LUT6_2__parameterized3_5                    |     1|
+|704   |                \Mux_Loop[13].I_MUX_LUT6                                             |MB_LUT6_2__parameterized3_6                    |     1|
+|705   |                \Mux_Loop[14].I_MUX_LUT6                                             |MB_LUT6_2__parameterized3_7                    |     1|
+|706   |                \Mux_Loop[15].I_MUX_LUT6                                             |MB_LUT6_2__parameterized3_8                    |     1|
+|707   |                \Mux_Loop[1].I_MUX_LUT6                                              |MB_LUT6_2__parameterized3_9                    |     1|
+|708   |                \Mux_Loop[2].I_MUX_LUT6                                              |MB_LUT6_2__parameterized3_10                   |     1|
+|709   |                \Mux_Loop[3].I_MUX_LUT6                                              |MB_LUT6_2__parameterized3_11                   |     1|
+|710   |                \Mux_Loop[4].I_MUX_LUT6                                              |MB_LUT6_2__parameterized3_12                   |     1|
+|711   |                \Mux_Loop[5].I_MUX_LUT6                                              |MB_LUT6_2__parameterized3_13                   |     1|
+|712   |                \Mux_Loop[6].I_MUX_LUT6                                              |MB_LUT6_2__parameterized3_14                   |     1|
+|713   |                \Mux_Loop[7].I_MUX_LUT6                                              |MB_LUT6_2__parameterized3_15                   |     1|
+|714   |                \Mux_Loop[8].I_MUX_LUT6                                              |MB_LUT6_2__parameterized3_16                   |     1|
+|715   |                \Mux_Loop[9].I_MUX_LUT6                                              |MB_LUT6_2__parameterized3_17                   |     1|
+|716   |            mem_databus_ready_sel_carry_or                                           |carry_or                                       |     1|
+|717   |              MUXCY_I                                                                |microblaze_v10_0_3_MB_MUXCY                    |     1|
+|718   |          Reset_DFF                                                                  |mb_sync_bit                                    |     2|
+|719   |          \Using_Async_Wakeup_0.Wakeup_DFF                                           |mb_sync_bit_1                                  |     3|
+|720   |          \Using_Async_Wakeup_1.Wakeup_DFF                                           |mb_sync_bit_2                                  |     2|
+|721   |    microblaze_0_axi_periph                                                          |uc_system_microblaze_0_axi_periph_0            |   366|
+|722   |      xbar                                                                           |uc_system_xbar_1                               |   366|
+|723   |        inst                                                                         |axi_crossbar_v2_1_14_axi_crossbar              |   366|
+|724   |          \gen_sasd.crossbar_sasd_0                                                  |axi_crossbar_v2_1_14_crossbar_sasd             |   366|
+|725   |            addr_arbiter_inst                                                        |axi_crossbar_v2_1_14_addr_arbiter_sasd         |   141|
+|726   |            \gen_decerr.decerr_slave_inst                                            |axi_crossbar_v2_1_14_decerr_slave              |    13|
+|727   |            reg_slice_r                                                              |axi_register_slice_v2_1_13_axic_register_slice |   184|
+|728   |            splitter_ar                                                              |axi_crossbar_v2_1_14_splitter__parameterized0  |     5|
+|729   |            splitter_aw                                                              |axi_crossbar_v2_1_14_splitter                  |     8|
+|730   |      m03_couplers                                                                   |m03_couplers_imp_QRT0UT                        |     0|
+|731   |        auto_pc                                                                      |uc_system_auto_pc_0                            |     0|
+|732   |    proc_sys_reset_0                                                                 |uc_system_proc_sys_reset_0_0                   |    66|
+|733   |      U0                                                                             |proc_sys_reset                                 |    66|
+|734   |        EXT_LPF                                                                      |lpf                                            |    23|
+|735   |          \ACTIVE_HIGH_EXT.ACT_HI_EXT                                                |cdc_sync__parameterized1                       |     6|
+|736   |          \ACTIVE_LOW_AUX.ACT_LO_AUX                                                 |cdc_sync__parameterized1_0                     |     6|
+|737   |        SEQ                                                                          |sequence_psr                                   |    38|
+|738   |          SEQ_COUNTER                                                                |upcnt_n                                        |    13|
+|739   |    microblaze_0_local_memory                                                        |microblaze_0_local_memory_imp_1DGYSR8          |   224|
+|740   |      dlmb_bram_if_cntlr                                                             |uc_system_dlmb_bram_if_cntlr_0                 |     8|
+|741   |        U0                                                                           |lmb_bram_if_cntlr                              |     8|
+|742   |      dlmb_v10                                                                       |uc_system_dlmb_v10_0                           |     1|
+|743   |        U0                                                                           |lmb_v10__1                                     |     1|
+|744   |      ilmb_bram_if_cntlr                                                             |uc_system_ilmb_bram_if_cntlr_0                 |     7|
+|745   |        U0                                                                           |lmb_bram_if_cntlr__parameterized1              |     7|
+|746   |      ilmb_v10                                                                       |uc_system_ilmb_v10_0                           |     1|
+|747   |        U0                                                                           |lmb_v10                                        |     1|
+|748   |      lmb_bram                                                                       |uc_system_lmb_bram_0                           |   207|
+|749   |        U0                                                                           |blk_mem_gen_v8_3_6                             |   207|
+|750   |          inst_blk_mem_gen                                                           |blk_mem_gen_v8_3_6_synth                       |   207|
+|751   |            \gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen                   |blk_mem_gen_top                                |   207|
+|752   |              \valid.cstr                                                            |blk_mem_gen_generic_cstr                       |   207|
+|753   |                \has_mux_a.A                                                         |blk_mem_gen_mux                                |    33|
+|754   |                \has_mux_b.B                                                         |blk_mem_gen_mux__parameterized0                |    34|
+|755   |                \ramloop[0].ram.r                                                    |blk_mem_gen_prim_width                         |     2|
+|756   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper                       |     2|
+|757   |                \ramloop[10].ram.r                                                   |blk_mem_gen_prim_width__parameterized9         |     2|
+|758   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized9       |     2|
+|759   |                \ramloop[11].ram.r                                                   |blk_mem_gen_prim_width__parameterized10        |     2|
+|760   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized10      |     2|
+|761   |                \ramloop[12].ram.r                                                   |blk_mem_gen_prim_width__parameterized11        |     2|
+|762   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized11      |     2|
+|763   |                \ramloop[13].ram.r                                                   |blk_mem_gen_prim_width__parameterized12        |     2|
+|764   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized12      |     2|
+|765   |                \ramloop[14].ram.r                                                   |blk_mem_gen_prim_width__parameterized13        |     2|
+|766   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized13      |     2|
+|767   |                \ramloop[15].ram.r                                                   |blk_mem_gen_prim_width__parameterized14        |     2|
+|768   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized14      |     2|
+|769   |                \ramloop[16].ram.r                                                   |blk_mem_gen_prim_width__parameterized15        |     2|
+|770   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized15      |     2|
+|771   |                \ramloop[17].ram.r                                                   |blk_mem_gen_prim_width__parameterized16        |     2|
+|772   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized16      |     2|
+|773   |                \ramloop[18].ram.r                                                   |blk_mem_gen_prim_width__parameterized17        |     2|
+|774   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized17      |     2|
+|775   |                \ramloop[19].ram.r                                                   |blk_mem_gen_prim_width__parameterized18        |     2|
+|776   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized18      |     2|
+|777   |                \ramloop[1].ram.r                                                    |blk_mem_gen_prim_width__parameterized0         |     2|
+|778   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized0       |     2|
+|779   |                \ramloop[20].ram.r                                                   |blk_mem_gen_prim_width__parameterized19        |     2|
+|780   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized19      |     2|
+|781   |                \ramloop[21].ram.r                                                   |blk_mem_gen_prim_width__parameterized20        |     2|
+|782   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized20      |     2|
+|783   |                \ramloop[22].ram.r                                                   |blk_mem_gen_prim_width__parameterized21        |     2|
+|784   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized21      |     2|
+|785   |                \ramloop[23].ram.r                                                   |blk_mem_gen_prim_width__parameterized22        |     2|
+|786   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized22      |     2|
+|787   |                \ramloop[24].ram.r                                                   |blk_mem_gen_prim_width__parameterized23        |     2|
+|788   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized23      |     2|
+|789   |                \ramloop[25].ram.r                                                   |blk_mem_gen_prim_width__parameterized24        |     2|
+|790   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized24      |     2|
+|791   |                \ramloop[26].ram.r                                                   |blk_mem_gen_prim_width__parameterized25        |     2|
+|792   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized25      |     2|
+|793   |                \ramloop[27].ram.r                                                   |blk_mem_gen_prim_width__parameterized26        |     2|
+|794   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized26      |     2|
+|795   |                \ramloop[28].ram.r                                                   |blk_mem_gen_prim_width__parameterized27        |     2|
+|796   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized27      |     2|
+|797   |                \ramloop[29].ram.r                                                   |blk_mem_gen_prim_width__parameterized28        |     2|
+|798   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized28      |     2|
+|799   |                \ramloop[2].ram.r                                                    |blk_mem_gen_prim_width__parameterized1         |     2|
+|800   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized1       |     2|
+|801   |                \ramloop[30].ram.r                                                   |blk_mem_gen_prim_width__parameterized29        |     2|
+|802   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized29      |     2|
+|803   |                \ramloop[31].ram.r                                                   |blk_mem_gen_prim_width__parameterized30        |     2|
+|804   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized30      |     2|
+|805   |                \ramloop[32].ram.r                                                   |blk_mem_gen_prim_width__parameterized31        |     2|
+|806   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized31      |     2|
+|807   |                \ramloop[33].ram.r                                                   |blk_mem_gen_prim_width__parameterized32        |     2|
+|808   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized32      |     2|
+|809   |                \ramloop[34].ram.r                                                   |blk_mem_gen_prim_width__parameterized33        |     2|
+|810   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized33      |     2|
+|811   |                \ramloop[35].ram.r                                                   |blk_mem_gen_prim_width__parameterized34        |     2|
+|812   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized34      |     2|
+|813   |                \ramloop[36].ram.r                                                   |blk_mem_gen_prim_width__parameterized35        |     2|
+|814   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized35      |     2|
+|815   |                \ramloop[37].ram.r                                                   |blk_mem_gen_prim_width__parameterized36        |     2|
+|816   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized36      |     2|
+|817   |                \ramloop[38].ram.r                                                   |blk_mem_gen_prim_width__parameterized37        |     2|
+|818   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized37      |     2|
+|819   |                \ramloop[39].ram.r                                                   |blk_mem_gen_prim_width__parameterized38        |     2|
+|820   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized38      |     2|
+|821   |                \ramloop[3].ram.r                                                    |blk_mem_gen_prim_width__parameterized2         |     2|
+|822   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized2       |     2|
+|823   |                \ramloop[40].ram.r                                                   |blk_mem_gen_prim_width__parameterized39        |     2|
+|824   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized39      |     2|
+|825   |                \ramloop[41].ram.r                                                   |blk_mem_gen_prim_width__parameterized40        |     2|
+|826   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized40      |     2|
+|827   |                \ramloop[42].ram.r                                                   |blk_mem_gen_prim_width__parameterized41        |     2|
+|828   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized41      |     2|
+|829   |                \ramloop[43].ram.r                                                   |blk_mem_gen_prim_width__parameterized42        |     2|
+|830   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized42      |     2|
+|831   |                \ramloop[44].ram.r                                                   |blk_mem_gen_prim_width__parameterized43        |     2|
+|832   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized43      |     2|
+|833   |                \ramloop[45].ram.r                                                   |blk_mem_gen_prim_width__parameterized44        |     2|
+|834   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized44      |     2|
+|835   |                \ramloop[46].ram.r                                                   |blk_mem_gen_prim_width__parameterized45        |     2|
+|836   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized45      |     2|
+|837   |                \ramloop[47].ram.r                                                   |blk_mem_gen_prim_width__parameterized46        |     2|
+|838   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized46      |     2|
+|839   |                \ramloop[48].ram.r                                                   |blk_mem_gen_prim_width__parameterized47        |     2|
+|840   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized47      |     2|
+|841   |                \ramloop[49].ram.r                                                   |blk_mem_gen_prim_width__parameterized48        |     2|
+|842   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized48      |     2|
+|843   |                \ramloop[4].ram.r                                                    |blk_mem_gen_prim_width__parameterized3         |     2|
+|844   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized3       |     2|
+|845   |                \ramloop[50].ram.r                                                   |blk_mem_gen_prim_width__parameterized49        |     2|
+|846   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized49      |     2|
+|847   |                \ramloop[51].ram.r                                                   |blk_mem_gen_prim_width__parameterized50        |     2|
+|848   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized50      |     2|
+|849   |                \ramloop[52].ram.r                                                   |blk_mem_gen_prim_width__parameterized51        |     2|
+|850   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized51      |     2|
+|851   |                \ramloop[53].ram.r                                                   |blk_mem_gen_prim_width__parameterized52        |     2|
+|852   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized52      |     2|
+|853   |                \ramloop[54].ram.r                                                   |blk_mem_gen_prim_width__parameterized53        |     2|
+|854   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized53      |     2|
+|855   |                \ramloop[55].ram.r                                                   |blk_mem_gen_prim_width__parameterized54        |     2|
+|856   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized54      |     2|
+|857   |                \ramloop[56].ram.r                                                   |blk_mem_gen_prim_width__parameterized55        |     2|
+|858   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized55      |     2|
+|859   |                \ramloop[57].ram.r                                                   |blk_mem_gen_prim_width__parameterized56        |     2|
+|860   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized56      |     2|
+|861   |                \ramloop[58].ram.r                                                   |blk_mem_gen_prim_width__parameterized57        |     2|
+|862   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized57      |     2|
+|863   |                \ramloop[59].ram.r                                                   |blk_mem_gen_prim_width__parameterized58        |     2|
+|864   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized58      |     2|
+|865   |                \ramloop[5].ram.r                                                    |blk_mem_gen_prim_width__parameterized4         |     2|
+|866   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized4       |     2|
+|867   |                \ramloop[60].ram.r                                                   |blk_mem_gen_prim_width__parameterized59        |     2|
+|868   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized59      |     2|
+|869   |                \ramloop[61].ram.r                                                   |blk_mem_gen_prim_width__parameterized60        |     2|
+|870   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized60      |     2|
+|871   |                \ramloop[62].ram.r                                                   |blk_mem_gen_prim_width__parameterized61        |     2|
+|872   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized61      |     2|
+|873   |                \ramloop[63].ram.r                                                   |blk_mem_gen_prim_width__parameterized62        |     2|
+|874   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized62      |     2|
+|875   |                \ramloop[6].ram.r                                                    |blk_mem_gen_prim_width__parameterized5         |     2|
+|876   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized5       |     2|
+|877   |                \ramloop[7].ram.r                                                    |blk_mem_gen_prim_width__parameterized6         |     2|
+|878   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized6       |     2|
+|879   |                \ramloop[8].ram.r                                                    |blk_mem_gen_prim_width__parameterized7         |     2|
+|880   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized7       |     2|
+|881   |                \ramloop[9].ram.r                                                    |blk_mem_gen_prim_width__parameterized8         |     2|
+|882   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized8       |     2|
++------+-------------------------------------------------------------------------------------+-----------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:40 ; elapsed = 00:05:58 . Memory (MB): peak = 1846.953 ; gain = 746.625 ; free physical = 506 ; free virtual = 16158
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 27404 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:05:07 ; elapsed = 00:05:23 . Memory (MB): peak = 1846.953 ; gain = 574.000 ; free physical = 556 ; free virtual = 16208
+Synthesis Optimization Complete : Time (s): cpu = 00:05:40 ; elapsed = 00:05:58 . Memory (MB): peak = 1846.961 ; gain = 746.625 ; free physical = 558 ; free virtual = 16210
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 807 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 389 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 70 instances
+  FDE => FDRE: 32 instances
+  FDR => FDRE: 111 instances
+  FDS => FDSE: 3 instances
+  LD => LDCE: 36 instances
+  LD => LDCE (inverted pins: G): 1 instances
+  LDC => LDCE: 38 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 80 instances
+  MULT_AND => LUT2: 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 16 instances
+  SRL16 => SRL16E: 1 instances
+
+990 Infos, 312 Warnings, 32 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:05:50 ; elapsed = 00:06:08 . Memory (MB): peak = 1846.961 ; gain = 760.223 ; free physical = 562 ; free virtual = 16214
+INFO: [Common 17-1381] The checkpoint '/home/izoomko/wrk/4grade/io/lab3/lab2.runs/synth_1/uc_system_wrapper.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:01 . Memory (MB): peak = 1870.965 ; gain = 0.000 ; free physical = 552 ; free virtual = 16215
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 12 12:05:31 2018...
