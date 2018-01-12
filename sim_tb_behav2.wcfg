@@ -3,28 +3,23 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="sim_tb_behav.wdb" id="1">
+      <db_ref path="sim_tb_func_synth.wdb" id="1">
          <top_modules>
-            <top_module name="axi_bram_ctrl_funcs" />
             <top_module name="glbl" />
-            <top_module name="ipif_pkg" />
-            <top_module name="lib_pkg" />
-            <top_module name="lmb_bram_if_funcs" />
             <top_module name="sim_tb" />
-            <top_module name="tc_types" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="154417872350fs"></ZoomEndTime>
-      <Cursor1Time time="11285106000fs"></Cursor1Time>
+      <ZoomStartTime time="33500000000fs"></ZoomStartTime>
+      <ZoomEndTime time="186900000001fs"></ZoomEndTime>
+      <Cursor1Time time="103100000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="185"></NameColumnWidth>
-      <ValueColumnWidth column_width="96"></ValueColumnWidth>
+      <ValueColumnWidth column_width="92"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="34" />
+   <WVObjectSize size="25" />
    <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/clk_i">
       <obj_property name="ElementShortName">clk_i</obj_property>
       <obj_property name="ObjectShortName">clk_i</obj_property>
@@ -38,8 +33,8 @@
       <obj_property name="ObjectShortName">addr_bi[12:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/wrdata_bi">
-      <obj_property name="ElementShortName">wrdata_bi[31:0]</obj_property>
-      <obj_property name="ObjectShortName">wrdata_bi[31:0]</obj_property>
+      <obj_property name="ElementShortName">wrdata_bi[29:0]</obj_property>
+      <obj_property name="ObjectShortName">wrdata_bi[29:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/rddata_bo">
       <obj_property name="ElementShortName">rddata_bo[31:0]</obj_property>
@@ -70,10 +65,6 @@
       <obj_property name="ElementShortName">prev_addr[12:0]</obj_property>
       <obj_property name="ObjectShortName">prev_addr[12:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/icconf">
-      <obj_property name="ElementShortName">icconf[31:0]</obj_property>
-      <obj_property name="ObjectShortName">icconf[31:0]</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/icconf_out">
       <obj_property name="ElementShortName">icconf_out[31:0]</obj_property>
       <obj_property name="ObjectShortName">icconf_out[31:0]</obj_property>
@@ -82,21 +73,9 @@
       <obj_property name="ElementShortName">ictmr[1:0]</obj_property>
       <obj_property name="ObjectShortName">ictmr[1:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/timer1_enabled">
-      <obj_property name="ElementShortName">timer1_enabled[15:0]</obj_property>
-      <obj_property name="ObjectShortName">timer1_enabled[15:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/timer2_enabled">
-      <obj_property name="ElementShortName">timer2_enabled[15:0]</obj_property>
-      <obj_property name="ObjectShortName">timer2_enabled[15:0]</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/timer">
       <obj_property name="ElementShortName">timer[31:0]</obj_property>
       <obj_property name="ObjectShortName">timer[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/icconf_next">
-      <obj_property name="ElementShortName">icconf_next[31:0]</obj_property>
-      <obj_property name="ObjectShortName">icconf_next[31:0]</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/r_state">
       <obj_property name="ElementShortName">r_state</obj_property>
@@ -110,22 +89,9 @@
       <obj_property name="ElementShortName">ed_prescaler</obj_property>
       <obj_property name="ObjectShortName">ed_prescaler</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/prescaler_fifo">
-      <obj_property name="ElementShortName">prescaler_fifo</obj_property>
-      <obj_property name="ObjectShortName">prescaler_fifo</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/mem">
-      <obj_property name="ElementShortName">mem[31:0][31:0]</obj_property>
-      <obj_property name="ObjectShortName">mem[31:0][31:0]</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/wr_ptr">
       <obj_property name="ElementShortName">wr_ptr[4:0]</obj_property>
       <obj_property name="ObjectShortName">wr_ptr[4:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/wr_ptr_next">
-      <obj_property name="ElementShortName">wr_ptr_next[4:0]</obj_property>
-      <obj_property name="ObjectShortName">wr_ptr_next[4:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/rd_ptr">
@@ -138,10 +104,6 @@
       <obj_property name="ObjectShortName">rd_ptr_next[4:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/read">
-      <obj_property name="ElementShortName">read</obj_property>
-      <obj_property name="ObjectShortName">read</obj_property>
-   </wvobject>
    <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/write">
       <obj_property name="ElementShortName">write</obj_property>
       <obj_property name="ObjectShortName">write</obj_property>
@@ -150,20 +112,16 @@
       <obj_property name="ElementShortName">icbne</obj_property>
       <obj_property name="ObjectShortName">icbne</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/icbne_next">
-      <obj_property name="ElementShortName">icbne_next</obj_property>
-      <obj_property name="ObjectShortName">icbne_next</obj_property>
-   </wvobject>
    <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/icov">
       <obj_property name="ElementShortName">icov</obj_property>
       <obj_property name="ObjectShortName">icov</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/icov_next">
-      <obj_property name="ElementShortName">icov_next</obj_property>
-      <obj_property name="ObjectShortName">icov_next</obj_property>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uart_rtl_rxd">
+      <obj_property name="ElementShortName">uart_rtl_rxd</obj_property>
+      <obj_property name="ObjectShortName">uart_rtl_rxd</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/sim_tb/uc/uc_system_i/IC_0/inst/i">
-      <obj_property name="ElementShortName">i[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   <wvobject type="logic" fp_name="/sim_tb/uc/uart_rtl_txd">
+      <obj_property name="ElementShortName">uart_rtl_txd</obj_property>
+      <obj_property name="ObjectShortName">uart_rtl_txd</obj_property>
    </wvobject>
 </wave_config>
