@@ -68,29 +68,39 @@ module IC(
     
     always @(* /* rs_state or prev_addr or icconf */) begin
         read = 0;
-        if (rs_state) begin
-            case (prev_addr)
-                'h0:
-                    rddata_bo = icconf_out;
-                'h4: begin
-                    rddata_bo = mem[rd_ptr];
-                    read = 1;
-                end
-            endcase
+        if (rst_i) begin
+            rddata_bo = 0;
+        end
+        else begin
+            if (rs_state) begin
+                case (prev_addr)
+                    'h0:
+                        rddata_bo = icconf_out;
+                    'h4: begin
+                        rddata_bo = mem[rd_ptr];
+                        read = 1;
+                    end
+                endcase
+            end
         end
     end
     
     always @(* /* prescaler_fifo */) begin
-        write = 0;
-        wr_ptr_next = wr_ptr;
-        if (prescaler_fifo && !icov && icconf[2:0] != 0) begin
-            write = 1;
-            if ((wr_ptr % 4 == 2 && wr_ptr != 0) && icconf[2:0] == 1) begin // for store-each-front mode double each third front
-                wr_ptr_next = wr_ptr + 2;
+        if (rst_i) begin
+            wr_ptr_next = 0;
+        end
+        else begin
+            write = 0;
+            wr_ptr_next = wr_ptr;
+            if (prescaler_fifo && !icov && icconf[2:0] != 0) begin
+                write = 1;
+                if ((wr_ptr % 4 == 2 && wr_ptr != 0) && icconf[2:0] == 1) begin // for store-each-front mode double each third front
+                    wr_ptr_next = wr_ptr + 2;
+                end
+                else begin
+                    wr_ptr_next = wr_ptr + 1;
+                end  
             end
-            else begin
-                wr_ptr_next = wr_ptr + 1;
-            end  
         end
     end
     
@@ -110,40 +120,47 @@ module IC(
     end
     
     always @(* /* write or read or icov or rd_ptr or wr_ptr */) begin
-        icov_next = (write || icov) && !read && wr_ptr_next == rd_ptr_next;
-        icbne_next  = (wr_ptr != rd_ptr) || icov;
+        if (rst_i) begin
+            icov_next = 0;
+            icbne_next = 0;
+        end
+        else begin
+            icov_next = (write || icov) && !read && wr_ptr_next == rd_ptr_next;
+            icbne_next  = (wr_ptr != rd_ptr) || icov;
+        end
+        
     end
     
     always @(negedge clk_i) begin
-        r_state <= 0;
-        if (en_i && we_bi == 'h0) begin // if no write performed shedule read on next tick then
-            prev_addr  <= addr_bi;
-            r_state    <= 1;
-            case (addr_bi)
-            'h0: begin
-                icconf_out <= icconf;
-                icconf_out[4:3] <= {icov, icbne};
-            end
-            'h4: begin
-                if (icbne) begin
-                    rd_ptr_next <= rd_ptr + 1;
+        if (rst_i) begin
+            prev_addr   <= 0;
+            r_state     <= 0;
+            icconf_out  <= 0;
+            rd_ptr_next <= 0;
+        end
+        else begin
+            r_state <= 0;
+            if (en_i && we_bi == 'h0) begin // if no write performed shedule read on next tick then
+                prev_addr  <= addr_bi;
+                r_state    <= 1;
+                case (addr_bi)
+                'h0: begin
+                    icconf_out <= icconf;
+                    icconf_out[4:3] <= {icov, icbne};
                 end
+                'h4: begin
+                    if (icbne) begin
+                        rd_ptr_next <= rd_ptr + 1;
+                    end
+                end
+                endcase
             end
-            endcase
         end
     end
     
     integer i;
     always @(posedge clk_i) begin
-        prev_addr  <= addr_bi;
         if (rst_i) begin // reset read operation
-            rs_state    <= 0;
-            icconf      <= 0;
-            rddata_bo   <= 0;
-            wr_ptr_next <= 0;
-            rd_ptr_next <= 0;
-            icbne_next  <= 0;
-            icov_next   <= 0;
             for (i = 0; i < 32; i = i + 1) begin
                 mem[i]  <= 0;
             end

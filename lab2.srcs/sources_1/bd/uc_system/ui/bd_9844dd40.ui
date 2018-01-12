@@ -3,14 +3,13 @@
 #  -string -flagsOSRD
 preplace port uart_rtl -pg 1 -y -580 -defaultsOSRD
 preplace port reset_rtl -pg 1 -y -30 -defaultsOSRD
-preplace port edges -pg 1 -y -80 -defaultsOSRD
 preplace port gpio_rtl -pg 1 -y 280 -defaultsOSRD
 preplace port pwm0 -pg 1 -y 40 -defaultsOSRD
 preplace port clock_rtl -pg 1 -y -50 -defaultsOSRD
 preplace inst microblaze_0_axi_periph -pg 1 -lvl 1 -y -10 -defaultsOSRD
 preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -y -50 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 3 -y 280 -defaultsOSRD
-preplace inst axi_timer_0 -pg 1 -lvl 3 -y 110 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 3 -y 474 -defaultsOSRD
+preplace inst axi_timer_0 -pg 1 -lvl 3 -y 304 -defaultsOSRD
 preplace inst BRAMInterconnect_0 -pg 1 -lvl 3 -y -440 -defaultsOSRD
 preplace inst IC_0 -pg 1 -lvl 4 -y -90 -defaultsOSRD
 preplace inst axi_uartlite_0 -pg 1 -lvl 2 -y -550 -defaultsOSRD
@@ -18,50 +17,49 @@ preplace inst microblaze_0 -pg 1 -lvl 1 -y -450 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -y -280 -defaultsOSRD
 preplace inst Timer_0 -pg 1 -lvl 4 -y -610 -defaultsOSRD
 preplace inst axi_bram_ctrl_0 -pg 1 -lvl 2 -y -320 -defaultsOSRD -resize 242 254
-preplace inst microblaze_0_local_memory -pg 1 -lvl 3 -y -130 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 3 -y -128 -defaultsOSRD
 preplace inst Timer_1 -pg 1 -lvl 4 -y -360 -defaultsOSRD
 preplace netloc BRAMInterconnect_0_s1_we_bo 1 3 1 1380
-preplace netloc axi_bram_ctrl_0_bram_addr_a 1 2 1 770
-preplace netloc axi_bram_ctrl_0_bram_clk_a 1 2 2 760 -620 1390
+preplace netloc axi_bram_ctrl_0_bram_addr_a 1 2 1 800
+preplace netloc axi_bram_ctrl_0_bram_clk_a 1 2 2 790 -620 1390
 preplace netloc BRAMInterconnect_0_s3_en_o 1 3 1 1320
 preplace netloc clk_wiz_0_locked 1 1 1 330
 preplace netloc BRAMInterconnect_0_s2_wrdata_bo 1 3 1 1360
 preplace netloc BRAMInterconnect_0_s1_en_o 1 3 1 1330
 preplace netloc BRAMInterconnect_0_s3_wrdata_bo 1 3 1 1330
-preplace netloc microblaze_0_Clk 1 0 3 -230 -550 380 -140 770
-preplace netloc microblaze_0_axi_periph_M03_AXI 1 1 1 370
+preplace netloc microblaze_0_Clk 1 0 3 -230 -550 380 -150 770
+preplace netloc microblaze_0_axi_periph_M03_AXI 1 1 1 390
 preplace netloc BRAMInterconnect_0_s2_we_bo 1 3 1 1350
 preplace netloc reset_rtl_0_1_1 1 0 2 -250J -210 320J
-preplace netloc proc_sys_reset_0_bus_struct_reset 1 2 1 850J
-preplace netloc proc_sys_reset_0_mb_reset 1 0 3 -200 -220 350J -160 740
+preplace netloc proc_sys_reset_0_bus_struct_reset 1 2 1 880J
+preplace netloc proc_sys_reset_0_mb_reset 1 0 3 -200 -220 350J -160 750
 preplace netloc BRAMInterconnect_0_s1_wrdata_bo 1 3 1 1370
-preplace netloc axi_timer_0_pwm0 1 3 2 1350J 40 N
-preplace netloc microblaze_0_axi_periph_M00_AXI 1 1 2 300J 60 NJ
+preplace netloc axi_timer_0_pwm0 1 3 2 1330J 40 N
+preplace netloc microblaze_0_axi_periph_M00_AXI 1 1 2 370J -140 780J
 preplace netloc microblaze_0_M_AXI_DP 1 0 2 -210 -530 290
-preplace netloc microblaze_0_ilmb_1 1 1 2 350J -470 800J
+preplace netloc microblaze_0_ilmb_1 1 1 2 320J -470 840J
 preplace netloc proc_sys_reset_0_interconnect_aresetn 1 0 3 -200 -190 340J -170 760
-preplace netloc microblaze_0_axi_periph_M01_AXI 1 1 2 290J 50 750J
-preplace netloc IC_0_rddata_bi 1 2 3 860 -240 NJ -240 1820
-preplace netloc Timer_0_data_bo 1 2 3 850 -250 1380J -250 1840
-preplace netloc axi_bram_ctrl_0_bram_wrdata_a 1 2 1 790
-preplace netloc axi_uartlite_0_UART 1 2 3 750J -610 1340J -500 1850J
-preplace netloc axi_gpio_0_GPIO 1 3 2 NJ 280 NJ
-preplace netloc IC_0_edges 1 4 1 N
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 1 2 290J 50 760J
+preplace netloc IC_0_rddata_bi 1 2 3 890 -240 NJ -240 2360
+preplace netloc Timer_0_data_bo 1 2 3 880 -250 1380J -250 2380
+preplace netloc axi_bram_ctrl_0_bram_wrdata_a 1 2 1 820
+preplace netloc axi_uartlite_0_UART 1 2 3 780J -610 1340J -500 2390J
+preplace netloc axi_gpio_0_GPIO 1 3 2 1390J 280 NJ
 preplace netloc BRAMInterconnect_0_s3_we_bo 1 3 1 1310
 preplace netloc BRAMInterconnect_0_s2_en_o 1 3 1 1370
 preplace netloc BRAMInterconnect_0_s2_addr_bo 1 3 1 1380
-preplace netloc proc_sys_reset_0_peripheral_reset 1 2 2 780 -640 1400J
+preplace netloc proc_sys_reset_0_peripheral_reset 1 2 2 810 -640 1400J
 preplace netloc BRAMInterconnect_0_s1_addr_bo 1 3 1 1360
-preplace netloc axi_bram_ctrl_0_bram_we_a 1 2 1 830
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 3 -220 -200 360 40 740
+preplace netloc axi_bram_ctrl_0_bram_we_a 1 2 1 860
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 3 -220 -200 360 40 750
 preplace netloc microblaze_0_axi_periph_M02_AXI 1 1 1 310
-preplace netloc microblaze_0_dlmb_1 1 1 2 320J -480 750J
+preplace netloc microblaze_0_dlmb_1 1 1 2 300J -480 780J
 preplace netloc BRAMInterconnect_0_s3_addr_bo 1 3 1 1340
 preplace netloc clock_rtl_1 1 0 1 -240J
-preplace netloc Timer_1_data_bo 1 2 3 840 -230 1370J -230 1830
-preplace netloc axi_bram_ctrl_0_bram_en_a 1 2 1 810
-preplace netloc BRAMInterconnect_0_bram_rddata_o 1 2 2 820J -270 1300J
-levelinfo -pg 1 -270 50 560 1100 1630 1870 -top -1320 -bot 560
+preplace netloc Timer_1_data_bo 1 2 3 870 -230 1370J -230 2370
+preplace netloc axi_bram_ctrl_0_bram_en_a 1 2 1 830
+preplace netloc BRAMInterconnect_0_bram_rddata_o 1 2 2 850J -270 1300J
+levelinfo -pg 1 -270 50 570 1100 2164 2410 -top -1320 -bot 560
 ",
 }
 {

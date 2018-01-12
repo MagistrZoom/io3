@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir /home/izoomko/wrk/4grade/io/lab3/lab2.sim/sim_1/behav/xsim.dir/sim_tb_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Fri Jan 12 07:06:34 2018" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Fri Jan 12 11:25:05 2018" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2017.2 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "1909853" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "LIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "4426b560-871a-4146-b1ce-1007ef515f91" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "f8e3ffd721a74a89bb5b27c51c482709" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "3" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "2" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Debian" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "Debian GNU/Linux oldstable-updates (sid)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i3-3217U CPU @ 1.80GHz" -context "user_environment"
@@ -31,12 +31,12 @@ webtalk_add_data -client xsim -key HWCosim -value "false" -context "xsim\\comman
 webtalk_add_data -client xsim -key DPI_Used -value "false" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key Debug -value "typical" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key Simulation_Image_Code -value "2933 KB" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Image_Data -value "360 KB" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Image_Data -value "372 KB" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Nets -value "0" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Processes -value "7552" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Instances -value "2472" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Xilinx_HDL_Libraries_Used -value "secureip unimacro_ver unisims_ver " -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Time -value "44.47_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Memory -value "902464_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 2043363068 -regid "" -xml /home/izoomko/wrk/4grade/io/lab3/lab2.sim/sim_1/behav/xsim.dir/sim_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html /home/izoomko/wrk/4grade/io/lab3/lab2.sim/sim_1/behav/xsim.dir/sim_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm /home/izoomko/wrk/4grade/io/lab3/lab2.sim/sim_1/behav/xsim.dir/sim_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Compiler_Time -value "36.99_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Compiler_Memory -value "912976_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 2091377256 -regid "" -xml /home/izoomko/wrk/4grade/io/lab3/lab2.sim/sim_1/behav/xsim.dir/sim_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html /home/izoomko/wrk/4grade/io/lab3/lab2.sim/sim_1/behav/xsim.dir/sim_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm /home/izoomko/wrk/4grade/io/lab3/lab2.sim/sim_1/behav/xsim.dir/sim_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

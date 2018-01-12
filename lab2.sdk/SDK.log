@@ -167,3 +167,49 @@
 07:16:20 INFO  : Successfully done setting SDK workspace  
 07:16:24 INFO  : Processing command line option -hwspec /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf.
 07:16:24 INFO  : Checking for hwspec changes in the project uc_system_wrapper_hw_platform_1.
+07:43:03 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1515732181000,  Project:1515729414000
+07:43:03 INFO  : Project uc_system_wrapper_hw_platform_1's source hardware specification located at /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+07:43:05 INFO  : Copied contents of /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf into /uc_system_wrapper_hw_platform_1/system.hdf.
+07:43:06 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+07:43:06 INFO  : Clearing existing target manager status.
+07:43:12 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+07:43:12 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+07:44:43 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1515732281000,  Project:1515732181000
+07:44:43 INFO  : Project uc_system_wrapper_hw_platform_1's source hardware specification located at /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+07:44:44 INFO  : Copied contents of /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf into /uc_system_wrapper_hw_platform_1/system.hdf.
+07:44:44 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+07:44:44 INFO  : Clearing existing target manager status.
+07:44:44 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+07:44:44 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+07:45:14 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+07:48:30 INFO  : Registering command handlers for SDK TCF services
+07:48:30 INFO  : Launching XSCT server: xsct -n -interactive /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/temp_xsdb_launch_script.tcl
+07:48:32 INFO  : XSCT server has started successfully.
+07:48:35 INFO  : Successfully done setting XSCT server connection channel  
+07:48:35 INFO  : Successfully done setting SDK workspace  
+07:48:35 INFO  : Processing command line option -hwspec /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf.
+07:48:35 INFO  : Checking for hwspec changes in the project uc_system_wrapper_hw_platform_1.
+07:48:35 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1515732476000,  Project:1515732281000
+07:48:35 INFO  : The hardware specification for project 'uc_system_wrapper_hw_platform_1' is different from /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf.
+07:48:35 INFO  : Copied contents of /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf into /uc_system_wrapper_hw_platform_1/system.hdf.
+07:48:36 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+07:48:36 INFO  : Clearing existing target manager status.
+07:48:43 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+07:48:43 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+08:23:19 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+11:27:06 INFO  : Registering command handlers for SDK TCF services
+11:27:07 INFO  : Launching XSCT server: xsct -n -interactive /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/temp_xsdb_launch_script.tcl
+11:27:09 INFO  : XSCT server has started successfully.
+11:27:09 INFO  : Successfully done setting XSCT server connection channel  
+11:32:08 INFO  : Successfully done setting SDK workspace  
+11:32:08 INFO  : Processing command line option -hwspec /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf.
+11:32:08 INFO  : Checking for hwspec changes in the project uc_system_wrapper_hw_platform_1.
+11:32:08 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1515745591000,  Project:1515732476000
+11:32:08 INFO  : The hardware specification for project 'uc_system_wrapper_hw_platform_1' is different from /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf.
+11:32:08 INFO  : Copied contents of /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf into /uc_system_wrapper_hw_platform_1/system.hdf.
+11:32:08 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+11:32:10 INFO  : 
+11:32:12 INFO  : Updating hardware inferred compiler options for proj.
+11:32:12 INFO  : Clearing existing target manager status.

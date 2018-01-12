@@ -252,7 +252,6 @@ proc create_root_design { parentCell } {
 CONFIG.FREQ_HZ {100000000} \
 CONFIG.PHASE {0.000} \
  ] $clock_rtl
-  set edges [ create_bd_port -dir O edges ]
   set pwm0 [ create_bd_port -dir O pwm0 ]
   set reset_rtl [ create_bd_port -dir I -type rst reset_rtl ]
   set_property -dict [ list \
@@ -375,7 +374,6 @@ CONFIG.C_NUM_PERP_RST {1} \
   connect_bd_net -net BRAMInterconnect_0_s3_en_o [get_bd_pins BRAMInterconnect_0/s3_en_o] [get_bd_pins IC_0/en_i]
   connect_bd_net -net BRAMInterconnect_0_s3_we_bo [get_bd_pins BRAMInterconnect_0/s3_we_bo] [get_bd_pins IC_0/we_bi]
   connect_bd_net -net BRAMInterconnect_0_s3_wrdata_bo [get_bd_pins BRAMInterconnect_0/s3_wrdata_bo] [get_bd_pins IC_0/wrdata_bi]
-  connect_bd_net -net IC_0_edges [get_bd_ports edges] [get_bd_pins IC_0/edges]
   connect_bd_net -net IC_0_rddata_bi [get_bd_pins BRAMInterconnect_0/s3_rddata_bi] [get_bd_pins IC_0/rddata_bo]
   connect_bd_net -net Timer_0_data_bo [get_bd_pins BRAMInterconnect_0/s1_rddata_bi] [get_bd_pins IC_0/timer1_val_bi] [get_bd_pins Timer_0/data_bo]
   connect_bd_net -net Timer_1_data_bo [get_bd_pins BRAMInterconnect_0/s2_rddata_bi] [get_bd_pins IC_0/timer2_val_bi] [get_bd_pins Timer_1/data_bo]
@@ -400,8 +398,8 @@ CONFIG.C_NUM_PERP_RST {1} \
   create_bd_addr_seg -range 0x00010000 -offset 0x40000000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] SEG_axi_gpio_0_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x41C00000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_timer_0/S_AXI/Reg] SEG_axi_timer_0_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x40600000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_uartlite_0/S_AXI/Reg] SEG_axi_uartlite_0_Reg
-  create_bd_addr_seg -range 0x00002000 -offset 0x00000000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs microblaze_0_local_memory/dlmb_bram_if_cntlr/SLMB/Mem] SEG_dlmb_bram_if_cntlr_Mem
-  create_bd_addr_seg -range 0x00002000 -offset 0x00000000 [get_bd_addr_spaces microblaze_0/Instruction] [get_bd_addr_segs microblaze_0_local_memory/ilmb_bram_if_cntlr/SLMB/Mem] SEG_ilmb_bram_if_cntlr_Mem
+  create_bd_addr_seg -range 0x00080000 -offset 0x00000000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs microblaze_0_local_memory/dlmb_bram_if_cntlr/SLMB/Mem] SEG_dlmb_bram_if_cntlr_Mem
+  create_bd_addr_seg -range 0x00080000 -offset 0x00000000 [get_bd_addr_spaces microblaze_0/Instruction] [get_bd_addr_segs microblaze_0_local_memory/ilmb_bram_if_cntlr/SLMB/Mem] SEG_ilmb_bram_if_cntlr_Mem
 
 
   # Restore current instance

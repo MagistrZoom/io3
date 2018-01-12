@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-//Date        : Fri Jan 12 06:56:25 2018
+//Date        : Fri Jan 12 11:33:12 2018
 //Host        : sirius running 64-bit Debian GNU/Linux oldstable-updates (sid)
 //Command     : generate_target uc_system_wrapper.bd
 //Design      : uc_system_wrapper
@@ -11,14 +11,12 @@
 
 module uc_system_wrapper
    (clock_rtl,
-    edges,
     gpio_rtl_tri_o,
     pwm0,
     reset_rtl,
     uart_rtl_rxd,
     uart_rtl_txd);
   input clock_rtl;
-  output edges;
   output [15:0]gpio_rtl_tri_o;
   output pwm0;
   input reset_rtl;
@@ -26,7 +24,6 @@ module uc_system_wrapper
   output uart_rtl_txd;
 
   wire clock_rtl;
-  wire edges;
   wire [15:0]gpio_rtl_tri_o;
   wire pwm0;
   wire reset_rtl;
@@ -35,7 +32,6 @@ module uc_system_wrapper
 
   uc_system uc_system_i
        (.clock_rtl(clock_rtl),
-        .edges(edges),
         .gpio_rtl_tri_o(gpio_rtl_tri_o),
         .pwm0(pwm0),
         .reset_rtl(reset_rtl),

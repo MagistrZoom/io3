@@ -1,4 +1,4 @@
-07:29:32 **** Auto Build of configuration Debug for project soft ****
+11:32:43 **** Auto Build of configuration Debug for project soft ****
 make all 
 Building file: ../src/main.c
 Invoking: MicroBlaze gcc compiler
@@ -8,11 +8,14 @@ Finished building: ../src/main.c
 Building target: soft.elf
 Invoking: MicroBlaze gcc linker
 mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: soft.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
-/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 5256 bytes
-collect2: error: ld returned 1 exit status
-make: *** [soft.elf] Error 1
-makefile:36: recipe for target 'soft.elf' failed
+Finished building target: soft.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size soft.elf  |tee "soft.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11468	    268	   3112	  14848	   3a00	soft.elf
+Finished building: soft.elf.size
+ 
 
-07:29:32 Build Finished (took 322ms)
+11:32:44 Build Finished (took 604ms)
 

@@ -2763,3 +2763,635 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-e
 collect2: error: ld returned 1 exit status
 make: *** [soft.elf] Error 1
 makefile:36: recipe for target 'soft.elf' failed
+07:31:59 **** Incremental Build of configuration Debug for project soft ****
+make all 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: soft.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+makefile:36: recipe for target 'soft.elf' failed
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 5256 bytes
+collect2: error: ld returned 1 exit status
+make: *** [soft.elf] Error 1
+07:33:18 **** Clean-only build of configuration Debug for project soft ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  soft.elf.size  soft.elf
+ 
+07:33:19 **** Clean-only build of project soft_bsp ****
+make -k clean 
+make -C microblaze_0/libsrc/bram_v4_1/src -s clean 
+make -C microblaze_0/libsrc/cpu_v2_6/src -s clean 
+make -C microblaze_0/libsrc/standalone_v6_3/src -s clean 
+make -C microblaze_0/libsrc/gpio_v4_3/src -s clean 
+make -C microblaze_0/libsrc/tmrctr_v4_3/src -s clean 
+rm -f microblaze_0/lib/libxil.a
+07:33:19 **** Build of project soft_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/bram_v4_1/src
+make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/cpu_v2_6/src
+make -C microblaze_0/libsrc/cpu_v2_6/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/standalone_v6_3/src
+make -C microblaze_0/libsrc/standalone_v6_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/gpio_v4_3/src
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/tmrctr_v4_3/src
+make -C microblaze_0/libsrc/tmrctr_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make libs in microblaze_0/libsrc/bram_v4_1/src
+make -C microblaze_0/libsrc/bram_v4_1/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling bram
+mb-ar: creating ../../../lib/libxil.a
+Running Make libs in microblaze_0/libsrc/cpu_v2_6/src
+make -C microblaze_0/libsrc/cpu_v2_6/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling cpu
+Running Make libs in microblaze_0/libsrc/standalone_v6_3/src
+make -C microblaze_0/libsrc/standalone_v6_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling standalone
+outbyte.c: In function 'outbyte':
+outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
+ void outbyte(char c) {
+                   ^
+inbyte.c: In function 'inbyte':
+inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Running Make libs in microblaze_0/libsrc/gpio_v4_3/src
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling gpio
+Running Make libs in microblaze_0/libsrc/tmrctr_v4_3/src
+make -C microblaze_0/libsrc/tmrctr_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling tmrctr
+Finished building libraries
+07:33:24 **** Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: soft.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 5256 bytes
+collect2: error: ld returned 1 exit status
+makefile:36: recipe for target 'soft.elf' failed
+make: *** [soft.elf] Error 1
+07:33:33 **** Incremental Build of configuration Release for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: soft.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 4744 bytes
+collect2: error: ld returned 1 exit status
+make: *** [soft.elf] Error 1
+makefile:36: recipe for target 'soft.elf' failed
+07:34:03 **** Clean-only build of configuration Release for project soft ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  soft.elf.size  soft.elf
+ 
+07:34:03 **** Clean-only build of project soft_bsp ****
+make -k clean 
+make -C microblaze_0/libsrc/bram_v4_1/src -s clean 
+make -C microblaze_0/libsrc/cpu_v2_6/src -s clean 
+make -C microblaze_0/libsrc/standalone_v6_3/src -s clean 
+make -C microblaze_0/libsrc/gpio_v4_3/src -s clean 
+make -C microblaze_0/libsrc/tmrctr_v4_3/src -s clean 
+rm -f microblaze_0/lib/libxil.a
+07:34:03 **** Build of project soft_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/bram_v4_1/src
+make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/cpu_v2_6/src
+make -C microblaze_0/libsrc/cpu_v2_6/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/standalone_v6_3/src
+make -C microblaze_0/libsrc/standalone_v6_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/gpio_v4_3/src
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/tmrctr_v4_3/src
+make -C microblaze_0/libsrc/tmrctr_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make libs in microblaze_0/libsrc/bram_v4_1/src
+make -C microblaze_0/libsrc/bram_v4_1/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling bram
+mb-ar: creating ../../../lib/libxil.a
+Running Make libs in microblaze_0/libsrc/cpu_v2_6/src
+make -C microblaze_0/libsrc/cpu_v2_6/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling cpu
+Running Make libs in microblaze_0/libsrc/standalone_v6_3/src
+make -C microblaze_0/libsrc/standalone_v6_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling standalone
+outbyte.c: In function 'outbyte':
+outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
+ void outbyte(char c) {
+                   ^
+inbyte.c: In function 'inbyte':
+inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Running Make libs in microblaze_0/libsrc/gpio_v4_3/src
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling gpio
+Running Make libs in microblaze_0/libsrc/tmrctr_v4_3/src
+make -C microblaze_0/libsrc/tmrctr_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling tmrctr
+Finished building libraries
+07:34:07 **** Build of configuration Release for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: soft.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 4744 bytes
+makefile:36: recipe for target 'soft.elf' failed
+collect2: error: ld returned 1 exit status
+make: *** [soft.elf] Error 1
+07:34:15 **** Clean-only build of configuration Release for project soft ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  soft.elf.size  soft.elf
+ 
+07:34:15 **** Clean-only build of project soft_bsp ****
+make -k clean 
+make -C microblaze_0/libsrc/bram_v4_1/src -s clean 
+make -C microblaze_0/libsrc/cpu_v2_6/src -s clean 
+make -C microblaze_0/libsrc/standalone_v6_3/src -s clean 
+make -C microblaze_0/libsrc/gpio_v4_3/src -s clean 
+make -C microblaze_0/libsrc/tmrctr_v4_3/src -s clean 
+rm -f microblaze_0/lib/libxil.a
+07:34:16 **** Build of project soft_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/bram_v4_1/src
+make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/cpu_v2_6/src
+make -C microblaze_0/libsrc/cpu_v2_6/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/standalone_v6_3/src
+make -C microblaze_0/libsrc/standalone_v6_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/gpio_v4_3/src
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/tmrctr_v4_3/src
+make -C microblaze_0/libsrc/tmrctr_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make libs in microblaze_0/libsrc/bram_v4_1/src
+make -C microblaze_0/libsrc/bram_v4_1/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling bram
+mb-ar: creating ../../../lib/libxil.a
+Running Make libs in microblaze_0/libsrc/cpu_v2_6/src
+make -C microblaze_0/libsrc/cpu_v2_6/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling cpu
+Running Make libs in microblaze_0/libsrc/standalone_v6_3/src
+make -C microblaze_0/libsrc/standalone_v6_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling standalone
+outbyte.c: In function 'outbyte':
+outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
+ void outbyte(char c) {
+                   ^
+inbyte.c: In function 'inbyte':
+inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Running Make libs in microblaze_0/libsrc/gpio_v4_3/src
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling gpio
+Running Make libs in microblaze_0/libsrc/tmrctr_v4_3/src
+make -C microblaze_0/libsrc/tmrctr_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling tmrctr
+Finished building libraries
+07:34:19 **** Build of configuration Release for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: soft.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 4744 bytes
+collect2: error: ld returned 1 exit status
+make: *** [soft.elf] Error 1
+makefile:36: recipe for target 'soft.elf' failed
+07:35:24 **** Clean-only build of configuration Debug for project soft ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  soft.elf.size  soft.elf
+ 
+07:35:24 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:183:25: error: 'value' undeclared (first use in this function)
+                 ratio = value;
+                         ^~~~~
+../src/main.c:183:25: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:132:12: warning: variable 'ratio' set but not used [-Wunused-but-set-variable]
+     double ratio = 0;
+            ^~~~~
+../src/main.c:127:9: warning: variable 'impulse_negedge' set but not used [-Wunused-but-set-variable]
+     int impulse_negedge = 0;
+         ^~~~~~~~~~~~~~~
+../src/main.c:126:9: warning: variable 'impulse_posedge' set but not used [-Wunused-but-set-variable]
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+     int impulse_posedge = 0;
+         ^~~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+07:35:28 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:132:12: warning: unused variable 'ratio' [-Wunused-variable]
+     double ratio = 0;
+            ^~~~~
+../src/main.c:127:9: warning: variable 'impulse_negedge' set but not used [-Wunused-but-set-variable]
+     int impulse_negedge = 0;
+         ^~~~~~~~~~~~~~~
+../src/main.c:126:9: warning: variable 'impulse_posedge' set but not used [-Wunused-but-set-variable]
+     int impulse_posedge = 0;
+         ^~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: soft.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size soft.elf  |tee "soft.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2836	    268	   3112	   6216	   1848	soft.elf
+Finished building: soft.elf.size
+ 
+07:35:35 **** Incremental Build of configuration Debug for project soft ****
+make all 
+make: Nothing to be done for 'all'.
+07:37:50 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:119:12: warning: unused variable 'ratio' [-Wunused-variable]
+     double ratio = 0;
+            ^~~~~
+../src/main.c:114:9: warning: variable 'impulse_negedge' set but not used [-Wunused-but-set-variable]
+     int impulse_negedge = 0;
+         ^~~~~~~~~~~~~~~
+../src/main.c:113:9: warning: variable 'impulse_posedge' set but not used [-Wunused-but-set-variable]
+     int impulse_posedge = 0;
+         ^~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: soft.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size soft.elf  |tee "soft.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2836	    268	   3112	   6216	   1848	soft.elf
+Finished building: soft.elf.size
+ 
+07:38:01 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:167:26: warning: unused variable 'epsilon' [-Wunused-variable]
+             const double epsilon = 10e-2;
+                          ^~~~~~~
+../src/main.c:119:12: warning: unused variable 'ratio' [-Wunused-variable]
+     double ratio = 0;
+            ^~~~~
+../src/main.c:114:9: warning: variable 'impulse_negedge' set but not used [-Wunused-but-set-variable]
+     int impulse_negedge = 0;
+         ^~~~~~~~~~~~~~~
+../src/main.c:113:9: warning: variable 'impulse_posedge' set but not used [-Wunused-but-set-variable]
+     int impulse_posedge = 0;
+         ^~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: soft.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size soft.elf  |tee "soft.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2860	    268	   3112	   6240	   1860	soft.elf
+Finished building: soft.elf.size
+ 
+07:38:14 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:168:20: warning: unused variable 'value' [-Wunused-variable]
+             double value = (double) (next_posedge - impulse_posedge) / (impulse_negedge - impulse_posedge);
+                    ^~~~~
+../src/main.c:167:26: warning: unused variable 'epsilon' [-Wunused-variable]
+             const double epsilon = 10e-2;
+                          ^~~~~~~
+../src/main.c:119:12: warning: unused variable 'ratio' [-Wunused-variable]
+     double ratio = 0;
+            ^~~~~
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: soft.elf section `.heap' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 2576 bytes
+collect2: error: ld returned 1 exit status
+make: *** [soft.elf] Error 1
+makefile:36: recipe for target 'soft.elf' failed
+07:39:10 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:168:19: warning: unused variable 'value' [-Wunused-variable]
+             float value = (float) (next_posedge - impulse_posedge) / (impulse_negedge - impulse_posedge);
+                   ^~~~~
+../src/main.c:167:25: warning: unused variable 'epsilon' [-Wunused-variable]
+             const float epsilon = 10e-2;
+                         ^~~~~~~
+../src/main.c:119:12: warning: unused variable 'ratio' [-Wunused-variable]
+     double ratio = 0;
+            ^~~~~
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+makefile:36: recipe for target 'soft.elf' failed
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: soft.elf section `.stack' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 752 bytes
+collect2: error: ld returned 1 exit status
+make: *** [soft.elf] Error 1
+07:39:19 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: soft.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 6200 bytes
+makefile:36: recipe for target 'soft.elf' failed
+collect2: error: ld returned 1 exit status
+make: *** [soft.elf] Error 1
+07:43:39 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'set_pwm':
+../src/main.c:36:12: error: 'GPIO_ADDRESS' undeclared (first use in this function)
+  Xil_Out32(GPIO_ADDRESS, 0);
+            ^~~~~~~~~~~~
+../src/main.c:36:12: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Error 1
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+07:43:46 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: soft.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 6200 bytes
+collect2: error: ld returned 1 exit status
+make: *** [soft.elf] Error 1
+makefile:36: recipe for target 'soft.elf' failed
+07:45:01 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: soft.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 6200 bytes
+collect2: error: ld returned 1 exit status
+makefile:36: recipe for target 'soft.elf' failed
+make: *** [soft.elf] Error 1
+07:49:07 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: soft.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+makefile:36: recipe for target 'soft.elf' failed
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 6704 bytes
+collect2: error: ld returned 1 exit status
+make: *** [soft.elf] Error 1
+07:52:14 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: soft.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+/home/izoomko/Soft/xilinx/SDK/2017.2/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 6704 bytes
+makefile:36: recipe for target 'soft.elf' failed
+collect2: error: ld returned 1 exit status
+make: *** [soft.elf] Error 1
+07:56:14 **** Build of project proj_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/bram_v4_1/src
+make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/cpu_v2_6/src
+make -C microblaze_0/libsrc/cpu_v2_6/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/standalone_v6_3/src
+make -C microblaze_0/libsrc/standalone_v6_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/uartlite_v3_2/src
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/gpio_v4_3/src
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/tmrctr_v4_3/src
+make -C microblaze_0/libsrc/tmrctr_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make libs in microblaze_0/libsrc/bram_v4_1/src
+make -C microblaze_0/libsrc/bram_v4_1/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling bram
+mb-ar: creating ../../../lib/libxil.a
+Running Make libs in microblaze_0/libsrc/cpu_v2_6/src
+make -C microblaze_0/libsrc/cpu_v2_6/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling cpu
+Running Make libs in microblaze_0/libsrc/standalone_v6_3/src
+make -C microblaze_0/libsrc/standalone_v6_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling standalone
+Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling uartlite
+Running Make libs in microblaze_0/libsrc/gpio_v4_3/src
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling gpio
+Running Make libs in microblaze_0/libsrc/tmrctr_v4_3/src
+make -C microblaze_0/libsrc/tmrctr_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling tmrctr
+Finished building libraries
+07:56:22 **** Build of configuration Debug for project proj ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../proj_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../proj_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: proj.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../proj_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "proj.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: proj.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size proj.elf  |tee "proj.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2748	    268	   3112	   6128	   17f0	proj.elf
+Finished building: proj.elf.size
+ 
+07:56:24 **** Auto Build of configuration Debug for project proj ****
+make all 
+make: Nothing to be done for 'all'.
+07:56:54 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: soft.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size soft.elf  |tee "soft.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11468	    268	   3112	  14848	   3a00	soft.elf
+Finished building: soft.elf.size
+ 
+07:56:59 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: soft.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size soft.elf  |tee "soft.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11468	    268	   3112	  14848	   3a00	soft.elf
+Finished building: soft.elf.size
+ 
+07:57:04 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: soft.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size soft.elf  |tee "soft.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11468	    268	   3112	  14848	   3a00	soft.elf
+Finished building: soft.elf.size
+ 
+08:15:28 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: soft.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size soft.elf  |tee "soft.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11468	    268	   3112	  14848	   3a00	soft.elf
+Finished building: soft.elf.size
+ 
+08:21:10 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: soft.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size soft.elf  |tee "soft.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11468	    268	   3112	  14848	   3a00	soft.elf
+Finished building: soft.elf.size
+ 
+11:32:43 **** Auto Build of configuration Debug for project soft ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../soft_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: soft.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soft_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soft.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: soft.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size soft.elf  |tee "soft.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11468	    268	   3112	  14848	   3a00	soft.elf
+Finished building: soft.elf.size
+ 

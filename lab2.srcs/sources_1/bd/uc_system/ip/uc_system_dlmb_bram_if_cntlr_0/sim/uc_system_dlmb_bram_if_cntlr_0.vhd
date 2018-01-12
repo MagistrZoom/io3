@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -213,7 +213,7 @@ BEGIN
   U0 : lmb_bram_if_cntlr
     GENERIC MAP (
       C_FAMILY => "artix7",
-      C_HIGHADDR => X"0000000000001FFF",
+      C_HIGHADDR => X"000000000007FFFF",
       C_BASEADDR => X"0000000000000000",
       C_NUM_LMB => 1,
       C_MASK => X"0000000040000000",
