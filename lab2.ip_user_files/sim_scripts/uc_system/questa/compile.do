@@ -167,6 +167,9 @@ vlog -work xil_defaultlib -64 "+incdir+../../../../lab2.srcs/sources_1/bd/uc_sys
 "../../../bd/uc_system/ip/uc_system_IC_0_0/sim/uc_system_IC_0_0.v" \
 "../../../bd/uc_system/hdl/uc_system.v" \
 
+vcom -work xil_defaultlib -64 -93 \
+"../../../bd/uc_system/ip/uc_system_axi_timer_1_0/sim/uc_system_axi_timer_1_0.vhd" \
+
 vlog -work axi_protocol_converter_v2_1_13 -64 "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" \
 "../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/f0ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 

@@ -213,3 +213,42 @@
 11:32:10 INFO  : 
 11:32:12 INFO  : Updating hardware inferred compiler options for proj.
 11:32:12 INFO  : Clearing existing target manager status.
+09:34:35 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+20:10:33 INFO  : Registering command handlers for SDK TCF services
+20:10:34 INFO  : Launching XSCT server: xsct -n -interactive /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/temp_xsdb_launch_script.tcl
+20:10:39 INFO  : XSCT server has started successfully.
+20:10:39 INFO  : Successfully done setting XSCT server connection channel  
+20:10:41 INFO  : Successfully done setting SDK workspace  
+20:10:41 INFO  : Processing command line option -hwspec /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf.
+20:10:41 INFO  : Checking for hwspec changes in the project uc_system_wrapper_hw_platform_1.
+20:10:41 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1515863401000,  Project:1515745591000
+20:10:41 INFO  : The hardware specification for project 'uc_system_wrapper_hw_platform_1' is different from /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf.
+20:10:41 INFO  : Copied contents of /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf into /uc_system_wrapper_hw_platform_1/system.hdf.
+20:10:42 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+20:10:43 INFO  : 
+20:10:44 INFO  : Updating hardware inferred compiler options for uart.
+20:10:45 INFO  : Clearing existing target manager status.
+20:18:28 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+20:21:12 INFO  : Registering command handlers for SDK TCF services
+20:21:12 INFO  : Launching XSCT server: xsct -n -interactive /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/temp_xsdb_launch_script.tcl
+20:21:14 INFO  : XSCT server has started successfully.
+20:21:14 INFO  : Successfully done setting XSCT server connection channel  
+20:21:14 INFO  : Successfully done setting SDK workspace  
+20:21:17 INFO  : Processing command line option -hwspec /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf.
+20:21:18 INFO  : Checking for hwspec changes in the project uc_system_wrapper_hw_platform_1.
+20:23:19 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1515864196000,  Project:1515863401000
+20:23:19 INFO  : Project uc_system_wrapper_hw_platform_1's source hardware specification located at /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+20:23:21 INFO  : Copied contents of /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf into /uc_system_wrapper_hw_platform_1/system.hdf.
+20:23:21 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+20:23:23 INFO  : 
+20:23:24 INFO  : Updating hardware inferred compiler options for uart.
+20:23:24 INFO  : Clearing existing target manager status.
+20:23:44 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+20:24:19 INFO  : Registering command handlers for SDK TCF services
+20:24:20 INFO  : Launching XSCT server: xsct -n -interactive /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/temp_xsdb_launch_script.tcl
+20:24:22 INFO  : XSCT server has started successfully.
+20:24:22 INFO  : Successfully done setting XSCT server connection channel  
+20:24:24 INFO  : Successfully done setting SDK workspace  
+20:24:24 INFO  : Processing command line option -hwspec /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf.
+20:24:24 INFO  : Checking for hwspec changes in the project uc_system_wrapper_hw_platform_1.

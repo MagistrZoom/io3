@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -837,7 +837,7 @@ BEGIN
       C_FSL_EXCEPTION => 0,
       C_USE_STACK_PROTECTION => 0,
       C_IMPRECISE_EXCEPTIONS => 0,
-      C_USE_INTERRUPT => 0,
+      C_USE_INTERRUPT => 1,
       C_USE_EXT_BRK => 0,
       C_USE_EXT_NM_BRK => 0,
       C_USE_NON_SECURE => 0,

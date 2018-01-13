@@ -75,9 +75,9 @@ module IC(
             if (rs_state) begin
                 case (prev_addr)
                     'h0:
-                        rddata_bo = icconf_out;
+                        rddata_bo = icconf;
                     'h4: begin
-                        rddata_bo = mem[rd_ptr];
+                        rddata_bo = mem[rd_ptr - 1];
                         read = 1;
                     end
                 endcase
@@ -94,12 +94,7 @@ module IC(
             wr_ptr_next = wr_ptr;
             if (prescaler_fifo && !icov && icconf[2:0] != 0) begin
                 write = 1;
-                if ((wr_ptr % 4 == 2 && wr_ptr != 0) && icconf[2:0] == 1) begin // for store-each-front mode double each third front
-                    wr_ptr_next = wr_ptr + 2;
-                end
-                else begin
-                    wr_ptr_next = wr_ptr + 1;
-                end  
+                wr_ptr_next = wr_ptr + 1;
             end
         end
     end
@@ -110,12 +105,13 @@ module IC(
         end
         else begin
             icconf_next = icconf;
-            if (we_bi == 'hF) begin
+            if (en_i && we_bi == 'hF) begin
                 case (addr_bi)
                     'h0:
                         icconf_next = wrdata_bi;
                 endcase
             end
+            icconf_next[4:3] = {icov, icbne};
         end
     end
     
@@ -135,7 +131,6 @@ module IC(
         if (rst_i) begin
             prev_addr   <= 0;
             r_state     <= 0;
-            icconf_out  <= 0;
             rd_ptr_next <= 0;
         end
         else begin
@@ -145,8 +140,7 @@ module IC(
                 r_state    <= 1;
                 case (addr_bi)
                 'h0: begin
-                    icconf_out <= icconf;
-                    icconf_out[4:3] <= {icov, icbne};
+                    //icconf[4:3] <= {icov, icbne};
                 end
                 'h4: begin
                     if (icbne) begin
@@ -158,24 +152,12 @@ module IC(
         end
     end
     
-    integer i;
     always @(posedge clk_i) begin
-        if (rst_i) begin // reset read operation
-            for (i = 0; i < 32; i = i + 1) begin
-                mem[i]  <= 0;
-            end
-        end
-        else begin
+        if (!rst_i) begin
             rs_state    <= r_state;
             icconf      <= icconf_next;
             if (write) begin
-                if ((wr_ptr % 4 == 2 && wr_ptr != 0) && icconf[2:0] == 1) begin // for store-each-front mode double each third front
-                    mem[wr_ptr]     <= timer;
-                    mem[wr_ptr + 1] <= timer;
-                end
-                else begin
-                    mem[wr_ptr]     <= timer;
-                end
+                mem[wr_ptr]     <= timer;
             end
             wr_ptr      <= wr_ptr_next;
             rd_ptr      <= rd_ptr_next;

@@ -31,6 +31,7 @@ INFO: [VRFC 10-311] analyzing module m00_couplers_imp_1I5IBZW
 INFO: [VRFC 10-311] analyzing module m01_couplers_imp_5RMMHW
 INFO: [VRFC 10-311] analyzing module m02_couplers_imp_1EY65SD
 INFO: [VRFC 10-311] analyzing module m03_couplers_imp_QRT0UT
+INFO: [VRFC 10-311] analyzing module m04_couplers_imp_BQ65LQ
 INFO: [VRFC 10-311] analyzing module microblaze_0_local_memory_imp_1DGYSR8
 INFO: [VRFC 10-311] analyzing module s00_couplers_imp_P907S0
 INFO: [VRFC 10-311] analyzing module uc_system
@@ -63,3 +64,5 @@ INFO: [VRFC 10-163] Analyzing VHDL file "/home/izoomko/wrk/4grade/io/lab3/lab2.i
 INFO: [VRFC 10-307] analyzing entity uc_system_axi_uartlite_0_0
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/izoomko/wrk/4grade/io/lab3/lab2.ip_user_files/bd/uc_system/ip/uc_system_proc_sys_reset_0_0/sim/uc_system_proc_sys_reset_0_0.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity uc_system_proc_sys_reset_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/izoomko/wrk/4grade/io/lab3/lab2.ip_user_files/bd/uc_system/ip/uc_system_axi_timer_1_0/sim/uc_system_axi_timer_1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity uc_system_axi_timer_1_0

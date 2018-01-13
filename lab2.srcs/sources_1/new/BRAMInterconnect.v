@@ -66,7 +66,7 @@ module BRAMInterconnect(
     // read
     // if rs_state (means read-second state) is set it means
     // en_i was 1 and we_bi was 0 on previous tick 
-    always @(rs_state or addr_bi or s1_rddata_bi or s2_rddata_bi or s3_rddata_bi) begin
+    always @(*) begin
         if (rs_state) begin
             case (addr_bi)
                 'h0, 'h4, 'h8:
@@ -79,7 +79,7 @@ module BRAMInterconnect(
         end
     end
 
-    always @(addr_bi or wrdata_bi or en_i or we_bi) begin
+    always @(*) begin
         s1_addr_bo   <= 0;
         s1_wrdata_bo <= 0;
         s1_en_o      <= 0;

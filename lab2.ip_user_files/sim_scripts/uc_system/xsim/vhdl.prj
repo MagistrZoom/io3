@@ -8,4 +8,5 @@ vhdl xil_defaultlib "../../../bd/uc_system/ip/uc_system_ilmb_bram_if_cntlr_0/sim
 vhdl xil_defaultlib "../../../bd/uc_system/ip/uc_system_axi_bram_ctrl_0_0/sim/uc_system_axi_bram_ctrl_0_0.vhd" 
 vhdl xil_defaultlib "../../../bd/uc_system/ip/uc_system_axi_uartlite_0_0/sim/uc_system_axi_uartlite_0_0.vhd" 
 vhdl xil_defaultlib "../../../bd/uc_system/ip/uc_system_proc_sys_reset_0_0/sim/uc_system_proc_sys_reset_0_0.vhd" 
+vhdl xil_defaultlib "../../../bd/uc_system/ip/uc_system_axi_timer_1_0/sim/uc_system_axi_timer_1_0.vhd" 
 nosort
