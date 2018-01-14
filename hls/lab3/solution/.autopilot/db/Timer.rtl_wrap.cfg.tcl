@@ -57,7 +57,7 @@ lappend portList $port5
 set portName6 "data_bo"
 set isMeta6 0
 set portInterface6 [list "sc_out"]
-set portData6 [list "unsigned short"]
+set portData6 [list "sc_uint" 32]
 set isClock6 0
 set isReset6 0
 set portAttribute6 [list $isClock6 $isReset6]

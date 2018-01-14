@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Timer_on_clock'" level="0">
-<item name = "Date">Mon Dec 25 00:09:29 2017
+<item name = "Date">Sun Jan 14 12:48:31 2018
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">lab3</item>
@@ -77,22 +77,22 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="tmp_1_fu_204_p2">+, 0, 101, 37, 32, 2</column>
-<column name="tmp_4_fu_224_p2">+, 0, 101, 37, 32, 1</column>
+<column name="tmp_1_fu_208_p2">+, 0, 101, 37, 32, 2</column>
+<column name="tmp_4_fu_228_p2">+, 0, 101, 37, 32, 1</column>
 <column name="ap_condition_70">and, 0, 0, 2, 1, 1</column>
-<column name="tmp_9_fu_198_p2">icmp, 0, 0, 16, 32, 1</column>
-<column name="tmp_s_fu_218_p2">icmp, 0, 0, 16, 32, 32</column>
-<column name="Timer_m_tmr_V_load_t_fu_210_p3">select, 0, 0, 32, 1, 32</column>
-<column name="storemerge2_fu_238_p3">select, 0, 0, 32, 1, 32</column>
-<column name="tmp_4_s_fu_230_p3">select, 0, 0, 32, 1, 32</column>
+<column name="tmp_9_fu_202_p2">icmp, 0, 0, 16, 32, 1</column>
+<column name="tmp_s_fu_222_p2">icmp, 0, 0, 16, 32, 32</column>
+<column name="Timer_m_tmr_V_load_t_fu_214_p3">select, 0, 0, 32, 1, 32</column>
+<column name="storemerge2_fu_242_p3">select, 0, 0, 32, 1, 32</column>
+<column name="tmp_4_s_fu_234_p3">select, 0, 0, 32, 1, 32</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="Timer_m_tconf_V_o">15, 3, 32, 96</column>
 <column name="Timer_m_tmr_V_o">15, 3, 32, 96</column>
-<column name="Timer_m_tval_V_loc_3_phi_fu_165_p14">27, 5, 32, 160</column>
 <column name="Timer_m_tval_V_o">21, 4, 32, 128</column>
+<column name="v_V_phi_fu_167_p14">27, 5, 32, 160</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -112,7 +112,7 @@
 <column name="en_i">in, 1, ap_none, en_i, pointer</column>
 <column name="addr_bi">in, 13, ap_none, addr_bi, pointer</column>
 <column name="data_bi">in, 32, ap_none, data_bi, pointer</column>
-<column name="data_bo">out, 16, ap_vld, data_bo, pointer</column>
+<column name="data_bo">out, 32, ap_vld, data_bo, pointer</column>
 <column name="data_bo_ap_vld">out, 1, ap_vld, data_bo, pointer</column>
 <column name="Timer_m_tmr_V_i">in, 32, ap_ovld, Timer_m_tmr_V, pointer</column>
 <column name="Timer_m_tmr_V_o">out, 32, ap_ovld, Timer_m_tmr_V, pointer</column>

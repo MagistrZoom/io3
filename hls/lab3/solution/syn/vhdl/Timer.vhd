@@ -17,7 +17,7 @@ port (
     addr_bi : IN STD_LOGIC_VECTOR (12 downto 0);
     data_bi : IN STD_LOGIC_VECTOR (31 downto 0);
     we_bi : IN STD_LOGIC_VECTOR (3 downto 0);
-    data_bo : OUT STD_LOGIC_VECTOR (15 downto 0);
+    data_bo : OUT STD_LOGIC_VECTOR (31 downto 0);
     ap_rst : IN STD_LOGIC );
 end;
 
@@ -25,7 +25,7 @@ end;
 architecture behav of Timer is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "Timer,hls_ip_2017_2,{HLS_INPUT_TYPE=sc,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a100tcsg324-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.294000,HLS_SYN_LAT=1,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=314,HLS_SYN_LUT=282}";
+    "Timer,hls_ip_2017_2,{HLS_INPUT_TYPE=sc,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a100tcsg324-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.294000,HLS_SYN_LAT=1,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=330,HLS_SYN_LUT=282}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
@@ -38,7 +38,7 @@ architecture behav of Timer is
     signal ap_CS_fsm : STD_LOGIC_VECTOR (1 downto 0);
     attribute fsm_encoding : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
-    signal StgValue_16_Timer_on_clock_fu_66_data_bo : STD_LOGIC_VECTOR (15 downto 0);
+    signal StgValue_16_Timer_on_clock_fu_66_data_bo : STD_LOGIC_VECTOR (31 downto 0);
     signal StgValue_16_Timer_on_clock_fu_66_data_bo_ap_vld : STD_LOGIC;
     signal StgValue_16_Timer_on_clock_fu_66_Timer_m_tmr_V_o : STD_LOGIC_VECTOR (31 downto 0);
     signal StgValue_16_Timer_on_clock_fu_66_Timer_m_tmr_V_o_ap_vld : STD_LOGIC;
@@ -60,7 +60,7 @@ architecture behav of Timer is
         en_i : IN STD_LOGIC;
         addr_bi : IN STD_LOGIC_VECTOR (12 downto 0);
         data_bi : IN STD_LOGIC_VECTOR (31 downto 0);
-        data_bo : OUT STD_LOGIC_VECTOR (15 downto 0);
+        data_bo : OUT STD_LOGIC_VECTOR (31 downto 0);
         data_bo_ap_vld : OUT STD_LOGIC;
         Timer_m_tmr_V_i : IN STD_LOGIC_VECTOR (31 downto 0);
         Timer_m_tmr_V_o : OUT STD_LOGIC_VECTOR (31 downto 0);

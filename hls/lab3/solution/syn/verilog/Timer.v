@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="Timer,hls_ip_2017_2,{HLS_INPUT_TYPE=sc,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a100tcsg324-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.294000,HLS_SYN_LAT=1,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=314,HLS_SYN_LUT=282}" *)
+(* CORE_GENERATION_INFO="Timer,hls_ip_2017_2,{HLS_INPUT_TYPE=sc,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a100tcsg324-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.294000,HLS_SYN_LAT=1,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=330,HLS_SYN_LUT=282}" *)
 
 module Timer (
         clk_i,
@@ -27,14 +27,14 @@ input   en_i;
 input  [12:0] addr_bi;
 input  [31:0] data_bi;
 input  [3:0] we_bi;
-output  [15:0] data_bo;
+output  [31:0] data_bo;
 input   ap_rst;
 
-reg[15:0] data_bo;
+reg[31:0] data_bo;
 
 wire   [0:0] Timer_ssdm_thread_load_fu_90_p1;
 wire   [1:0] ap_CS_fsm;
-wire   [15:0] StgValue_16_Timer_on_clock_fu_66_data_bo;
+wire   [31:0] StgValue_16_Timer_on_clock_fu_66_data_bo;
 wire    StgValue_16_Timer_on_clock_fu_66_data_bo_ap_vld;
 wire   [31:0] StgValue_16_Timer_on_clock_fu_66_Timer_m_tmr_V_o;
 wire    StgValue_16_Timer_on_clock_fu_66_Timer_m_tmr_V_o_ap_vld;

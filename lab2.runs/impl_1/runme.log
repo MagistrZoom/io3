@@ -1,0 +1,683 @@
+
+*** Running vivado
+    with args -log uc_system_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source uc_system_wrapper.tcl -notrace
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source uc_system_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/izoomko/Soft/xilinx/Vivado/2017.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_microblaze_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_microblaze_0_0/uc_system_microblaze_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_microblaze_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_microblaze_0_0/uc_system_microblaze_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_microblaze_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_microblaze_0_0/uc_system_microblaze_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_microblaze_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_microblaze_0_0/uc_system_microblaze_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_microblaze_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_microblaze_0_0/uc_system_microblaze_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_clk_wiz_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_clk_wiz_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_clk_wiz_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_clk_wiz_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_clk_wiz_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_timer_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_timer_0_0/uc_system_axi_timer_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_timer_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_timer_0_0/uc_system_axi_timer_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_timer_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_timer_0_0/uc_system_axi_timer_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_timer_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_timer_0_0/uc_system_axi_timer_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_timer_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_timer_0_0/uc_system_axi_timer_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_gpio_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_gpio_0_0/uc_system_axi_gpio_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_gpio_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_gpio_0_0/uc_system_axi_gpio_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_gpio_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_gpio_0_0/uc_system_axi_gpio_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_gpio_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_gpio_0_0/uc_system_axi_gpio_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_gpio_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_gpio_0_0/uc_system_axi_gpio_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_xbar_1' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_xbar_1/uc_system_xbar_1.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_xbar_1' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_xbar_1/uc_system_xbar_1_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_xbar_1' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_xbar_1/uc_system_xbar_1_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_xbar_1' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_xbar_1/uc_system_xbar_1_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_xbar_1' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_xbar_1/uc_system_xbar_1_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_dlmb_v10_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_dlmb_v10_0/uc_system_dlmb_v10_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_dlmb_v10_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_dlmb_v10_0/uc_system_dlmb_v10_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_dlmb_v10_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_dlmb_v10_0/uc_system_dlmb_v10_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_dlmb_v10_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_dlmb_v10_0/uc_system_dlmb_v10_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_dlmb_v10_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_dlmb_v10_0/uc_system_dlmb_v10_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_ilmb_v10_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_ilmb_v10_0/uc_system_ilmb_v10_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_ilmb_v10_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_ilmb_v10_0/uc_system_ilmb_v10_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_ilmb_v10_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_ilmb_v10_0/uc_system_ilmb_v10_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_ilmb_v10_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_ilmb_v10_0/uc_system_ilmb_v10_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_ilmb_v10_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_ilmb_v10_0/uc_system_ilmb_v10_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_dlmb_bram_if_cntlr_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_dlmb_bram_if_cntlr_0/uc_system_dlmb_bram_if_cntlr_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_dlmb_bram_if_cntlr_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_dlmb_bram_if_cntlr_0/uc_system_dlmb_bram_if_cntlr_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_dlmb_bram_if_cntlr_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_dlmb_bram_if_cntlr_0/uc_system_dlmb_bram_if_cntlr_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_dlmb_bram_if_cntlr_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_dlmb_bram_if_cntlr_0/uc_system_dlmb_bram_if_cntlr_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_dlmb_bram_if_cntlr_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_dlmb_bram_if_cntlr_0/uc_system_dlmb_bram_if_cntlr_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_ilmb_bram_if_cntlr_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_ilmb_bram_if_cntlr_0/uc_system_ilmb_bram_if_cntlr_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_ilmb_bram_if_cntlr_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_ilmb_bram_if_cntlr_0/uc_system_ilmb_bram_if_cntlr_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_ilmb_bram_if_cntlr_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_ilmb_bram_if_cntlr_0/uc_system_ilmb_bram_if_cntlr_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_ilmb_bram_if_cntlr_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_ilmb_bram_if_cntlr_0/uc_system_ilmb_bram_if_cntlr_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_ilmb_bram_if_cntlr_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_ilmb_bram_if_cntlr_0/uc_system_ilmb_bram_if_cntlr_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_lmb_bram_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_lmb_bram_0/uc_system_lmb_bram_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_lmb_bram_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_lmb_bram_0/uc_system_lmb_bram_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_lmb_bram_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_lmb_bram_0/uc_system_lmb_bram_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_lmb_bram_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_lmb_bram_0/uc_system_lmb_bram_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_lmb_bram_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_lmb_bram_0/uc_system_lmb_bram_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_bram_ctrl_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_bram_ctrl_0_0/uc_system_axi_bram_ctrl_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_bram_ctrl_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_bram_ctrl_0_0/uc_system_axi_bram_ctrl_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_bram_ctrl_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_bram_ctrl_0_0/uc_system_axi_bram_ctrl_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_bram_ctrl_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_bram_ctrl_0_0/uc_system_axi_bram_ctrl_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_bram_ctrl_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_bram_ctrl_0_0/uc_system_axi_bram_ctrl_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_uartlite_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_uartlite_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_uartlite_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_uartlite_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_uartlite_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 1095.762 ; gain = 10.020 ; free physical = 1118 ; free virtual = 17950
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 412 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_microblaze_0_0/uc_system_microblaze_0_0.xdc] for cell 'uc_system_i/microblaze_0/U0'
+Finished Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_microblaze_0_0/uc_system_microblaze_0_0.xdc] for cell 'uc_system_i/microblaze_0/U0'
+Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0_board.xdc] for cell 'uc_system_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0_board.xdc] for cell 'uc_system_i/clk_wiz_0/inst'
+Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.xdc] for cell 'uc_system_i/clk_wiz_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1946.578 ; gain = 517.445 ; free physical = 356 ; free virtual = 17239
+Finished Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.xdc] for cell 'uc_system_i/clk_wiz_0/inst'
+Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_timer_0_0/uc_system_axi_timer_0_0.xdc] for cell 'uc_system_i/axi_timer_0/U0'
+Finished Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_timer_0_0/uc_system_axi_timer_0_0.xdc] for cell 'uc_system_i/axi_timer_0/U0'
+Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_gpio_0_0/uc_system_axi_gpio_0_0_board.xdc] for cell 'uc_system_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_gpio_0_0/uc_system_axi_gpio_0_0_board.xdc] for cell 'uc_system_i/axi_gpio_0/U0'
+Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_gpio_0_0/uc_system_axi_gpio_0_0.xdc] for cell 'uc_system_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_gpio_0_0/uc_system_axi_gpio_0_0.xdc] for cell 'uc_system_i/axi_gpio_0/U0'
+Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_dlmb_v10_0/uc_system_dlmb_v10_0.xdc] for cell 'uc_system_i/microblaze_0_local_memory/dlmb_v10/U0'
+Finished Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_dlmb_v10_0/uc_system_dlmb_v10_0.xdc] for cell 'uc_system_i/microblaze_0_local_memory/dlmb_v10/U0'
+Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_ilmb_v10_0/uc_system_ilmb_v10_0.xdc] for cell 'uc_system_i/microblaze_0_local_memory/ilmb_v10/U0'
+Finished Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_ilmb_v10_0/uc_system_ilmb_v10_0.xdc] for cell 'uc_system_i/microblaze_0_local_memory/ilmb_v10/U0'
+Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0_board.xdc] for cell 'uc_system_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0_board.xdc] for cell 'uc_system_i/axi_uartlite_0/U0'
+Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0.xdc] for cell 'uc_system_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0.xdc] for cell 'uc_system_i/axi_uartlite_0/U0'
+Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_proc_sys_reset_0_0/uc_system_proc_sys_reset_0_0_board.xdc] for cell 'uc_system_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_proc_sys_reset_0_0/uc_system_proc_sys_reset_0_0_board.xdc] for cell 'uc_system_i/proc_sys_reset_0/U0'
+Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_proc_sys_reset_0_0/uc_system_proc_sys_reset_0_0.xdc] for cell 'uc_system_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_proc_sys_reset_0_0/uc_system_proc_sys_reset_0_0.xdc] for cell 'uc_system_i/proc_sys_reset_0/U0'
+Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_timer_1_0/uc_system_axi_timer_1_0.xdc] for cell 'uc_system_i/axi_timer_1/U0'
+Finished Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_timer_1_0/uc_system_axi_timer_1_0.xdc] for cell 'uc_system_i/axi_timer_1/U0'
+Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc]
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[15]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[14]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[13]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[12]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[11]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[10]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[9]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[8]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[7]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[6]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[5]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[4]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[3]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[2]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[1]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[0]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[15]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[14]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[13]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[12]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[11]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[10]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[9]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[8]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[7]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[6]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[5]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[4]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[3]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[2]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[1]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'gpio_rtl[0]'. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/constrs_1/new/constraints.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Generating merged BMM file for the design top 'uc_system_wrapper'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uart/Debug/uart.elf 
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 100 instances were transformed.
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 80 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 20 instances
+
+link_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 1946.590 ; gain = 850.828 ; free physical = 415 ; free virtual = 17265
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+Command: report_drc (run_mandatory_drcs) for: opt_checks
+INFO: [DRC 23-27] Running DRC with 4 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1978.594 ; gain = 32.004 ; free physical = 406 ; free virtual = 17256
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1c668b487
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.99 . Memory (MB): peak = 1985.594 ; gain = 0.000 ; free physical = 407 ; free virtual = 17257
+INFO: [Opt 31-389] Phase Retarget created 1 cells and removed 81 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 3 inverter(s) to 35 load pin(s).
+Phase 2 Constant propagation | Checksum: 213b8b828
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1985.594 ; gain = 0.000 ; free physical = 404 ; free virtual = 17254
+INFO: [Opt 31-389] Phase Constant propagation created 178 cells and removed 673 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 2012de9c1
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1985.594 ; gain = 0.000 ; free physical = 405 ; free virtual = 17256
+INFO: [Opt 31-389] Phase Sweep created 16 cells and removed 805 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 2012de9c1
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1985.594 ; gain = 0.000 ; free physical = 405 ; free virtual = 17255
+INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 2012de9c1
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1985.594 ; gain = 0.000 ; free physical = 404 ; free virtual = 17255
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1985.594 ; gain = 0.000 ; free physical = 404 ; free virtual = 17255
+Ending Logic Optimization Task | Checksum: 2012de9c1
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1985.594 ; gain = 0.000 ; free physical = 404 ; free virtual = 17255
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 128 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 64 newly gated: 0 Total Ports: 256
+Ending PowerOpt Patch Enables Task | Checksum: 261ed2435
+
+Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.54 . Memory (MB): peak = 2272.117 ; gain = 0.000 ; free physical = 493 ; free virtual = 17271
+Ending Power Optimization Task | Checksum: 261ed2435
+
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:59 . Memory (MB): peak = 2272.117 ; gain = 286.523 ; free physical = 506 ; free virtual = 17285
+32 Infos, 92 Warnings, 32 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:01:11 ; elapsed = 00:01:09 . Memory (MB): peak = 2272.117 ; gain = 325.527 ; free physical = 506 ; free virtual = 17285
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.20 . Memory (MB): peak = 2272.117 ; gain = 0.000 ; free physical = 510 ; free virtual = 17288
+INFO: [Common 17-1381] The checkpoint '/home/izoomko/wrk/4grade/io/lab3/lab2.runs/impl_1/uc_system_wrapper_opt.dcp' has been generated.
+Command: report_drc -file uc_system_wrapper_drc_opted.rpt
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/izoomko/wrk/4grade/io/lab3/lab2.runs/impl_1/uc_system_wrapper_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 2272.117 ; gain = 0.000 ; free physical = 522 ; free virtual = 17296
+INFO: [Chipscope 16-241] No debug cores found in the current design.
+Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
+or use the create_debug_core and connect_debug_core Tcl commands to insert debug cores into the design.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+Command: report_drc (run_mandatory_drcs) for: incr_eco_checks
+INFO: [DRC 23-27] Running DRC with 4 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+Command: report_drc (run_mandatory_drcs) for: placer_checks
+INFO: [DRC 23-27] Running DRC with 4 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2272.117 ; gain = 0.000 ; free physical = 530 ; free virtual = 17303
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1d3b90496
+
+Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2272.117 ; gain = 0.000 ; free physical = 530 ; free virtual = 17303
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2272.117 ; gain = 0.000 ; free physical = 537 ; free virtual = 17311
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: e4368d39
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2272.117 ; gain = 0.000 ; free physical = 527 ; free virtual = 17305
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: dd6b8bd3
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2272.117 ; gain = 0.000 ; free physical = 513 ; free virtual = 17292
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: dd6b8bd3
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2272.117 ; gain = 0.000 ; free physical = 513 ; free virtual = 17292
+Phase 1 Placer Initialization | Checksum: dd6b8bd3
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2272.117 ; gain = 0.000 ; free physical = 513 ; free virtual = 17292
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: 1fa875bf0
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:30 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 498 ; free virtual = 17278
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1fa875bf0
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:30 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 498 ; free virtual = 17278
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 110b39325
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:37 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 374 ; free virtual = 17214
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 163794fbf
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:37 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 369 ; free virtual = 17209
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: ca8634a9
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:37 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 367 ; free virtual = 17207
+
+Phase 3.5 Timing Path Optimizer
+Phase 3.5 Timing Path Optimizer | Checksum: 136373705
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:39 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 367 ; free virtual = 17191
+
+Phase 3.6 Fast Optimization
+Phase 3.6 Fast Optimization | Checksum: 185a16f4d
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:40 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 369 ; free virtual = 17193
+
+Phase 3.7 Small Shape Detail Placement
+Phase 3.7 Small Shape Detail Placement | Checksum: 146f49ae1
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:44 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 266 ; free virtual = 17104
+
+Phase 3.8 Re-assign LUT pins
+Phase 3.8 Re-assign LUT pins | Checksum: eca023f2
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:44 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 270 ; free virtual = 17108
+
+Phase 3.9 Pipeline Register Optimization
+Phase 3.9 Pipeline Register Optimization | Checksum: eca023f2
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:45 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 269 ; free virtual = 17107
+
+Phase 3.10 Fast Optimization
+Phase 3.10 Fast Optimization | Checksum: 1522e1c5f
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:49 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 179 ; free virtual = 17055
+Phase 3 Detail Placement | Checksum: 1522e1c5f
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:49 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 191 ; free virtual = 17058
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: e6a3da54
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 4 CPUs
+INFO: [Place 46-41] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: e6a3da54
+
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:55 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 165 ; free virtual = 17030
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.106. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1409d7d6e
+
+Time (s): cpu = 00:01:38 ; elapsed = 00:01:21 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 172 ; free virtual = 16679
+Phase 4.1 Post Commit Optimization | Checksum: 1409d7d6e
+
+Time (s): cpu = 00:01:39 ; elapsed = 00:01:21 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 173 ; free virtual = 16680
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1409d7d6e
+
+Time (s): cpu = 00:01:39 ; elapsed = 00:01:22 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 174 ; free virtual = 16681
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 1409d7d6e
+
+Time (s): cpu = 00:01:39 ; elapsed = 00:01:22 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 174 ; free virtual = 16681
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: 1d18b8278
+
+Time (s): cpu = 00:01:39 ; elapsed = 00:01:22 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 174 ; free virtual = 16681
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1d18b8278
+
+Time (s): cpu = 00:01:39 ; elapsed = 00:01:22 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 173 ; free virtual = 16681
+Ending Placer Task | Checksum: 1cf9677e4
+
+Time (s): cpu = 00:01:39 ; elapsed = 00:01:22 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 184 ; free virtual = 16691
+51 Infos, 92 Warnings, 32 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:01:44 ; elapsed = 00:01:24 . Memory (MB): peak = 2288.125 ; gain = 16.008 ; free physical = 180 ; free virtual = 16687
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2288.125 ; gain = 0.000 ; free physical = 159 ; free virtual = 16657
+INFO: [Common 17-1381] The checkpoint '/home/izoomko/wrk/4grade/io/lab3/lab2.runs/impl_1/uc_system_wrapper_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2288.125 ; gain = 0.000 ; free physical = 143 ; free virtual = 16613
+report_io: Time (s): cpu = 00:00:00.80 ; elapsed = 00:00:02 . Memory (MB): peak = 2288.125 ; gain = 0.000 ; free physical = 153 ; free virtual = 16598
+report_utilization: Time (s): cpu = 00:00:00.62 ; elapsed = 00:00:00.76 . Memory (MB): peak = 2288.125 ; gain = 0.000 ; free physical = 164 ; free virtual = 16612
+report_control_sets: Time (s): cpu = 00:00:00.66 ; elapsed = 00:00:00.86 . Memory (MB): peak = 2288.125 ; gain = 0.000 ; free physical = 162 ; free virtual = 16602
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+Running DRC as a precondition to command route_design
+Command: report_drc (run_mandatory_drcs) for: router_checks
+INFO: [DRC 23-27] Running DRC with 4 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+Checksum: PlaceDB: ffe178d1 ConstDB: 0 ShapeSum: cfb4ff13 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 157be541a
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:55 . Memory (MB): peak = 2288.125 ; gain = 0.000 ; free physical = 230 ; free virtual = 16405
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 157be541a
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:56 . Memory (MB): peak = 2288.125 ; gain = 0.000 ; free physical = 218 ; free virtual = 16384
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 157be541a
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:58 . Memory (MB): peak = 2288.125 ; gain = 0.000 ; free physical = 171 ; free virtual = 16346
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 157be541a
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:58 . Memory (MB): peak = 2288.125 ; gain = 0.000 ; free physical = 174 ; free virtual = 16350
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 8471afde
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:01:10 . Memory (MB): peak = 2288.125 ; gain = 0.000 ; free physical = 160 ; free virtual = 16155
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.237  | TNS=0.000  | WHS=-0.168 | THS=-44.047|
+
+Phase 2 Router Initialization | Checksum: a859523b
+
+Time (s): cpu = 00:01:20 ; elapsed = 00:01:13 . Memory (MB): peak = 2288.125 ; gain = 0.000 ; free physical = 135 ; free virtual = 16129
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 2043d44bc
+
+Time (s): cpu = 00:03:56 ; elapsed = 00:02:43 . Memory (MB): peak = 2398.109 ; gain = 109.984 ; free physical = 247 ; free virtual = 15848
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 550
+ Number of Nodes with overlaps = 37
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.200 | TNS=-1.002 | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: e939e5c1
+
+Time (s): cpu = 00:05:34 ; elapsed = 00:04:11 . Memory (MB): peak = 2398.109 ; gain = 109.984 ; free physical = 523 ; free virtual = 15108
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 67
+ Number of Nodes with overlaps = 19
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.180 | TNS=-0.902 | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 1d5d2a54b
+
+Time (s): cpu = 00:06:36 ; elapsed = 00:04:57 . Memory (MB): peak = 2398.109 ; gain = 109.984 ; free physical = 179 ; free virtual = 14778
+Phase 4 Rip-up And Reroute | Checksum: 1d5d2a54b
+
+Time (s): cpu = 00:06:36 ; elapsed = 00:04:57 . Memory (MB): peak = 2398.109 ; gain = 109.984 ; free physical = 181 ; free virtual = 14780
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1d103faa8
+
+Time (s): cpu = 00:06:37 ; elapsed = 00:04:58 . Memory (MB): peak = 2398.109 ; gain = 109.984 ; free physical = 176 ; free virtual = 14782
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.173 | TNS=-0.867 | WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 14c44c7fa
+
+Time (s): cpu = 00:06:38 ; elapsed = 00:04:59 . Memory (MB): peak = 2398.109 ; gain = 109.984 ; free physical = 176 ; free virtual = 14781
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 14c44c7fa
+
+Time (s): cpu = 00:06:38 ; elapsed = 00:04:59 . Memory (MB): peak = 2398.109 ; gain = 109.984 ; free physical = 176 ; free virtual = 14781
+Phase 5 Delay and Skew Optimization | Checksum: 14c44c7fa
+
+Time (s): cpu = 00:06:38 ; elapsed = 00:04:59 . Memory (MB): peak = 2398.109 ; gain = 109.984 ; free physical = 176 ; free virtual = 14781
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1dff0cb9c
+
+Time (s): cpu = 00:06:40 ; elapsed = 00:05:01 . Memory (MB): peak = 2398.109 ; gain = 109.984 ; free physical = 188 ; free virtual = 14794
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.173 | TNS=-0.867 | WHS=0.020  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1742067ee
+
+Time (s): cpu = 00:06:40 ; elapsed = 00:05:01 . Memory (MB): peak = 2398.109 ; gain = 109.984 ; free physical = 188 ; free virtual = 14794
+Phase 6 Post Hold Fix | Checksum: 1742067ee
+
+Time (s): cpu = 00:06:40 ; elapsed = 00:05:01 . Memory (MB): peak = 2398.109 ; gain = 109.984 ; free physical = 188 ; free virtual = 14794
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 3.54019 %
+  Global Horizontal Routing Utilization  = 2.18393 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 53.1532%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 65.7658%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 67.6471%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 61.7647%, No Congested Regions.
+Phase 7 Route finalize | Checksum: 1bc78ff2f
+
+Time (s): cpu = 00:06:41 ; elapsed = 00:05:02 . Memory (MB): peak = 2398.109 ; gain = 109.984 ; free physical = 201 ; free virtual = 14809
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1bc78ff2f
+
+Time (s): cpu = 00:06:41 ; elapsed = 00:05:02 . Memory (MB): peak = 2398.109 ; gain = 109.984 ; free physical = 200 ; free virtual = 14808
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1a366d951
+
+Time (s): cpu = 00:06:42 ; elapsed = 00:05:04 . Memory (MB): peak = 2398.109 ; gain = 109.984 ; free physical = 194 ; free virtual = 14807
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.173 | TNS=-0.867 | WHS=0.020  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 1a366d951
+
+Time (s): cpu = 00:06:42 ; elapsed = 00:05:04 . Memory (MB): peak = 2398.109 ; gain = 109.984 ; free physical = 198 ; free virtual = 14814
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:06:42 ; elapsed = 00:05:04 . Memory (MB): peak = 2398.109 ; gain = 109.984 ; free physical = 220 ; free virtual = 14838
+
+Routing Is Done.
+64 Infos, 93 Warnings, 32 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:06:49 ; elapsed = 00:05:10 . Memory (MB): peak = 2443.129 ; gain = 155.004 ; free physical = 206 ; free virtual = 14838
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2450.980 ; gain = 0.000 ; free physical = 171 ; free virtual = 14831
+INFO: [Common 17-1381] The checkpoint '/home/izoomko/wrk/4grade/io/lab3/lab2.runs/impl_1/uc_system_wrapper_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2450.980 ; gain = 7.852 ; free physical = 188 ; free virtual = 14837
+Command: report_drc -file uc_system_wrapper_drc_routed.rpt -pb uc_system_wrapper_drc_routed.pb -rpx uc_system_wrapper_drc_routed.rpx
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/izoomko/wrk/4grade/io/lab3/lab2.runs/impl_1/uc_system_wrapper_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2515.012 ; gain = 64.031 ; free physical = 229 ; free virtual = 14928
+Command: report_methodology -file uc_system_wrapper_methodology_drc_routed.rpt -rpx uc_system_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 4 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/izoomko/wrk/4grade/io/lab3/lab2.runs/impl_1/uc_system_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 2515.012 ; gain = 0.000 ; free physical = 167 ; free virtual = 14800
+Command: report_power -file uc_system_wrapper_power_routed.rpt -pb uc_system_wrapper_power_summary_routed.pb -rpx uc_system_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+71 Infos, 93 Warnings, 32 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2515.012 ; gain = 0.000 ; free physical = 171 ; free virtual = 14724
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 14 13:29:21 2018...

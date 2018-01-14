@@ -41,18 +41,18 @@ Timer_on_clock::Timer_on_clock(sc_module_name name) : sc_module(name), mVcdFile(
     sensitive << ( tmp_read_fu_88_p2 );
     sensitive << ( tmp_5_read_fu_106_p2 );
 
-    SC_METHOD(thread_Timer_m_tmr_V_load_t_fu_210_p3);
+    SC_METHOD(thread_Timer_m_tmr_V_load_t_fu_214_p3);
     sensitive << ( Timer_m_tmr_V_i );
-    sensitive << ( tmp_9_fu_198_p2 );
-    sensitive << ( tmp_1_fu_204_p2 );
+    sensitive << ( tmp_9_fu_202_p2 );
+    sensitive << ( tmp_1_fu_208_p2 );
 
     SC_METHOD(thread_Timer_m_tmr_V_o);
+    sensitive << ( data_bi );
     sensitive << ( Timer_m_tmr_V_i );
     sensitive << ( ap_CS_fsm_state1 );
     sensitive << ( val_V_read_fu_148_p2 );
     sensitive << ( tmp_read_fu_88_p2 );
     sensitive << ( tmp_5_read_fu_106_p2 );
-    sensitive << ( p_s_fu_262_p1 );
 
     SC_METHOD(thread_Timer_m_tmr_V_o_ap_vld);
     sensitive << ( ap_CS_fsm_state1 );
@@ -60,24 +60,14 @@ Timer_on_clock::Timer_on_clock(sc_module_name name) : sc_module(name), mVcdFile(
     sensitive << ( tmp_read_fu_88_p2 );
     sensitive << ( tmp_5_read_fu_106_p2 );
 
-    SC_METHOD(thread_Timer_m_tval_V_loc_3_phi_fu_165_p14);
-    sensitive << ( Timer_m_tval_V_i );
-    sensitive << ( ap_CS_fsm_state1 );
-    sensitive << ( val_V_read_fu_148_p2 );
-    sensitive << ( tmp_read_fu_88_p2 );
-    sensitive << ( p_1_fu_252_p1 );
-    sensitive << ( tmp_5_read_fu_106_p2 );
-    sensitive << ( storemerge2_fu_238_p3 );
-    sensitive << ( tmp_10_fu_190_p3 );
-
     SC_METHOD(thread_Timer_m_tval_V_o);
+    sensitive << ( data_bi );
     sensitive << ( Timer_m_tval_V_i );
     sensitive << ( ap_CS_fsm_state1 );
     sensitive << ( val_V_read_fu_148_p2 );
     sensitive << ( tmp_read_fu_88_p2 );
-    sensitive << ( p_1_fu_252_p1 );
     sensitive << ( tmp_5_read_fu_106_p2 );
-    sensitive << ( storemerge2_fu_238_p3 );
+    sensitive << ( storemerge2_fu_242_p3 );
     sensitive << ( ap_condition_70 );
 
     SC_METHOD(thread_Timer_m_tval_V_o_ap_vld);
@@ -85,7 +75,7 @@ Timer_on_clock::Timer_on_clock(sc_module_name name) : sc_module(name), mVcdFile(
     sensitive << ( val_V_read_fu_148_p2 );
     sensitive << ( tmp_read_fu_88_p2 );
     sensitive << ( tmp_5_read_fu_106_p2 );
-    sensitive << ( tmp_10_fu_190_p3 );
+    sensitive << ( tmp_7_fu_194_p3 );
 
     SC_METHOD(thread_ap_CS_fsm);
 
@@ -94,73 +84,71 @@ Timer_on_clock::Timer_on_clock(sc_module_name name) : sc_module(name), mVcdFile(
     SC_METHOD(thread_ap_condition_70);
     sensitive << ( tmp_read_fu_88_p2 );
     sensitive << ( tmp_5_read_fu_106_p2 );
-    sensitive << ( tmp_10_fu_190_p3 );
+    sensitive << ( tmp_7_fu_194_p3 );
 
     SC_METHOD(thread_data_bo);
-    sensitive << ( Timer_m_tval_V_loc_3_phi_fu_165_p14 );
+    sensitive << ( v_V_phi_fu_167_p14 );
     sensitive << ( ap_CS_fsm_state1 );
 
     SC_METHOD(thread_data_bo_ap_vld);
     sensitive << ( ap_CS_fsm_state1 );
 
-    SC_METHOD(thread_p_1_fu_252_p1);
-    sensitive << ( tmp_7_fu_248_p1 );
+    SC_METHOD(thread_storemerge2_fu_242_p3);
+    sensitive << ( tmp_6_fu_190_p1 );
+    sensitive << ( tmp_4_s_fu_234_p3 );
+    sensitive << ( Timer_m_tmr_V_load_t_fu_214_p3 );
 
-    SC_METHOD(thread_p_s_fu_262_p1);
-    sensitive << ( tmp_6_fu_258_p1 );
-
-    SC_METHOD(thread_storemerge2_fu_238_p3);
-    sensitive << ( tmp_8_fu_186_p1 );
-    sensitive << ( tmp_4_s_fu_230_p3 );
-    sensitive << ( Timer_m_tmr_V_load_t_fu_210_p3 );
-
-    SC_METHOD(thread_tmp_10_fu_190_p3);
-    sensitive << ( Timer_m_tconf_V_i );
-
-    SC_METHOD(thread_tmp_1_fu_204_p2);
+    SC_METHOD(thread_tmp_1_fu_208_p2);
     sensitive << ( Timer_m_tval_V_i );
 
-    SC_METHOD(thread_tmp_4_fu_224_p2);
+    SC_METHOD(thread_tmp_4_fu_228_p2);
     sensitive << ( Timer_m_tval_V_i );
 
-    SC_METHOD(thread_tmp_4_s_fu_230_p3);
-    sensitive << ( tmp_s_fu_218_p2 );
-    sensitive << ( tmp_4_fu_224_p2 );
+    SC_METHOD(thread_tmp_4_s_fu_234_p3);
+    sensitive << ( tmp_s_fu_222_p2 );
+    sensitive << ( tmp_4_fu_228_p2 );
 
     SC_METHOD(thread_tmp_5_read_fu_106_p2);
     sensitive << ( rst_i );
     sensitive << ( ap_CS_fsm_state1 );
     sensitive << ( tmp_read_fu_88_p2 );
 
-    SC_METHOD(thread_tmp_6_fu_258_p1);
-    sensitive << ( data_bi );
-
-    SC_METHOD(thread_tmp_7_fu_248_p1);
-    sensitive << ( data_bi );
-
-    SC_METHOD(thread_tmp_8_fu_186_p1);
+    SC_METHOD(thread_tmp_6_fu_190_p1);
     sensitive << ( Timer_m_tconf_V_i );
 
-    SC_METHOD(thread_tmp_9_fu_198_p2);
+    SC_METHOD(thread_tmp_7_fu_194_p3);
+    sensitive << ( Timer_m_tconf_V_i );
+
+    SC_METHOD(thread_tmp_9_fu_202_p2);
     sensitive << ( Timer_m_tval_V_i );
     sensitive << ( ap_CS_fsm_state1 );
     sensitive << ( tmp_read_fu_88_p2 );
     sensitive << ( tmp_5_read_fu_106_p2 );
-    sensitive << ( tmp_10_fu_190_p3 );
-    sensitive << ( tmp_8_fu_186_p1 );
+    sensitive << ( tmp_7_fu_194_p3 );
+    sensitive << ( tmp_6_fu_190_p1 );
 
     SC_METHOD(thread_tmp_read_fu_88_p2);
     sensitive << ( en_i );
     sensitive << ( ap_CS_fsm_state1 );
 
-    SC_METHOD(thread_tmp_s_fu_218_p2);
+    SC_METHOD(thread_tmp_s_fu_222_p2);
     sensitive << ( Timer_m_tmr_V_i );
     sensitive << ( Timer_m_tval_V_i );
     sensitive << ( ap_CS_fsm_state1 );
     sensitive << ( tmp_read_fu_88_p2 );
     sensitive << ( tmp_5_read_fu_106_p2 );
-    sensitive << ( tmp_10_fu_190_p3 );
-    sensitive << ( tmp_8_fu_186_p1 );
+    sensitive << ( tmp_7_fu_194_p3 );
+    sensitive << ( tmp_6_fu_190_p1 );
+
+    SC_METHOD(thread_v_V_phi_fu_167_p14);
+    sensitive << ( data_bi );
+    sensitive << ( Timer_m_tval_V_i );
+    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( val_V_read_fu_148_p2 );
+    sensitive << ( tmp_read_fu_88_p2 );
+    sensitive << ( tmp_5_read_fu_106_p2 );
+    sensitive << ( storemerge2_fu_242_p3 );
+    sensitive << ( tmp_7_fu_194_p3 );
 
     SC_METHOD(thread_val_V_read_fu_148_p2);
     sensitive << ( addr_bi );
@@ -197,25 +185,21 @@ Timer_on_clock::Timer_on_clock(sc_module_name name) : sc_module(name), mVcdFile(
     sc_trace(mVcdFile, Timer_m_tconf_V_o_ap_vld, "(port)Timer_m_tconf_V_o_ap_vld");
 #endif
 #ifdef __HLS_TRACE_LEVEL_INT__
-    sc_trace(mVcdFile, Timer_m_tval_V_loc_3_phi_fu_165_p14, "Timer_m_tval_V_loc_3_phi_fu_165_p14");
+    sc_trace(mVcdFile, v_V_phi_fu_167_p14, "v_V_phi_fu_167_p14");
     sc_trace(mVcdFile, ap_CS_fsm, "ap_CS_fsm");
     sc_trace(mVcdFile, ap_CS_fsm_state1, "ap_CS_fsm_state1");
     sc_trace(mVcdFile, val_V_read_fu_148_p2, "val_V_read_fu_148_p2");
     sc_trace(mVcdFile, tmp_read_fu_88_p2, "tmp_read_fu_88_p2");
-    sc_trace(mVcdFile, p_1_fu_252_p1, "p_1_fu_252_p1");
     sc_trace(mVcdFile, tmp_5_read_fu_106_p2, "tmp_5_read_fu_106_p2");
-    sc_trace(mVcdFile, storemerge2_fu_238_p3, "storemerge2_fu_238_p3");
-    sc_trace(mVcdFile, tmp_10_fu_190_p3, "tmp_10_fu_190_p3");
-    sc_trace(mVcdFile, p_s_fu_262_p1, "p_s_fu_262_p1");
-    sc_trace(mVcdFile, tmp_9_fu_198_p2, "tmp_9_fu_198_p2");
-    sc_trace(mVcdFile, tmp_1_fu_204_p2, "tmp_1_fu_204_p2");
-    sc_trace(mVcdFile, tmp_s_fu_218_p2, "tmp_s_fu_218_p2");
-    sc_trace(mVcdFile, tmp_4_fu_224_p2, "tmp_4_fu_224_p2");
-    sc_trace(mVcdFile, tmp_8_fu_186_p1, "tmp_8_fu_186_p1");
-    sc_trace(mVcdFile, tmp_4_s_fu_230_p3, "tmp_4_s_fu_230_p3");
-    sc_trace(mVcdFile, Timer_m_tmr_V_load_t_fu_210_p3, "Timer_m_tmr_V_load_t_fu_210_p3");
-    sc_trace(mVcdFile, tmp_7_fu_248_p1, "tmp_7_fu_248_p1");
-    sc_trace(mVcdFile, tmp_6_fu_258_p1, "tmp_6_fu_258_p1");
+    sc_trace(mVcdFile, storemerge2_fu_242_p3, "storemerge2_fu_242_p3");
+    sc_trace(mVcdFile, tmp_7_fu_194_p3, "tmp_7_fu_194_p3");
+    sc_trace(mVcdFile, tmp_9_fu_202_p2, "tmp_9_fu_202_p2");
+    sc_trace(mVcdFile, tmp_1_fu_208_p2, "tmp_1_fu_208_p2");
+    sc_trace(mVcdFile, tmp_s_fu_222_p2, "tmp_s_fu_222_p2");
+    sc_trace(mVcdFile, tmp_4_fu_228_p2, "tmp_4_fu_228_p2");
+    sc_trace(mVcdFile, tmp_6_fu_190_p1, "tmp_6_fu_190_p1");
+    sc_trace(mVcdFile, tmp_4_s_fu_234_p3, "tmp_4_s_fu_234_p3");
+    sc_trace(mVcdFile, Timer_m_tmr_V_load_t_fu_214_p3, "Timer_m_tmr_V_load_t_fu_214_p3");
     sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
     sc_trace(mVcdFile, ap_condition_70, "ap_condition_70");
 #endif
@@ -258,15 +242,15 @@ void Timer_on_clock::thread_Timer_m_tconf_V_o_ap_vld() {
     }
 }
 
-void Timer_on_clock::thread_Timer_m_tmr_V_load_t_fu_210_p3() {
-    Timer_m_tmr_V_load_t_fu_210_p3 = (!tmp_9_fu_198_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_9_fu_198_p2.read()[0].to_bool())? Timer_m_tmr_V_i.read(): tmp_1_fu_204_p2.read());
+void Timer_on_clock::thread_Timer_m_tmr_V_load_t_fu_214_p3() {
+    Timer_m_tmr_V_load_t_fu_214_p3 = (!tmp_9_fu_202_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_9_fu_202_p2.read()[0].to_bool())? Timer_m_tmr_V_i.read(): tmp_1_fu_208_p2.read());
 }
 
 void Timer_on_clock::thread_Timer_m_tmr_V_o() {
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read())) {
         if ((esl_seteq<1,13,13>(val_V_read_fu_148_p2.read(), ap_const_lv13_0) && 
              esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_1))) {
-            Timer_m_tmr_V_o = p_s_fu_262_p1.read();
+            Timer_m_tmr_V_o = data_bi.read();
         } else if ((esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_0) && 
                     esl_seteq<1,1,1>(ap_const_lv1_1, tmp_5_read_fu_106_p2.read()))) {
             Timer_m_tmr_V_o = ap_const_lv32_0;
@@ -291,51 +275,16 @@ void Timer_on_clock::thread_Timer_m_tmr_V_o_ap_vld() {
     }
 }
 
-void Timer_on_clock::thread_Timer_m_tval_V_loc_3_phi_fu_165_p14() {
-    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
-         esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_0) && 
-         esl_seteq<1,1,1>(ap_const_lv1_0, tmp_5_read_fu_106_p2.read()) && 
-         esl_seteq<1,1,1>(ap_const_lv1_0, tmp_10_fu_190_p3.read()))) {
-        Timer_m_tval_V_loc_3_phi_fu_165_p14 = storemerge2_fu_238_p3.read();
-    } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
-                esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_0) && 
-                esl_seteq<1,1,1>(ap_const_lv1_1, tmp_5_read_fu_106_p2.read()))) {
-        Timer_m_tval_V_loc_3_phi_fu_165_p14 = ap_const_lv32_0;
-    } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
-                esl_seteq<1,13,13>(val_V_read_fu_148_p2.read(), ap_const_lv13_4) && 
-                esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_1))) {
-        Timer_m_tval_V_loc_3_phi_fu_165_p14 = p_1_fu_252_p1.read();
-    } else if (((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
-                 !esl_seteq<1,13,13>(val_V_read_fu_148_p2.read(), ap_const_lv13_8) && 
-                 !esl_seteq<1,13,13>(val_V_read_fu_148_p2.read(), ap_const_lv13_4) && 
-                 !esl_seteq<1,13,13>(val_V_read_fu_148_p2.read(), ap_const_lv13_0) && 
-                 esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_1)) || 
-                (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
-                 esl_seteq<1,13,13>(val_V_read_fu_148_p2.read(), ap_const_lv13_8) && 
-                 esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_1)) || 
-                (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
-                 esl_seteq<1,13,13>(val_V_read_fu_148_p2.read(), ap_const_lv13_0) && 
-                 esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_1)) || 
-                (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
-                 esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_0) && 
-                 esl_seteq<1,1,1>(ap_const_lv1_0, tmp_5_read_fu_106_p2.read()) && 
-                 esl_seteq<1,1,1>(ap_const_lv1_1, tmp_10_fu_190_p3.read())))) {
-        Timer_m_tval_V_loc_3_phi_fu_165_p14 = Timer_m_tval_V_i.read();
-    } else {
-        Timer_m_tval_V_loc_3_phi_fu_165_p14 = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    }
-}
-
 void Timer_on_clock::thread_Timer_m_tval_V_o() {
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read())) {
         if ((esl_seteq<1,13,13>(val_V_read_fu_148_p2.read(), ap_const_lv13_4) && 
              esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_1))) {
-            Timer_m_tval_V_o = p_1_fu_252_p1.read();
+            Timer_m_tval_V_o = data_bi.read();
         } else if ((esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_0) && 
                     esl_seteq<1,1,1>(ap_const_lv1_1, tmp_5_read_fu_106_p2.read()))) {
             Timer_m_tval_V_o = ap_const_lv32_0;
         } else if (esl_seteq<1,1,1>(ap_condition_70.read(), ap_const_boolean_1)) {
-            Timer_m_tval_V_o = storemerge2_fu_238_p3.read();
+            Timer_m_tval_V_o = storemerge2_fu_242_p3.read();
         } else {
             Timer_m_tval_V_o = Timer_m_tval_V_i.read();
         }
@@ -354,7 +303,7 @@ void Timer_on_clock::thread_Timer_m_tval_V_o_ap_vld() {
          (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
           esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_0) && 
           esl_seteq<1,1,1>(ap_const_lv1_0, tmp_5_read_fu_106_p2.read()) && 
-          esl_seteq<1,1,1>(ap_const_lv1_0, tmp_10_fu_190_p3.read())))) {
+          esl_seteq<1,1,1>(ap_const_lv1_0, tmp_7_fu_194_p3.read())))) {
         Timer_m_tval_V_o_ap_vld = ap_const_logic_1;
     } else {
         Timer_m_tval_V_o_ap_vld = ap_const_logic_0;
@@ -370,11 +319,11 @@ void Timer_on_clock::thread_ap_CS_fsm_state1() {
 }
 
 void Timer_on_clock::thread_ap_condition_70() {
-    ap_condition_70 = (esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_0) && esl_seteq<1,1,1>(ap_const_lv1_0, tmp_5_read_fu_106_p2.read()) && esl_seteq<1,1,1>(ap_const_lv1_0, tmp_10_fu_190_p3.read()));
+    ap_condition_70 = (esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_0) && esl_seteq<1,1,1>(ap_const_lv1_0, tmp_5_read_fu_106_p2.read()) && esl_seteq<1,1,1>(ap_const_lv1_0, tmp_7_fu_194_p3.read()));
 }
 
 void Timer_on_clock::thread_data_bo() {
-    data_bo = Timer_m_tval_V_loc_3_phi_fu_165_p14.read().range(16-1, 0);
+    data_bo = v_V_phi_fu_167_p14.read();
 }
 
 void Timer_on_clock::thread_data_bo_ap_vld() {
@@ -385,60 +334,79 @@ void Timer_on_clock::thread_data_bo_ap_vld() {
     }
 }
 
-void Timer_on_clock::thread_p_1_fu_252_p1() {
-    p_1_fu_252_p1 = esl_zext<32,16>(tmp_7_fu_248_p1.read());
+void Timer_on_clock::thread_storemerge2_fu_242_p3() {
+    storemerge2_fu_242_p3 = (!tmp_6_fu_190_p1.read()[0].is_01())? sc_lv<32>(): ((tmp_6_fu_190_p1.read()[0].to_bool())? tmp_4_s_fu_234_p3.read(): Timer_m_tmr_V_load_t_fu_214_p3.read());
 }
 
-void Timer_on_clock::thread_p_s_fu_262_p1() {
-    p_s_fu_262_p1 = esl_zext<32,16>(tmp_6_fu_258_p1.read());
+void Timer_on_clock::thread_tmp_1_fu_208_p2() {
+    tmp_1_fu_208_p2 = (!Timer_m_tval_V_i.read().is_01() || !ap_const_lv32_FFFFFFFF.is_01())? sc_lv<32>(): (sc_biguint<32>(Timer_m_tval_V_i.read()) + sc_bigint<32>(ap_const_lv32_FFFFFFFF));
 }
 
-void Timer_on_clock::thread_storemerge2_fu_238_p3() {
-    storemerge2_fu_238_p3 = (!tmp_8_fu_186_p1.read()[0].is_01())? sc_lv<32>(): ((tmp_8_fu_186_p1.read()[0].to_bool())? tmp_4_s_fu_230_p3.read(): Timer_m_tmr_V_load_t_fu_210_p3.read());
+void Timer_on_clock::thread_tmp_4_fu_228_p2() {
+    tmp_4_fu_228_p2 = (!Timer_m_tval_V_i.read().is_01() || !ap_const_lv32_1.is_01())? sc_lv<32>(): (sc_biguint<32>(Timer_m_tval_V_i.read()) + sc_biguint<32>(ap_const_lv32_1));
 }
 
-void Timer_on_clock::thread_tmp_10_fu_190_p3() {
-    tmp_10_fu_190_p3 = Timer_m_tconf_V_i.read().range(1, 1);
-}
-
-void Timer_on_clock::thread_tmp_1_fu_204_p2() {
-    tmp_1_fu_204_p2 = (!Timer_m_tval_V_i.read().is_01() || !ap_const_lv32_FFFFFFFF.is_01())? sc_lv<32>(): (sc_biguint<32>(Timer_m_tval_V_i.read()) + sc_bigint<32>(ap_const_lv32_FFFFFFFF));
-}
-
-void Timer_on_clock::thread_tmp_4_fu_224_p2() {
-    tmp_4_fu_224_p2 = (!Timer_m_tval_V_i.read().is_01() || !ap_const_lv32_1.is_01())? sc_lv<32>(): (sc_biguint<32>(Timer_m_tval_V_i.read()) + sc_biguint<32>(ap_const_lv32_1));
-}
-
-void Timer_on_clock::thread_tmp_4_s_fu_230_p3() {
-    tmp_4_s_fu_230_p3 = (!tmp_s_fu_218_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_s_fu_218_p2.read()[0].to_bool())? tmp_4_fu_224_p2.read(): ap_const_lv32_0);
+void Timer_on_clock::thread_tmp_4_s_fu_234_p3() {
+    tmp_4_s_fu_234_p3 = (!tmp_s_fu_222_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_s_fu_222_p2.read()[0].to_bool())? tmp_4_fu_228_p2.read(): ap_const_lv32_0);
 }
 
 void Timer_on_clock::thread_tmp_5_read_fu_106_p2() {
     tmp_5_read_fu_106_p2 =  (sc_lv<1>) (rst_i.read());
 }
 
-void Timer_on_clock::thread_tmp_6_fu_258_p1() {
-    tmp_6_fu_258_p1 = data_bi.read().range(16-1, 0);
+void Timer_on_clock::thread_tmp_6_fu_190_p1() {
+    tmp_6_fu_190_p1 = Timer_m_tconf_V_i.read().range(1-1, 0);
 }
 
-void Timer_on_clock::thread_tmp_7_fu_248_p1() {
-    tmp_7_fu_248_p1 = data_bi.read().range(16-1, 0);
+void Timer_on_clock::thread_tmp_7_fu_194_p3() {
+    tmp_7_fu_194_p3 = Timer_m_tconf_V_i.read().range(1, 1);
 }
 
-void Timer_on_clock::thread_tmp_8_fu_186_p1() {
-    tmp_8_fu_186_p1 = Timer_m_tconf_V_i.read().range(1-1, 0);
-}
-
-void Timer_on_clock::thread_tmp_9_fu_198_p2() {
-    tmp_9_fu_198_p2 = (!Timer_m_tval_V_i.read().is_01() || !ap_const_lv32_0.is_01())? sc_lv<1>(): sc_lv<1>(Timer_m_tval_V_i.read() == ap_const_lv32_0);
+void Timer_on_clock::thread_tmp_9_fu_202_p2() {
+    tmp_9_fu_202_p2 = (!Timer_m_tval_V_i.read().is_01() || !ap_const_lv32_0.is_01())? sc_lv<1>(): sc_lv<1>(Timer_m_tval_V_i.read() == ap_const_lv32_0);
 }
 
 void Timer_on_clock::thread_tmp_read_fu_88_p2() {
     tmp_read_fu_88_p2 =  (sc_lv<1>) (en_i.read());
 }
 
-void Timer_on_clock::thread_tmp_s_fu_218_p2() {
-    tmp_s_fu_218_p2 = (!Timer_m_tval_V_i.read().is_01() || !Timer_m_tmr_V_i.read().is_01())? sc_lv<1>(): (sc_biguint<32>(Timer_m_tval_V_i.read()) < sc_biguint<32>(Timer_m_tmr_V_i.read()));
+void Timer_on_clock::thread_tmp_s_fu_222_p2() {
+    tmp_s_fu_222_p2 = (!Timer_m_tval_V_i.read().is_01() || !Timer_m_tmr_V_i.read().is_01())? sc_lv<1>(): (sc_biguint<32>(Timer_m_tval_V_i.read()) < sc_biguint<32>(Timer_m_tmr_V_i.read()));
+}
+
+void Timer_on_clock::thread_v_V_phi_fu_167_p14() {
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
+         esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_0) && 
+         esl_seteq<1,1,1>(ap_const_lv1_0, tmp_5_read_fu_106_p2.read()) && 
+         esl_seteq<1,1,1>(ap_const_lv1_0, tmp_7_fu_194_p3.read()))) {
+        v_V_phi_fu_167_p14 = storemerge2_fu_242_p3.read();
+    } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
+                esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_0) && 
+                esl_seteq<1,1,1>(ap_const_lv1_1, tmp_5_read_fu_106_p2.read()))) {
+        v_V_phi_fu_167_p14 = ap_const_lv32_0;
+    } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
+                esl_seteq<1,13,13>(val_V_read_fu_148_p2.read(), ap_const_lv13_4) && 
+                esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_1))) {
+        v_V_phi_fu_167_p14 = data_bi.read();
+    } else if (((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
+                 !esl_seteq<1,13,13>(val_V_read_fu_148_p2.read(), ap_const_lv13_8) && 
+                 !esl_seteq<1,13,13>(val_V_read_fu_148_p2.read(), ap_const_lv13_4) && 
+                 !esl_seteq<1,13,13>(val_V_read_fu_148_p2.read(), ap_const_lv13_0) && 
+                 esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_1)) || 
+                (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
+                 esl_seteq<1,13,13>(val_V_read_fu_148_p2.read(), ap_const_lv13_8) && 
+                 esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_1)) || 
+                (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
+                 esl_seteq<1,13,13>(val_V_read_fu_148_p2.read(), ap_const_lv13_0) && 
+                 esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_1)) || 
+                (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
+                 esl_seteq<1,1,1>(tmp_read_fu_88_p2.read(), ap_const_lv1_0) && 
+                 esl_seteq<1,1,1>(ap_const_lv1_0, tmp_5_read_fu_106_p2.read()) && 
+                 esl_seteq<1,1,1>(ap_const_lv1_1, tmp_7_fu_194_p3.read())))) {
+        v_V_phi_fu_167_p14 = Timer_m_tval_V_i.read();
+    } else {
+        v_V_phi_fu_167_p14 = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    }
 }
 
 void Timer_on_clock::thread_val_V_read_fu_148_p2() {

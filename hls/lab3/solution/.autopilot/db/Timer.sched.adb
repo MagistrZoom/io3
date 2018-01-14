@@ -192,11 +192,11 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>Timer.data_bo.m_if.Val</originalName>
+						<originalName>Timer.data_bo.m_if.Val.V</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>16</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<direction>1</direction>
 				<if_type>0</if_type>
@@ -216,21 +216,21 @@
 						<type>0</type>
 						<id>23</id>
 						<name>Timer_ssdm_thread</name>
-						<fileName>../lab1/src/Timer.cpp</fileName>
-						<fileDirectory>/home/izoomko/wrk/4grade/io/hls</fileDirectory>
+						<fileName>../../lab1/src/Timer.cpp</fileName>
+						<fileDirectory>/home/izoomko/wrk/4grade/io/lab3/hls</fileDirectory>
 						<lineNumber>12</lineNumber>
 						<contextFuncName>Timer</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="10" tracking_level="0" version="0">
-								<first>/home/izoomko/wrk/4grade/io/hls</first>
+								<first>/home/izoomko/wrk/4grade/io/lab3/hls</first>
 								<second class_id="11" tracking_level="0" version="0">
 									<count>1</count>
 									<item_version>0</item_version>
 									<item class_id="12" tracking_level="0" version="0">
 										<first class_id="13" tracking_level="0" version="0">
-											<first>../lab1/src/Timer.cpp</first>
+											<first>../../lab1/src/Timer.cpp</first>
 											<second>Timer</second>
 										</first>
 										<second>12</second>
@@ -258,21 +258,21 @@
 						<type>0</type>
 						<id>24</id>
 						<name></name>
-						<fileName>../lab1/src/Timer.cpp</fileName>
-						<fileDirectory>/home/izoomko/wrk/4grade/io/hls</fileDirectory>
+						<fileName>../../lab1/src/Timer.cpp</fileName>
+						<fileDirectory>/home/izoomko/wrk/4grade/io/lab3/hls</fileDirectory>
 						<lineNumber>12</lineNumber>
 						<contextFuncName>Timer</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/izoomko/wrk/4grade/io/hls</first>
+								<first>/home/izoomko/wrk/4grade/io/lab3/hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../lab1/src/Timer.cpp</first>
+											<first>../../lab1/src/Timer.cpp</first>
 											<second>Timer</second>
 										</first>
 										<second>12</second>
@@ -302,21 +302,21 @@
 						<type>0</type>
 						<id>26</id>
 						<name></name>
-						<fileName>../lab1/src/Timer.cpp</fileName>
-						<fileDirectory>/home/izoomko/wrk/4grade/io/hls</fileDirectory>
+						<fileName>../../lab1/src/Timer.cpp</fileName>
+						<fileDirectory>/home/izoomko/wrk/4grade/io/lab3/hls</fileDirectory>
 						<lineNumber>12</lineNumber>
 						<contextFuncName>Timer</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/izoomko/wrk/4grade/io/hls</first>
+								<first>/home/izoomko/wrk/4grade/io/lab3/hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../lab1/src/Timer.cpp</first>
+											<first>../../lab1/src/Timer.cpp</first>
 											<second>Timer</second>
 										</first>
 										<second>12</second>
@@ -354,21 +354,21 @@
 						<type>0</type>
 						<id>27</id>
 						<name></name>
-						<fileName>../lab1/src/Timer.cpp</fileName>
-						<fileDirectory>/home/izoomko/wrk/4grade/io/hls</fileDirectory>
+						<fileName>../../lab1/src/Timer.cpp</fileName>
+						<fileDirectory>/home/izoomko/wrk/4grade/io/lab3/hls</fileDirectory>
 						<lineNumber>12</lineNumber>
 						<contextFuncName>Timer</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/izoomko/wrk/4grade/io/hls</first>
+								<first>/home/izoomko/wrk/4grade/io/lab3/hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../lab1/src/Timer.cpp</first>
+											<first>../../lab1/src/Timer.cpp</first>
 											<second>Timer</second>
 										</first>
 										<second>12</second>
@@ -396,24 +396,24 @@
 						<type>0</type>
 						<id>38</id>
 						<name></name>
-						<fileName>../lab1/src/Timer.h</fileName>
-						<fileDirectory>/home/izoomko/wrk/4grade/io/hls</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<fileName>../../lab1/src/Timer.h</fileName>
+						<fileDirectory>/home/izoomko/wrk/4grade/io/lab3/hls</fileDirectory>
+						<lineNumber>24</lineNumber>
 						<contextFuncName></contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/izoomko/wrk/4grade/io/hls</first>
+								<first>/home/izoomko/wrk/4grade/io/lab3/hls</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../lab1/src/Timer.h</first>
+											<first>../../lab1/src/Timer.h</first>
 											<second></second>
 										</first>
-										<second>26</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>

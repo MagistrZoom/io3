@@ -27,8 +27,8 @@ module IC(
     input [31:0] wrdata_bi,
     input en_i,
     input [3:0] we_bi,
-    input [15:0] timer1_val_bi,
-    input [15:0] timer2_val_bi,
+    input [31:0] timer1_val_bi,
+    input [31:0] timer2_val_bi,
     input ins_i,
     output reg [31:0] rddata_bo,
     output edges
@@ -39,9 +39,9 @@ module IC(
     reg [31:0] icconf_out;
     wire [1:0] ictmr;
     assign ictmr = icconf[6:5];
-    wire [15:0] timer1_enabled = ictmr[0:0] ? 'hFFFF : 'h0000;
-    wire [15:0] timer2_enabled = ictmr[1:1] ? 'hFFFF : 'h0000;
-    wire [31:0] timer = {timer2_enabled & timer2_val_bi , timer1_enabled & timer1_val_bi};
+    wire [31:0] timer1_enabled = ictmr[0:0] ? 'hFFFF : 'h0000;
+    wire [31:0] timer2_enabled = ictmr[1:1] ? 'hFFFF : 'h0000;
+    wire [63:0] timer = {timer2_enabled & timer2_val_bi , timer1_enabled & timer1_val_bi};
     reg [31:0] icconf_next;
     
     reg r_state;
@@ -52,7 +52,7 @@ module IC(
     wire prescaler_fifo;
     Prescaler u_prescaler(clk_i, rst_i, ed_prescaler, icconf[2:0], prescaler_fifo);
 
-    reg [31:0] mem [31:0];
+    reg [63:0] mem [31:0];
     reg [4:0] wr_ptr;
     reg [4:0] wr_ptr_next;
     reg [4:0] rd_ptr;

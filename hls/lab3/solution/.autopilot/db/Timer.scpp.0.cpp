@@ -1,5 +1,5 @@
-#pragma line 1 "../lab1/src/Timer.cpp"
-#pragma line 1 "../lab1/src/Timer.cpp" 1
+#pragma line 1 "../../lab1/src/Timer.cpp"
+#pragma line 1 "../../lab1/src/Timer.cpp" 1
 #pragma line 1 "<built-in>" 1
 #pragma line 1 "<built-in>" 3
 #pragma line 155 "<built-in>" 3
@@ -202,7 +202,7 @@ extern "C" {
 // 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 #pragma line 7 "<command line>" 2
 #pragma line 1 "<built-in>" 2
-#pragma line 1 "../lab1/src/Timer.cpp" 2
+#pragma line 1 "../../lab1/src/Timer.cpp" 2
 //
 // Created by izoomko on 10/2/17.
 //
@@ -2934,8 +2934,8 @@ extern int getloadavg (double __loadavg[], int __nelem)
 /* Define some macros helping to catch buffer overflows.  */
 #pragma line 934 "/usr/include/stdlib.h" 3 4
 }
-#pragma line 6 "../lab1/src/Timer.cpp" 2
-#pragma line 1 "../lab1/src/Timer.h" 1
+#pragma line 6 "../../lab1/src/Timer.cpp" 2
+#pragma line 1 "../../lab1/src/Timer.h" 1
 //
 // Created by izoomko on 10/2/17.
 //
@@ -45065,9 +45065,7 @@ typedef void****** __ap_sc_end__;
 #pragma line 2 "/home/izoomko/Soft/xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_sysc/systemc.h" 2
 #pragma empty_line
 // 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#pragma line 7 "../lab1/src/Timer.h" 2
-#pragma empty_line
-typedef unsigned short uint16_t;
+#pragma line 7 "../../lab1/src/Timer.h" 2
 #pragma empty_line
 struct Timer : ::sc_core::sc_module
 {
@@ -45083,7 +45081,7 @@ struct Timer : ::sc_core::sc_module
     sc_in<sc_bv<13> > addr_bi;
     sc_in<int> data_bi;
     sc_in<sc_bv<4> > we_bi;
-    sc_out<uint16_t> data_bo;
+    sc_out<sc_uint<32> > data_bo;
 #pragma empty_line
     typedef Timer SC_CURRENT_USER_MODULE; Timer( ::sc_core::sc_module_name );
 private:
@@ -45093,7 +45091,7 @@ private:
 #pragma empty_line
     void on_clock();
 };
-#pragma line 7 "../lab1/src/Timer.cpp" 2
+#pragma line 7 "../../lab1/src/Timer.cpp" 2
 #pragma empty_line
 #pragma empty_line
 Timer::Timer(sc_module_name nm)
@@ -45119,10 +45117,10 @@ void Timer::on_clock()
 #pragma empty_line
      switch (addr.to_int()) {
          case 0x0:
-             m_tmr = (uint16_t) data;
+             m_tmr = data;
              break;
          case 0x4:
-             m_tval = (uint16_t) data;
+             m_tval = data;
              break;
          case 0x8:
              m_tconf = data;

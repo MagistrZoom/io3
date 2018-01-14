@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Jan 13 21:45:06 2018" VIVADOVERSION="2017.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Jan 14 13:10:21 2018" VIVADOVERSION="2017.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="uc_system" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -197,12 +197,12 @@
             <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="s3_we_bo"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="timer1_val_bi" RIGHT="0" SIGIS="undef" SIGNAME="Timer_0_data_bo">
+        <PORT DIR="I" LEFT="31" NAME="timer1_val_bi" RIGHT="0" SIGIS="undef" SIGNAME="Timer_0_data_bo">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Timer_0" PORT="data_bo"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="timer2_val_bi" RIGHT="0" SIGIS="undef" SIGNAME="Timer_1_data_bo">
+        <PORT DIR="I" LEFT="31" NAME="timer2_val_bi" RIGHT="0" SIGIS="undef" SIGNAME="Timer_1_data_bo">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Timer_1" PORT="data_bo"/>
           </CONNECTIONS>
@@ -258,7 +258,7 @@
             <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="s1_we_bo"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="data_bo" RIGHT="0" SIGIS="undef" SIGNAME="Timer_0_data_bo">
+        <PORT DIR="O" LEFT="31" NAME="data_bo" RIGHT="0" SIGIS="undef" SIGNAME="Timer_0_data_bo">
           <CONNECTIONS>
             <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="s1_rddata_bi"/>
             <CONNECTION INSTANCE="IC_0" PORT="timer1_val_bi"/>
@@ -305,7 +305,7 @@
             <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="s2_we_bo"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="data_bo" RIGHT="0" SIGIS="undef" SIGNAME="Timer_1_data_bo">
+        <PORT DIR="O" LEFT="31" NAME="data_bo" RIGHT="0" SIGIS="undef" SIGNAME="Timer_1_data_bo">
           <CONNECTIONS>
             <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="s2_rddata_bi"/>
             <CONNECTION INSTANCE="IC_0" PORT="timer2_val_bi"/>
@@ -829,9 +829,9 @@
         <PORT DIR="O" NAME="bram_rst_a" SIGIS="rst"/>
         <PORT DIR="O" NAME="bram_clk_a" SIGIS="clk" SIGNAME="axi_bram_ctrl_0_bram_clk_a">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="clk_i"/>
             <CONNECTION INSTANCE="Timer_0" PORT="clk_i"/>
             <CONNECTION INSTANCE="Timer_1" PORT="clk_i"/>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="clk_i"/>
             <CONNECTION INSTANCE="IC_0" PORT="clk_i"/>
           </CONNECTIONS>
         </PORT>
@@ -6013,9 +6013,9 @@
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_reset">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="rst_i"/>
             <CONNECTION INSTANCE="Timer_0" PORT="rst_i"/>
             <CONNECTION INSTANCE="Timer_1" PORT="rst_i"/>
-            <CONNECTION INSTANCE="BRAMInterconnect_0" PORT="rst_i"/>
             <CONNECTION INSTANCE="IC_0" PORT="rst_i"/>
           </CONNECTIONS>
         </PORT>

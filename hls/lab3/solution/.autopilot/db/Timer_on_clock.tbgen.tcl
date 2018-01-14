@@ -14,7 +14,7 @@ set C_modelArgList {
 	{ en_i int 1 regular {pointer 0 volatile }  }
 	{ addr_bi int 13 regular {pointer 0 volatile }  }
 	{ data_bi int 32 regular {pointer 0 volatile }  }
-	{ data_bo int 16 regular {pointer 1 volatile }  }
+	{ data_bo int 32 regular {pointer 1 volatile }  }
 	{ Timer_m_tmr_V int 32 regular {pointer 2}  }
 	{ Timer_m_tval_V int 32 regular {pointer 2}  }
 	{ Timer_m_tconf_V int 32 regular {pointer 2}  }
@@ -24,7 +24,7 @@ set C_modelArgMapList {[
  	{ "Name" : "en_i", "interface" : "wire", "bitwidth" : 1, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "Timer.en_i.m_if.Val","cData": "bool","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "addr_bi", "interface" : "wire", "bitwidth" : 13, "direction" : "READONLY", "bitSlice":[{"low":0,"up":12,"cElement": [{"cName": "Timer.addr_bi.m_if.Val.V","cData": "uint13","bit_use": { "low": 0,"up": 12},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "data_bi", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "Timer.data_bi.m_if.Val","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
- 	{ "Name" : "data_bo", "interface" : "wire", "bitwidth" : 16, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":15,"cElement": [{"cName": "Timer.data_bo.m_if.Val","cData": "unsigned short","bit_use": { "low": 0,"up": 15},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
+ 	{ "Name" : "data_bo", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "Timer.data_bo.m_if.Val.V","cData": "uint32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "Timer_m_tmr_V", "interface" : "wire", "bitwidth" : 32, "direction" : "READWRITE", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "Timer.m_tmr.V","cData": "uint32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "Timer_m_tval_V", "interface" : "wire", "bitwidth" : 32, "direction" : "READWRITE", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "Timer.m_tval.V","cData": "uint32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "Timer_m_tconf_V", "interface" : "wire", "bitwidth" : 32, "direction" : "READWRITE", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "Timer.m_tconf.V","cData": "uint32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} ]}
@@ -37,7 +37,7 @@ set portList {
 	{ en_i sc_in sc_logic 1 signal 1 } 
 	{ addr_bi sc_in sc_lv 13 signal 2 } 
 	{ data_bi sc_in sc_lv 32 signal 3 } 
-	{ data_bo sc_out sc_lv 16 signal 4 } 
+	{ data_bo sc_out sc_lv 32 signal 4 } 
 	{ data_bo_ap_vld sc_out sc_logic 1 outvld 4 } 
 	{ Timer_m_tmr_V_i sc_in sc_lv 32 signal 5 } 
 	{ Timer_m_tmr_V_o sc_out sc_lv 32 signal 5 } 
@@ -56,7 +56,7 @@ set NewPortList {[
  	{ "name": "en_i", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "en_i", "role": "default" }} , 
  	{ "name": "addr_bi", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "addr_bi", "role": "default" }} , 
  	{ "name": "data_bi", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "data_bi", "role": "default" }} , 
- 	{ "name": "data_bo", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "data_bo", "role": "default" }} , 
+ 	{ "name": "data_bo", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "data_bo", "role": "default" }} , 
  	{ "name": "data_bo_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "data_bo", "role": "ap_vld" }} , 
  	{ "name": "Timer_m_tmr_V_i", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "Timer_m_tmr_V", "role": "i" }} , 
  	{ "name": "Timer_m_tmr_V_o", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "Timer_m_tmr_V", "role": "o" }} , 
@@ -118,7 +118,7 @@ set Spec2ImplPortList {
 	en_i { ap_none {  { en_i in_data 0 1 } } }
 	addr_bi { ap_none {  { addr_bi in_data 0 13 } } }
 	data_bi { ap_none {  { data_bi in_data 0 32 } } }
-	data_bo { ap_vld {  { data_bo out_data 1 16 }  { data_bo_ap_vld out_vld 1 1 } } }
+	data_bo { ap_vld {  { data_bo out_data 1 32 }  { data_bo_ap_vld out_vld 1 1 } } }
 	Timer_m_tmr_V { ap_ovld {  { Timer_m_tmr_V_i in_data 0 32 }  { Timer_m_tmr_V_o out_data 1 32 }  { Timer_m_tmr_V_o_ap_vld out_vld 1 1 } } }
 	Timer_m_tval_V { ap_ovld {  { Timer_m_tval_V_i in_data 0 32 }  { Timer_m_tval_V_o out_data 1 32 }  { Timer_m_tval_V_o_ap_vld out_vld 1 1 } } }
 	Timer_m_tconf_V { ap_ovld {  { Timer_m_tconf_V_i in_data 0 32 }  { Timer_m_tconf_V_o out_data 1 32 }  { Timer_m_tconf_V_o_ap_vld out_vld 1 1 } } }

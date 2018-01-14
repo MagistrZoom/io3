@@ -16,7 +16,7 @@ set C_modelArgList {
 	{ addr_bi int 13 regular {pointer 0 volatile }  }
 	{ data_bi int 32 regular {pointer 0 volatile }  }
 	{ we_bi int 4 unused {pointer 0}  }
-	{ data_bo int 16 regular {pointer 1 volatile }  }
+	{ data_bo int 32 regular {pointer 1 volatile }  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "clk_i", "interface" : "wire", "bitwidth" : 1, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "Timer.clk_i.m_if.Val","cData": "bool","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
@@ -25,7 +25,7 @@ set C_modelArgMapList {[
  	{ "Name" : "addr_bi", "interface" : "wire", "bitwidth" : 13, "direction" : "READONLY", "bitSlice":[{"low":0,"up":12,"cElement": [{"cName": "Timer.addr_bi.m_if.Val.V","cData": "uint13","bit_use": { "low": 0,"up": 12},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "data_bi", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "Timer.data_bi.m_if.Val","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "we_bi", "interface" : "wire", "bitwidth" : 4, "direction" : "READONLY", "bitSlice":[{"low":0,"up":3,"cElement": [{"cName": "Timer.we_bi.m_if.Val.V","cData": "uint4","bit_use": { "low": 0,"up": 3},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
- 	{ "Name" : "data_bo", "interface" : "wire", "bitwidth" : 16, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":15,"cElement": [{"cName": "Timer.data_bo.m_if.Val","cData": "unsigned short","bit_use": { "low": 0,"up": 15},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} ]}
+ 	{ "Name" : "data_bo", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "Timer.data_bo.m_if.Val.V","cData": "uint32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} ]}
 # RTL Port declarations: 
 set portNum 8
 set portList { 
@@ -35,7 +35,7 @@ set portList {
 	{ addr_bi sc_in sc_lv 13 signal 3 clk_i } 
 	{ data_bi sc_in sc_lv 32 signal 4 clk_i } 
 	{ we_bi sc_in sc_lv 4 signal 5 clk_i } 
-	{ data_bo sc_out sc_lv 16 signal 6 clk_i } 
+	{ data_bo sc_out sc_lv 32 signal 6 clk_i } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync clk_i } 
 }
 set NewPortList {[ 
@@ -45,7 +45,7 @@ set NewPortList {[
  	{ "name": "addr_bi", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "addr_bi", "role": "default" }} , 
  	{ "name": "data_bi", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "data_bi", "role": "default" }} , 
  	{ "name": "we_bi", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "we_bi", "role": "default" }} , 
- 	{ "name": "data_bo", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "data_bo", "role": "default" }} , 
+ 	{ "name": "data_bo", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "data_bo", "role": "default" }} , 
  	{ "name": "ap_rst", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "reset", "bundle":{"name": "ap_rst", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
@@ -153,7 +153,7 @@ set Spec2ImplPortList {
 	addr_bi { ap_none {  { addr_bi in_data 0 13 } } }
 	data_bi { ap_none {  { data_bi in_data 0 32 } } }
 	we_bi { ap_none {  { we_bi in_data 0 4 } } }
-	data_bo { ap_vld {  { data_bo out_data 1 16 } } }
+	data_bo { ap_vld {  { data_bo out_data 1 32 } } }
 }
 
 set busDeadlockParameterList { 

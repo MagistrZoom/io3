@@ -5,6 +5,10 @@ Using 8 slave threads.
 Starting static elaboration
 WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port s1_rddata_bi [/home/izoomko/wrk/4grade/io/lab3/lab2.ip_user_files/bd/uc_system/hdl/uc_system.v:1392]
 WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port s2_rddata_bi [/home/izoomko/wrk/4grade/io/lab3/lab2.ip_user_files/bd/uc_system/hdl/uc_system.v:1397]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port timer1_val_bi [/home/izoomko/wrk/4grade/io/lab3/lab2.ip_user_files/bd/uc_system/ip/uc_system_IC_0_0/sim/uc_system_IC_0_0.v:89]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port timer2_val_bi [/home/izoomko/wrk/4grade/io/lab3/lab2.ip_user_files/bd/uc_system/ip/uc_system_IC_0_0/sim/uc_system_IC_0_0.v:90]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port data_bo [/home/izoomko/wrk/4grade/io/lab3/lab2.ip_user_files/bd/uc_system/ip/uc_system_Timer_0_0/sim/uc_system_Timer_0_0.v:84]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port data_bo [/home/izoomko/wrk/4grade/io/lab3/lab2.ip_user_files/bd/uc_system/ip/uc_system_Timer_1_0/sim/uc_system_Timer_1_0.v:84]
 WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 15 for port m_axi_arprot [/home/izoomko/wrk/4grade/io/lab3/lab2.ip_user_files/bd/uc_system/hdl/uc_system.v:2690]
 WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 15 for port m_axi_awprot [/home/izoomko/wrk/4grade/io/lab3/lab2.ip_user_files/bd/uc_system/hdl/uc_system.v:2694]
 WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.2/nightly/2017_06_15_1909853/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]

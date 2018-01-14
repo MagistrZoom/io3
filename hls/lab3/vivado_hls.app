@@ -8,9 +8,8 @@
         <solution name="solution" status="active"/>
     </solutions>
     <files xmlns="">
-        <file name="../../../lab1/src/main.cpp" sc="1" tb="1" cflags=" "/>
-        <file name="../lab1/src/Timer.cpp" sc="1" tb="false" cflags=""/>
-        <file name="../lab1/src/Timer.h" sc="1" tb="false" cflags=""/>
+        <file name="../../lab1/src/Timer.h" sc="1" tb="false" cflags=""/>
+        <file name="../../lab1/src/Timer.cpp" sc="1" tb="false" cflags=""/>
     </files>
 </project>
 

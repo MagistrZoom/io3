@@ -5648,3 +5648,160 @@ mb-size uart.elf  |tee "uart.elf.size"
    7884	    272	   3116	  11272	   2c08	uart.elf
 Finished building: uart.elf.size
  
+12:27:05 **** Auto Build of configuration Debug for project uart ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../uart_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: uart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../uart_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "uart.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: uart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size uart.elf  |tee "uart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7884	    272	   3116	  11272	   2c08	uart.elf
+Finished building: uart.elf.size
+ 
+12:28:48 **** Auto Build of configuration Debug for project uart ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../uart_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: uart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../uart_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "uart.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: uart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size uart.elf  |tee "uart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83488	   1436	   3188	  88112	  15830	uart.elf
+Finished building: uart.elf.size
+ 
+12:28:58 **** Auto Build of configuration Debug for project uart ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../uart_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: uart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../uart_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "uart.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: uart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size uart.elf  |tee "uart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83488	   1436	   3188	  88112	  15830	uart.elf
+Finished building: uart.elf.size
+ 
+12:33:42 **** Auto Build of configuration Debug for project uart ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../uart_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: uart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../uart_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "uart.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: uart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size uart.elf  |tee "uart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83488	   1436	   3188	  88112	  15830	uart.elf
+Finished building: uart.elf.size
+ 
+12:51:35 **** Auto Build of configuration Debug for project uart ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../uart_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:203:9: warning: unused variable 'first_run' [-Wunused-variable]
+     int first_run = 1;
+         ^~~~~~~~~
+../src/helloworld.c: At top level:
+../src/helloworld.c:274:2: warning: data definition has no type or storage class
+  cleanup_platform();
+  ^~~~~~~~~~~~~~~~
+../src/helloworld.c:274:2: warning: type defaults to 'int' in declaration of 'cleanup_platform' [-Wimplicit-int]
+../src/helloworld.c:274:2: error: conflicting types for 'cleanup_platform'
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+In file included from ../src/helloworld.c:48:0:
+../src/platform.h:39:6: note: previous declaration of 'cleanup_platform' was here
+ void cleanup_platform();
+      ^~~~~~~~~~~~~~~~
+../src/helloworld.c:275:2: error: expected identifier or '(' before 'return'
+  return 0;
+  ^~~~~~
+../src/helloworld.c:276:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [src/helloworld.o] Error 1
+12:51:41 **** Auto Build of configuration Debug for project uart ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../uart_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:203:9: warning: unused variable 'first_run' [-Wunused-variable]
+     int first_run = 1;
+         ^~~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: uart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../uart_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "uart.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: uart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size uart.elf  |tee "uart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83472	   1436	   3188	  88096	  15820	uart.elf
+Finished building: uart.elf.size
+ 
+12:52:38 **** Auto Build of configuration Debug for project uart ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../uart_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: uart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../uart_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "uart.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: uart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size uart.elf  |tee "uart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83512	   1436	   3188	  88136	  15848	uart.elf
+Finished building: uart.elf.size
+ 
+12:58:08 **** Auto Build of configuration Debug for project uart ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../uart_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: uart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../uart_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "uart.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: uart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size uart.elf  |tee "uart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83512	   1436	   3188	  88136	  15848	uart.elf
+Finished building: uart.elf.size
+ 

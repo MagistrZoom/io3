@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Timer'
 ================================================================
-* Date:           Mon Dec 25 00:09:29 2017
+* Date:           Sun Jan 14 12:48:31 2018
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        lab3
@@ -77,80 +77,80 @@ IsGatedGlobalClock: 0
 
  <State 1>: 0.00ns
 ST_1: StgValue_3 (12)  [1/1] 0.00ns
-:0  call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk_i), !map !124
+:0  call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk_i), !map !120
 
 ST_1: StgValue_4 (13)  [1/1] 0.00ns
-:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %rst_i), !map !128
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %rst_i), !map !124
 
 ST_1: StgValue_5 (14)  [1/1] 0.00ns
-:2  call void (...)* @_ssdm_op_SpecBitsMap(i1* %en_i), !map !132
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i1* %en_i), !map !128
 
 ST_1: StgValue_6 (15)  [1/1] 0.00ns
-:3  call void (...)* @_ssdm_op_SpecBitsMap(i13* %addr_bi), !map !136
+:3  call void (...)* @_ssdm_op_SpecBitsMap(i13* %addr_bi), !map !132
 
 ST_1: StgValue_7 (16)  [1/1] 0.00ns
-:4  call void (...)* @_ssdm_op_SpecBitsMap(i32* %data_bi), !map !140
+:4  call void (...)* @_ssdm_op_SpecBitsMap(i32* %data_bi), !map !136
 
 ST_1: StgValue_8 (17)  [1/1] 0.00ns
-:5  call void (...)* @_ssdm_op_SpecBitsMap(i4* %we_bi), !map !144
+:5  call void (...)* @_ssdm_op_SpecBitsMap(i4* %we_bi), !map !140
 
 ST_1: StgValue_9 (18)  [1/1] 0.00ns
-:6  call void (...)* @_ssdm_op_SpecBitsMap(i16* %data_bo), !map !148
+:6  call void (...)* @_ssdm_op_SpecBitsMap(i32* %data_bo), !map !144
 
 ST_1: StgValue_10 (19)  [1/1] 0.00ns
-:7  call void (...)* @_ssdm_op_SpecBitsMap(i32* %Timer_m_tmr_V), !map !152
+:7  call void (...)* @_ssdm_op_SpecBitsMap(i32* %Timer_m_tmr_V), !map !148
 
 ST_1: StgValue_11 (20)  [1/1] 0.00ns
-:8  call void (...)* @_ssdm_op_SpecBitsMap(i32* %Timer_m_tval_V), !map !156
+:8  call void (...)* @_ssdm_op_SpecBitsMap(i32* %Timer_m_tval_V), !map !152
 
 ST_1: StgValue_12 (21)  [1/1] 0.00ns
-:9  call void (...)* @_ssdm_op_SpecBitsMap(i32* %Timer_m_tconf_V), !map !160
+:9  call void (...)* @_ssdm_op_SpecBitsMap(i32* %Timer_m_tconf_V), !map !156
 
-ST_1: StgValue_13 (22)  [1/1] 0.00ns  loc: ../lab1/src/Timer.cpp:11
+ST_1: StgValue_13 (22)  [1/1] 0.00ns  loc: ../../lab1/src/Timer.cpp:11
 :10  call void (...)* @_ssdm_op_SpecTopModule([6 x i8]* @p_str, [6 x i8]* @p_str) nounwind
 
-ST_1: Timer_ssdm_thread (23)  [1/1] 0.00ns  loc: ../lab1/src/Timer.cpp:12
+ST_1: Timer_ssdm_thread (23)  [1/1] 0.00ns  loc: ../../lab1/src/Timer.cpp:12
 :11  %Timer_ssdm_thread = load i1* @Timer_ssdm_thread_M_on_clock, align 1
 
-ST_1: StgValue_15 (24)  [1/1] 0.00ns  loc: ../lab1/src/Timer.cpp:12
+ST_1: StgValue_15 (24)  [1/1] 0.00ns  loc: ../../lab1/src/Timer.cpp:12
 :12  br i1 %Timer_ssdm_thread, label %1, label %._crit_edge
 
 
  <State 2>: 7.29ns
-ST_2: StgValue_16 (26)  [1/1] 7.29ns  loc: ../lab1/src/Timer.cpp:12
-:0  call void @"Timer::on_clock"(i1* %clk_i, i1* %rst_i, i1* %en_i, i13* %addr_bi, i32* %data_bi, i4* %we_bi, i16* %data_bo, i32* %Timer_m_tmr_V, i32* %Timer_m_tval_V, i32* %Timer_m_tconf_V)
+ST_2: StgValue_16 (26)  [1/1] 7.29ns  loc: ../../lab1/src/Timer.cpp:12
+:0  call void @"Timer::on_clock"(i1* %clk_i, i1* %rst_i, i1* %en_i, i13* %addr_bi, i32* %data_bi, i4* %we_bi, i32* %data_bo, i32* %Timer_m_tmr_V, i32* %Timer_m_tval_V, i32* %Timer_m_tconf_V)
 
-ST_2: StgValue_17 (27)  [1/1] 0.00ns  loc: ../lab1/src/Timer.cpp:12
+ST_2: StgValue_17 (27)  [1/1] 0.00ns  loc: ../../lab1/src/Timer.cpp:12
 :1  br label %._crit_edge
 
-ST_2: StgValue_18 (29)  [1/1] 0.00ns  loc: ../lab1/src/Timer.cpp:12
+ST_2: StgValue_18 (29)  [1/1] 0.00ns  loc: ../../lab1/src/Timer.cpp:12
 ._crit_edge:0  call void (...)* @_ssdm_op_SpecProcessDecl([6 x i8]* @p_str, i32 0, [9 x i8]* @p_str1) nounwind
 
-ST_2: StgValue_19 (30)  [1/1] 0.00ns  loc: ../lab1/src/Timer.cpp:13
+ST_2: StgValue_19 (30)  [1/1] 0.00ns  loc: ../../lab1/src/Timer.cpp:13
 ._crit_edge:1  call void (...)* @_ssdm_op_SpecSensitive([9 x i8]* @p_str1, [6 x i8]* @p_str2, i1* %clk_i, i32 1) nounwind
 
-ST_2: StgValue_20 (31)  [1/1] 0.00ns  loc: ../lab1/src/Timer.cpp:14
+ST_2: StgValue_20 (31)  [1/1] 0.00ns  loc: ../../lab1/src/Timer.cpp:14
 ._crit_edge:2  call void (...)* @_ssdm_op_SpecPort([6 x i8]* @p_str, i32 0, [7 x i8]* @p_str3, [6 x i8]* @p_str2, i32 0, i32 0, i1* %clk_i) nounwind
 
-ST_2: StgValue_21 (32)  [1/1] 0.00ns  loc: ../lab1/src/Timer.cpp:15
+ST_2: StgValue_21 (32)  [1/1] 0.00ns  loc: ../../lab1/src/Timer.cpp:15
 ._crit_edge:3  call void (...)* @_ssdm_op_SpecPort([6 x i8]* @p_str, i32 0, [7 x i8]* @p_str3, [6 x i8]* @p_str4, i32 0, i32 0, i1* %rst_i) nounwind
 
-ST_2: StgValue_22 (33)  [1/1] 0.00ns  loc: ../lab1/src/Timer.cpp:16
+ST_2: StgValue_22 (33)  [1/1] 0.00ns  loc: ../../lab1/src/Timer.cpp:16
 ._crit_edge:4  call void (...)* @_ssdm_op_SpecPort([6 x i8]* @p_str, i32 0, [7 x i8]* @p_str3, [5 x i8]* @p_str5, i32 0, i32 0, i1* %en_i) nounwind
 
-ST_2: StgValue_23 (34)  [1/1] 0.00ns  loc: ../lab1/src/Timer.cpp:17
+ST_2: StgValue_23 (34)  [1/1] 0.00ns  loc: ../../lab1/src/Timer.cpp:17
 ._crit_edge:5  call void (...)* @_ssdm_op_SpecPort([6 x i8]* @p_str, i32 0, [12 x i8]* @p_str6, [8 x i8]* @p_str7, i32 0, i32 0, i13* %addr_bi) nounwind
 
-ST_2: StgValue_24 (35)  [1/1] 0.00ns  loc: ../lab1/src/Timer.cpp:18
+ST_2: StgValue_24 (35)  [1/1] 0.00ns  loc: ../../lab1/src/Timer.cpp:18
 ._crit_edge:6  call void (...)* @_ssdm_op_SpecPort([6 x i8]* @p_str, i32 0, [6 x i8]* @p_str8, [8 x i8]* @p_str9, i32 0, i32 0, i32* %data_bi) nounwind
 
-ST_2: StgValue_25 (36)  [1/1] 0.00ns  loc: ../lab1/src/Timer.cpp:19
+ST_2: StgValue_25 (36)  [1/1] 0.00ns  loc: ../../lab1/src/Timer.cpp:19
 ._crit_edge:7  call void (...)* @_ssdm_op_SpecPort([6 x i8]* @p_str, i32 0, [11 x i8]* @p_str10, [6 x i8]* @p_str11, i32 0, i32 0, i4* %we_bi) nounwind
 
-ST_2: StgValue_26 (37)  [1/1] 0.00ns  loc: ../lab1/src/Timer.cpp:20
-._crit_edge:8  call void (...)* @_ssdm_op_SpecPort([6 x i8]* @p_str, i32 1, [11 x i8]* @p_str12, [8 x i8]* @p_str13, i32 0, i32 0, i16* %data_bo) nounwind
+ST_2: StgValue_26 (37)  [1/1] 0.00ns  loc: ../../lab1/src/Timer.cpp:20
+._crit_edge:8  call void (...)* @_ssdm_op_SpecPort([6 x i8]* @p_str, i32 1, [14 x i8]* @p_str12, [8 x i8]* @p_str13, i32 0, i32 0, i32* %data_bo) nounwind
 
-ST_2: StgValue_27 (38)  [1/1] 0.00ns  loc: ../lab1/src/Timer.h:26
+ST_2: StgValue_27 (38)  [1/1] 0.00ns  loc: ../../lab1/src/Timer.h:24
 ._crit_edge:9  ret void
 
 
@@ -165,7 +165,7 @@ The critical path consists of the following:
 
  <State 2>: 7.29ns
 The critical path consists of the following:
-	'call' operation (../lab1/src/Timer.cpp:12) to 'Timer::on_clock' [26]  (7.29 ns)
+	'call' operation (../../lab1/src/Timer.cpp:12) to 'Timer::on_clock' [26]  (7.29 ns)
 
 
 ============================================================

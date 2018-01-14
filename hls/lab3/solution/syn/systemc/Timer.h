@@ -23,7 +23,7 @@ struct Timer : public sc_module {
     sc_in< sc_lv<13> > addr_bi;
     sc_in< sc_lv<32> > data_bi;
     sc_in< sc_lv<4> > we_bi;
-    sc_out< sc_lv<16> > data_bo;
+    sc_out< sc_lv<32> > data_bo;
     sc_in< sc_logic > ap_rst;
 
 
@@ -40,7 +40,7 @@ struct Timer : public sc_module {
     Timer_on_clock* StgValue_16_Timer_on_clock_fu_66;
     sc_signal< sc_lv<1> > Timer_ssdm_thread_load_fu_90_p1;
     sc_signal< sc_lv<2> > ap_CS_fsm;
-    sc_signal< sc_lv<16> > StgValue_16_Timer_on_clock_fu_66_data_bo;
+    sc_signal< sc_lv<32> > StgValue_16_Timer_on_clock_fu_66_data_bo;
     sc_signal< sc_logic > StgValue_16_Timer_on_clock_fu_66_data_bo_ap_vld;
     sc_signal< sc_lv<32> > StgValue_16_Timer_on_clock_fu_66_Timer_m_tmr_V_o;
     sc_signal< sc_logic > StgValue_16_Timer_on_clock_fu_66_Timer_m_tmr_V_o_ap_vld;

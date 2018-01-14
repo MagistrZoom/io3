@@ -70,7 +70,7 @@ input wire en_i;
 input wire [12 : 0] addr_bi;
 input wire [31 : 0] data_bi;
 input wire [3 : 0] we_bi;
-output wire [15 : 0] data_bo;
+output wire [31 : 0] data_bo;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 ap_rst RST" *)
 input wire ap_rst;
 

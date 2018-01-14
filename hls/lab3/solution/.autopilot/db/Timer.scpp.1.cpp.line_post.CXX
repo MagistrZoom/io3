@@ -1,5 +1,5 @@
-#pragma line 1 "../lab1/src/Timer.cpp" ::: 0
-#pragma line 1 "../lab1/src/Timer.cpp" 1 ::: 1
+#pragma line 1 "../../lab1/src/Timer.cpp" ::: 0
+#pragma line 1 "../../lab1/src/Timer.cpp" 1 ::: 1
 #pragma line 1 "<built-in>" 1 ::: 2
 #pragma line 1 "<built-in>" 3 ::: 3
 #pragma line 155 "<built-in>" 3 ::: 4
@@ -12,7 +12,7 @@
 #pragma line 427 "/home/izoomko/Soft/xilinx/Vivado_HLS/2017.2/common/technology/autopilot/etc/autopilot_ssdm_op.h" ::: 145
 #pragma line 7 "<command line>" 2 ::: 146
 #pragma line 1 "<built-in>" 2 ::: 147
-#pragma line 1 "../lab1/src/Timer.cpp" 2 ::: 148
+#pragma line 1 "../../lab1/src/Timer.cpp" 2 ::: 148
 #pragma line 1 "/usr/include/stdlib.h" 1 3 4 ::: 151
 #pragma line 1 "/usr/include/features.h" 1 3 4 ::: 157
 #pragma line 122 "/usr/include/features.h" 3 4 ::: 164
@@ -139,8 +139,8 @@
 #pragma line 1 "/usr/include/x86_64-linux-gnu/bits/stdlib-float.h" 1 3 4 ::: 2518
 #pragma line 922 "/usr/include/stdlib.h" 2 3 4 ::: 2536
 #pragma line 934 "/usr/include/stdlib.h" 3 4 ::: 2539
-#pragma line 6 "../lab1/src/Timer.cpp" 2 ::: 2541
-#pragma line 1 "../lab1/src/Timer.h" 1 ::: 2542
+#pragma line 6 "../../lab1/src/Timer.cpp" 2 ::: 2541
+#pragma line 1 "../../lab1/src/Timer.h" 1 ::: 2542
 #pragma line 1 "/home/izoomko/Soft/xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_sysc/systemc.h" 1 ::: 2546
 #pragma line 1 "/home/izoomko/Soft/xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_sysc/ap_systemc.h" 1 ::: 2547
 #pragma line 1 "/home/izoomko/Soft/xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 1 3 ::: 2562
@@ -751,12 +751,11 @@
 #pragma line 182 "/home/izoomko/Soft/xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_sysc/ap_systemc.h" ::: 43583
 #pragma line 293 "/home/izoomko/Soft/xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_sysc/ap_systemc.h" ::: 43591
 #pragma line 2 "/home/izoomko/Soft/xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_sysc/systemc.h" 2 ::: 43597
-#pragma line 7 "../lab1/src/Timer.h" 2 ::: 43599
-#pragma line 8 "../lab1/src/Timer.h" ::: 43601
-#pragma line 10 "../lab1/src/Timer.h" ::: 43604
-#pragma line 7 "../lab1/src/Timer.cpp" 2 ::: 43628
-#pragma line 9 "../lab1/src/Timer.cpp" ::: 43631
-#pragma line 26 "../lab1/src/Timer.h" ::: 43654
-#pragma line 24 "../lab1/src/Timer.cpp" ::: 43658
-#pragma line 26 "../lab1/src/Timer.cpp" ::: 43679
-#pragma line 67 "../lab1/src/Timer.cpp" ::: 43721
+#pragma line 7 "../../lab1/src/Timer.h" 2 ::: 43599
+#pragma line 8 "../../lab1/src/Timer.h" ::: 43601
+#pragma line 7 "../../lab1/src/Timer.cpp" 2 ::: 43625
+#pragma line 9 "../../lab1/src/Timer.cpp" ::: 43628
+#pragma line 24 "../../lab1/src/Timer.h" ::: 43651
+#pragma line 24 "../../lab1/src/Timer.cpp" ::: 43655
+#pragma line 26 "../../lab1/src/Timer.cpp" ::: 43676
+#pragma line 67 "../../lab1/src/Timer.cpp" ::: 43718

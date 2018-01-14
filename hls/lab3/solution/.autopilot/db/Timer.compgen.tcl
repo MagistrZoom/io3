@@ -78,7 +78,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_data_bo \
     op interface \
-    ports { data_bo { O 16 vector } } \
+    ports { data_bo { O 32 vector } } \
 } "
 }
 

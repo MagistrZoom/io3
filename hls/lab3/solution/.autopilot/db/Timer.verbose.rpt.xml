@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Timer'" level="0">
-<item name = "Date">Mon Dec 25 00:09:29 2017
+<item name = "Date">Sun Jan 14 12:48:31 2018
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">lab3</item>
@@ -53,7 +53,7 @@
 <column name="Instance">-, -, 202, 282</column>
 <column name="Memory">-, -, -, -</column>
 <column name="Multiplexer">-, -, -, -</column>
-<column name="Register">-, -, 112, -</column>
+<column name="Register">-, -, 128, -</column>
 <specialColumn name="Available">270, 240, 126800, 63400</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
 </table>
@@ -90,7 +90,7 @@
 <column name="Timer_m_tconf_V">32, 0, 32, 0</column>
 <column name="Timer_m_tmr_V">32, 0, 32, 0</column>
 <column name="Timer_m_tval_V">32, 0, 32, 0</column>
-<column name="data_bo">16, 0, 16, 0</column>
+<column name="data_bo">32, 0, 32, 0</column>
 </table>
 </item>
 </section>
@@ -107,7 +107,7 @@
 <column name="addr_bi">in, 13, ap_none, addr_bi, pointer</column>
 <column name="data_bi">in, 32, ap_none, data_bi, pointer</column>
 <column name="we_bi">in, 4, ap_none, we_bi, pointer</column>
-<column name="data_bo">out, 16, ap_vld, data_bo, pointer</column>
+<column name="data_bo">out, 32, ap_vld, data_bo, pointer</column>
 </table>
 </item>
 </section>

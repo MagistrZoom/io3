@@ -1,5 +1,5 @@
-# 1 "../lab1/src/Timer.cpp"
-# 1 "../lab1/src/Timer.cpp" 1
+# 1 "../../lab1/src/Timer.cpp"
+# 1 "../../lab1/src/Timer.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 155 "<built-in>" 3
@@ -202,7 +202,7 @@ extern "C" {
 // 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 # 7 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "../lab1/src/Timer.cpp" 2
+# 1 "../../lab1/src/Timer.cpp" 2
 //
 // Created by izoomko on 10/2/17.
 //
@@ -2930,8 +2930,8 @@ extern int getloadavg (double __loadavg[], int __nelem)
 /* Define some macros helping to catch buffer overflows.  */
 # 934 "/usr/include/stdlib.h" 3 4
 }
-# 6 "../lab1/src/Timer.cpp" 2
-# 1 "../lab1/src/Timer.h" 1
+# 6 "../../lab1/src/Timer.cpp" 2
+# 1 "../../lab1/src/Timer.h" 1
 //
 // Created by izoomko on 10/2/17.
 //
@@ -45045,9 +45045,7 @@ typedef void****** __ap_sc_end__;
 # 2 "/home/izoomko/Soft/xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_sysc/systemc.h" 2
 
 // 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 7 "../lab1/src/Timer.h" 2
-
-typedef unsigned short uint16_t;
+# 7 "../../lab1/src/Timer.h" 2
 
 struct Timer : ::sc_core::sc_module
 {
@@ -45063,7 +45061,7 @@ struct Timer : ::sc_core::sc_module
     sc_in<sc_bv<13> > addr_bi;
     sc_in<int> data_bi;
     sc_in<sc_bv<4> > we_bi;
-    sc_out<uint16_t> data_bo;
+    sc_out<sc_uint<32> > data_bo;
 
     typedef Timer SC_CURRENT_USER_MODULE; Timer( ::sc_core::sc_module_name );
 private:
@@ -45073,7 +45071,7 @@ private:
 
     void on_clock();
 };
-# 7 "../lab1/src/Timer.cpp" 2
+# 7 "../../lab1/src/Timer.cpp" 2
 
 
 Timer::Timer(sc_module_name nm)
@@ -45099,10 +45097,10 @@ void Timer::on_clock()
 
      switch (addr.to_int()) {
          case 0x0:
-             m_tmr = (uint16_t) data;
+             m_tmr = data;
              break;
          case 0x4:
-             m_tval = (uint16_t) data;
+             m_tval = data;
              break;
          case 0x8:
              m_tconf = data;

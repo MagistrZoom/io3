@@ -29,22 +29,17 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/home/izoomko/wrk/4grade/io/hls/lab3/.apc/.src</location>
+			<location>/home/izoomko/wrk/4grade/io/lab3/hls/lab3/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/home/izoomko/wrk/4grade/io/hls/lab3/.apc/.tb</location>
-		</link>
-		<link>
-			<name>.reference/sc_signal_ports.h</name>
-			<type>1</type>
-			<location>/home/izoomko/Soft/xilinx/Vivado_HLS/2017.2/lnx64/tools/systemc/include/sysc/communication/sc_signal_ports.h</location>
+			<location>/home/izoomko/wrk/4grade/io/lab3/hls/lab3/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution/constraints</name>
 			<type>2</type>
-			<location>/home/izoomko/wrk/4grade/io/hls/lab3/solution/.tcls</location>
+			<location>/home/izoomko/wrk/4grade/io/lab3/hls/lab3/solution/.tcls</location>
 		</link>
 		<link>
 			<name>source/Timer.cpp</name>
@@ -57,24 +52,19 @@
 			<location>/home/izoomko/wrk/4grade/io/lab1/src/Timer.h</location>
 		</link>
 		<link>
-			<name>testbench/main.cpp</name>
-			<type>1</type>
-			<location>/home/izoomko/wrk/4grade/io/lab1/src/main.cpp</location>
-		</link>
-		<link>
 			<name>solution/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/izoomko/wrk/4grade/io/hls/lab3/solution/solution.directive</location>
+			<location>/home/izoomko/wrk/4grade/io/lab3/hls/lab3/solution/solution.directive</location>
 		</link>
 		<link>
 			<name>solution/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/izoomko/wrk/4grade/io/hls/lab3/solution/directives.tcl</location>
+			<location>/home/izoomko/wrk/4grade/io/lab3/hls/lab3/solution/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/izoomko/wrk/4grade/io/hls/lab3/solution/script.tcl</location>
+			<location>/home/izoomko/wrk/4grade/io/lab3/hls/lab3/solution/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

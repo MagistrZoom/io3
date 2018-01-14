@@ -41,15 +41,15 @@ set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
 set TargetInfo "xc7a100t:csg324:-1"
-set SourceFiles {sc ../../../lab1/src/Timer.cpp c {}}
+set SourceFiles {sc ../../../../lab1/src/Timer.cpp c {}}
 set SourceFlags {sc {{}} c {}}
-set DirectiveFile {/home/izoomko/wrk/4grade/io/hls/lab3/solution/solution.directive}
-set TBFiles {verilog ../../../lab1/src/main.cpp bc ../../../lab1/src/main.cpp vhdl ../../../lab1/src/main.cpp sc ../../../lab1/src/main.cpp cas ../../../lab1/src/main.cpp c {}}
+set DirectiveFile {/home/izoomko/wrk/4grade/io/lab3/hls/lab3/solution/solution.directive}
+set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
-set TBTops {verilog {} bc {} vhdl {} sc {} cas {} c {}}
-set TBInstNames {verilog {} bc {} vhdl {} sc {} cas {} c {}}
+set TBTops {bc "" c "" sc "" cas "" vhdl "" verilog ""}
+set TBInstNames {bc "" c "" sc "" cas "" vhdl "" verilog ""}
 set XDCFiles {}
 set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_gate" 0}
 set PlatformFiles {{DefaultPlatform {xilinx/artix7/artix7 xilinx/artix7/artix7_fpv6}}}
