@@ -1,4 +1,4 @@
-21:29:16 **** Auto Build of configuration Debug for project uart ****
+10:51:52 **** Auto Build of configuration Debug for project uart ****
 make all 
 Building file: ../src/helloworld.c
 Invoking: MicroBlaze gcc compiler
@@ -13,9 +13,9 @@ Finished building target: uart.elf
 Invoking: MicroBlaze Print Size
 mb-size uart.elf  |tee "uart.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   9688	    272	   3112	  13072	   3310	uart.elf
+   7884	    272	   3116	  11272	   2c08	uart.elf
 Finished building: uart.elf.size
  
 
-21:29:19 Build Finished (took 3s.224ms)
+10:51:52 Build Finished (took 581ms)
 

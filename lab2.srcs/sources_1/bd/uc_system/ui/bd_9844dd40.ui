@@ -10,8 +10,8 @@ preplace inst microblaze_0_axi_periph -pg 1 -lvl 1 -y 60 -defaultsOSRD
 preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -y -80 -defaultsOSRD
 preplace inst axi_gpio_0 -pg 1 -lvl 3 -y 240 -defaultsOSRD
 preplace inst axi_timer_0 -pg 1 -lvl 3 -y 40 -defaultsOSRD
-preplace inst axi_timer_1 -pg 1 -lvl 2 -y 140 -defaultsOSRD
 preplace inst BRAMInterconnect_0 -pg 1 -lvl 3 -y -550 -defaultsOSRD
+preplace inst axi_timer_1 -pg 1 -lvl 2 -y 140 -defaultsOSRD
 preplace inst IC_0 -pg 1 -lvl 4 -y -100 -defaultsOSRD
 preplace inst axi_uartlite_0 -pg 1 -lvl 2 -y -680 -defaultsOSRD
 preplace inst microblaze_0 -pg 1 -lvl 1 -y -420 -defaultsOSRD

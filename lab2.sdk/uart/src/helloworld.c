@@ -188,7 +188,7 @@ void int_handler(void) {
         }
         set_pwm(TIMER_ADDRESS, LOW_TIME + high_time[cycle], high_time[cycle]);
 
-        //Xil_Out32(GPIO_ADDRESS, high_time[cycle] * 10);
+        Xil_Out32(GPIO_ADDRESS, high_time[cycle] * 10);
 }
 
 
@@ -200,6 +200,7 @@ int main()
     int impulse_negedge = 0;
     int next_posedge = 0;
 
+    int first_run = 1;
     // static int c = 0;
     int read_n = 0;
     float ratio = 0;
@@ -223,15 +224,9 @@ int main()
 			break;
 		case 1: {// wait for non-empty
 			u32 icconf = Xil_In32(IC + ICCONF);
-			//xil_printf("%d\n\r", icconf);
             if (icconf & FIFO_NOT_EMPTY) {
                 switch (read_n) {
                     case 0:
-                        //microblaze_disable_interrupts();
-                        //Xil_Out32(TIMER1 + TCONF,	2);
-                        //Xil_Out32(TIMER1 + TVAL,	0);
-                        //Xil_Out32(TIMER1 + TCONF,	1);
-                        //microblaze_enable_interrupts();
                         state = 2;
                         break;
                     case 1:
@@ -258,19 +253,23 @@ int main()
             break;
         case 4: { // signal end
             next_posedge = Xil_In32(IC + ICBUF);
-            state = 1;
-            read_n = 0;
-            const float epsilon = 10e-2;
-            float value = (float) (next_posedge - impulse_posedge) / (impulse_negedge - impulse_posedge);
-            if (LAB3_ABS(value - ratio) > epsilon && value > 0) {
-                ratio = value;
-        		//char buf[128];
-        		//snprintf(buf, 127, "%d %d %d %f\n\r", impulse_posedge, impulse_negedge, next_posedge, ratio);
-        		//print(buf);
-        		Xil_Out32(GPIO_ADDRESS,	(int)(ratio*100));
+            if (!first_run) {
+				state = 1;
+				read_n = 0;
+				const float epsilon = 10e-2;
+				float value = (float) (next_posedge - impulse_posedge) / (impulse_negedge - impulse_posedge);
+				if (LAB3_ABS(value - ratio) > epsilon && value > 0) {
+					ratio = value;
+					//char buf[128];
+					//snprintf(buf, 127, "%d %d %d %f\n\r", impulse_posedge, impulse_negedge, next_posedge, ratio);
+					//print(buf);
+				}
+				if (value < 0) {
+					//print("[Error] Timer overflow probably\n\r");
+				}
             }
-            if (value < 0) {
-            	//print("[Error] Timer overflow probably\n\r");
+            else {
+            	first_run = 0;
             }
         } break;
 		}

@@ -235,6 +235,13 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
+        <spirit:instanceName>axi_timer_1</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="axi_timer" spirit:vendor="xilinx.com" spirit:version="2.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">uc_system_axi_timer_1_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
         <spirit:instanceName>BRAMInterconnect_0</spirit:instanceName>
         <spirit:componentRef spirit:library="module_ref" spirit:name="BRAMInterconnect" spirit:vendor="user.org" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -243,13 +250,6 @@
           <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>axi_timer_1</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="axi_timer" spirit:vendor="xilinx.com" spirit:version="2.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">uc_system_axi_timer_1_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -2528,10 +2528,10 @@
               <spirit:localName>sim_1</spirit:localName>
             </spirit:fileSetRef>
             <spirit:fileSetRef>
-              <spirit:localName>sources_1</spirit:localName>
+              <spirit:localName>sim_1</spirit:localName>
             </spirit:fileSetRef>
             <spirit:fileSetRef>
-              <spirit:localName>sim_1</spirit:localName>
+              <spirit:localName>sources_1</spirit:localName>
             </spirit:fileSetRef>
           </spirit:fileSetRefGroup>
         </spirit:executableImage>

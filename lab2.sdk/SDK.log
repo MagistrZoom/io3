@@ -252,3 +252,40 @@
 20:24:24 INFO  : Successfully done setting SDK workspace  
 20:24:24 INFO  : Processing command line option -hwspec /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf.
 20:24:24 INFO  : Checking for hwspec changes in the project uc_system_wrapper_hw_platform_1.
+10:37:51 INFO  : Registering command handlers for SDK TCF services
+10:37:52 INFO  : Launching XSCT server: xsct -n -interactive /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/temp_xsdb_launch_script.tcl
+10:37:58 INFO  : XSCT server has started successfully.
+10:38:00 INFO  : Successfully done setting XSCT server connection channel  
+10:38:00 INFO  : Successfully done setting SDK workspace  
+10:38:00 INFO  : Processing command line option -hwspec /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf.
+10:38:00 INFO  : Checking for hwspec changes in the project uc_system_wrapper_hw_platform_1.
+10:38:00 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1515915324000,  Project:1515864196000
+10:38:00 INFO  : The hardware specification for project 'uc_system_wrapper_hw_platform_1' is different from /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf.
+10:38:00 INFO  : Copied contents of /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf into /uc_system_wrapper_hw_platform_1/system.hdf.
+10:38:01 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+10:38:05 INFO  : 
+10:38:06 INFO  : Updating hardware inferred compiler options for uart.
+10:38:07 INFO  : Clearing existing target manager status.
+10:42:53 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+10:45:51 INFO  : Registering command handlers for SDK TCF services
+10:45:52 INFO  : Launching XSCT server: xsct -n -interactive /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/temp_xsdb_launch_script.tcl
+10:45:55 INFO  : XSCT server has started successfully.
+10:45:57 INFO  : Successfully done setting XSCT server connection channel  
+10:45:57 INFO  : Successfully done setting SDK workspace  
+10:45:57 INFO  : Processing command line option -hwspec /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf.
+10:45:58 INFO  : Checking for hwspec changes in the project uc_system_wrapper_hw_platform_1.
+10:45:58 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1515915916000,  Project:1515915324000
+10:45:58 INFO  : The hardware specification for project 'uc_system_wrapper_hw_platform_1' is different from /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf.
+10:45:58 INFO  : Copied contents of /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf into /uc_system_wrapper_hw_platform_1/system.hdf.
+10:46:07 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+10:46:10 INFO  : 
+10:46:11 INFO  : Updating hardware inferred compiler options for uart.
+10:46:11 INFO  : Clearing existing target manager status.
+10:47:15 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+10:47:43 INFO  : Registering command handlers for SDK TCF services
+10:47:43 INFO  : Launching XSCT server: xsct -n -interactive /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/temp_xsdb_launch_script.tcl
+10:47:45 INFO  : XSCT server has started successfully.
+10:47:46 INFO  : Successfully done setting XSCT server connection channel  
+10:47:46 INFO  : Successfully done setting SDK workspace  
+10:47:46 INFO  : Processing command line option -hwspec /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf.
+10:47:46 INFO  : Checking for hwspec changes in the project uc_system_wrapper_hw_platform_1.
