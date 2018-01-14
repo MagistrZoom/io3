@@ -238,6 +238,8 @@ int main()
                 }
             }
             if (icconf & FIFO_OV) {
+            	Xil_Out32(GPIO_ADDRESS, ~0);
+            	while (1);
                 //abort();
             }
 		} break;
