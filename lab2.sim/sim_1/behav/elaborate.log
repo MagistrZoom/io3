@@ -3,12 +3,6 @@ Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
 Running: /home/izoomko/Soft/xilinx/Vivado/2017.2/bin/unwrapped/lnx64.o/xelab -wto f8e3ffd721a74a89bb5b27c51c482709 --debug typical --relax --mt 8 -L xil_defaultlib -L microblaze_v10_0_3 -L axi_lite_ipif_v3_0_4 -L lib_cdc_v1_0_2 -L lib_pkg_v1_0_2 -L axi_timer_v2_0_15 -L interrupt_control_v3_1_4 -L axi_gpio_v2_0_15 -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_13 -L fifo_generator_v13_1_4 -L axi_data_fifo_v2_1_12 -L axi_crossbar_v2_1_14 -L lmb_v10_v3_0_9 -L lmb_bram_if_cntlr_v4_0_12 -L blk_mem_gen_v8_3_6 -L axi_bram_ctrl_v4_0_11 -L lib_srl_fifo_v1_0_2 -L axi_uartlite_v2_0_17 -L proc_sys_reset_v5_0_11 -L axi_protocol_converter_v2_1_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot sim_tb_behav xil_defaultlib.sim_tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port s1_rddata_bi [/home/izoomko/wrk/4grade/io/lab3/lab2.ip_user_files/bd/uc_system/hdl/uc_system.v:1392]
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port s2_rddata_bi [/home/izoomko/wrk/4grade/io/lab3/lab2.ip_user_files/bd/uc_system/hdl/uc_system.v:1397]
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port timer1_val_bi [/home/izoomko/wrk/4grade/io/lab3/lab2.ip_user_files/bd/uc_system/ip/uc_system_IC_0_0/sim/uc_system_IC_0_0.v:89]
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port timer2_val_bi [/home/izoomko/wrk/4grade/io/lab3/lab2.ip_user_files/bd/uc_system/ip/uc_system_IC_0_0/sim/uc_system_IC_0_0.v:90]
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port data_bo [/home/izoomko/wrk/4grade/io/lab3/lab2.ip_user_files/bd/uc_system/ip/uc_system_Timer_0_0/sim/uc_system_Timer_0_0.v:84]
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port data_bo [/home/izoomko/wrk/4grade/io/lab3/lab2.ip_user_files/bd/uc_system/ip/uc_system_Timer_1_0/sim/uc_system_Timer_1_0.v:84]
 WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 15 for port m_axi_arprot [/home/izoomko/wrk/4grade/io/lab3/lab2.ip_user_files/bd/uc_system/hdl/uc_system.v:2690]
 WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 15 for port m_axi_awprot [/home/izoomko/wrk/4grade/io/lab3/lab2.ip_user_files/bd/uc_system/hdl/uc_system.v:2694]
 WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.2/nightly/2017_06_15_1909853/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
@@ -44,8 +38,8 @@ Compiling module xil_defaultlib.IC
 Compiling module xil_defaultlib.uc_system_IC_0_0
 Compiling module xil_defaultlib.Timer_on_clock
 Compiling module xil_defaultlib.Timer
-Compiling module xil_defaultlib.uc_system_Timer_0_0
-Compiling module xil_defaultlib.uc_system_Timer_1_0
+Compiling module xil_defaultlib.uc_system_Timer_0_1
+Compiling module xil_defaultlib.uc_system_Timer_1_1
 Compiling architecture implementation of entity axi_bram_ctrl_v4_0_11.sng_port_arb [\sng_port_arb(c_s_axi_addr_width...]
 Compiling architecture implementation of entity axi_bram_ctrl_v4_0_11.wrap_brst [\wrap_brst(c_axi_addr_width=13,c...]
 Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]

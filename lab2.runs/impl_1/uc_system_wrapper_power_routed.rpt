@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-| Date             : Sun Jan 14 13:29:14 2018
+| Date             : Sun Jan 14 17:13:36 2018
 | Host             : sirius running 64-bit Debian GNU/Linux oldstable-updates (sid)
 | Command          : report_power -file uc_system_wrapper_power_routed.rpt -pb uc_system_wrapper_power_summary_routed.pb -rpx uc_system_wrapper_power_routed.rpx
 | Design           : uc_system_wrapper
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------+
-| Total On-Chip Power (W)  | 0.303  |
+| Total On-Chip Power (W)  | 0.304  |
 | Dynamic (W)              | 0.200  |
 | Device Static (W)        | 0.104  |
 | Effective TJA (C/W)      | 4.6    |
@@ -50,21 +50,21 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.015 |        5 |       --- |             --- |
-| Slice Logic              |     0.006 |     6527 |       --- |             --- |
-|   LUT as Logic           |     0.005 |     2793 |     63400 |            4.41 |
-|   LUT as Distributed RAM |    <0.001 |       80 |     19000 |            0.42 |
+| Slice Logic              |     0.006 |     6560 |       --- |             --- |
+|   LUT as Logic           |     0.005 |     2807 |     63400 |            4.43 |
+|   LUT as Distributed RAM |    <0.001 |       88 |     19000 |            0.46 |
 |   CARRY4                 |    <0.001 |      177 |     15850 |            1.12 |
-|   Register               |    <0.001 |     1996 |    126800 |            1.57 |
+|   Register               |    <0.001 |     2001 |    126800 |            1.58 |
 |   F7/F8 Muxes            |    <0.001 |      176 |     63400 |            0.28 |
 |   LUT as Shift Register  |    <0.001 |       50 |     19000 |            0.26 |
 |   BUFG                   |    <0.001 |        2 |        32 |            6.25 |
 |   Others                 |    <0.001 |      656 |       --- |             --- |
-| Signals                  |     0.017 |     4423 |       --- |             --- |
+| Signals                  |     0.017 |     4442 |       --- |             --- |
 | Block RAM                |     0.048 |      128 |       135 |           94.81 |
 | MMCM                     |     0.106 |        1 |         6 |           16.67 |
 | I/O                      |     0.007 |       21 |       210 |           10.00 |
 | Static Power             |     0.104 |          |           |                 |
-| Total                    |     0.303 |          |           |                 |
+| Total                    |     0.304 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.101 |       0.083 |      0.018 |
+| Vccint    |       1.000 |     0.102 |       0.083 |      0.018 |
 | Vccaux    |       1.800 |     0.077 |       0.059 |      0.018 |
 | Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -153,6 +153,8 @@ Table of Contents
 |       inst                                                                         |    <0.001 |
 |         mem_reg_0_31_0_5                                                           |    <0.001 |
 |         mem_reg_0_31_12_17                                                         |    <0.001 |
+|         mem_reg_0_31_18_23                                                         |    <0.001 |
+|         mem_reg_0_31_24_29                                                         |    <0.001 |
 |         mem_reg_0_31_30_31                                                         |    <0.001 |
 |         mem_reg_0_31_6_11                                                          |    <0.001 |
 |         u_detector                                                                 |    <0.001 |
@@ -245,7 +247,7 @@ Table of Contents
 |       U0                                                                           |     0.022 |
 |         MicroBlaze_Core_I                                                          |     0.022 |
 |           Performance.Core                                                         |     0.022 |
-|             Data_Flow_I                                                            |     0.007 |
+|             Data_Flow_I                                                            |     0.008 |
 |               ALU_I                                                                |     0.001 |
 |                 Using_FPGA.ALL_Bits[0].ALU_Bit_I1                                  |    <0.001 |
 |                   Last_Bit.I_ALU_LUT_2                                             |    <0.001 |
@@ -872,7 +874,7 @@ Table of Contents
 |                 MUXCY_I                                                            |    <0.001 |
 |               if_pc_incr_carry_and_3                                               |     0.000 |
 |                 MUXCY_I                                                            |     0.000 |
-|               jump_logic_I1                                                        |     0.008 |
+|               jump_logic_I1                                                        |     0.007 |
 |                 MUXCY_JUMP_CARRY                                                   |    <0.001 |
 |                 MUXCY_JUMP_CARRY2                                                  |    <0.001 |
 |                 MUXCY_JUMP_CARRY3                                                  |    <0.001 |

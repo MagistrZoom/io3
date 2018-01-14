@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-//Date        : Sun Jan 14 13:10:19 2018
+//Date        : Sun Jan 14 16:55:45 2018
 //Host        : sirius running 64-bit Debian GNU/Linux oldstable-updates (sid)
 //Command     : generate_target uc_system.bd
 //Design      : uc_system
@@ -1415,7 +1415,7 @@ module uc_system
         .timer2_val_bi(Timer_1_data_bo),
         .we_bi(BRAMInterconnect_0_s3_we_bo),
         .wrdata_bi(BRAMInterconnect_0_s3_wrdata_bo));
-  uc_system_Timer_0_0 Timer_0
+  uc_system_Timer_0_1 Timer_0
        (.addr_bi(BRAMInterconnect_0_s1_addr_bo),
         .ap_rst(1'b0),
         .clk_i(axi_bram_ctrl_0_bram_clk_a),
@@ -1424,7 +1424,7 @@ module uc_system
         .en_i(BRAMInterconnect_0_s1_en_o),
         .rst_i(proc_sys_reset_0_peripheral_reset),
         .we_bi(BRAMInterconnect_0_s1_we_bo));
-  uc_system_Timer_1_0 Timer_1
+  uc_system_Timer_1_1 Timer_1
        (.addr_bi(BRAMInterconnect_0_s2_addr_bo),
         .ap_rst(1'b0),
         .clk_i(axi_bram_ctrl_0_bram_clk_a),

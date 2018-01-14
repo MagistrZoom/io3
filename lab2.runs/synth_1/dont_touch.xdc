@@ -48,20 +48,20 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==uc_system_axi_u
 # IP: bd/uc_system/ip/uc_system_BRAMInterconnect_0_0/uc_system_BRAMInterconnect_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==uc_system_BRAMInterconnect_0_0 || ORIG_REF_NAME==uc_system_BRAMInterconnect_0_0}]
 
-# IP: bd/uc_system/ip/uc_system_Timer_0_0/uc_system_Timer_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==uc_system_Timer_0_0 || ORIG_REF_NAME==uc_system_Timer_0_0}]
-
 # IP: bd/uc_system/ip/uc_system_proc_sys_reset_0_0/uc_system_proc_sys_reset_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==uc_system_proc_sys_reset_0_0 || ORIG_REF_NAME==uc_system_proc_sys_reset_0_0}]
-
-# IP: bd/uc_system/ip/uc_system_Timer_1_0/uc_system_Timer_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==uc_system_Timer_1_0 || ORIG_REF_NAME==uc_system_Timer_1_0}]
 
 # IP: bd/uc_system/ip/uc_system_IC_0_0/uc_system_IC_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==uc_system_IC_0_0 || ORIG_REF_NAME==uc_system_IC_0_0}]
 
 # IP: bd/uc_system/ip/uc_system_axi_timer_1_0/uc_system_axi_timer_1_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==uc_system_axi_timer_1_0 || ORIG_REF_NAME==uc_system_axi_timer_1_0}]
+
+# IP: bd/uc_system/ip/uc_system_Timer_0_1/uc_system_Timer_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==uc_system_Timer_0_1 || ORIG_REF_NAME==uc_system_Timer_0_1}]
+
+# IP: bd/uc_system/ip/uc_system_Timer_1_1/uc_system_Timer_1_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==uc_system_Timer_1_1 || ORIG_REF_NAME==uc_system_Timer_1_1}]
 
 # IP: bd/uc_system/ip/uc_system_auto_pc_0/uc_system_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==uc_system_auto_pc_0 || ORIG_REF_NAME==uc_system_auto_pc_0}]

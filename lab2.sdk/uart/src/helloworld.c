@@ -209,7 +209,7 @@ int main()
 		Xil_Out32(GPIO_ADDRESS, state);
 		switch (state) {
 		case 0: // init
-			set_pwm(TIMER_ADDRESS, 20000, 5000);
+			set_pwm(TIMER_ADDRESS, 10000, 2500);
 			Xil_Out32(TIMER1 + TCONF,	2);
 			Xil_Out32(TIMER1 + TMR,	~0);
 			Xil_Out32(TIMER1 + TCONF,	1);
@@ -242,15 +242,9 @@ int main()
             }
 		} break;
         case 2: // read impulse posedge
-        	if (first_run) {
-        		next_posedge = Xil_In32(IC + ICBUF);
-        	}
-        	else {
-                impulse_posedge = next_posedge;
-                first_run = 0;
-                state = 1;
-                read_n = 1;
-        	}
+			impulse_posedge = next_posedge;
+			state = 1;
+			read_n = 1;
             break;
         case 3: // imp negedge
             impulse_negedge = Xil_In32(IC + ICBUF);
@@ -262,15 +256,20 @@ int main()
 			state = 1;
 			read_n = 0;
 			const float epsilon = 10e-2;
-			float value = (float) (next_posedge - impulse_posedge) / (impulse_negedge - impulse_posedge);
-			if (LAB3_ABS(value - ratio) > epsilon && value > 0) {
-				ratio = value;
-				char buf[128];
-				snprintf(buf, 127, "%d %d %d %f\n\r", impulse_posedge, impulse_negedge, next_posedge, ratio);
-				print(buf);
+			if (!first_run) {
+				float value = (float) (next_posedge - impulse_posedge) / (impulse_negedge - impulse_posedge);
+				if (LAB3_ABS(value - ratio) > epsilon && value > 0) {
+					ratio = value;
+					char buf[128];
+					snprintf(buf, 127, "%d %d %d %f\n\r", impulse_posedge, impulse_negedge, next_posedge, ratio);
+					print(buf);
+				}
+				if (value < 0) {
+					print("[Error] Timer overflow probably\n\r");
+				}
 			}
-			if (value < 0) {
-				//print("[Error] Timer overflow probably\n\r");
+			else {
+				first_run = 0;
 			}
         } break;
 		}

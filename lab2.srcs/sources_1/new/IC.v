@@ -36,11 +36,10 @@ module IC(
     
     reg [12:0] prev_addr;
     reg [31:0] icconf;
-    reg [31:0] icconf_out;
     wire [1:0] ictmr;
     assign ictmr = icconf[6:5];
-    wire [31:0] timer1_enabled = ictmr[0:0] ? 'hFFFF : 'h0000;
-    wire [31:0] timer2_enabled = ictmr[1:1] ? 'hFFFF : 'h0000;
+    wire [31:0] timer1_enabled = ictmr[0:0] ? 'hFFFFFFFF : 'h00000000;
+    wire [31:0] timer2_enabled = ictmr[1:1] ? 'hFFFFFFFF : 'h00000000;
     wire [63:0] timer = {timer2_enabled & timer2_val_bi , timer1_enabled & timer1_val_bi};
     reg [31:0] icconf_next;
     
@@ -56,6 +55,7 @@ module IC(
     reg [4:0] wr_ptr;
     reg [4:0] wr_ptr_next;
     reg [4:0] rd_ptr;
+    reg [4:0] rd_ptr_prev;
     reg [4:0] rd_ptr_next;
     
     reg read;
@@ -69,7 +69,7 @@ module IC(
     always @(* /* rs_state or prev_addr or icconf */) begin
         read = 0;
         if (rst_i) begin
-            rddata_bo = 0;
+            rddata_bo = 0;      
         end
         else begin
             if (rs_state) begin
@@ -77,7 +77,7 @@ module IC(
                     'h0:
                         rddata_bo = icconf;
                     'h4: begin
-                        rddata_bo = mem[rd_ptr - 1];
+                        rddata_bo = mem[rd_ptr_prev];
                         read = 1;
                     end
                 endcase
@@ -132,6 +132,7 @@ module IC(
             prev_addr   <= 0;
             r_state     <= 0;
             rd_ptr_next <= 0;
+            rd_ptr_prev <= 0;
         end
         else begin
             r_state <= 0;
@@ -144,6 +145,7 @@ module IC(
                 end
                 'h4: begin
                     if (icbne) begin
+                        rd_ptr_prev <= rd_ptr;
                         rd_ptr_next <= rd_ptr + 1;
                     end
                 end

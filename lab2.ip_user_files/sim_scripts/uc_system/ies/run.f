@@ -103,7 +103,6 @@
 -endlib
 -makelib ies/xil_defaultlib \
   "../../../bd/uc_system/ip/uc_system_BRAMInterconnect_0_0/sim/uc_system_BRAMInterconnect_0_0.v" \
-  "../../../bd/uc_system/ip/uc_system_Timer_0_0/sim/uc_system_Timer_0_0.v" \
 -endlib
 -makelib ies/proc_sys_reset_v5_0_11 \
   "../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
@@ -112,12 +111,15 @@
   "../../../bd/uc_system/ip/uc_system_proc_sys_reset_0_0/sim/uc_system_proc_sys_reset_0_0.vhd" \
 -endlib
 -makelib ies/xil_defaultlib \
-  "../../../bd/uc_system/ip/uc_system_Timer_1_0/sim/uc_system_Timer_1_0.v" \
   "../../../bd/uc_system/ip/uc_system_IC_0_0/sim/uc_system_IC_0_0.v" \
   "../../../bd/uc_system/hdl/uc_system.v" \
 -endlib
 -makelib ies/xil_defaultlib \
   "../../../bd/uc_system/ip/uc_system_axi_timer_1_0/sim/uc_system_axi_timer_1_0.vhd" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/uc_system/ip/uc_system_Timer_0_1/sim/uc_system_Timer_0_1.v" \
+  "../../../bd/uc_system/ip/uc_system_Timer_1_1/sim/uc_system_Timer_1_1.v" \
 -endlib
 -makelib ies/axi_protocol_converter_v2_1_13 \
   "../../../../lab2.srcs/sources_1/bd/uc_system/ipshared/f0ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
