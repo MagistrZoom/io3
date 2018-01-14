@@ -669,3 +669,81 @@ report_power: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
 INFO: [Common 17-206] Exiting Vivado at Sun Jan 14 17:13:45 2018...
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Sun Jan 14 17:25:31 2018
+# Process ID: 13813
+# Current directory: /home/izoomko/wrk/4grade/io/lab3/lab2.runs/impl_1
+# Command line: vivado -log uc_system_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source uc_system_wrapper.tcl -notrace
+# Log file: /home/izoomko/wrk/4grade/io/lab3/lab2.runs/impl_1/uc_system_wrapper.vdi
+# Journal file: /home/izoomko/wrk/4grade/io/lab3/lab2.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source uc_system_wrapper.tcl -notrace
+Command: open_checkpoint uc_system_wrapper_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.22 . Memory (MB): peak = 1083.727 ; gain = 0.000 ; free physical = 721 ; free virtual = 15081
+INFO: [Netlist 29-17] Analyzing 394 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.runs/impl_1/.Xil/Vivado-13813-sirius/dcp3/uc_system_wrapper_board.xdc]
+Finished Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.runs/impl_1/.Xil/Vivado-13813-sirius/dcp3/uc_system_wrapper_board.xdc]
+Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.runs/impl_1/.Xil/Vivado-13813-sirius/dcp3/uc_system_wrapper_early.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 1879.543 ; gain = 517.445 ; free physical = 125 ; free virtual = 14376
+Finished Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.runs/impl_1/.Xil/Vivado-13813-sirius/dcp3/uc_system_wrapper_early.xdc]
+Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.runs/impl_1/.Xil/Vivado-13813-sirius/dcp3/uc_system_wrapper.xdc]
+Finished Parsing XDC File [/home/izoomko/wrk/4grade/io/lab3/lab2.runs/impl_1/.Xil/Vivado-13813-sirius/dcp3/uc_system_wrapper.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.99 ; elapsed = 00:00:01 . Memory (MB): peak = 1888.543 ; gain = 9.000 ; free physical = 129 ; free virtual = 14369
+Restored from archive | CPU: 1.010000 secs | Memory: 8.173302 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.99 ; elapsed = 00:00:01 . Memory (MB): peak = 1888.543 ; gain = 9.000 ; free physical = 129 ; free virtual = 14369
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 85 instances were transformed.
+  LUT6_2 => LUT6_2 (LUT6, LUT5): 63 instances
+  RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 22 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2017.2 (64-bit) build 1909853
+open_checkpoint: Time (s): cpu = 00:00:34 ; elapsed = 00:00:48 . Memory (MB): peak = 1888.543 ; gain = 804.816 ; free physical = 141 ; free virtual = 14372
+Command: write_bitstream -force uc_system_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+Running DRC as a precondition to command write_bitstream
+Command: report_drc (run_mandatory_drcs) for: bitstream_checks
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC CFGBVS-1] Missing CFGBVS and CONFIG_VOLTAGE Design Properties: Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+WARNING: [DRC PDRC-153] Gated clock check: Net uc_system_i/IC_0/inst/u_detector/E[0] is a gated clock net sourced by a combinational pin uc_system_i/IC_0/inst/u_detector/next_counter_reg[5]_i_2/O, cell uc_system_i/IC_0/inst/u_detector/next_counter_reg[5]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 2 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Project 1-821] Please set project.enableDesignId to be 'true'.
+INFO: [Designutils 20-2272] Running write_bitstream with 4 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./uc_system_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+17 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:01:22 ; elapsed = 00:00:58 . Memory (MB): peak = 2375.359 ; gain = 486.816 ; free physical = 341 ; free virtual = 14285
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 14 17:27:46 2018...

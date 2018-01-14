@@ -312,3 +312,19 @@
 16:08:43 INFO  : Successfully done setting SDK workspace  
 16:08:43 INFO  : Processing command line option -hwspec /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf.
 16:08:43 INFO  : Checking for hwspec changes in the project uc_system_wrapper_hw_platform_1.
+18:01:24 INFO  : Registering command handlers for SDK TCF services
+18:01:25 INFO  : Launching XSCT server: xsct -n -interactive /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/temp_xsdb_launch_script.tcl
+18:01:27 INFO  : XSCT server has started successfully.
+18:01:32 INFO  : Successfully done setting XSCT server connection channel  
+18:01:32 INFO  : Successfully done setting SDK workspace  
+18:01:32 INFO  : Processing command line option -hwspec /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf.
+18:01:33 INFO  : Checking for hwspec changes in the project uc_system_wrapper_hw_platform_1.
+18:01:33 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1515941961000,  Project:1515935249000
+18:01:33 INFO  : The hardware specification for project 'uc_system_wrapper_hw_platform_1' is different from /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf.
+18:01:33 INFO  : Copied contents of /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf into /uc_system_wrapper_hw_platform_1/system.hdf.
+18:01:33 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+18:01:36 INFO  : 
+18:01:37 INFO  : Updating hardware inferred compiler options for uart.
+18:01:37 INFO  : Clearing existing target manager status.
+18:01:46 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+18:01:49 WARN  : Linker script will not be updated automatically. Users need to update it manually.

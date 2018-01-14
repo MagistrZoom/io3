@@ -242,6 +242,9 @@ int main()
             }
 		} break;
         case 2: // read impulse posedge
+        	if (first_run) {
+        		Xil_In32(IC + ICBUF);
+        	}
 			impulse_posedge = next_posedge;
 			state = 1;
 			read_n = 1;

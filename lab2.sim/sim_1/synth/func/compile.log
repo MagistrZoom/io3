@@ -100,8 +100,8 @@ INFO: [VRFC 10-311] analyzing module uartlite_tx
 INFO: [VRFC 10-311] analyzing module uc_system
 INFO: [VRFC 10-311] analyzing module uc_system_BRAMInterconnect_0_0
 INFO: [VRFC 10-311] analyzing module uc_system_IC_0_0
-INFO: [VRFC 10-311] analyzing module uc_system_Timer_0_0
-INFO: [VRFC 10-311] analyzing module uc_system_Timer_1_0
+INFO: [VRFC 10-311] analyzing module uc_system_Timer_0_1
+INFO: [VRFC 10-311] analyzing module uc_system_Timer_1_1
 INFO: [VRFC 10-311] analyzing module uc_system_auto_pc_0
 INFO: [VRFC 10-311] analyzing module uc_system_axi_bram_ctrl_0_0
 INFO: [VRFC 10-311] analyzing module uc_system_axi_gpio_0_0
