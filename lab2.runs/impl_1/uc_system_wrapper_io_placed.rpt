@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-| Date                      : Sun Jan 14 17:09:35 2018
+| Date                      : Sun Jan 14 20:57:15 2018
 | Host                      : sirius running 64-bit Debian GNU/Linux oldstable-updates (sid)
 | Command                   : report_io -file uc_system_wrapper_io_placed.rpt
 | Design                    : uc_system_wrapper

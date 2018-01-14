@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Sun Jan 14 16:55:53 2018
-# Process ID: 8515
+# Start of session at: Sun Jan 14 20:43:48 2018
+# Process ID: 26435
 # Current directory: /home/izoomko/wrk/4grade/io/lab3/lab2.runs/synth_1
 # Command line: vivado -log uc_system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source uc_system_wrapper.tcl
 # Log file: /home/izoomko/wrk/4grade/io/lab3/lab2.runs/synth_1/uc_system_wrapper.vds
@@ -73,15 +73,15 @@ WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_uartlite_0_0' generated file not fo
 WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_uartlite_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0_stub.vhdl'. Please regenerate to continue.
 WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_uartlite_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0_sim_netlist.v'. Please regenerate to continue.
 WARNING: [IP_Flow 19-3664] IP 'uc_system_axi_uartlite_0_0' generated file not found '/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0_sim_netlist.vhdl'. Please regenerate to continue.
-add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1087.758 ; gain = 2.020 ; free physical = 783 ; free virtual = 15937
+add_files: Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1087.758 ; gain = 2.020 ; free physical = 916 ; free virtual = 15076
 Command: synth_design -top uc_system_wrapper -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8608 
+INFO: Helper process launched with PID 26550 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1183.328 ; gain = 81.988 ; free physical = 647 ; free virtual = 15836
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1183.328 ; gain = 81.988 ; free physical = 822 ; free virtual = 14981
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'uc_system_wrapper' [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/hdl/uc_system_wrapper.v:12]
 INFO: [Synth 8-638] synthesizing module 'uc_system' [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/hdl/uc_system.v:1191]
@@ -1194,7 +1194,7 @@ INFO: [Synth 8-638] synthesizing module 'uc_system_axi_uartlite_0_0' [/home/izoo
 	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_BAUDRATE bound to: 115200 - type: integer 
 	Parameter C_DATA_BITS bound to: 8 - type: integer 
 	Parameter C_USE_PARITY bound to: 0 - type: integer 
 	Parameter C_ODD_PARITY bound to: 0 - type: integer 
@@ -1204,7 +1204,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_uartlite' [/home/izoomko/wrk/4grade
 	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_BAUDRATE bound to: 115200 - type: integer 
 	Parameter C_DATA_BITS bound to: 8 - type: integer 
 	Parameter C_USE_PARITY bound to: 0 - type: integer 
 	Parameter C_ODD_PARITY bound to: 0 - type: integer 
@@ -1213,12 +1213,12 @@ INFO: [Synth 8-5534] Detected attribute (* max_fanout = "10000" *) [/home/izoomk
 INFO: [Synth 8-638] synthesizing module 'uartlite_core' [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1615]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
-	Parameter C_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_BAUDRATE bound to: 115200 - type: integer 
 	Parameter C_DATA_BITS bound to: 8 - type: integer 
 	Parameter C_USE_PARITY bound to: 0 - type: integer 
 	Parameter C_ODD_PARITY bound to: 0 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'baudrate' [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1418]
-	Parameter C_RATIO bound to: 651 - type: integer 
+	Parameter C_RATIO bound to: 54 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'baudrate' (42#1) [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1418]
 INFO: [Synth 8-3919] null assignment ignored [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1881]
 INFO: [Synth 8-638] synthesizing module 'uartlite_rx' [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:909]
@@ -2219,7 +2219,7 @@ WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected p
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[184]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:04:17 ; elapsed = 00:04:27 . Memory (MB): peak = 1673.336 ; gain = 571.996 ; free physical = 247 ; free virtual = 15133
+Finished RTL Elaboration : Time (s): cpu = 00:04:08 ; elapsed = 00:04:19 . Memory (MB): peak = 1672.336 ; gain = 570.996 ; free physical = 701 ; free virtual = 14673
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2229,7 +2229,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:04:20 ; elapsed = 00:04:32 . Memory (MB): peak = 1673.336 ; gain = 571.996 ; free physical = 293 ; free virtual = 15179
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:04:12 ; elapsed = 00:04:23 . Memory (MB): peak = 1672.336 ; gain = 570.996 ; free physical = 701 ; free virtual = 14700
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 976 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -2388,16 +2388,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 16 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.19 . Memory (MB): peak = 1845.961 ; gain = 0.000 ; free physical = 159 ; free virtual = 14875
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1845.961 ; gain = 0.000 ; free physical = 437 ; free virtual = 14477
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:05:06 ; elapsed = 00:05:35 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 306 ; free virtual = 15007
+Finished Constraint Validation : Time (s): cpu = 00:05:04 ; elapsed = 00:05:25 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 589 ; free virtual = 14630
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:05:06 ; elapsed = 00:05:35 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 306 ; free virtual = 15007
+Finished Loading Part and Timing Information : Time (s): cpu = 00:05:04 ; elapsed = 00:05:25 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 591 ; free virtual = 14631
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -2433,7 +2433,7 @@ Applied set_property DONT_TOUCH = true for uc_system_i/microblaze_0_local_memory
 Applied set_property DONT_TOUCH = true for uc_system_i/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for uc_system_i/proc_sys_reset_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:05:06 ; elapsed = 00:05:36 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 307 ; free virtual = 15009
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:05:04 ; elapsed = 00:05:25 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 592 ; free virtual = 14633
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "s1_en_o" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "s2_en_o" won't be mapped to RAM because it is too sparse
@@ -2539,7 +2539,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'write_reg' [/home/izoomko/w
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'rlast_sm_cs_reg' using encoding 'sequential' in module 'rd_chnl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:05:21 ; elapsed = 00:05:57 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 349 ; free virtual = 15074
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:05:20 ; elapsed = 00:05:44 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 693 ; free virtual = 14736
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2555,9 +2555,9 @@ Detailed RTL Component Info :
 	   2 Input     33 Bit       Adders := 4     
 	   2 Input     32 Bit       Adders := 4     
 	   2 Input     13 Bit       Adders := 2     
-	   2 Input     10 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 1     
 	   2 Input      8 Bit       Adders := 2     
-	   2 Input      6 Bit       Adders := 5     
+	   2 Input      6 Bit       Adders := 6     
 	   2 Input      5 Bit       Adders := 3     
 	   3 Input      5 Bit       Adders := 2     
 	   2 Input      4 Bit       Adders := 1     
@@ -2578,10 +2578,10 @@ Detailed RTL Component Info :
 	               15 Bit    Registers := 1     
 	               13 Bit    Registers := 2     
 	               11 Bit    Registers := 1     
-	               10 Bit    Registers := 5     
+	               10 Bit    Registers := 4     
 	                9 Bit    Registers := 1     
 	                8 Bit    Registers := 2     
-	                6 Bit    Registers := 6     
+	                6 Bit    Registers := 7     
 	                5 Bit    Registers := 9     
 	                4 Bit    Registers := 10    
 	                3 Bit    Registers := 14    
@@ -2610,7 +2610,7 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit        Muxes := 10    
 	   4 Input      8 Bit        Muxes := 2     
 	   5 Input      6 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 3     
+	   2 Input      6 Bit        Muxes := 4     
 	   2 Input      5 Bit        Muxes := 6     
 	   5 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 5     
@@ -2905,11 +2905,12 @@ Detailed RTL Component Info :
 Module baudrate 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     10 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
 +---Registers : 
-	               10 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 Module cntr_incr_decr_addn_f 
 Detailed RTL Component Info : 
@@ -3249,7 +3250,6 @@ INFO: [Synth 8-5545] ROM "inst/StgValue_16_Timer_on_clock_fu_66/tmp_9_fu_202_p2"
 INFO: [Synth 8-5545] ROM "inst/StgValue_16_Timer_on_clock_fu_66/tmp_9_fu_202_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/axi_rd_burst_two" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-4471] merging register 'bus2ip_reset_reg' into 'AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst_reg' [/home/izoomko/wrk/4grade/io/lab3/lab2.srcs/sources_1/bd/uc_system/ipshared/cb07/hdl/axi_gpio_v2_0_vh_rfs.vhd:1583]
-INFO: [Synth 8-5546] ROM "UARTLITE_CORE_I/BAUD_RATE_I/EN_16x_Baud" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/reset_mode_dbg_halt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/reset_mode_sleep" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Control_Reg_En" won't be mapped to RAM because it is too sparse
@@ -3561,7 +3561,7 @@ INFO: [Synth 8-3886] merging instance 'uc_system_i/microblaze_0/U0/LOCKSTEP_Out_
 INFO: [Synth 8-3886] merging instance 'uc_system_i/microblaze_0/U0/LOCKSTEP_Out_reg[640]' (FDR) to 'uc_system_i/microblaze_0/U0/LOCKSTEP_Out_reg[474]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:06:02 ; elapsed = 00:06:42 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 202 ; free virtual = 14934
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:55 ; elapsed = 00:06:23 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 535 ; free virtual = 14601
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -3591,13 +3591,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'uc_system_i/microblaze_0/
 INFO: [Synth 8-5578] Moved timing constraint from pin 'uc_system_i/microblaze_0/U0/Interrupt' to pin 'uc_system_i/axi_timer_1/U0/TC_CORE_I/TIMER_CONTROL_I/Interrupt_reg/Q'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:06:16 ; elapsed = 00:07:01 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 213 ; free virtual = 14923
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:06:10 ; elapsed = 00:06:40 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 491 ; free virtual = 14505
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:06:23 ; elapsed = 00:07:08 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 191 ; free virtual = 14888
+Finished Timing Optimization : Time (s): cpu = 00:06:16 ; elapsed = 00:06:46 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 436 ; free virtual = 14496
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3609,7 +3609,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:06:33 ; elapsed = 00:07:18 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 145 ; free virtual = 14802
+Finished Technology Mapping : Time (s): cpu = 00:06:26 ; elapsed = 00:06:57 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 532 ; free virtual = 14540
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3633,7 +3633,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:06:35 ; elapsed = 00:07:21 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 143 ; free virtual = 14799
+Finished IO Insertion : Time (s): cpu = 00:06:28 ; elapsed = 00:06:59 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 539 ; free virtual = 14541
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3646,7 +3646,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:06:35 ; elapsed = 00:07:21 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 144 ; free virtual = 14799
+Finished Renaming Generated Instances : Time (s): cpu = 00:06:28 ; elapsed = 00:06:59 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 539 ; free virtual = 14541
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3658,25 +3658,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:38 ; elapsed = 00:07:25 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 163 ; free virtual = 14725
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:30 ; elapsed = 00:07:02 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 503 ; free virtual = 14504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:06:38 ; elapsed = 00:07:25 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 156 ; free virtual = 14727
+Finished Renaming Generated Ports : Time (s): cpu = 00:06:31 ; elapsed = 00:07:02 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 474 ; free virtual = 14495
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:06:39 ; elapsed = 00:07:26 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 143 ; free virtual = 14710
+Finished Handling Custom Attributes : Time (s): cpu = 00:06:31 ; elapsed = 00:07:02 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 610 ; free virtual = 14606
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:06:39 ; elapsed = 00:07:26 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 139 ; free virtual = 14707
+Finished Renaming Generated Nets : Time (s): cpu = 00:06:31 ; elapsed = 00:07:02 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 605 ; free virtual = 14604
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -3722,12 +3722,12 @@ Report Cell Usage:
 |1     |AND2B1L    |     1|
 |2     |BUFG       |     4|
 |3     |CARRY4     |    78|
-|4     |LUT1       |   191|
-|5     |LUT2       |   498|
-|6     |LUT3       |   738|
-|7     |LUT4       |   544|
-|8     |LUT5       |   522|
-|9     |LUT6       |   992|
+|4     |LUT1       |   192|
+|5     |LUT2       |   497|
+|6     |LUT3       |   737|
+|7     |LUT4       |   542|
+|8     |LUT5       |   521|
+|9     |LUT6       |   988|
 |10    |LUT6_2     |    80|
 |11    |MMCME2_ADV |     1|
 |12    |MULT_AND   |     1|
@@ -3744,7 +3744,7 @@ Report Cell Usage:
 |23    |FDCE       |   144|
 |24    |FDE        |    32|
 |25    |FDR        |   125|
-|26    |FDRE       |  2473|
+|26    |FDRE       |  2469|
 |27    |FDS        |     3|
 |28    |FDSE       |    72|
 |29    |LD         |    37|
@@ -3757,8 +3757,8 @@ Report Instance Areas:
 +------+-------------------------------------------------------------------------------------+-----------------------------------------------+------+
 |      |Instance                                                                             |Module                                         |Cells |
 +------+-------------------------------------------------------------------------------------+-----------------------------------------------+------+
-|1     |top                                                                                  |                                               |  7396|
-|2     |  uc_system_i                                                                        |uc_system                                      |  7376|
+|1     |top                                                                                  |                                               |  7384|
+|2     |  uc_system_i                                                                        |uc_system                                      |  7364|
 |3     |    BRAMInterconnect_0                                                               |uc_system_BRAMInterconnect_0_0                 |   237|
 |4     |      inst                                                                           |BRAMInterconnect                               |   126|
 |5     |    IC_0                                                                             |uc_system_IC_0_0                               |   238|
@@ -3828,16 +3828,16 @@ Report Instance Areas:
 |69    |            INPUT_DOUBLE_REGS                                                        |cdc_sync__parameterized0_594                   |     5|
 |70    |            INPUT_DOUBLE_REGS2                                                       |cdc_sync__parameterized0_595                   |     5|
 |71    |            INPUT_DOUBLE_REGS3                                                       |cdc_sync__parameterized0_596                   |    14|
-|72    |    axi_uartlite_0                                                                   |uc_system_axi_uartlite_0_0                     |   227|
-|73    |      U0                                                                             |axi_uartlite                                   |   227|
+|72    |    axi_uartlite_0                                                                   |uc_system_axi_uartlite_0_0                     |   215|
+|73    |      U0                                                                             |axi_uartlite                                   |   215|
 |74    |        AXI_LITE_IPIF_I                                                              |axi_lite_ipif__parameterized1                  |    65|
 |75    |          I_SLAVE_ATTACHMENT                                                         |slave_attachment__parameterized1               |    65|
 |76    |            I_DECODER                                                                |address_decoder__parameterized1                |    37|
 |77    |              \MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I         |pselect_f                                      |     1|
 |78    |              \MEM_DECODE_GEN[0].PER_CE_GEN[1].MULTIPLE_CES_THIS_CS_GEN.CE_I         |pselect_f__parameterized0                      |     1|
 |79    |              \MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I         |pselect_f__parameterized1                      |     1|
-|80    |        UARTLITE_CORE_I                                                              |uartlite_core                                  |   162|
-|81    |          BAUD_RATE_I                                                                |baudrate                                       |    26|
+|80    |        UARTLITE_CORE_I                                                              |uartlite_core                                  |   150|
+|81    |          BAUD_RATE_I                                                                |baudrate                                       |    14|
 |82    |          UARTLITE_RX_I                                                              |uartlite_rx                                    |    76|
 |83    |            DELAY_16_I                                                               |dynshreg_i_f                                   |    17|
 |84    |            INPUT_DOUBLE_REGS3                                                       |cdc_sync__parameterized0                       |     5|
@@ -4666,11 +4666,11 @@ Report Instance Areas:
 |907   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized8       |     2|
 +------+-------------------------------------------------------------------------------------+-----------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:06:39 ; elapsed = 00:07:27 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 130 ; free virtual = 14681
+Finished Writing Synthesis Report : Time (s): cpu = 00:06:31 ; elapsed = 00:07:03 . Memory (MB): peak = 1845.961 ; gain = 744.621 ; free physical = 602 ; free virtual = 14602
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 27409 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:06:03 ; elapsed = 00:06:36 . Memory (MB): peak = 1845.961 ; gain = 571.996 ; free physical = 194 ; free virtual = 14745
-Synthesis Optimization Complete : Time (s): cpu = 00:06:39 ; elapsed = 00:07:27 . Memory (MB): peak = 1845.969 ; gain = 744.621 ; free physical = 186 ; free virtual = 14738
+Synthesis Optimization Runtime : Time (s): cpu = 00:05:50 ; elapsed = 00:06:12 . Memory (MB): peak = 1845.961 ; gain = 570.996 ; free physical = 650 ; free virtual = 14650
+Synthesis Optimization Complete : Time (s): cpu = 00:06:32 ; elapsed = 00:07:03 . Memory (MB): peak = 1845.969 ; gain = 744.621 ; free physical = 651 ; free virtual = 14652
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 907 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -4690,10 +4690,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 22 instances
   SRL16 => SRL16E: 1 instances
 
-910 Infos, 313 Warnings, 32 Critical Warnings and 0 Errors encountered.
+909 Infos, 313 Warnings, 32 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:06:54 ; elapsed = 00:07:52 . Memory (MB): peak = 1845.969 ; gain = 758.211 ; free physical = 241 ; free virtual = 14557
+synth_design: Time (s): cpu = 00:06:44 ; elapsed = 00:07:17 . Memory (MB): peak = 1845.969 ; gain = 758.211 ; free physical = 523 ; free virtual = 14498
 INFO: [Common 17-1381] The checkpoint '/home/izoomko/wrk/4grade/io/lab3/lab2.runs/synth_1/uc_system_wrapper.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1869.973 ; gain = 24.004 ; free physical = 188 ; free virtual = 14535
-report_utilization: Time (s): cpu = 00:00:00.74 ; elapsed = 00:00:02 . Memory (MB): peak = 1869.973 ; gain = 0.000 ; free physical = 320 ; free virtual = 14701
-INFO: [Common 17-206] Exiting Vivado at Sun Jan 14 17:04:33 2018...
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1869.973 ; gain = 24.004 ; free physical = 454 ; free virtual = 14463
+report_utilization: Time (s): cpu = 00:00:00.61 ; elapsed = 00:00:02 . Memory (MB): peak = 1869.973 ; gain = 0.000 ; free physical = 331 ; free virtual = 14454
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 14 20:51:56 2018...
