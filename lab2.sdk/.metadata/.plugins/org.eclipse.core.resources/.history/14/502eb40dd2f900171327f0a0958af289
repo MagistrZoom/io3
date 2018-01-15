@@ -183,6 +183,7 @@ void int_handler(void) {
         Xil_Out32(AXI_TIMER_1_ADDRESS + TCS_OFFSET, INTERRUPT | ENT | ENIT | ARHT | DTM);
         if (cycle == THIRD) {
                 cycle = FIRST;
+                Xil_Out32(GPIO_ADDRESS, ~0);
                 Xil_Out32(IC + ICCONF,	0x0 | 0x20);
                 Xil_Out32(TIMER1 + TVAL,	0);
                 Xil_Out32(IC + ICCONF,	0x1 | 0x20);
@@ -243,7 +244,6 @@ int main()
             }
             if (icconf & FIFO_OV) {
             	Xil_Out32(GPIO_ADDRESS, ~0);
-            	print("PANIC\n\r");
             	while (1);
                 //abort();
             }
@@ -265,16 +265,19 @@ int main()
             next_posedge = Xil_In32(IC + ICBUF);
 			state = 1;
 			read_n = 0;
-			const unsigned epsilon = 20;
+			const unsigned epsilon = 10;
 			if (!first_run) {
-				unsigned value = ((float) (impulse_negedge - impulse_posedge) / (next_posedge - impulse_posedge))*1000;
-				if (impulse_posedge < next_posedge && LAB3_ABS(value - ratio) > epsilon && value > 0) {
+				unsigned value = ((float) (impulse_negedge - impulse_posedge) / (next_posedge - impulse_posedge))*100;
+				if (LAB3_ABS(value - ratio) > epsilon && value > 0) {
 					ratio = value;
 					//char buf[128];
 					//snprintf(buf, 127, "%lu %lu %lu %u\n\r", impulse_posedge, impulse_negedge, next_posedge, (unsigned)(ratio * 100)/*, ratio*/);
 					Xil_Out32(GPIO_ADDRESS, ratio);
 					snprintf(buf, 16, "%u\n\r", ratio);
 					print(buf);
+				}
+				if (value < 0) {
+					print("[Error] Timer overflow probably\n\r");
 				}
 			}
 			else {
