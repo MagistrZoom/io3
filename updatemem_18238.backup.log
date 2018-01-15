@@ -2,8 +2,8 @@
 # updatemem v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Mon Jan 15 12:16:04 2018
-# Process ID: 15992
+# Start of session at: Mon Jan 15 12:37:25 2018
+# Process ID: 18238
 # Current directory: /home/izoomko/wrk/4grade/io/lab3
 # Command line: updatemem -mode batch -source /home/izoomko/Soft/xilinx/Vivado/2017.2/scripts/updatemem/main.tcl -notrace -tclargs -meminfo ./lab2.runs/impl_1/uc_system_wrapper.mmi -data ./lab2.sdk/uart/Debug/uart.elf -proc uc_system_i/microblaze_0 -bit ./lab2.runs/impl_1/uc_system_wrapper.bit -out test.bit
 # Log file: /home/izoomko/wrk/4grade/io/lab3/updatemem.log
@@ -18,5 +18,5 @@ Creating bitstream...
 Writing bitstream test.bit...
 0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 update_mem completed successfully
-update_mem: Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 884.668 ; gain = 384.000 ; free physical = 867 ; free virtual = 15833
-INFO: [Common 17-206] Exiting updatemem at Mon Jan 15 12:16:34 2018...
+update_mem: Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 884.668 ; gain = 384.000 ; free physical = 728 ; free virtual = 15724
+INFO: [Common 17-206] Exiting updatemem at Mon Jan 15 12:37:54 2018...

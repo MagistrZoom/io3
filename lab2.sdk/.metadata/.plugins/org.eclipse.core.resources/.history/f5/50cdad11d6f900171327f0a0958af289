@@ -265,14 +265,15 @@ int main()
             next_posedge = Xil_In32(IC + ICBUF);
 			state = 1;
 			read_n = 0;
-			const unsigned epsilon = 10;
+			const unsigned epsilon = 20;
 			if (!first_run) {
-				unsigned value = ((float) (impulse_negedge - impulse_posedge) / (next_posedge - impulse_posedge))*100;
-				if (impulse_posedge < next_posedge && LAB3_ABS((int)(value - ratio)) > epsilon && value > 0) {
+				unsigned value = ((float) (impulse_negedge - impulse_posedge) / (next_posedge - impulse_posedge))*1000;
+				if (impulse_posedge < next_posedge && LAB3_ABS(value - ratio) > epsilon && value > 0) {
 					ratio = value;
-					snprintf(buf, 127, "%u\n\r", ratio);
+					//char buf[128];
 					//snprintf(buf, 127, "%lu %lu %lu %u\n\r", impulse_posedge, impulse_negedge, next_posedge, (unsigned)(ratio * 100)/*, ratio*/);
 					Xil_Out32(GPIO_ADDRESS, ratio);
+					snprintf(buf, 16, "%u\n\r", ratio);
 					print(buf);
 				}
 			}
