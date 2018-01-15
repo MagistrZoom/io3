@@ -197,7 +197,7 @@ void int_handler(void) {
 }
 
 
-#define LAB3_ABS(x) ((x) > (0) ? (x) : (-(x)))
+#define LAB3_ABS(x) ((x) > (0) ? (x) : (-x))
 int main()
 {
 	init_platform();
@@ -268,7 +268,7 @@ int main()
 			read_n = 0;
 			const unsigned epsilon = 10;
 			if (!first_run) {
-				unsigned value = ((float) (impulse_negedge - impulse_posedge) / (next_posedge - impulse_posedge))*100;
+				unsigned value = ((float) (next_posedge - impulse_posedge) / (impulse_negedge - impulse_posedge))*100;
 				if (LAB3_ABS(value - ratio) > epsilon /* && value > 0 */) {
 					ratio = value;
 					//char buf[128];
