@@ -328,3 +328,20 @@
 18:01:37 INFO  : Clearing existing target manager status.
 18:01:46 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
 18:01:49 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+21:06:18 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+10:53:48 INFO  : Registering command handlers for SDK TCF services
+10:53:49 INFO  : Launching XSCT server: xsct -n -interactive /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/temp_xsdb_launch_script.tcl
+10:53:51 INFO  : XSCT server has started successfully.
+10:53:55 INFO  : Successfully done setting XSCT server connection channel  
+10:53:55 INFO  : Successfully done setting SDK workspace  
+10:53:55 INFO  : Processing command line option -hwspec /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf.
+10:53:56 INFO  : Checking for hwspec changes in the project uc_system_wrapper_hw_platform_1.
+10:53:56 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1516002797000,  Project:1515941961000
+10:53:56 INFO  : The hardware specification for project 'uc_system_wrapper_hw_platform_1' is different from /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf.
+10:53:56 INFO  : Copied contents of /home/izoomko/wrk/4grade/io/lab3/lab2.sdk/uc_system_wrapper.hdf into /uc_system_wrapper_hw_platform_1/system.hdf.
+10:53:56 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+10:53:58 INFO  : 
+10:53:59 INFO  : Updating hardware inferred compiler options for uart.
+10:53:59 INFO  : Clearing existing target manager status.
+10:54:06 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+10:54:08 WARN  : Linker script will not be updated automatically. Users need to update it manually.

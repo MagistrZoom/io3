@@ -9,12 +9,12 @@
     <Object name="xc7a100t_0" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value=""/>
       <Properties Property="PROBES.FILE" value=""/>
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/uc_system_wrapper.bit"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="test.bit"/>
     </Object>
     <Object name="xc7a100t_0_1" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value=""/>
       <Properties Property="PROBES.FILE" value=""/>
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/uc_system_wrapper.bit"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="test.bit"/>
     </Object>
   </ObjectList>
   <probeset name="hw project" active="false"/>

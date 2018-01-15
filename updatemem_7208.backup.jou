@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# updatemem v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Jan 15 11:38:47 2018
+# Process ID: 7208
+# Current directory: /home/izoomko/wrk/4grade/io/lab3
+# Command line: updatemem -mode batch -source /home/izoomko/Soft/xilinx/Vivado/2017.2/scripts/updatemem/main.tcl -notrace -tclargs -meminfo mem.mmi -data ./lab2.sdk/uart/Debug/uart.elf -proc uc_system_i/microblaze_0 -bit wra.bit -out test.bit
+# Log file: /home/izoomko/wrk/4grade/io/lab3/updatemem.log
+# Journal file: /home/izoomko/wrk/4grade/io/lab3/updatemem.jou
+#-----------------------------------------------------------
+source /home/izoomko/Soft/xilinx/Vivado/2017.2/scripts/updatemem/main.tcl -notrace

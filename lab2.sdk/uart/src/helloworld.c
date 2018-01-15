@@ -172,10 +172,10 @@ enum cycle_t {
 
 
 volatile static u8 cycle = FIRST;
-volatile static u32 high_time[] = {5000, 15000, 45000};
+volatile static u32 high_time[] = {50000, 150000, 450000};
 void int_handler(void) __attribute__ ((interrupt_handler));
 
-#define LOW_TIME 15000
+#define LOW_TIME 150000
 
 #define TIMER1_OFFSET   0x10
 
@@ -183,12 +183,17 @@ void int_handler(void) {
         Xil_Out32(AXI_TIMER_1_ADDRESS + TCS_OFFSET, INTERRUPT | ENT | ENIT | ARHT | DTM);
         if (cycle == THIRD) {
                 cycle = FIRST;
+                Xil_Out32(GPIO_ADDRESS, ~0);
+                Xil_Out32(IC + ICCONF,	0x0 | 0x20);
+                Xil_Out32(TIMER1 + TVAL,	0);
+                Xil_Out32(IC + ICCONF,	0x1 | 0x20);
         } else {
                 cycle++;
         }
+
         set_pwm(TIMER_ADDRESS, LOW_TIME + high_time[cycle], high_time[cycle]);
 
-        Xil_Out32(GPIO_ADDRESS, high_time[cycle] * 10);
+        //Xil_Out32(GPIO_ADDRESS, cycle);
 }
 
 
@@ -196,20 +201,21 @@ void int_handler(void) {
 int main()
 {
 	init_platform();
-    int impulse_posedge = 0;
-    int impulse_negedge = 0;
-    int next_posedge = 0;
+    u32 impulse_posedge = 0;
+    u32 impulse_negedge = 0;
+    u32 next_posedge = 0;
 
+    char buf[16];
     int first_run = 1;
     // static int c = 0;
     int read_n = 0;
-    float ratio = 0;
+    unsigned ratio = 0;
 	int state = 0;
 	while (1) {
-		Xil_Out32(GPIO_ADDRESS, state);
+		//Xil_Out32(GPIO_ADDRESS, state);
 		switch (state) {
 		case 0: // init
-			set_pwm(TIMER_ADDRESS, 10000, 2500);
+			set_pwm(TIMER_ADDRESS, 200000, 50000);
 			Xil_Out32(TIMER1 + TCONF,	2);
 			Xil_Out32(TIMER1 + TMR,	~0);
 			Xil_Out32(TIMER1 + TCONF,	1);
@@ -260,13 +266,14 @@ int main()
             next_posedge = Xil_In32(IC + ICBUF);
 			state = 1;
 			read_n = 0;
-			const float epsilon = 10e-2;
+			const unsigned epsilon = 10;
 			if (!first_run) {
-				float value = (float) (next_posedge - impulse_posedge) / (impulse_negedge - impulse_posedge);
-				if (LAB3_ABS(value - ratio) > epsilon && value > 0) {
+				unsigned value = ((float) (next_posedge - impulse_posedge) / (impulse_negedge - impulse_posedge))*100;
+				if (LAB3_ABS(value - ratio) > epsilon /* && value > 0 */) {
 					ratio = value;
-					char buf[128];
-					snprintf(buf, 127, "%d %d %d %f\n\r", impulse_posedge, impulse_negedge, next_posedge, ratio);
+					//char buf[128];
+					//snprintf(buf, 127, "%lu %lu %lu %u\n\r", impulse_posedge, impulse_negedge, next_posedge, (unsigned)(ratio * 100)/*, ratio*/);
+					snprintf(buf, 16, "%u\n\r", ratio);
 					print(buf);
 				}
 				if (value < 0) {
